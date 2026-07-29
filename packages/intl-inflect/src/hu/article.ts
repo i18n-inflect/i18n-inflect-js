@@ -44,6 +44,10 @@ function isAcronym(token: string): boolean {
  * acronyms and single letters (letter names) and a few symbols.
  */
 export function definiteArticle(nextWord: string): "a" | "az" {
+  // A hyphenated suffix is pronounced after the base, so the base decides:
+  // "az MTA-ban", "a 6-ot", "az e-mail".
+  const base = nextWord.split("-", 1)[0];
+  if (base !== undefined && base.length > 0) nextWord = base;
   const first = nextWord[0];
   if (first === undefined) return "a";
   if (/\d/.test(first)) return digitTakesAz(nextWord) ? "az" : "a";

@@ -61,6 +61,28 @@ function runPack(pack: LanguagePack, phrase: string, features: GrammaticalFeatur
   return { text: result.text, confidence: result.confidence, misses };
 }
 
+/**
+ * How much longer than its lemma an inflected form may plausibly be. Real
+ * suffix chains are short; a much longer answer means the model ran away.
+ */
+const MAX_SUFFIX_GROWTH = 12;
+
+/**
+ * Why a fallback answer must not be cached, or `undefined` when it is
+ * acceptable. Generic sanity checks live here; language-specific
+ * plausibility is delegated to the pack's `acceptFallback`.
+ */
+function rejectionReason(
+  pack: LanguagePack,
+  request: FallbackRequest,
+  answer: string,
+): string | undefined {
+  if (answer.length === 0) return "empty";
+  if (answer.length > request.lemma.length + MAX_SUFFIX_GROWTH) return "implausibly long";
+  if (pack.acceptFallback && !pack.acceptFallback(request, answer)) return "rejected by pack";
+  return undefined;
+}
+
 function packOrWarn(locale: string): LanguagePack | undefined {
   const pack = getLanguage(locale);
   if (!pack) emitWarning({ code: "unknown-locale", locale: resolveLocale(locale), detail: locale });
@@ -108,9 +130,17 @@ export async function inflectAsync(
     const answers = await fallback.predict(first.misses);
     first.misses.forEach((request, i) => {
       const answer = answers[i];
-      if (typeof answer === "string" && answer.length > 0) {
-        oracleCache.set(oracleKey(pack.locale, request), answer);
+      if (typeof answer !== "string") return;
+      const rejection = rejectionReason(pack, request, answer);
+      if (rejection !== undefined) {
+        emitWarning({
+          code: "fallback-rejected",
+          locale: pack.locale,
+          detail: `${request.lemma} ${request.tag} → "${answer}" (${rejection})`,
+        });
+        return;
       }
+      oracleCache.set(oracleKey(pack.locale, request), answer);
     });
   } catch (error) {
     emitWarning({

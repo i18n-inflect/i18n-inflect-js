@@ -69,9 +69,24 @@ for (const [word, c] of [
 }
 show("hu  ház + plural + inessive", inflect("hu", "ház", { number: "plural", case: "inessive" }));
 
-console.log("\n■ a/az kiejtés szerint (szám, betűszó is) — és kötőjeles idegen szavak:\n");
+console.log("\n■ a/az kiejtés szerint (szám, betűszó is):\n");
 for (const p of ["a alma", "az ház", "a 5-ös", "az 6-os", "a MTA", "az BKV"]) {
   show(`hu  "${p}" (névelő-egyeztetés)`, inflect("hu", p));
+}
+
+console.log("\n■ Számok és betűszavak kötőjeles toldalékolása (kiejtés szerint):\n");
+for (const [tok, c] of [
+  ["6", "accusative"], // hat → hatot → 6-ot
+  ["5", "instrumental"], // öt → öttel → 5-tel
+  ["1", "instrumental"], // egy → eggyel → 1-gyel
+  ["100", "instrumental"], // száz → százzal → 100-zal
+  ["1000", "accusative"], // ezer → ezret → 1000-et
+  ["10", "accusative"], // tíz → tizet → 10-et
+  ["SMS", "accusative"], // es-em-es →
+  ["MTA", "inessive"], // em-té-á →
+  ["BKV", "instrumental"], // bé-ká-vé →
+]) {
+  show(`hu  ${tok} + ${c}`, inflect("hu", tok, { case: c }));
 }
 show("hu  tv + instrumental (lexikonból)", inflect("hu", "tv", { case: "instrumental" }));
 show("hu  dkg + instrumental (lexikonból)", inflect("hu", "dkg", { case: "instrumental" }));
@@ -83,7 +98,7 @@ show(
 );
 show('fr  "le ami" (elízió)', inflect("fr", "le ami"));
 show('fr  "le haricot" (h aspiré blokkol)', inflect("fr", "le haricot"));
-show('es  agua + definite article', inflect("es", "agua", { article: "definite" }));
+show("es  agua + definite article", inflect("es", "agua", { article: "definite" }));
 show('es  "el agua" + plural', inflect("es", "el agua", { number: "plural" }));
 
 console.log("\n■ Koreai partikulák (batchim szerint):\n");
@@ -99,6 +114,6 @@ for (const [w, c] of [
 }
 
 console.log("\n■ Hibatűrés (sosem dob — degradál és warningol):\n");
-show('xx (ismeretlen nyelv)', format("xx", "take ^[a sword](case: dative)"));
-show('hu, elgépelt jegy', format("hu", "^[a ház](case: tipó)"));
+show("xx (ismeretlen nyelv)", format("xx", "take ^[a sword](case: dative)"));
+show("hu, elgépelt jegy", format("hu", "^[a ház](case: tipó)"));
 console.log();

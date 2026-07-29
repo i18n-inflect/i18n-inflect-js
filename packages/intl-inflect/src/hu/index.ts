@@ -10,6 +10,7 @@ import {
 import { registerLanguage } from "../core/registry.js";
 import { definiteArticle } from "./article.js";
 import { BACK_LEMMAS, FORM_OVERRIDES, HYPHEN_SUFFIXES, STEM_FLAGS } from "./exceptions.gen.js";
+import { hyphenatedForm } from "./numerals.js";
 import { BACK_NEUTRAL_LEMMAS, vowelsOf } from "./phonology.js";
 import { inflectNounRules } from "./suffixes.js";
 import { type HuCase, isHuCase, nounTag } from "./tags.js";
@@ -52,6 +53,19 @@ interface HeadResult {
   confident: boolean;
 }
 
+/**
+ * Look a token up in the generated lexicon: first as a full-form override,
+ * then as a hyphen-suffixing lemma ("tv" → "tv-vel"). Capitalization of the
+ * input is preserved.
+ */
+function lookupLexicon(token: string, tag: string): string | undefined {
+  const lower = token.toLowerCase();
+  const override = FORM_OVERRIDES.get(`${lower}|${tag}`);
+  if (override !== undefined) return isCapitalized(token) ? capitalize(override) : override;
+  const rest = HYPHEN_SUFFIXES.get(lower)?.get(tag);
+  return rest === undefined ? undefined : `${token}-${rest}`;
+}
+
 function inflectHead(
   token: string,
   plural: boolean,
@@ -61,32 +75,32 @@ function inflectHead(
   const [core, punct] = splitTrailingPunctuation(token);
   if (core.length === 0 || (!plural && !huCase)) return { form: token, confident: true };
 
-  const lower = core.toLowerCase();
   const tag = nounTag(huCase, plural);
 
-  const override = FORM_OVERRIDES.get(`${lower}|${tag}`);
-  if (override !== undefined) {
-    return {
-      form: (isCapitalized(core) ? capitalize(override) : override) + punct,
-      confident: true,
-    };
+  // Abbreviations keep their period as part of the word ("okt.-ben"), so the
+  // lexicon is consulted with the punctuation attached before it is treated
+  // as sentence punctuation.
+  const lexical = lookupLexicon(token, tag) ?? lookupLexicon(core, tag);
+  if (lexical !== undefined) {
+    const form = lexical.endsWith(punct) ? lexical : lexical + punct;
+    return { form, confident: true };
   }
 
-  // Hyphen-suffixing lemmas from the lexicon: "tv" → "tv-vel", "show" → "show-t".
-  const hyphen = HYPHEN_SUFFIXES.get(lower);
-  if (hyphen) {
-    const rest = hyphen.get(tag);
-    if (rest !== undefined) return { form: `${core}-${rest}${punct}`, confident: true };
-  }
+  const lower = core.toLowerCase();
 
-  // Digits and unknown acronyms need spoken-form-based suffixes ("6-ot",
-  // "SMS-t") — beyond rules in v1: leave unchanged, ask the oracle.
-  if (/^\d/.test(core) || /^[A-ZÁÉÍÓÖŐÚÜŰ]{2,}$/.test(core)) {
+  // Digits and initialisms take hyphenated suffixes derived from their
+  // spoken form ("6-ot", "5-tel", "SMS-t") — see numerals.ts.
+  const spelled = hyphenatedForm(core, plural, huCase);
+  if (spelled !== undefined) return { form: spelled + punct, confident: true };
+
+  // Mixed tokens the speller cannot read (e.g. "6-os", "max."): leave them
+  // alone and let a fallback try. Answers are validated by acceptFallback.
+  if (/^\d/.test(core) || /^[A-ZÁÉÍÓÖŐÚÜŰ]{2,}/.test(core)) {
     const request = { lemma: core, tag };
     const cached = ctx.lookup(request);
     if (cached) return { form: cached + punct, confident: true };
     ctx.requestFallback(request);
-    ctx.warn("low-confidence", `cannot suffix digits/acronym "${core}" by rules`);
+    ctx.warn("low-confidence", `cannot suffix "${core}" by rules`);
     return { form: token, confident: false };
   }
 
@@ -156,10 +170,33 @@ function inflectPhrase(
   return { text: joinPhrase(split), confidence: head.confident ? "high" : "low" };
 }
 
+/** Strip diacritics so stem alternations (kéz → kezet) still match. */
+function foldAccents(text: string): string {
+  return text
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase();
+}
+
+/**
+ * Plausibility check for fallback answers. Hungarian suffixation keeps the
+ * word's opening intact — stem alternations only ever touch vowel length or
+ * a dropped vowel — so an answer that starts elsewhere is a hallucination,
+ * not an inflection.
+ */
+function acceptFallback(request: { lemma: string }, answer: string): boolean {
+  const lemma = foldAccents(request.lemma);
+  const form = foldAccents(answer);
+  if (form.length + 1 < lemma.length) return false;
+  const prefix = Math.min(3, lemma.length);
+  return form.slice(0, prefix) === lemma.slice(0, prefix);
+}
+
 /** The Hungarian language pack. */
 export const hu: LanguagePack = {
   locale: "hu",
   inflectPhrase,
+  acceptFallback,
 };
 
 registerLanguage(hu);

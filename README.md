@@ -28,7 +28,7 @@ format("en", "You drew ^[a {c}](article: indefinite)", { c: "ace" });
 
 | | |
 | --- | --- |
-| 🇭🇺 **Hungarian** | 15 case suffixes + plural with full vowel harmony, stem alternations (kéz→kezet, bokor→bokrot, ló→lovat), v-assimilation (ász→ásszal, busz→busszal), a/az article by pronunciation — even for digits ("az 5", "a 6", "az 1000") and acronyms ("az MTA", "a BKV") — and hyphenated suffixes for foreign words ("show-t", "tv-vel") |
+| 🇭🇺 **Hungarian** | 15 case suffixes + plural with full vowel harmony, stem alternations (kéz→kezet, bokor→bokrot, ló→lovat), v-assimilation (ász→ásszal, busz→busszal), a/az article by pronunciation ("az 5", "a 6", "az MTA", "a BKV"), and suffixes written after a hyphen for numbers, initialisms and foreign words — spelled from their spoken form: 6-ot, 5-tel, 1-gyel, 100-zal, 1000-et, SMS-t, MTA-ban, tv-vel |
 | 🇬🇧 **English** | a/an by sound (an hour, a university, an MTA card, an 8), pluralization |
 | 🇩🇪 **German** | full article matrix (4 cases × 3 genders), weak/mixed/strong adjective endings ("ein rotes Auto" → "einem roten Auto") |
 | 🇫🇷 **French** | le/la/les/un/une with elision (l'ami) and h-aspiré (le haricot), pluralization |

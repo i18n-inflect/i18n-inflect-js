@@ -15,6 +15,7 @@ export type WarningCode =
   | "malformed-template"
   | "missing-gender"
   | "fallback-error"
+  | "fallback-rejected"
   | "low-confidence";
 
 /** A single reported warning. */

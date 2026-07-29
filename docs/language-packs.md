@@ -55,6 +55,27 @@ Because the cache is shared, later *synchronous* calls return the corrected form
   UniMorph bundles (`"N;INS;SG"`) so the same tags drive rules, lexicon, golden tests
   and model training.
 
+**Validate what comes back.** A fallback is a statistical model being asked about
+words it may never have seen, and one bad answer would be cached and then served to
+every later synchronous call. Core rejects empty and implausibly long answers; add
+`acceptFallback(request, answer)` to your pack for language-specific plausibility:
+
+```ts
+acceptFallback(request, answer) {
+  // Hungarian suffixation keeps the word's opening intact, so an answer
+  // that starts elsewhere is a hallucination, not an inflection.
+  return foldAccents(answer).startsWith(foldAccents(request.lemma).slice(0, 3));
+}
+```
+
+Rejected answers are reported as `fallback-rejected` warnings and the rule-based
+form is kept.
+
+**Prefer rules over the model wherever the problem is actually closed.** Hungarian
+number and initialism suffixation ("6-ot", "SMS-t") looks like a job for the neural
+fallback, but it is fully rule-derivable once you spell the token's spoken form —
+see `hu/numerals.ts`. Rules are exact, need no download, and work synchronously.
+
 ## Generated data
 
 If your language needs an exception lexicon, generate it — don't hand-write it.

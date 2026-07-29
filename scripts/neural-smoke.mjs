@@ -11,8 +11,8 @@
  * Usage: node scripts/neural-smoke.mjs   (after training/export/quantize)
  */
 import { readFileSync } from "node:fs";
-import { createNeuralFallback } from "../packages/neural/dist/index.js";
 import { ortNodeEngine } from "../packages/neural/dist/engines/ort-node.js";
+import { createNeuralFallback } from "../packages/neural/dist/index.js";
 
 const out = new URL("../training/out/hu/", import.meta.url);
 const vocab = JSON.parse(readFileSync(new URL("vocab.json", out), "utf8"));

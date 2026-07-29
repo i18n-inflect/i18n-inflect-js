@@ -236,10 +236,16 @@ describe("hu: phrase-level inflection", () => {
 describe("hu: oracle protocol for digits/acronyms and unknown words", () => {
   beforeEach(() => clearOracle());
 
-  it("leaves digits unchanged but accepts oracle answers", () => {
-    expect(inflect("hu", "a 6", { case: "accusative" })).toBe("a 6");
-    seedOracle("hu", { lemma: "6", tag: "N;ACC;SG" }, "6-ot");
+  it("suffixes digits by rules, no oracle needed", () => {
+    // Numerals are a closed class spelled out by numerals.ts, so this needs
+    // neither the lexicon nor a model.
     expect(inflect("hu", "a 6", { case: "accusative" })).toBe("a 6-ot");
+  });
+
+  it("leaves tokens it cannot read unchanged, but accepts oracle answers", () => {
+    expect(inflect("hu", "a 6-os", { case: "accusative" })).toBe("a 6-os");
+    seedOracle("hu", { lemma: "6-os", tag: "N;ACC;SG" }, "6-osat");
+    expect(inflect("hu", "a 6-os", { case: "accusative" })).toBe("a 6-osat");
   });
 
   it("requests fallback for suspicious foreign words", async () => {

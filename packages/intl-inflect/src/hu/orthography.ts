@@ -19,29 +19,38 @@ export function lengthenFinalVowel(stem: string): string {
 }
 
 /**
- * Attach a `v`-assimilating suffix (`-val/-vel`, `-vá/-vé`): the `v`
- * assimilates to a final consonant, written as a geminate — with digraphs
- * doubling only their first letter, and never creating a triple:
+ * Split a v-assimilating suffix (`-val/-vel`, `-vá/-vé`) into the stem and
+ * the suffix as *written*.
+ *
+ * The `v` assimilates to the stem-final consonant and is written as a
+ * geminate — digraphs doubling only their first letter, and never forming a
+ * triple. The second copy of the grapheme belongs to the **suffix**, which
+ * is what the hyphenated digit spellings expose: 5 (öt) → "5-tel",
+ * 100 (száz) → "100-zal", 1 (egy) → "1-gyel".
+ *
+ * `rest` is the suffix without the `v` (e.g. `"al"`, `"el"`, `"á"`, `"é"`).
+ */
+export function assimilatingParts(stem: string, rest: string): { stem: string; suffix: string } {
+  const final: FinalConsonant | undefined = finalConsonantOf(stem);
+  if (!final) {
+    // Vowel-final stems keep the v: hajó+val → hajóval (caller lengthens).
+    return { stem, suffix: `v${rest}` };
+  }
+  // toll + val → tollal: the existing geminate absorbs the v.
+  if (final.geminate) return { stem, suffix: rest };
+  const g = final.grapheme;
+  return { stem: stem.slice(0, stem.length - g.length) + g[0], suffix: g + rest };
+}
+
+/**
+ * Attach a `v`-assimilating suffix (`-val/-vel`, `-vá/-vé`):
  *
  * - `ház` + `val` → `házzal`
  * - `ász` + `val` → `ásszal`
  * - `busz` + `val` → `busszal`
  * - `toll` + `val` → `tollal` (already geminate: no triple letter)
- *
- * `rest` is the suffix without the `v` (e.g. `"al"`, `"el"`, `"á"`, `"é"`).
  */
 export function attachAssimilating(stem: string, rest: string): string {
-  const final: FinalConsonant | undefined = finalConsonantOf(stem);
-  if (!final) {
-    // Vowel-final stems keep the v: hajó+val → hajóval (caller lengthens).
-    return `${stem}v${rest}`;
-  }
-  if (final.geminate) {
-    // toll + val → tollal: the geminate absorbs the v.
-    return stem + rest;
-  }
-  // Double the final grapheme in writing: z→zz, sz→ssz. The written geminate
-  // of a digraph doubles its FIRST letter before the digraph: á|sz → á|s|sz.
-  const g = final.grapheme;
-  return `${stem.slice(0, stem.length - g.length)}${g[0]}${g}${rest}`;
+  const parts = assimilatingParts(stem, rest);
+  return parts.stem + parts.suffix;
 }

@@ -83,6 +83,17 @@ export interface LanguagePack {
     raw: Record<string, string>,
     warn: (kind: "unknown-feature-key" | "unknown-feature-value", detail: string) => void,
   ): GrammaticalFeatures;
+  /**
+   * Optional plausibility check for a fallback's answer, called before it
+   * enters the shared cache.
+   *
+   * A fallback is a statistical model asked about words it may never have
+   * seen; without a check, one implausible answer would be cached and then
+   * served to every later synchronous call. Return `false` to discard it
+   * and keep the rule-based form. Core applies generic sanity checks
+   * (non-empty, sane length) regardless.
+   */
+  acceptFallback?(request: FallbackRequest, answer: string): boolean;
 }
 
 /**
