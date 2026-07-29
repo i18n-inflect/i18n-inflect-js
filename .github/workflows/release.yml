@@ -14,6 +14,10 @@ jobs:
       contents: write
       pull-requests: write
       id-token: write
+    env:
+      # Exposed at job level so the publish step can be skipped while the
+      # secret does not exist yet — otherwise every push to main goes red.
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -24,9 +28,12 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
       - name: Create release PR or publish
+        if: env.NPM_TOKEN != ''
         uses: changesets/action@v1
         with:
           publish: pnpm changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publishing not configured
+        if: env.NPM_TOKEN == ''
+        run: echo "NPM_TOKEN is not set — skipping release. Add it in repository settings to enable publishing."
