@@ -1,0 +1,41 @@
+{
+  "name": "@intl-inflect/model-hu",
+  "version": "0.1.0",
+  "description": "Hungarian neural inflection model for intl-inflect — a ~2 MB int8 char-level seq2seq (encoder + decoder ONNX graphs + vocab), trained on UniMorph. Weights are CC BY-SA 3.0.",
+  "license": "MIT AND CC-BY-SA-3.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./assets/*": "./assets/*"
+  },
+  "files": [
+    "dist",
+    "assets",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@intl-inflect/neural": "workspace:^"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boogie/intl-inflect-js.git"
+  }
+}

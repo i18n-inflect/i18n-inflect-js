@@ -1,0 +1,69 @@
+{
+  "name": "@intl-inflect/neural",
+  "version": "0.1.0",
+  "description": "Neural inflection fallback runtime for intl-inflect — tiny char-level seq2seq models over a swappable inference engine (onnxruntime-web, onnxruntime-node, or the cordova-plugin-boogie-onnx native bridge).",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./ort-web": {
+      "types": "./dist/engines/ort-web.d.ts",
+      "import": "./dist/engines/ort-web.js",
+      "require": "./dist/engines/ort-web.cjs"
+    },
+    "./ort-node": {
+      "types": "./dist/engines/ort-node.d.ts",
+      "import": "./dist/engines/ort-node.js",
+      "require": "./dist/engines/ort-node.cjs"
+    },
+    "./boogie-onnx": {
+      "types": "./dist/engines/boogie-onnx.d.ts",
+      "import": "./dist/engines/boogie-onnx.js",
+      "require": "./dist/engines/boogie-onnx.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "intl-inflect": "workspace:^"
+  },
+  "peerDependencies": {
+    "onnxruntime-node": ">=1.17",
+    "onnxruntime-web": ">=1.17"
+  },
+  "peerDependenciesMeta": {
+    "onnxruntime-node": {
+      "optional": true
+    },
+    "onnxruntime-web": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boogie/intl-inflect-js.git"
+  },
+  "devDependencies": {
+    "onnxruntime-node": "^1.27.0"
+  }
+}

@@ -1,0 +1,60 @@
+name: Train models
+
+# Trains, exports, quantizes and evaluates the neural models, then uploads
+# the artifacts. Dispatched manually (or on a schedule later) — the main CI
+# never depends on model artifacts.
+
+on:
+  workflow_dispatch:
+    inputs:
+      lang:
+        description: Language to train
+        default: hu
+        required: true
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - uses: astral-sh/setup-uv@v5
+      - run: pnpm install --frozen-lockfile
+      - name: Generate training data (pinned UniMorph)
+        run: pnpm pipeline:${{ inputs.lang }}
+      - name: Train
+        working-directory: training
+        run: |
+          uv sync
+          uv run train.py --lang ${{ inputs.lang }}
+      - name: Export + quantize
+        working-directory: training
+        run: |
+          uv run export_onnx.py --lang ${{ inputs.lang }}
+          uv run quantize.py --lang ${{ inputs.lang }}
+      - name: Evaluate (gate ≥ 95% fp32 exact-match)
+        working-directory: training
+        run: |
+          uv run evaluate.py --lang ${{ inputs.lang }}
+          uv run evaluate.py --lang ${{ inputs.lang }} --int8
+          python3 - <<'EOF'
+          import json, sys
+          meta = json.load(open("out/${{ inputs.lang }}/meta.json"))
+          acc = meta.get("accuracy_fp32", 0)
+          print(f"fp32 exact-match: {acc:.2%}")
+          sys.exit(0 if acc >= 0.95 else 1)
+          EOF
+      - uses: actions/upload-artifact@v4
+        with:
+          name: model-${{ inputs.lang }}
+          path: |
+            training/out/${{ inputs.lang }}/encoder_int8.onnx
+            training/out/${{ inputs.lang }}/decoder_step_int8.onnx
+            training/out/${{ inputs.lang }}/vocab.json
+            training/out/${{ inputs.lang }}/meta.json

@@ -1,0 +1,94 @@
+{
+  "name": "intl-inflect",
+  "version": "0.1.0",
+  "description": "Grammatical inflection and agreement for i18n — articles, case suffixes, particles — in the browser, Node.js, and Cordova. API inspired by Apple's Morphology / automatic grammar agreement.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "./dist/hu/index.js",
+    "./dist/hu/index.cjs",
+    "./dist/en/index.js",
+    "./dist/en/index.cjs",
+    "./dist/de/index.js",
+    "./dist/de/index.cjs",
+    "./dist/fr/index.js",
+    "./dist/fr/index.cjs",
+    "./dist/es/index.js",
+    "./dist/es/index.cjs",
+    "./dist/ko/index.js",
+    "./dist/ko/index.cjs"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./hu": {
+      "types": "./dist/hu/index.d.ts",
+      "import": "./dist/hu/index.js",
+      "require": "./dist/hu/index.cjs"
+    },
+    "./en": {
+      "types": "./dist/en/index.d.ts",
+      "import": "./dist/en/index.js",
+      "require": "./dist/en/index.cjs"
+    },
+    "./de": {
+      "types": "./dist/de/index.d.ts",
+      "import": "./dist/de/index.js",
+      "require": "./dist/de/index.cjs"
+    },
+    "./fr": {
+      "types": "./dist/fr/index.d.ts",
+      "import": "./dist/fr/index.js",
+      "require": "./dist/fr/index.cjs"
+    },
+    "./es": {
+      "types": "./dist/es/index.d.ts",
+      "import": "./dist/es/index.js",
+      "require": "./dist/es/index.cjs"
+    },
+    "./ko": {
+      "types": "./dist/ko/index.d.ts",
+      "import": "./dist/ko/index.js",
+      "require": "./dist/ko/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "keywords": [
+    "i18n",
+    "l10n",
+    "inflection",
+    "morphology",
+    "grammar",
+    "agreement",
+    "declension",
+    "hungarian",
+    "korean",
+    "article",
+    "localization"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boogie/intl-inflect-js.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

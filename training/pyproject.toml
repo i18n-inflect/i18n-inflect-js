@@ -1,0 +1,15 @@
+[project]
+name = "intl-inflect-training"
+version = "0.1.0"
+description = "Training pipeline for intl-inflect neural inflection models (char-level seq2seq → ONNX)"
+requires-python = ">=3.11"
+dependencies = [
+    "torch>=2.4",
+    "onnx>=1.16",
+    "onnxscript>=0.2",
+    "onnxruntime>=1.18",
+    "numpy>=1.26",
+]
+
+[tool.uv]
+package = false
