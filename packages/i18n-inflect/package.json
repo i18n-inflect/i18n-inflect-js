@@ -1,7 +1,7 @@
 {
   "name": "i18n-inflect",
-  "version": "0.1.1",
-  "description": "Grammatical inflection and agreement for i18n \u2014 articles, case suffixes, particles \u2014 in the browser, Node.js, and Cordova. API inspired by Apple's Morphology / automatic grammar agreement.",
+  "version": "0.1.2",
+  "description": "Grammatical inflection and agreement for i18n — articles, case suffixes, particles — in the browser, Node.js, and Cordova. API inspired by Apple's Morphology / automatic grammar agreement.",
   "license": "MIT",
   "type": "module",
   "sideEffects": [
@@ -92,7 +92,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "B\u00e1rth\u00e1zi Andr\u00e1s <magic@barthazi.hu> (https://github.com/boogie)",
+  "author": "Bártházi András <magic@barthazi.hu> (https://github.com/boogie)",
   "homepage": "https://github.com/i18n-inflect/i18n-inflect-js#readme",
   "bugs": {
     "url": "https://github.com/i18n-inflect/i18n-inflect-js/issues"
