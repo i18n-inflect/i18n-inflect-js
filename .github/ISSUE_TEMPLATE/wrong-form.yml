@@ -1,0 +1,45 @@
+name: Wrong form
+description: A word comes out inflected incorrectly
+title: "[hu] wrong form for …"
+labels: ["bug", "linguistics"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Native-speaker corrections are the most valuable reports this project
+        gets. You do not need to know how the library works to file one.
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      description: BCP 47 subtag, e.g. `hu`, `de`, `ko`
+      placeholder: hu
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: What you called
+      description: The `inflect()` or `format()` call, if you have it.
+      render: ts
+      placeholder: inflect("hu", "kőr ász", { case: "instrumental" })
+  - type: input
+    id: got
+    attributes:
+      label: What you got
+    validations:
+      required: true
+  - type: input
+    id: expected
+    attributes:
+      label: What it should be
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: >
+        Is the correct form regional or contested? Is more than one answer
+        acceptable? Does the word belong to a class that behaves the same way
+        (so the fix generalizes)?

@@ -8,7 +8,7 @@ concurrency: release-${{ github.ref }}
 
 jobs:
   release:
-    if: github.repository_owner == 'boogie'
+    if: github.repository_owner == 'i18n-inflect'
     runs-on: ubuntu-latest
     permissions:
       contents: write

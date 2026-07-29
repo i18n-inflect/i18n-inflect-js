@@ -1,5 +1,10 @@
 # i18n-inflect
 
+[![CI](https://github.com/i18n-inflect/i18n-inflect-js/actions/workflows/ci.yml/badge.svg)](https://github.com/i18n-inflect/i18n-inflect-js/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Types](https://img.shields.io/badge/types-included-blue.svg)](#)
+[![Zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#)
+
 **Grammatical inflection and agreement for i18n — in the browser, Node.js, and Cordova.**
 
 Localized strings constantly need grammar that `printf`-style interpolation can't provide:
@@ -116,19 +121,45 @@ fixtures and neural weights are UniMorph/Wiktionary derivatives (CC BY-SA 3.0 �
 | `@i18n-inflect/neural` | neural fallback runtime with swappable inference engines |
 | `@i18n-inflect/model-hu` | Hungarian model weights (encoder + decoder ONNX + vocab) |
 
+## Try it
+
+```sh
+git clone https://github.com/i18n-inflect/i18n-inflect-js && cd i18n-inflect-js
+pnpm install && pnpm build
+node scripts/demo.mjs                          # the whole library in one screen
+node scripts/demo.mjs "zöld sárkány" sublative # inflect your own phrase
+```
+
 ## Development
 
 ```sh
-pnpm install
 pnpm test          # vitest across packages (incl. UniMorph golden tests)
 pnpm build         # tsup: ESM + CJS + d.ts
+pnpm typecheck && pnpm lint
 pnpm pipeline:hu   # regenerate the Hungarian lexicon + fixtures from UniMorph
+node scripts/size-gate.mjs   # bundle budgets
 ```
 
 The neural training pipeline (PyTorch → ONNX → int8) lives in
-[training/](training/README.md). Guides: [template spec](docs/template-spec.md) ·
+[training/](training/README.md).
+
+**Docs:** [template spec](docs/template-spec.md) ·
 [writing a language pack](docs/language-packs.md) · [neural setup](docs/neural.md) ·
-[React usage](docs/react.md).
+[React usage](docs/react.md) · [contributing](CONTRIBUTING.md)
+
+## Contributing
+
+New languages and native-speaker corrections are the most valuable contributions —
+if a form comes out wrong in your language, that is worth an issue even without a
+fix. See [CONTRIBUTING.md](CONTRIBUTING.md) and
+[docs/language-packs.md](docs/language-packs.md).
+
+## Status
+
+v0.1 — the API is settled and the Hungarian pack is validated against a million
+UniMorph forms, but nothing is battle-tested in production yet. Expect the feature
+model to gain fields (possessives, verb agreement) rather than change shape.
+The neural model packages are not published yet; the rule engine works without them.
 
 ## License
 

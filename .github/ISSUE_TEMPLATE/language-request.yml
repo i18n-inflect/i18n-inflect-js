@@ -1,0 +1,39 @@
+name: Language request
+description: Ask for a language that is not supported yet
+title: "add support for …"
+labels: ["language pack"]
+body:
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      description: Name and BCP 47 subtag
+      placeholder: Polish (pl)
+    validations:
+      required: true
+  - type: textarea
+    id: phenomena
+    attributes:
+      label: What needs to agree
+      description: >
+        Which of these does the language need — case suffixes, articles by
+        sound, gendered articles, adjective agreement, particles, elision,
+        plurals, something else? Concrete examples help enormously.
+      placeholder: |
+        - 7 cases, e.g. "kot" → "kota" (genitive)
+        - no articles
+    validations:
+      required: true
+  - type: dropdown
+    id: speaker
+    attributes:
+      label: Are you a native or fluent speaker?
+      description: >
+        Not required, but a language pack is hard to land without someone who
+        can judge the output.
+      options:
+        - "Yes, and I can review forms"
+        - "Yes, and I would like to implement it"
+        - "No"
+    validations:
+      required: true
