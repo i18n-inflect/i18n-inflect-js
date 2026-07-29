@@ -22,9 +22,10 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-      - name: Use an npm that supports trusted publishing
-        # Node 22 ships npm 10, which predates OIDC publishing.
-        run: npm install -g npm@latest
+      # NOTE: do not globally upgrade npm here. The latest npm rejects unknown
+      # CLI flags outright, and `pnpm publish` passes it pnpm-specific ones
+      # (--git-checks), which older npm ignored. Trusted publishing needs a
+      # newer npm than Node 22 ships; pin and test a version when switching.
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
       - name: Create release PR or publish
