@@ -28,6 +28,7 @@ async function publishedVersions(name) {
 }
 
 const results = [];
+const failures = [];
 for (const dir of readdirSync(PACKAGES_DIR)) {
   const manifestPath = join(PACKAGES_DIR, dir, "package.json");
   let manifest;
@@ -46,19 +47,33 @@ for (const dir of readdirSync(PACKAGES_DIR)) {
     continue;
   }
   console.log(`publish ${manifest.name}@${manifest.version}${DRY_RUN ? " (dry run)" : ""}`);
-  if (!DRY_RUN) {
+  if (DRY_RUN) {
+    results.push(`${manifest.name}@${manifest.version}`);
+    continue;
+  }
+  // Attempt every package before failing: a missing trusted publisher on one
+  // of them must not hide whether the others went out.
+  try {
     execFileSync("npm", ["publish", "--provenance", "--access", "public"], {
       cwd: join(PACKAGES_DIR, dir),
       stdio: "inherit",
     });
-    // changesets/action and humans both look for this line.
     console.log(`New tag: ${manifest.name}@${manifest.version}`);
+    results.push(`${manifest.name}@${manifest.version}`);
+  } catch {
+    failures.push(`${manifest.name}@${manifest.version}`);
   }
-  results.push(`${manifest.name}@${manifest.version}`);
 }
 
-console.log(
-  results.length === 0
-    ? "\nnothing to publish — every package version is already on the registry"
-    : `\npublished: ${results.join(", ")}`,
-);
+if (results.length > 0) console.log(`\npublished: ${results.join(", ")}`);
+if (failures.length > 0) {
+  console.error(`\nFAILED to publish: ${failures.join(", ")}`);
+  console.error(
+    "A 404 here usually means the package has no trusted publisher configured " +
+      "for this repository and workflow — see npmjs.com → package → Settings.",
+  );
+  process.exit(1);
+}
+if (results.length === 0) {
+  console.log("\nnothing to publish — every package version is already on the registry");
+}
