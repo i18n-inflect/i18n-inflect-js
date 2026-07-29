@@ -1,7 +1,7 @@
 {
   "name": "@i18n-inflect/neural",
-  "version": "0.1.0",
-  "description": "Neural inflection fallback runtime for i18n-inflect \u2014 tiny char-level seq2seq models over a swappable inference engine (onnxruntime-web, onnxruntime-node, or the cordova-plugin-boogie-onnx native bridge).",
+  "version": "0.1.1",
+  "description": "Neural inflection fallback runtime for i18n-inflect — tiny char-level seq2seq models over a swappable inference engine (onnxruntime-web, onnxruntime-node, or the cordova-plugin-boogie-onnx native bridge).",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -68,7 +68,7 @@
   "devDependencies": {
     "onnxruntime-node": "^1.27.0"
   },
-  "author": "B\u00e1rth\u00e1zi Andr\u00e1s <magic@barthazi.hu> (https://github.com/boogie)",
+  "author": "Bártházi András <magic@barthazi.hu> (https://github.com/boogie)",
   "homepage": "https://github.com/i18n-inflect/i18n-inflect-js/blob/main/docs/neural.md",
   "bugs": {
     "url": "https://github.com/i18n-inflect/i18n-inflect-js/issues"
