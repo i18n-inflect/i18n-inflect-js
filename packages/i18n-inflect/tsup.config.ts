@@ -16,4 +16,8 @@ export default defineConfig({
   clean: true,
   target: "es2022",
   treeshake: true,
+  // Shared chunks in BOTH formats: without this, each CJS entry bundles its
+  // own copy of the registry, so `require("i18n-inflect/hu")` would register
+  // into a different Map than `require("i18n-inflect")` reads.
+  splitting: true,
 });
