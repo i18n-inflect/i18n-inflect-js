@@ -25,7 +25,7 @@ import {
  * correct singular forms (no lexicon in the size budget), and plural noun
  * forms must be supplied by the caller — German nominal plurals are lexical.
  *
- * `import "intl-inflect/de"` registers it as a side effect.
+ * `import "i18n-inflect/de"` registers it as a side effect.
  */
 
 const DEFINITE_ARTICLES = new Set(["der", "die", "das", "den", "dem", "des"]);

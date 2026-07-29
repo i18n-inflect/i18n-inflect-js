@@ -3,8 +3,8 @@ import type { InflectionFallback, LanguagePack } from "./pack.js";
 /**
  * Global registries for language packs and fallbacks.
  *
- * Importing a language subpath (`import "intl-inflect/hu"`) registers its
- * pack here as a side effect; fallbacks (e.g. `@intl-inflect/neural`) are
+ * Importing a language subpath (`import "i18n-inflect/hu"`) registers its
+ * pack here as a side effect; fallbacks (e.g. `@i18n-inflect/neural`) are
  * registered explicitly by the application.
  */
 

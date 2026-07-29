@@ -13,10 +13,10 @@
  * 3. *Residual overrides* — whatever still mismatches is stored as
  *    individual full forms.
  */
-import { BACK_NEUTRAL_LEMMAS, harmonyOf } from "../packages/intl-inflect/src/hu/phonology.js";
-import type { StemFlags } from "../packages/intl-inflect/src/hu/stems.js";
-import { inflectNounRules } from "../packages/intl-inflect/src/hu/suffixes.js";
-import { HU_CASE_TAGS, type HuCase } from "../packages/intl-inflect/src/hu/tags.js";
+import { BACK_NEUTRAL_LEMMAS, harmonyOf } from "../packages/i18n-inflect/src/hu/phonology.js";
+import type { StemFlags } from "../packages/i18n-inflect/src/hu/stems.js";
+import { inflectNounRules } from "../packages/i18n-inflect/src/hu/suffixes.js";
+import { HU_CASE_TAGS, type HuCase } from "../packages/i18n-inflect/src/hu/tags.js";
 import { groupByLemma, parseTag, type Row } from "./unimorph.js";
 
 const TAG_TO_CASE = new Map<string, HuCase>(

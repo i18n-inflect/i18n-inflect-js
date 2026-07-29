@@ -2,7 +2,7 @@
  * End-to-end JS smoke test of the neural runtime against REAL trained ONNX
  * artifacts (training/out/hu). Verifies the whole contract: vocab encoding,
  * batched greedy decode, the ort-node engine adapter, and integration with
- * the intl-inflect fallback slot.
+ * the i18n-inflect fallback slot.
  *
  * Prints predictions vs. UniMorph gold — accuracy depends on how long the
  * model was trained; the CONTRACT (loadable, decodable, sane strings) is

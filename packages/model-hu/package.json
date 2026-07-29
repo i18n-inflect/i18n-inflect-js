@@ -1,7 +1,8 @@
 {
-  "name": "@intl-inflect/model-hu",
+  "name": "@i18n-inflect/model-hu",
   "version": "0.1.0",
-  "description": "Hungarian neural inflection model for intl-inflect — a ~2 MB int8 char-level seq2seq (encoder + decoder ONNX graphs + vocab), trained on UniMorph. Weights are CC BY-SA 3.0.",
+  "private": true,
+  "description": "Hungarian neural inflection model for i18n-inflect \u2014 a ~2 MB int8 char-level seq2seq (encoder + decoder ONNX graphs + vocab), trained on UniMorph. Weights are CC BY-SA 3.0.",
   "license": "MIT AND CC-BY-SA-3.0",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -26,7 +27,7 @@
     "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
-    "@intl-inflect/neural": "workspace:^"
+    "@i18n-inflect/neural": "workspace:^"
   },
   "engines": {
     "node": ">=20"
@@ -36,6 +37,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boogie/intl-inflect-js.git"
+    "url": "git+https://github.com/i18n-inflect/i18n-inflect-js.git",
+    "directory": "packages/model-hu"
+  },
+  "author": "B\u00e1rth\u00e1zi Andr\u00e1s <magic@barthazi.hu> (https://github.com/boogie)",
+  "homepage": "https://github.com/i18n-inflect/i18n-inflect-js/blob/main/docs/neural.md",
+  "bugs": {
+    "url": "https://github.com/i18n-inflect/i18n-inflect-js/issues"
   }
 }

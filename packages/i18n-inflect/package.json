@@ -1,7 +1,7 @@
 {
-  "name": "intl-inflect",
+  "name": "i18n-inflect",
   "version": "0.1.0",
-  "description": "Grammatical inflection and agreement for i18n — articles, case suffixes, particles — in the browser, Node.js, and Cordova. API inspired by Apple's Morphology / automatic grammar agreement.",
+  "description": "Grammatical inflection and agreement for i18n \u2014 articles, case suffixes, particles \u2014 in the browser, Node.js, and Cordova. API inspired by Apple's Morphology / automatic grammar agreement.",
   "license": "MIT",
   "type": "module",
   "sideEffects": [
@@ -83,12 +83,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boogie/intl-inflect-js.git"
+    "url": "git+https://github.com/i18n-inflect/i18n-inflect-js.git"
   },
   "engines": {
     "node": ">=20"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "author": "B\u00e1rth\u00e1zi Andr\u00e1s <magic@barthazi.hu> (https://github.com/boogie)",
+  "homepage": "https://github.com/i18n-inflect/i18n-inflect-js#readme",
+  "bugs": {
+    "url": "https://github.com/i18n-inflect/i18n-inflect-js/issues"
   }
 }

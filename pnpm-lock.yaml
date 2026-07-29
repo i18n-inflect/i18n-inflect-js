@@ -33,19 +33,19 @@ importers:
         specifier: ^4.1.10
         version: 4.1.10(@types/node@24.13.3)(vite@8.1.5(@types/node@24.13.3)(esbuild@0.28.1)(tsx@4.23.1))
 
-  packages/intl-inflect: {}
+  packages/i18n-inflect: {}
 
   packages/model-hu:
     dependencies:
-      '@intl-inflect/neural':
+      '@i18n-inflect/neural':
         specifier: workspace:^
         version: link:../neural
 
   packages/neural:
     dependencies:
-      intl-inflect:
+      i18n-inflect:
         specifier: workspace:^
-        version: link:../intl-inflect
+        version: link:../i18n-inflect
       onnxruntime-web:
         specifier: '>=1.17'
         version: 1.27.0

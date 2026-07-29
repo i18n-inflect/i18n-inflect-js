@@ -96,7 +96,7 @@ function packOrWarn(locale: string): LanguagePack | undefined {
  *
  * @example
  * ```ts
- * import "intl-inflect/hu";
+ * import "i18n-inflect/hu";
  * inflect("hu", "kőr ász", { case: "instrumental" }); // "kőr ásszal"
  * ```
  */

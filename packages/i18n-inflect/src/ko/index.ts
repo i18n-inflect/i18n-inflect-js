@@ -11,7 +11,7 @@ import { isKoRole, particleFor } from "./particles.js";
  * syllable, with digit readings and a paired-form fallback for
  * undecidable (e.g. Latin) finals.
  *
- * `import "intl-inflect/ko"` registers it as a side effect.
+ * `import "i18n-inflect/ko"` registers it as a side effect.
  */
 
 function inflectPhrase(

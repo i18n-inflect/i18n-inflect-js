@@ -58,6 +58,6 @@ export function requireSource(
     if (value !== undefined) return value;
   }
   throw new Error(
-    `intl-inflect/neural: model source must provide one of [${supported.join(", ")}]`,
+    `i18n-inflect/neural: model source must provide one of [${supported.join(", ")}]`,
   );
 }

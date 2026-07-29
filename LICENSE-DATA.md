@@ -7,9 +7,9 @@ third-party lexical resources and carry their own license:
 
 | Artifact | Derived from | License |
 | --- | --- | --- |
-| `packages/intl-inflect/src/*/exceptions.gen.ts` | [UniMorph](https://unimorph.github.io/) (Wiktionary-extracted paradigms) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) |
-| `packages/intl-inflect/test/fixtures/*.golden.json` | UniMorph held-out splits | CC BY-SA 3.0 |
-| `@intl-inflect/model-*` neural weights | trained on UniMorph data | CC BY-SA 3.0 |
+| `packages/i18n-inflect/src/*/exceptions.gen.ts` | [UniMorph](https://unimorph.github.io/) (Wiktionary-extracted paradigms) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) |
+| `packages/i18n-inflect/test/fixtures/*.golden.json` | UniMorph held-out splits | CC BY-SA 3.0 |
+| `@i18n-inflect/model-*` neural weights | trained on UniMorph data | CC BY-SA 3.0 |
 
 Attribution: UniMorph (© UniMorph contributors, data extracted from the English
 Wiktionary, © Wikimedia contributors). Each generated file carries a header

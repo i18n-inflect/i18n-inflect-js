@@ -1,6 +1,6 @@
 # React recipe
 
-intl-inflect ships no React dependency — this pattern is all you need.
+i18n-inflect ships no React dependency — this pattern is all you need.
 
 The idea: render the synchronous answer immediately (rules are ~93%+ correct on
 unseen words, 100% on known vocabulary), then let the async pass upgrade the string
@@ -10,7 +10,7 @@ correct.
 
 ```tsx
 import { useEffect, useState } from "react";
-import { format, formatAsync, type TemplateArgs } from "intl-inflect";
+import { format, formatAsync, type TemplateArgs } from "i18n-inflect";
 
 export function useInflect(locale: string, template: string, args?: TemplateArgs): string {
   // Sync render: rules + lexicon + previously cached fallback answers.

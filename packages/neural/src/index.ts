@@ -1,14 +1,14 @@
 /**
- * `@intl-inflect/neural` — the optional neural inflection fallback.
+ * `@i18n-inflect/neural` — the optional neural inflection fallback.
  *
  * Wires a tiny char-level seq2seq model (per-language package such as
- * `@intl-inflect/model-hu`) into intl-inflect's fallback slot, over a
+ * `@i18n-inflect/model-hu`) into i18n-inflect's fallback slot, over a
  * swappable {@link InferenceEngine}:
  *
  * ```ts
- * import { registerFallback } from "intl-inflect";
- * import { createNeuralFallback } from "@intl-inflect/neural";
- * import { loadModelHu } from "@intl-inflect/model-hu";
+ * import { registerFallback } from "i18n-inflect";
+ * import { createNeuralFallback } from "@i18n-inflect/neural";
+ * import { loadModelHu } from "@i18n-inflect/model-hu";
  *
  * registerFallback(await createNeuralFallback({ model: await loadModelHu() }));
  * ```
@@ -18,7 +18,7 @@
  *
  * @packageDocumentation
  */
-import type { FallbackRequest, InflectionFallback } from "intl-inflect";
+import type { FallbackRequest, InflectionFallback } from "i18n-inflect";
 import { greedyDecodeBatch } from "./decode.js";
 import type { InferenceEngine, InferenceSession, ModelSource } from "./engine.js";
 import type { Vocab } from "./vocab.js";
@@ -34,7 +34,7 @@ export type {
 } from "./engine.js";
 export { decodeIds, encodeRequest, inverseVocab, type Vocab } from "./vocab.js";
 
-/** A packaged model, as exported by `@intl-inflect/model-*` loaders. */
+/** A packaged model, as exported by `@i18n-inflect/model-*` loaders. */
 export interface NeuralModel {
   /** Primary language subtag the model serves ("hu"). */
   locale: string;
@@ -74,7 +74,7 @@ export async function detectEngine(): Promise<InferenceEngine> {
  * Create an {@link InflectionFallback} backed by a neural model.
  *
  * Sessions are created lazily on first use (or eagerly via `preload()`,
- * which `intl-inflect`'s `preload(locale)` calls). Errors during prediction
+ * which `i18n-inflect`'s `preload(locale)` calls). Errors during prediction
  * propagate to the engine, which degrades to the rule-based answer and
  * reports a `fallback-error` warning.
  */

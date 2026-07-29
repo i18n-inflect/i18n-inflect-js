@@ -1,9 +1,9 @@
 /**
- * intl-inflect — grammatical inflection and agreement for i18n.
+ * i18n-inflect — grammatical inflection and agreement for i18n.
  *
  * ```ts
- * import { format } from "intl-inflect";
- * import "intl-inflect/hu"; // registers the Hungarian pack
+ * import { format } from "i18n-inflect";
+ * import "i18n-inflect/hu"; // registers the Hungarian pack
  *
  * format("hu", "Nyertél ^[a {card}](case: instrumental)!", { card: "kőr ász" });
  * // → "Nyertél a kőr ásszal!"

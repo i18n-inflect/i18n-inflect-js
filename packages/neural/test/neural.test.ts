@@ -133,10 +133,10 @@ describe("boogie-onnx engine adapter", () => {
   });
 });
 
-describe("integration with the intl-inflect fallback slot", () => {
+describe("integration with the i18n-inflect fallback slot", () => {
   it("plugs into registerFallback and upgrades async answers", async () => {
     const { registerLanguage, registerFallback, inflect, inflectAsync, clearOracle } = await import(
-      "intl-inflect"
+      "i18n-inflect"
     );
     clearOracle();
     registerLanguage({

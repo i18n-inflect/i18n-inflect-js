@@ -9,13 +9,13 @@ import { gzipSync } from "node:zlib";
 import { build } from "esbuild";
 
 const GATES = [
-  { name: "core", entry: "packages/intl-inflect/dist/index.js", budget: 8 * 1024 },
-  { name: "hu", entry: "packages/intl-inflect/dist/hu/index.js", budget: 25 * 1024 },
-  { name: "en", entry: "packages/intl-inflect/dist/en/index.js", budget: 8 * 1024 },
-  { name: "de", entry: "packages/intl-inflect/dist/de/index.js", budget: 8 * 1024 },
-  { name: "fr", entry: "packages/intl-inflect/dist/fr/index.js", budget: 8 * 1024 },
-  { name: "es", entry: "packages/intl-inflect/dist/es/index.js", budget: 8 * 1024 },
-  { name: "ko", entry: "packages/intl-inflect/dist/ko/index.js", budget: 8 * 1024 },
+  { name: "core", entry: "packages/i18n-inflect/dist/index.js", budget: 8 * 1024 },
+  { name: "hu", entry: "packages/i18n-inflect/dist/hu/index.js", budget: 25 * 1024 },
+  { name: "en", entry: "packages/i18n-inflect/dist/en/index.js", budget: 8 * 1024 },
+  { name: "de", entry: "packages/i18n-inflect/dist/de/index.js", budget: 8 * 1024 },
+  { name: "fr", entry: "packages/i18n-inflect/dist/fr/index.js", budget: 8 * 1024 },
+  { name: "es", entry: "packages/i18n-inflect/dist/es/index.js", budget: 8 * 1024 },
+  { name: "ko", entry: "packages/i18n-inflect/dist/ko/index.js", budget: 8 * 1024 },
   { name: "neural", entry: "packages/neural/dist/index.js", budget: 8 * 1024 },
 ];
 

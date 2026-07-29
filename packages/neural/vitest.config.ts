@@ -9,7 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       // Test against the sibling package's sources, not its build output.
-      "intl-inflect": fileURLToPath(new URL("../intl-inflect/src/index.ts", import.meta.url)),
+      "i18n-inflect": fileURLToPath(new URL("../i18n-inflect/src/index.ts", import.meta.url)),
     },
   },
 });

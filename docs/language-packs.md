@@ -7,8 +7,8 @@ fallback protocol, caching) lives in core — packs never see a Promise.
 ## The contract
 
 ```ts
-import type { LanguagePack } from "intl-inflect";
-import { registerLanguage } from "intl-inflect";
+import type { LanguagePack } from "i18n-inflect";
+import { registerLanguage } from "i18n-inflect";
 
 export const xx: LanguagePack = {
   locale: "xx", // primary BCP 47 language subtag

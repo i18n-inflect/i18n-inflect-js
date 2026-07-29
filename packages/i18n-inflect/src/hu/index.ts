@@ -23,7 +23,7 @@ import { type HuCase, isHuCase, nounTag } from "./tags.js";
  * v-assimilation, and agrees the definite article (a/az) with the
  * pronunciation of the word that follows it.
  *
- * `import "intl-inflect/hu"` registers it as a side effect.
+ * `import "i18n-inflect/hu"` registers it as a side effect.
  */
 
 const ARTICLES = new Set(["a", "az", "egy"]);

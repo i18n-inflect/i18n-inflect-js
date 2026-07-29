@@ -35,7 +35,7 @@ let handler: WarningHandler | undefined;
 /**
  * Install a global warning handler (pass `undefined` to remove).
  *
- * Typical development setup: `onWarning(w => console.warn("[intl-inflect]", w))`.
+ * Typical development setup: `onWarning(w => console.warn("[i18n-inflect]", w))`.
  * No handler is installed by default — production stays silent.
  */
 export function onWarning(next: WarningHandler | undefined): void {

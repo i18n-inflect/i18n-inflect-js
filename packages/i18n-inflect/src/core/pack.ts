@@ -59,7 +59,7 @@ export interface InflectionResult {
  * A pack works on a whole noun phrase: it tokenizes, inflects the head,
  * agrees articles/adjectives or attaches particles — whatever the language
  * needs. Packs are registered via `registerLanguage`, which importing the
- * language subpath (`import "intl-inflect/hu"`) does as a side effect.
+ * language subpath (`import "i18n-inflect/hu"`) does as a side effect.
  */
 export interface LanguagePack {
   /** Primary language subtag this pack serves ("hu", "de", …). */
@@ -98,7 +98,7 @@ export interface LanguagePack {
 
 /**
  * A pluggable oracle that can answer {@link FallbackRequest}s asynchronously —
- * in practice the `@intl-inflect/neural` seq2seq module, but any
+ * in practice the `@i18n-inflect/neural` seq2seq module, but any
  * implementation (server API, bigger dictionary, …) fits.
  */
 export interface InflectionFallback {

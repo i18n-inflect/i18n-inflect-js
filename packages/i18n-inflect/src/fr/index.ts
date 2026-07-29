@@ -14,7 +14,7 @@ import { elides } from "./elision.js";
  * French language pack: definite/indefinite articles with elision
  * (le/la/les/l'/un/une/des), h-aspiré handling, and noun pluralization.
  *
- * `import "intl-inflect/fr"` registers it as a side effect.
+ * `import "i18n-inflect/fr"` registers it as a side effect.
  */
 
 /** `-al` nouns that pluralize regularly (+s) instead of `-aux`. */

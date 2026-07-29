@@ -15,7 +15,7 @@ import { pluralize } from "./plural.js";
  * English language pack: a/an agreement (sound-based, incl. acronyms and
  * digits) and noun pluralization.
  *
- * `import "intl-inflect/en"` registers it as a side effect.
+ * `import "i18n-inflect/en"` registers it as a side effect.
  */
 
 const EXISTING_ARTICLES = new Set(["a", "an", "the"]);

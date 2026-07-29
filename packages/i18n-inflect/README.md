@@ -1,18 +1,18 @@
-# intl-inflect
+# i18n-inflect
 
 **Grammatical inflection and agreement for i18n — in the browser, Node.js, and Cordova.**
 
 Localized strings constantly need grammar that `printf`-style interpolation can't provide:
 the right article, the right case suffix, the right particle — *for a value only known at
-runtime*. intl-inflect fills that gap with an API inspired by Apple Foundation's
+runtime*. i18n-inflect fills that gap with an API inspired by Apple Foundation's
 [automatic grammar agreement](https://developer.apple.com/videos/play/wwdc2021/10109/)
 (`^[...](inflect: true)`), but open source, extensible, and with languages Apple doesn't
 cover — starting with Hungarian.
 
 ```ts
-import { format } from "intl-inflect";
-import "intl-inflect/hu";
-import "intl-inflect/en";
+import { format } from "i18n-inflect";
+import "i18n-inflect/hu";
+import "i18n-inflect/en";
 
 format("hu", "Nyertél ^[a {card}](case: instrumental)!", { card: "kőr ász" });
 // → "Nyertél a kőr ásszal!"        (case suffix + v-assimilation + a/az article)
@@ -41,15 +41,15 @@ pack API is public and documented — see [docs/language-packs.md](docs/language
 ## Install
 
 ```sh
-npm install intl-inflect
+npm install i18n-inflect
 ```
 
 Core is dependency-free and a few kB; each language is a tree-shakeable subpath import
 that registers itself:
 
 ```ts
-import { format, inflect } from "intl-inflect";
-import "intl-inflect/hu";   // only the languages you import end up in your bundle
+import { format, inflect } from "i18n-inflect";
+import "i18n-inflect/hu";   // only the languages you import end up in your bundle
 ```
 
 ## The two API layers
@@ -82,9 +82,9 @@ foreign, or invented), an optional **neural fallback** — a ~2 MB character-lev
 model per language, SIGMORPHON-style — can asynchronously improve answers:
 
 ```ts
-import { registerFallback, preload, format, formatAsync } from "intl-inflect";
-import { createNeuralFallback } from "@intl-inflect/neural";
-import { loadModelHu } from "@intl-inflect/model-hu";
+import { registerFallback, preload, format, formatAsync } from "i18n-inflect";
+import { createNeuralFallback } from "@i18n-inflect/neural";
+import { loadModelHu } from "@i18n-inflect/model-hu";
 
 registerFallback(createNeuralFallback({ model: await loadModelHu() }));
 await preload("hu"); // optional warm-up
@@ -112,9 +112,9 @@ fixtures and neural weights are UniMorph/Wiktionary derivatives (CC BY-SA 3.0 �
 
 | Package | Contents |
 | --- | --- |
-| `intl-inflect` | core + template engine + all rule-based language packs (zero deps) |
-| `@intl-inflect/neural` | neural fallback runtime with swappable inference engines |
-| `@intl-inflect/model-hu` | Hungarian model weights (encoder + decoder ONNX + vocab) |
+| `i18n-inflect` | core + template engine + all rule-based language packs (zero deps) |
+| `@i18n-inflect/neural` | neural fallback runtime with swappable inference engines |
+| `@i18n-inflect/model-hu` | Hungarian model weights (encoder + decoder ONNX + vocab) |
 
 ## Development
 

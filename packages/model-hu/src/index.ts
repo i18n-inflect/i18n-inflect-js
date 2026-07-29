@@ -1,4 +1,4 @@
-import type { NeuralModel, Vocab } from "@intl-inflect/neural";
+import type { NeuralModel, Vocab } from "@i18n-inflect/neural";
 
 /**
  * Loader for the Hungarian neural inflection model.
@@ -44,12 +44,12 @@ async function readVocab(source: { url?: string; path?: string }): Promise<Vocab
     const response = await fetch(source.url);
     if (!response.ok) {
       throw new Error(
-        `@intl-inflect/model-hu: cannot load ${source.url} (${response.status}) — are the model assets present? They are built by the models workflow, not stored in git.`,
+        `@i18n-inflect/model-hu: cannot load ${source.url} (${response.status}) — are the model assets present? They are built by the models workflow, not stored in git.`,
       );
     }
     return (await response.json()) as Vocab;
   }
-  throw new Error("@intl-inflect/model-hu: no vocab source");
+  throw new Error("@i18n-inflect/model-hu: no vocab source");
 }
 
 /** Load the Hungarian model descriptor for `createNeuralFallback`. */

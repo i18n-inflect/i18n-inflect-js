@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "paths": {
-      "intl-inflect": ["../intl-inflect/src/index.ts"]
+      "i18n-inflect": ["../i18n-inflect/src/index.ts"]
     }
   },
   "include": ["src", "test", "tsup.config.ts", "vitest.config.ts"]

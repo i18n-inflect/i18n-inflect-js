@@ -14,7 +14,7 @@ import { registerLanguage } from "../core/registry.js";
  * stressed-á rule: "el agua", "el hambre"), gender heuristics and noun
  * pluralization.
  *
- * `import "intl-inflect/es"` registers it as a side effect.
+ * `import "i18n-inflect/es"` registers it as a side effect.
  */
 
 /**

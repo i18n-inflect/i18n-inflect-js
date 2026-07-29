@@ -43,7 +43,7 @@ function bridge(): BoogieOnnx {
   const b = (globalThis as { boogieOnnx?: BoogieOnnx }).boogieOnnx;
   if (b === undefined) {
     throw new Error(
-      "intl-inflect/neural: global `boogieOnnx` not found — is cordova-plugin-boogie-onnx installed and the deviceready event fired?",
+      "i18n-inflect/neural: global `boogieOnnx` not found — is cordova-plugin-boogie-onnx installed and the deviceready event fired?",
     );
   }
   return b;
@@ -55,7 +55,7 @@ export function boogieOnnxEngine(options: BoogieOnnxEngineOptions = {}): Inferen
     async createSession(model) {
       if (model.path === undefined) {
         throw new Error(
-          "intl-inflect/neural: the boogie-onnx engine needs ModelSource.path — the native side loads the model file directly (bytes never cross the Cordova bridge)",
+          "i18n-inflect/neural: the boogie-onnx engine needs ModelSource.path — the native side loads the model file directly (bytes never cross the Cordova bridge)",
         );
       }
       const b = bridge();

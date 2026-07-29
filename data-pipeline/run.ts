@@ -26,8 +26,8 @@ import {
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const RAW = `${ROOT}data/raw/hun.tsv`;
-const GEN = `${ROOT}packages/intl-inflect/src/hu/exceptions.gen.ts`;
-const FIXTURES_DIR = `${ROOT}packages/intl-inflect/test/fixtures`;
+const GEN = `${ROOT}packages/i18n-inflect/src/hu/exceptions.gen.ts`;
+const FIXTURES_DIR = `${ROOT}packages/i18n-inflect/test/fixtures`;
 const TRAINING_DIR = `${ROOT}data/training`;
 
 /** Gates (fail the run when unmet). */

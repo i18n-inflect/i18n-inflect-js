@@ -1,13 +1,13 @@
 # Neural fallback: setup per environment
 
-The optional `@intl-inflect/neural` package runs a tiny (~2 MB int8) char-level
+The optional `@i18n-inflect/neural` package runs a tiny (~2 MB int8) char-level
 seq2seq model to inflect words the rules were unsure about. It talks to a
 **swappable inference engine** — three adapters ship, and anything implementing
 the 3-method `InferenceEngine` interface works.
 
 ```
 ┌──────────────┐   FallbackRequest[]   ┌───────────────────┐    ┌─────────────────────┐
-│ intl-inflect │ ────────────────────► │ @intl-inflect/    │ ─► │ InferenceEngine      │
+│ i18n-inflect │ ────────────────────► │ @i18n-inflect/    │ ─► │ InferenceEngine      │
 │  (rules)     │ ◄──────────────────── │ neural (decode)   │    │  · ort-web (WASM)    │
 └──────────────┘   inflected forms     └───────────────────┘    │  · ort-node          │
                                                                 │  · boogie-onnx (📱)  │
@@ -20,13 +20,13 @@ Node (`onnxruntime-node`) → browser (`onnxruntime-web`).
 ## Browser (onnxruntime-web)
 
 ```sh
-npm i @intl-inflect/neural @intl-inflect/model-hu onnxruntime-web
+npm i @i18n-inflect/neural @i18n-inflect/model-hu onnxruntime-web
 ```
 
 ```ts
-import { registerFallback, preload } from "intl-inflect";
-import { createNeuralFallback } from "@intl-inflect/neural";
-import { loadModelHu } from "@intl-inflect/model-hu";
+import { registerFallback, preload } from "i18n-inflect";
+import { createNeuralFallback } from "@i18n-inflect/neural";
+import { loadModelHu } from "@i18n-inflect/model-hu";
 
 registerFallback(createNeuralFallback({ model: await loadModelHu() }));
 await preload("hu"); // optional: create the WASM session up front
@@ -40,7 +40,7 @@ or the Hugging Face Hub).
 ## Node.js (onnxruntime-node)
 
 ```sh
-npm i @intl-inflect/neural @intl-inflect/model-hu onnxruntime-node
+npm i @i18n-inflect/neural @i18n-inflect/model-hu onnxruntime-node
 ```
 
 Same code as the browser — the engine is autodetected; model assets resolve to file
@@ -58,10 +58,10 @@ cordova plugin add https://github.com/boogie/cordova-plugin-boogie-onnx.git
 ```
 
 ```ts
-import { registerFallback } from "intl-inflect";
-import { createNeuralFallback } from "@intl-inflect/neural";
-import { boogieOnnxEngine } from "@intl-inflect/neural/boogie-onnx";
-import { loadModelHu } from "@intl-inflect/model-hu";
+import { registerFallback } from "i18n-inflect";
+import { createNeuralFallback } from "@i18n-inflect/neural";
+import { boogieOnnxEngine } from "@i18n-inflect/neural/boogie-onnx";
+import { loadModelHu } from "@i18n-inflect/model-hu";
 
 // After deviceready. The native side loads models BY FILE PATH — ship the
 // assets with your app (or download them) and pass their on-device paths.
@@ -85,7 +85,7 @@ bridge automatically; passing it explicitly lets you set `device`.)
 Not married to ONNX. Implement three methods and pass it as `engine:`:
 
 ```ts
-import type { InferenceEngine } from "@intl-inflect/neural";
+import type { InferenceEngine } from "@i18n-inflect/neural";
 
 const myEngine: InferenceEngine = {
   async createSession(model) {

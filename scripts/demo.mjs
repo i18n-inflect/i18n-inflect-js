@@ -5,13 +5,13 @@
  *   node scripts/demo.mjs "zöld sárkány" sublative   # inflect your own phrase
  *   node scripts/demo.mjs "a 5" accusative           # articles + digits
  */
-import { format, inflect, onWarning } from "../packages/intl-inflect/dist/index.js";
-import "../packages/intl-inflect/dist/hu/index.js";
-import "../packages/intl-inflect/dist/en/index.js";
-import "../packages/intl-inflect/dist/de/index.js";
-import "../packages/intl-inflect/dist/fr/index.js";
-import "../packages/intl-inflect/dist/es/index.js";
-import "../packages/intl-inflect/dist/ko/index.js";
+import { format, inflect, onWarning } from "../packages/i18n-inflect/dist/index.js";
+import "../packages/i18n-inflect/dist/hu/index.js";
+import "../packages/i18n-inflect/dist/en/index.js";
+import "../packages/i18n-inflect/dist/de/index.js";
+import "../packages/i18n-inflect/dist/fr/index.js";
+import "../packages/i18n-inflect/dist/es/index.js";
+import "../packages/i18n-inflect/dist/ko/index.js";
 
 onWarning((w) => console.log(`   ⚠ ${w.code}: ${w.detail}`));
 
