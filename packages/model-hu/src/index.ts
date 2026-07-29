@@ -27,9 +27,11 @@ export interface LoadModelHuOptions {
   };
 }
 
+// The shipped artifacts are the int8-quantized graphs (the `_int8` suffix
+// follows the onnxruntime / boogie-onnx `modelFileForDtype` convention).
 const ASSET_NAMES = {
-  encoder: "encoder.onnx",
-  decoderStep: "decoder_step.onnx",
+  encoder: "encoder_int8.onnx",
+  decoderStep: "decoder_step_int8.onnx",
   vocab: "vocab.json",
 } as const;
 
