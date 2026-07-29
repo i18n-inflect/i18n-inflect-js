@@ -27,7 +27,8 @@
       "types": "./dist/engines/boogie-onnx.d.ts",
       "import": "./dist/engines/boogie-onnx.js",
       "require": "./dist/engines/boogie-onnx.cjs"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist",
