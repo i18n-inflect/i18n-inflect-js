@@ -1,5 +1,6 @@
 # i18n-inflect
 
+[![npm](https://img.shields.io/npm/v/i18n-inflect.svg)](https://www.npmjs.com/package/i18n-inflect)
 [![CI](https://github.com/i18n-inflect/i18n-inflect-js/actions/workflows/ci.yml/badge.svg)](https://github.com/i18n-inflect/i18n-inflect-js/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Types](https://img.shields.io/badge/types-included-blue.svg)](#)
