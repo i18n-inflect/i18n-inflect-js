@@ -1,5 +1,9 @@
 name: Release
 
+# Publishes any package whose version is not yet on the registry. Version
+# bumps are made locally with `pnpm changeset version` and committed, so this
+# workflow needs no permission to open pull requests.
+
 on:
   push:
     branches: [main]
@@ -11,8 +15,7 @@ jobs:
     if: github.repository_owner == 'i18n-inflect'
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      pull-requests: write
+      contents: read
       # Required for npm trusted publishing (OIDC) and provenance.
       id-token: write
     steps:
@@ -21,21 +24,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          registry-url: https://registry.npmjs.org
           cache: pnpm
-      # NOTE: do not globally upgrade npm here. The latest npm rejects unknown
-      # CLI flags outright, and `pnpm publish` passes it pnpm-specific ones
-      # (--git-checks), which older npm ignored. Trusted publishing needs a
-      # newer npm than Node 22 ships; pin and test a version when switching.
+      - name: Use an npm that supports trusted publishing
+        # Node 22 ships npm 10; OIDC publishing needs 11.5.1 or later. Safe to
+        # upgrade here because publishing goes through npm directly — piping
+        # it through `pnpm publish` is what broke on unknown CLI flags before.
+        run: npm install -g npm@latest
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
-      - name: Create release PR or publish
-        uses: changesets/action@v1
-        with:
-          publish: pnpm changeset publish
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Authentication comes from the trusted publisher configured on
-          # npmjs.com per package; NPM_TOKEN is only a fallback for before
-          # that is set up, and can be deleted once it is.
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_PROVENANCE: true
+      - run: pnpm verify:dist
+      - name: Publish
+        run: node scripts/publish-npm.mjs
