@@ -28,6 +28,7 @@ export {
 export type {
   ArticleRequest,
   Definiteness,
+  Derivation,
   GrammaticalCase,
   GrammaticalFeatures,
   GrammaticalGender,

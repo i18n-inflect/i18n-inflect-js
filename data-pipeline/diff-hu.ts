@@ -13,6 +13,7 @@
  * 3. *Residual overrides* — whatever still mismatches is stored as
  *    individual full forms.
  */
+import { resolveStemFlags } from "../packages/i18n-inflect/src/hu/compounds.js";
 import { BACK_NEUTRAL_LEMMAS, harmonyOf } from "../packages/i18n-inflect/src/hu/phonology.js";
 import type { StemFlags } from "../packages/i18n-inflect/src/hu/stems.js";
 import { inflectNounRules } from "../packages/i18n-inflect/src/hu/suffixes.js";
@@ -154,14 +155,27 @@ export function diffAll(rows: Row[]): LemmaResult[] {
   return results;
 }
 
-/** Rules-only accuracy over rows (held-out evaluation). */
-export function rulesAccuracy(rows: Row[]): { correct: number; total: number } {
+/**
+ * Rules-only accuracy over rows (held-out evaluation).
+ *
+ * `lexicon` lets the caller measure with compound resolution against an
+ * already-generated lexicon — held-out lemmas are absent from it, but their
+ * compound heads usually are not, which is the whole point.
+ */
+export function rulesAccuracy(
+  rows: Row[],
+  lexicon?: ReadonlyMap<string, StemFlags>,
+): { correct: number; total: number } {
+  const heads = lexicon ? new Set(lexicon.keys()) : new Set<string>();
   let correct = 0;
   let total = 0;
   for (const [lemma, forms] of groupByLemma(rows)) {
+    const flags = lexicon
+      ? resolveStemFlags(lemma, lexicon, heads, BACK_NEUTRAL_LEMMAS)
+      : undefined;
     for (const [tag, accepted] of forms) {
       total++;
-      if (accepted.includes(predict(lemma, tag, undefined))) correct++;
+      if (accepted.includes(predict(lemma, tag, flags))) correct++;
     }
   }
   return { correct, total };

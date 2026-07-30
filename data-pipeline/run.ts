@@ -12,6 +12,8 @@
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { gzipSync } from "node:zlib";
+import type { StemFlags } from "../packages/i18n-inflect/src/hu/stems.js";
+import { BACK_NEUTRAL_LEMMAS, harmonyOf } from "../packages/i18n-inflect/src/hu/phonology.js";
 import { diffAll, rulesAccuracy } from "./diff-hu.js";
 import { SEED_OVERRIDE_LINES, SEED_STEM_LINES } from "./seed-hu.js";
 import {
@@ -47,6 +49,31 @@ function pct(x: number): string {
   return `${(100 * x).toFixed(2)}%`;
 }
 
+
+/**
+ * Compound heads whose harmony disagrees with the compound they appear in.
+ *
+ * `halottkém` scans as back (a, o) but harmonizes with `kém`, which is
+ * front — so without knowing `kém`'s class the engine produces
+ * *halottkémok. These heads are regular words, so they are absent from the
+ * exception lexicon; only their harmony is worth storing, and only when
+ * some compound actually needs it.
+ */
+function usefulHarmonyHeads(lemmas: string[]): Map<string, "back" | "front"> {
+  const all = new Set(lemmas);
+  const useful = new Map<string, "back" | "front">();
+  for (const word of lemmas) {
+    for (let start = 3; start <= word.length - 3; start++) {
+      const head = word.slice(start);
+      if (!all.has(head)) continue;
+      const headHarmony = harmonyOf(head, BACK_NEUTRAL_LEMMAS);
+      if (harmonyOf(word, BACK_NEUTRAL_LEMMAS) !== headHarmony) useful.set(head, headHarmony);
+      break; // longest head wins, same as splitCompound
+    }
+  }
+  return useful;
+}
+
 function main(): void {
   download();
   const rows = loadRows(RAW);
@@ -80,9 +107,13 @@ function main(): void {
   console.log(`train accuracy rules only: ${pct(formsCorrectRules / (formsTotal - hyphenForms))}`);
   console.log(`train accuracy with lexicon: ${pct(trainAccuracy)}`);
 
-  // 2. Held-out: pure rules (its lemmas are absent from the lexicon).
-  const ho = rulesAccuracy(heldOut);
-  console.log(`held-out accuracy (rules only): ${pct(ho.correct / ho.total)}`);
+  // 2. Held-out: its lemmas are absent from the lexicon, so this measures
+  //    generalization. Measured twice to show what compound resolution buys:
+  //    an unseen compound still finds its head in the lexicon.
+  const lexicon = new Map<string, StemFlags>();
+  for (const r of results) if (r.flags) lexicon.set(r.lemma, r.flags);
+  const hoPlain = rulesAccuracy(heldOut);
+  console.log(`held-out accuracy (rules only):        ${pct(hoPlain.correct / hoPlain.total)}`);
 
   // 3. Assemble lexicon lines (+ hand seeds for lemmas the split left uncovered).
   const covered = new Set(results.map((r) => r.lemma));
@@ -103,6 +134,16 @@ function main(): void {
     }
     for (const [tag, form] of r.overrides) overrideOut.push(`${r.lemma}|${tag}|${form}`);
   }
+  const harmonyHeads = usefulHarmonyHeads([...new Set(train.map((r) => r.lemma))]);
+  let harmonyAdded = 0;
+  for (const [head, harmony] of harmonyHeads) {
+    if (covered.has(head) && results.find((r) => r.lemma === head)?.flags) continue;
+    stemLines.push(`${head}|h:${harmony === "back" ? "b" : "f"}`);
+    lexicon.set(head, { harmony });
+    harmonyAdded++;
+  }
+  console.log(`compound-head harmony entries: ${harmonyAdded}`);
+
   let seededStems = 0;
   let seededOverrides = 0;
   for (const line of SEED_STEM_LINES) {
@@ -124,6 +165,9 @@ function main(): void {
       `hand seeds merged for uncovered lemmas: ${seededStems} flags, ${seededOverrides} overrides`,
     );
   }
+  const ho = rulesAccuracy(heldOut, lexicon);
+  console.log(`held-out accuracy (+ compound heads):  ${pct(ho.correct / ho.total)}`);
+
   const collate = new Intl.Collator("hu").compare;
   stemLines.sort(collate);
   overrideOut.sort(collate);

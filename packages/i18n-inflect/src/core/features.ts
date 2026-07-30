@@ -67,6 +67,13 @@ export type GrammaticalPerson = "first" | "second" | "third";
 export type ArticleRequest = "definite" | "indefinite" | "none";
 
 /**
+ * Word formation rather than inflection: make a different word out of this
+ * one. `"relational"` is the adjective meaning "belonging to / coming from"
+ * — Hungarian Budapest → budapesti, German Wien → Wiener.
+ */
+export type Derivation = "relational";
+
+/**
  * A bundle of grammatical features to apply to a phrase.
  *
  * Every field is optional; a pack applies what it understands. This is the
@@ -87,6 +94,8 @@ export interface GrammaticalFeatures {
   person?: GrammaticalPerson;
   /** Request to prepend/normalize an article on the phrase. */
   article?: ArticleRequest;
+  /** Derive a different word before applying any of the above. */
+  derivation?: Derivation;
 }
 
 const PART_OF_SPEECH: readonly PartOfSpeech[] = [
@@ -125,6 +134,7 @@ const CASES: readonly GrammaticalCase[] = [
 const DEFINITENESS: readonly Definiteness[] = ["definite", "indefinite", "none"];
 const PERSONS: readonly GrammaticalPerson[] = ["first", "second", "third"];
 const ARTICLES: readonly ArticleRequest[] = ["definite", "indefinite", "none"];
+const DERIVATIONS: readonly Derivation[] = ["relational"];
 
 function pick<T extends string>(allowed: readonly T[], value: string): T | undefined {
   return (allowed as readonly string[]).includes(value) ? (value as T) : undefined;
@@ -181,6 +191,12 @@ export function normalizeFeatures(
         const v = pick(ARTICLES, value);
         if (v) out.article = v;
         else warn("unknown-feature-value", `article: ${value}`);
+        break;
+      }
+      case "derivation": {
+        const v = pick(DERIVATIONS, value);
+        if (v) out.derivation = v;
+        else warn("unknown-feature-value", `derivation: ${value}`);
         break;
       }
       case "person": {

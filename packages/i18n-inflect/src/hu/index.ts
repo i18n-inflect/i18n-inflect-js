@@ -9,6 +9,8 @@ import {
 } from "../core/phrase.js";
 import { registerLanguage } from "../core/registry.js";
 import { definiteArticle } from "./article.js";
+import { resolveStemFlags } from "./compounds.js";
+import { RELATIONAL_FLAGS, relationalAdjective } from "./derivation.js";
 import { BACK_LEMMAS, FORM_OVERRIDES, HYPHEN_SUFFIXES, STEM_FLAGS } from "./exceptions.gen.js";
 import { hyphenatedForm } from "./numerals.js";
 import { BACK_NEUTRAL_LEMMAS, vowelsOf } from "./phonology.js";
@@ -30,6 +32,13 @@ const ARTICLES = new Set(["a", "az", "egy"]);
 
 /** Merged back-harmony exception set (built-in seed + generated). */
 const backSet = new Set([...BACK_NEUTRAL_LEMMAS, ...BACK_LEMMAS]);
+
+/**
+ * Lemmas that may appear as the final member of a compound. Every lexicon
+ * entry qualifies: if a word behaves irregularly on its own, compounds
+ * ending in it behave the same way.
+ */
+const COMPOUND_HEADS: ReadonlySet<string> = new Set(STEM_FLAGS.keys());
 
 /**
  * Heuristic uncertainty test: unknown lemmas that look foreign or whose
@@ -70,9 +79,21 @@ function inflectHead(
   token: string,
   plural: boolean,
   huCase: HuCase | undefined,
+  derivation: GrammaticalFeatures["derivation"],
   ctx: InflectionContext,
 ): HeadResult {
-  const [core, punct] = splitTrailingPunctuation(token);
+  let [core, punct] = splitTrailingPunctuation(token);
+
+  // Derivation runs first and produces a different word, which then inflects
+  // by its own (regular) pattern: Budapest → budapesti → budapestiek.
+  if (derivation === "relational" && core.length > 0) {
+    const flags = resolveStemFlags(core.toLowerCase(), STEM_FLAGS, COMPOUND_HEADS, backSet);
+    core = relationalAdjective(core, flags);
+    if (!plural && !huCase) return { form: core + punct, confident: true };
+    const form = inflectNounRules(core, RELATIONAL_FLAGS, plural, huCase, backSet);
+    return { form: form + punct, confident: true };
+  }
+
   if (core.length === 0 || (!plural && !huCase)) return { form: token, confident: true };
 
   const tag = nounTag(huCase, plural);
@@ -110,7 +131,7 @@ function inflectHead(
   }
 
   // Rules run on the original-cased token so "Péter" → "Péterrel".
-  const flags = STEM_FLAGS.get(lower);
+  const flags = resolveStemFlags(lower, STEM_FLAGS, COMPOUND_HEADS, backSet);
   const form = inflectNounRules(core, flags, plural, huCase, backSet);
   const confident = !isSuspicious(lower);
   if (!confident) ctx.requestFallback({ lemma: lower, tag });
@@ -135,7 +156,13 @@ function inflectPhrase(
 
   // 1. Inflect the head (last word).
   const headIdx = split.wordIndexes[split.words.length - 1] as number;
-  const head = inflectHead(split.parts[headIdx] as string, plural, huCase, ctx);
+  const head = inflectHead(
+    split.parts[headIdx] as string,
+    plural,
+    huCase,
+    features.derivation,
+    ctx,
+  );
   split.parts[headIdx] = head.form;
 
   // 2. Article agreement.

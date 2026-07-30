@@ -37,7 +37,7 @@ format("en", "You drew ^[a {c}](article: indefinite)", { c: "ace" });
 
 | | |
 | --- | --- |
-| 🇭🇺 **Hungarian** | 15 case suffixes + plural with full vowel harmony, stem alternations (kéz→kezet, bokor→bokrot, ló→lovat), v-assimilation (ász→ásszal, busz→busszal), a/az article by pronunciation ("az 5", "a 6", "az MTA", "a BKV"), and suffixes written after a hyphen for numbers, initialisms and foreign words — spelled from their spoken form: 6-ot, 5-tel, 1-gyel, 100-zal, 1000-et, SMS-t, MTA-ban, tv-vel |
+| 🇭🇺 **Hungarian** | 15 case suffixes + plural with full vowel harmony, stem alternations (kéz→kezet, bokor→bokrot, ló→lovat), v-assimilation (ász→ásszal, busz→busszal), a/az article by pronunciation ("az 5", "a 6", "az MTA", "a BKV"), and suffixes written after a hyphen for numbers, initialisms and foreign words — spelled from their spoken form: 6-ot, 5-tel, 1-gyel, 100-zal, 1000-et, SMS-t, MTA-ban, tv-vel. Compounds inflect after their final member (kávéház→kávéházat, tábortűz→tábortüzet), and the relational adjective is derivable: Budapest→budapesti |
 | 🇬🇧 **English** | a/an by sound (an hour, a university, an MTA card, an 8), pluralization |
 | 🇩🇪 **German** | full article matrix (4 cases × 3 genders), weak/mixed/strong adjective endings ("ein rotes Auto" → "einem roten Auto") |
 | 🇫🇷 **French** | le/la/les/un/une with elision (l'ami) and h-aspiré (le haricot), pluralization |
@@ -112,7 +112,7 @@ three-method interface.
 ## Data, accuracy, licensing
 
 The Hungarian rule engine is validated against [UniMorph](https://unimorph.github.io/)
-(1M+ forms): **~93% exact-match on held-out (unseen) lemmas by rules alone, 100% on
+(1M+ forms): **94.7% exact-match on held-out (entirely unseen) lemmas by rules alone, 100% on
 covered vocabulary with the generated 19 kB exception lexicon.** The lexicon, golden test
 fixtures and neural weights are UniMorph/Wiktionary derivatives (CC BY-SA 3.0 — see
 [LICENSE-DATA.md](LICENSE-DATA.md)); all code is MIT.

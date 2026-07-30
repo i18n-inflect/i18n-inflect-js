@@ -1,5 +1,26 @@
 # i18n-inflect
 
+## 0.2.0
+
+### Minor Changes
+
+- Hungarian: inflect compounds after their final member, and derive relational
+  adjectives.
+
+  Compounding is unboundedly productive, so no lexicon can list compounds
+  themselves — but their final member decides how they inflect. Unknown words
+  are now matched against the longest lexicon lemma they end with and inherit
+  its behaviour, with alternate stems rebased onto the whole word: kávéház →
+  kávéházat, tábortűz → tábortüzet, fénysugár → fénysugarak. Harmony follows
+  the head too, so halottkém → halottkémek rather than \*halottkémok. This
+  lifts held-out accuracy on entirely unseen lemmas from 92.8% to 94.7% at no
+  cost in bundle size.
+
+  New `derivation: "relational"` feature for the `-i` adjective: Budapest →
+  budapesti, Kanada → kanadai (no lengthening, unlike every case suffix),
+  Helsinki → helsinki (the suffix is absorbed). The derived adjective then
+  inflects as its own word: budapestiek, budapestit.
+
 ## 0.1.2
 
 ### Patch Changes
