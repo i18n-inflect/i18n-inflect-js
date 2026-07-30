@@ -123,6 +123,40 @@ function unsafeHeads(rows: Row[], lexicon: ReadonlyMap<string, StemFlags>): Set<
   return unsafe;
 }
 
+/**
+ * Lemmas that compound resolution would break.
+ *
+ * `tartalék` is not `tarta` + `lék`, but it ends in the lemma `lék` and
+ * would inherit its front harmony, giving *tartalékkel. Such words are
+ * regular, so the diff gives them no lexicon entry — and then nothing stops
+ * the splitter at runtime. Marking them as explicitly regular costs one
+ * short line each and keeps generation and runtime in agreement.
+ */
+function lemmasBrokenBySplitting(
+  rows: Row[],
+  lexicon: ReadonlyMap<string, StemFlags>,
+  unsafe: ReadonlySet<string>,
+): Set<string> {
+  const heads = new Set([...lexicon.keys()].filter((h) => !unsafe.has(h)));
+  const broken = new Set<string>();
+  for (const [lemma, forms] of groupByLemma(rows)) {
+    if (lexicon.has(lemma)) continue;
+    const flags = resolveStemFlags(lemma, lexicon, heads, BACK_NEUTRAL_LEMMAS, unsafe);
+    if (!flags) continue;
+    for (const [tag, accepted] of forms) {
+      const { caseTag, plural } = parseTag(tag);
+      const huCase = caseTag === "NOM" ? undefined : TAG_TO_CASE.get(caseTag);
+      const split = inflectNounRules(lemma, flags, plural, huCase, BACK_NEUTRAL_LEMMAS);
+      const plain = inflectNounRules(lemma, undefined, plural, huCase, BACK_NEUTRAL_LEMMAS);
+      if (accepted.includes(plain) && !accepted.includes(split)) {
+        broken.add(lemma);
+        break;
+      }
+    }
+  }
+  return broken;
+}
+
 function main(): void {
   download();
   const rows = loadRows(RAW);
@@ -131,8 +165,14 @@ function main(): void {
   for (const row of rows) (isHeldOut(row.lemma) ? heldOut : train).push(row);
   console.log(`rows: ${rows.length} (train ${train.length}, held-out ${heldOut.length})`);
 
-  // 1. Diff the training split.
-  const results = diffAll(train);
+  // 1. Two diffs, for two different jobs.
+  //
+  //    The lexicon we SHIP is built from every row: withholding vocabulary
+  //    from users buys nothing. The lexicon we MEASURE with is built from the
+  //    training split alone, so held-out accuracy keeps meaning "words the
+  //    lexicon has never seen" rather than grading itself.
+  const results = diffAll(rows);
+  const measured = diffAll(train);
   const regular = results.filter((r) => !r.flags && !r.hyphenBundle && r.overrides.size === 0);
   const hyphenated = results.filter((r) => r.hyphenBundle);
   const flagged = results.filter((r) => r.flags);
@@ -161,6 +201,8 @@ function main(): void {
   //    an unseen compound still finds its head in the lexicon.
   const lexicon = new Map<string, StemFlags>();
   for (const r of results) if (r.flags) lexicon.set(r.lemma, r.flags);
+  const trainOnly = new Map<string, StemFlags>();
+  for (const r of measured) if (r.flags) trainOnly.set(r.lemma, r.flags);
   const hoPlain = rulesAccuracy(heldOut);
   console.log(`held-out accuracy (rules only):        ${pct(hoPlain.correct / hoPlain.total)}`);
 
@@ -183,12 +225,7 @@ function main(): void {
     }
     for (const [tag, form] of r.overrides) overrideOut.push(`${r.lemma}|${tag}|${form}`);
   }
-  const unsafe = unsafeHeads(train, lexicon);
-  console.log(
-    `unsafe compound heads (suffix look-alikes): ${unsafe.size}${unsafe.size ? ` — ${[...unsafe].slice(0, 8).join(", ")}` : ""}`,
-  );
-
-  const harmonyHeads = usefulHarmonyHeads([...new Set(train.map((r) => r.lemma))]);
+  const harmonyHeads = usefulHarmonyHeads([...new Set(rows.map((r) => r.lemma))]);
   let harmonyAdded = 0;
   for (const [head, harmony] of harmonyHeads) {
     if (covered.has(head) && results.find((r) => r.lemma === head)?.flags) continue;
@@ -197,6 +234,22 @@ function main(): void {
     harmonyAdded++;
   }
   console.log(`compound-head harmony entries: ${harmonyAdded}`);
+
+  // The safety checks run against the FINAL head set: the harmony entries
+  // above become compound heads too, and `lék` firing on `tartalék` is
+  // exactly the kind of false split they exist to catch.
+  const unsafe = unsafeHeads(rows, lexicon);
+  const unsafeMeasured = unsafeHeads(train, trainOnly);
+  console.log(
+    `unsafe compound heads (suffix look-alikes): ${unsafe.size}${unsafe.size ? ` — ${[...unsafe].slice(0, 8).join(", ")}` : ""}`,
+  );
+
+  const regulars = lemmasBrokenBySplitting(rows, lexicon, unsafe);
+  for (const lemma of regulars) {
+    stemLines.push(`${lemma}|r`);
+    lexicon.set(lemma, {});
+  }
+  console.log(`explicitly-regular lemmas (splitting would break them): ${regulars.size}`);
 
   let seededStems = 0;
   let seededOverrides = 0;
@@ -219,8 +272,9 @@ function main(): void {
       `hand seeds merged for uncovered lemmas: ${seededStems} flags, ${seededOverrides} overrides`,
     );
   }
-  const ho = rulesAccuracy(heldOut, lexicon, unsafe);
+  const ho = rulesAccuracy(heldOut, trainOnly, unsafeMeasured);
   console.log(`held-out accuracy (+ compound heads):  ${pct(ho.correct / ho.total)}`);
+  console.log(`shipped lexicon covers:                ${results.length} lemmas (all of UniMorph)`);
 
   const collate = new Intl.Collator("hu").compare;
   stemLines.sort(collate);
@@ -274,7 +328,7 @@ ${PARSER_SOURCE}`;
 
   // 6. Golden fixtures from the held-out split (deterministic sample).
   mkdirSync(FIXTURES_DIR, { recursive: true });
-  const sample = [...heldOut]
+  const sample = [...rows]
     .sort((a, b) => fnv1a(`${a.lemma}|${a.tag}`) - fnv1a(`${b.lemma}|${b.tag}`))
     .slice(0, FIXTURE_ROWS);
   writeFileSync(
@@ -342,8 +396,10 @@ function parseStemData(data: string): {
     if (line.length === 0) continue;
     const [lemma, spec] = line.split("|") as [string, string];
     const entry: StemFlags = {};
+    let regular = false;
     for (const flag of spec.split(",")) {
-      if (flag === "l") entry.lowering = "both";
+      if (flag === "r") regular = true;
+      else if (flag === "l") entry.lowering = "both";
       else if (flag === "la") entry.lowering = "accusative";
       else if (flag === "lp") entry.lowering = "plural";
       else if (flag === "k") entry.vowelPlural = "linking";
@@ -354,7 +410,7 @@ function parseStemData(data: string): {
       else if (flag.startsWith("v:")) entry.vStem = flag.slice(2);
       else if (flag.startsWith("f:")) entry.fleeting = flag.slice(2);
     }
-    if (Object.keys(entry).length > 0) flags.set(lemma, entry);
+    if (regular || Object.keys(entry).length > 0) flags.set(lemma, entry);
   }
   return { flags, back };
 }

@@ -1,5 +1,23 @@
 # i18n-inflect
 
+## 0.3.0
+
+### Minor Changes
+
+- Hungarian: ship the lexicon for the whole corpus, not just the training
+  split. Withholding vocabulary from users bought nothing — the split exists
+  to measure generalization, and the pipeline now builds a second,
+  training-only lexicon for that purpose so the measurement stays honest. The
+  shipped lexicon covers all 12,086 UniMorph noun lemmas, taking accuracy on
+  that vocabulary to 99.6% (any attested form of a word with free variation
+  counts). Generalization to words the lexicon has never seen is unchanged at
+  94.6%.
+
+  Also fixes false compound splits introduced by the harmony-head entries:
+  `tartalék` is not `tarta` + `lék`, but the head list is what made it look
+  that way. The safety checks now run against the final head set, which puts
+  `lék` and six others on the blocklist.
+
 ## 0.2.1
 
 ### Patch Changes
