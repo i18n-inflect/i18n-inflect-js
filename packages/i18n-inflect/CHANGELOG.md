@@ -1,5 +1,24 @@
 # i18n-inflect
 
+## 0.4.0
+
+### Minor Changes
+
+- Hungarian: merge the current Wiktionary into the lexicon alongside UniMorph.
+
+  UniMorph's Hungarian data is itself a Wiktionary extraction, but pinned to
+  2023 and limited to what UniMorph included. Reading today's dump directly
+  adds 4,847 lemmas (12,086 → 16,933) — and, more valuably, cross-checks the
+  data we already had: where the two sources describe the same form they agree
+  99.8% of the time.
+
+  The dump is not needed to build the package; the generated lexicon is
+  committed and the pipeline falls back to UniMorph alone without it.
+
+  The larger vocabulary costs bundle size: the Hungarian pack goes from 25 kB
+  to 34 kB gzipped. Nothing else changes — the other languages and the core
+  are untouched, and you only pay for the language you import.
+
 ## 0.3.1
 
 ### Patch Changes

@@ -98,6 +98,12 @@ férfi|N;NOM;PL|férfiak`.split("\n");
  *
  * Unlike SEED_STEM_LINES, these override whatever generation produced.
  */
+export const CURATED_OVERRIDE_LINES: string[] = `szó|N;NOM;PL|szavak
+szó|N;ACC;PL|szavakat
+szó|N;DAT;PL|szavaknak
+szó|N;INS;PL|szavakkal
+szó|N;IN+ESS;PL|szavakban`.split("\n");
+
 export const CURATED_STEM_LINES: string[] = `nyár|s:nyar
 szél|s:szel
 tél|s:tel

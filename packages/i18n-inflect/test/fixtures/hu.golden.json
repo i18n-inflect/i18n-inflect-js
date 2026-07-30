@@ -3,6 +3,11 @@
  "license": "CC BY-SA 3.0",
  "rows": [
   [
+   "szakkör",
+   "N;ON+ABL;SG",
+   "szakkörről"
+  ],
+  [
    "forgatókönyvíró",
    "N;AT+ABL;PL",
    "forgatókönyvíróktól"
@@ -16,6 +21,11 @@
    "gépgyár",
    "N;IN+ALL;PL",
    "gépgyárakba"
+  ],
+  [
+   "szelf",
+   "N;ACC;PL",
+   "szelfeket"
   ],
   [
    "tolltartó",
@@ -33,9 +43,19 @@
    "kvantummechanikává"
   ],
   [
+   "kötésszög",
+   "N;DAT;PL",
+   "kötésszögeknek"
+  ],
+  [
    "cici",
    "N;ON+ESS;PL",
    "ciciken"
+  ],
+  [
+   "népcsoport",
+   "N;ON+ABL;SG",
+   "népcsoportról"
   ],
   [
    "hatvan",
@@ -73,9 +93,19 @@
    "fugához"
   ],
   [
+   "hatmillió",
+   "N;IN+ABL;SG",
+   "hatmillióból"
+  ],
+  [
    "belváros",
    "N;ACC;PL",
    "belvárosokat"
+  ],
+  [
+   "díszzsebkendő",
+   "N;ACC;PL",
+   "díszzsebkendőket"
   ],
   [
    "függő",
@@ -113,6 +143,11 @@
    "városrészektől"
   ],
   [
+   "tetőterasz",
+   "N;ON+ALL;PL",
+   "tetőteraszokra"
+  ],
+  [
    "fehér",
    "N;AT+ALL;PL",
    "fehérekhez"
@@ -133,9 +168,19 @@
    "damasztban"
   ],
   [
+   "dobó",
+   "N;IN+ABL;SG",
+   "dobóból"
+  ],
+  [
    "iksz",
    "N;AT+ALL;PL",
    "ikszekhez"
+  ],
+  [
+   "vészcsúszda",
+   "N;IN+ESS;SG",
+   "vészcsúszdában"
   ],
   [
    "ortopédia",
@@ -168,6 +213,11 @@
    "szabadesésekig"
   ],
   [
+   "lakásvásárlás",
+   "N;PRP;PL",
+   "lakásvásárlásokért"
+  ],
+  [
    "elemző",
    "N;IN+ALL;SG",
    "elemzőbe"
@@ -176,6 +226,11 @@
    "gyógyász",
    "N;AT+ESS;SG",
    "gyógyásznál"
+  ],
+  [
+   "bizalmatlanság",
+   "N;TRANS;SG",
+   "bizalmatlansággá"
   ],
   [
    "alapítás",
@@ -213,9 +268,24 @@
    "árufeltöltőkről"
   ],
   [
+   "einsteinium",
+   "N;ON+ALL;SG",
+   "einsteiniumra"
+  ],
+  [
    "maláj",
    "N;ACC;SG",
    "malájt"
+  ],
+  [
+   "érkezte",
+   "N;AT+ALL;SG",
+   "érkeztéhez"
+  ],
+  [
+   "keresztfiú",
+   "N;IN+ALL;PL",
+   "keresztfiúkba"
   ],
   [
    "kefehaj",
@@ -248,6 +318,11 @@
    "sílécektől"
   ],
   [
+   "nőcske",
+   "N;TERM;PL",
+   "nőcskékig"
+  ],
+  [
    "angol",
    "N;AT+ESS;SG",
    "angolnál"
@@ -256,6 +331,16 @@
    "ottomán",
    "N;IN+ABL;SG",
    "ottománból"
+  ],
+  [
+   "hegyrajz",
+   "N;DAT;SG",
+   "hegyrajznak"
+  ],
+  [
+   "apszis",
+   "N;ACC;PL",
+   "apszisokat"
   ],
   [
    "hajvágás",
@@ -273,9 +358,19 @@
    "létesítéssé"
   ],
   [
+   "tizenkettes",
+   "N;INS;PL",
+   "tizenkettesekkel"
+  ],
+  [
    "fogadósné",
    "N;IN+ALL;PL",
    "fogadósnékba"
+  ],
+  [
+   "kakodémon",
+   "N;IN+ALL;SG",
+   "kakodémonba"
   ],
   [
    "komputerközpont",
@@ -313,6 +408,11 @@
    "északiakért"
   ],
   [
+   "fénysebesség",
+   "N;PRP;SG",
+   "fénysebességért"
+  ],
+  [
    "raklap",
    "N;PRP;SG",
    "raklapért"
@@ -323,9 +423,29 @@
    "krédónál"
   ],
   [
+   "bénulás",
+   "N;AT+ESS;PL",
+   "bénulásoknál"
+  ],
+  [
    "étlap",
    "N;IN+ALL;PL",
    "étlapokba"
+  ],
+  [
+   "palimpszeszt",
+   "N;INS;PL",
+   "palimpszesztekkel"
+  ],
+  [
+   "lakbér",
+   "N;ON+ALL;PL",
+   "lakbérekre"
+  ],
+  [
+   "jogutód",
+   "N;AT+ALL;SG",
+   "jogutódhoz"
   ],
   [
    "tengeri",
@@ -368,6 +488,11 @@
    "vitaminokra"
   ],
   [
+   "forgástengely",
+   "N;PRP;SG",
+   "forgástengelyért"
+  ],
+  [
    "ujjonjáró",
    "N;IN+ALL;PL",
    "ujjonjárókba"
@@ -398,9 +523,19 @@
    "megbocsáthatatlanságokra"
   ],
   [
+   "kísérőzene",
+   "N;ACC;PL",
+   "kísérőzenéket"
+  ],
+  [
    "hatáskör",
    "N;PRP;PL",
    "hatáskörökért"
+  ],
+  [
+   "köztudat",
+   "N;ACC;PL",
+   "köztudatokat"
   ],
   [
    "hexán",
@@ -418,6 +553,16 @@
    "megszentségteleníthetetlenségig"
   ],
   [
+   "kisfröccs",
+   "N;AT+ABL;PL",
+   "kisfröccsöktől"
+  ],
+  [
+   "apszis",
+   "N;ON+ESS;PL",
+   "apszisokon"
+  ],
+  [
    "erő",
    "N;IN+ABL;SG",
    "erőből"
@@ -428,9 +573,19 @@
    "tömzzsé"
   ],
   [
+   "dán",
+   "N;INS;SG",
+   "dánnal"
+  ],
+  [
    "vizsla",
    "N;ACC;SG",
    "vizslát"
+  ],
+  [
+   "átalány",
+   "N;ON+ESS;PL",
+   "átalányokon"
   ],
   [
    "kisbőgő",
@@ -456,6 +611,11 @@
    "sztöchiometria",
    "N;IN+ALL;SG",
    "sztöchiometriába"
+  ],
+  [
+   "nikotintapasz",
+   "N;AT+ABL;PL",
+   "nikotintapaszoktól"
   ],
   [
    "poligon",
@@ -493,6 +653,11 @@
    "határőröket"
   ],
   [
+   "kukoricakeményítő",
+   "N;TERM;SG",
+   "kukoricakeményítőig"
+  ],
+  [
    "abrosz",
    "N;IN+ALL;SG",
    "abroszba"
@@ -516,6 +681,26 @@
    "átvitel",
    "N;IN+ALL;SG",
    "átvitelbe"
+  ],
+  [
+   "repülőút",
+   "N;TERM;PL",
+   "repülőutakig"
+  ],
+  [
+   "elkorcsosulás",
+   "N;AT+ABL;SG",
+   "elkorcsosulástól"
+  ],
+  [
+   "keresztlevél",
+   "N;AT+ALL;SG",
+   "keresztlevélhez"
+  ],
+  [
+   "célkitűzés",
+   "N;PRP;PL",
+   "célkitűzésekért"
   ],
   [
    "névjegy",
@@ -548,6 +733,11 @@
    "légáramlásra"
   ],
   [
+   "paradigma",
+   "N;AT+ABL;PL",
+   "paradigmáktól"
+  ],
+  [
    "betűtervezés",
    "N;IN+ABL;SG",
    "betűtervezésből"
@@ -563,9 +753,19 @@
    "szükségességekké"
   ],
   [
+   "becsszó",
+   "N;ON+ALL;SG",
+   "becsszóra"
+  ],
+  [
    "kakukkfű",
    "N;ON+ALL;SG",
    "kakukkfűre"
+  ],
+  [
+   "bek.",
+   "N;DAT;SG",
+   "bek.-nek"
   ],
   [
    "szicíliai",
@@ -576,6 +776,11 @@
    "pásztor",
    "N;IN+ABL;PL",
    "pásztorokból"
+  ],
+  [
+   "amiláz",
+   "N;AT+ABL;PL",
+   "amilázoktól"
   ],
   [
    "paleolitikum",
@@ -623,9 +828,19 @@
    "kabalákon"
   ],
   [
+   "kleopátralepke",
+   "N;TRANS;PL",
+   "kleopátralepkékké"
+  ],
+  [
    "diszperzió",
    "N;ON+ESS;PL",
    "diszperziókon"
+  ],
+  [
+   "etnológia",
+   "N;IN+ALL;SG",
+   "etnológiába"
   ],
   [
    "utalás",
@@ -648,6 +863,11 @@
    "szállításért"
   ],
   [
+   "gyerek",
+   "N;ACC;SG",
+   "gyereket"
+  ],
+  [
    "szájüreg",
    "N;AT+ALL;SG",
    "szájüreghez"
@@ -668,6 +888,26 @@
    "korosodásokra"
   ],
   [
+   "élesztőpehely",
+   "N;PRP;SG",
+   "élesztőpehelyért"
+  ],
+  [
+   "villanyoltás",
+   "N;IN+ESS;PL",
+   "villanyoltásokban"
+  ],
+  [
+   "légsúly",
+   "N;AT+ALL;SG",
+   "légsúlyhoz"
+  ],
+  [
+   "kismama",
+   "N;AT+ABL;PL",
+   "kismamáktól"
+  ],
+  [
    "sebesség",
    "N;IN+ALL;SG",
    "sebességbe"
@@ -686,6 +926,11 @@
    "űrlap",
    "N;TRANS;PL",
    "űrlapokká"
+  ],
+  [
+   "patisszon",
+   "N;TRANS;PL",
+   "patisszonokká"
   ],
   [
    "remeterák",
@@ -728,9 +973,24 @@
    "kreatúrával"
   ],
   [
+   "szántó",
+   "N;ON+ALL;PL",
+   "szántókra"
+  ],
+  [
    "állampolgárság",
    "N;ACC;SG",
    "állampolgárságot"
+  ],
+  [
+   "gyászzene",
+   "N;IN+ESS;SG",
+   "gyászzenében"
+  ],
+  [
+   "tülök",
+   "N;ACC;SG",
+   "tülköt"
   ],
   [
    "oktatás",
@@ -773,6 +1033,11 @@
    "centigrammért"
   ],
   [
+   "erődítmény",
+   "N;AT+ABL;PL",
+   "erődítményektől"
+  ],
+  [
    "ógörög",
    "N;AT+ESS;SG",
    "ógörögnél"
@@ -781,6 +1046,11 @@
    "tanítómestere",
    "N;TRANS;SG",
    "tanítómesterévé"
+  ],
+  [
+   "keserv",
+   "N;PRP;SG",
+   "keservért"
   ],
   [
    "internet",
@@ -798,6 +1068,16 @@
    "monszunokat"
   ],
   [
+   "himlőhely",
+   "N;AT+ABL;SG",
+   "himlőhelytől"
+  ],
+  [
+   "karó",
+   "N;IN+ABL;SG",
+   "karóból"
+  ],
+  [
    "majom",
    "N;NOM;PL",
    "majmok"
@@ -813,9 +1093,24 @@
    "cserekkel"
   ],
   [
+   "őrhely",
+   "N;ON+ABL;SG",
+   "őrhelyről"
+  ],
+  [
    "ágyú",
    "N;PRP;SG",
    "ágyúért"
+  ],
+  [
+   "űrszemét",
+   "N;TERM;PL",
+   "űrszemetekig"
+  ],
+  [
+   "plusz",
+   "N;TRANS;SG",
+   "plusszá"
   ],
   [
    "fülesbagoly",
@@ -826,6 +1121,11 @@
    "gyalogátkelőhely",
    "N;AT+ABL;SG",
    "gyalogátkelőhelytől"
+  ],
+  [
+   "poli(vinil-klorid)",
+   "N;IN+ALL;PL",
+   "poli(vinil-klorid)-okba"
   ],
   [
    "csészealj",
@@ -858,6 +1158,11 @@
    "medrek"
   ],
   [
+   "porbafingó",
+   "N;ON+ABL;PL",
+   "porbafingókról"
+  ],
+  [
    "intervenció",
    "N;IN+ABL;PL",
    "intervenciókból"
@@ -881,6 +1186,11 @@
    "koronaherceg",
    "N;ON+ALL;PL",
    "koronahercegekre"
+  ],
+  [
+   "határozottság",
+   "N;IN+ESS;PL",
+   "határozottságokban"
   ],
   [
    "disznó",
@@ -928,14 +1238,29 @@
    "madzsongot"
   ],
   [
+   "jelszó",
+   "N;ON+ESS;SG",
+   "jelszavon"
+  ],
+  [
    "tökfilkó",
    "N;IN+ABL;SG",
    "tökfilkóból"
   ],
   [
+   "iglu",
+   "N;ON+ALL;PL",
+   "iglukra"
+  ],
+  [
    "püspök",
    "N;AT+ESS;SG",
    "püspöknél"
+  ],
+  [
+   "bútorasztalos",
+   "N;IN+ABL;PL",
+   "bútorasztalosokból"
   ],
   [
    "alj",
@@ -973,9 +1298,19 @@
    "mostohaanyához"
   ],
   [
+   "ker.",
+   "N;IN+ALL;PL",
+   "ker.-ekbe"
+  ],
+  [
    "datolyapálma",
    "N;INS;SG",
    "datolyapálmával"
+  ],
+  [
+   "harapás",
+   "N;TERM;PL",
+   "harapásokig"
   ],
   [
    "szarkofág",
@@ -988,14 +1323,29 @@
    "vénasszonyon"
   ],
   [
+   "közkincs",
+   "N;ON+ESS;PL",
+   "közkincseken"
+  ],
+  [
    "bandaháború",
    "N;DAT;SG",
    "bandaháborúnak"
   ],
   [
+   "nyitóünnepség",
+   "N;TRANS;PL",
+   "nyitóünnepségekké"
+  ],
+  [
    "flamingó",
    "N;DAT;PL",
    "flamingóknak"
+  ],
+  [
+   "könyvárus",
+   "N;PRP;SG",
+   "könyvárusért"
   ],
   [
    "ementáli",
@@ -1008,9 +1358,19 @@
    "levélörvényen"
   ],
   [
+   "cukorsav",
+   "N;IN+ABL;SG",
+   "cukorsavból"
+  ],
+  [
    "busz",
    "N;INS;SG",
    "busszal"
+  ],
+  [
+   "pillangóhatás",
+   "N;PRP;SG",
+   "pillangóhatásért"
   ],
   [
    "öltönynadrág",
@@ -1023,6 +1383,11 @@
    "szúnyoghálóval"
   ],
   [
+   "hangulatkép",
+   "N;NOM;PL",
+   "hangulatképek"
+  ],
+  [
    "gyanús",
    "N;IN+ABL;PL",
    "gyanúsokból"
@@ -1031,6 +1396,11 @@
    "csibe",
    "N;TERM;PL",
    "csibékig"
+  ],
+  [
+   "hányattatás",
+   "N;NOM;PL",
+   "hányattatások"
   ],
   [
    "narancs",
@@ -1048,6 +1418,16 @@
    "vadászgörényhez"
   ],
   [
+   "kálvinista",
+   "N;ON+ESS;SG",
+   "kálvinistán"
+  ],
+  [
+   "információelmélet",
+   "N;ON+ESS;SG",
+   "információelméleten"
+  ],
+  [
    "kondás",
    "N;INS;SG",
    "kondással"
@@ -1056,6 +1436,11 @@
    "hamvasztás",
    "N;ON+ALL;PL",
    "hamvasztásokra"
+  ],
+  [
+   "találékonyság",
+   "N;TRANS;SG",
+   "találékonysággá"
   ],
   [
    "cinkos",
@@ -1073,6 +1458,21 @@
    "fordítókról"
   ],
   [
+   "gyászzene",
+   "N;INS;SG",
+   "gyászzenével"
+  ],
+  [
+   "plató",
+   "N;AT+ESS;SG",
+   "platónál"
+  ],
+  [
+   "sorsjegy",
+   "N;IN+ESS;PL",
+   "sorsjegyekben"
+  ],
+  [
    "hivatkozás",
    "N;ON+ESS;SG",
    "hivatkozáson"
@@ -1081,6 +1481,11 @@
    "halas",
    "N;DAT;PL",
    "halasoknak"
+  ],
+  [
+   "hozzájárulás",
+   "N;ON+ESS;PL",
+   "hozzájárulásokon"
   ],
   [
    "narkotikum",
@@ -1103,6 +1508,16 @@
    "párosnak"
   ],
   [
+   "nézőtér",
+   "N;PRP;SG",
+   "nézőtérért"
+  ],
+  [
+   "fajgyűlölet",
+   "N;IN+ABL;PL",
+   "fajgyűlöletekből"
+  ],
+  [
    "molnár",
    "N;ACC;PL",
    "molnárokat"
@@ -1113,6 +1528,11 @@
    "tegnaphoz"
   ],
   [
+   "ajtókulcs",
+   "N;AT+ESS;SG",
+   "ajtókulcsnál"
+  ],
+  [
    "nehéz",
    "N;DAT;PL",
    "nehezeknek"
@@ -1121,6 +1541,11 @@
    "nyakcsigolya",
    "N;ACC;PL",
    "nyakcsigolyákat"
+  ],
+  [
+   "orrspray",
+   "N;AT+ABL;SG",
+   "orrspray-től"
   ],
   [
    "jelleg",
@@ -1138,9 +1563,19 @@
    "archeológiává"
   ],
   [
+   "filmezés",
+   "N;IN+ABL;PL",
+   "filmezésekből"
+  ],
+  [
    "disznósajt",
    "N;ACC;PL",
    "disznósajtokat"
+  ],
+  [
+   "pu.",
+   "N;AT+ALL;PL",
+   "pu.-okhoz"
   ],
   [
    "kocsma",
@@ -1158,6 +1593,11 @@
    "kommutativitásig"
   ],
   [
+   "tartószerkezet",
+   "N;TRANS;PL",
+   "tartószerkezetekké"
+  ],
+  [
    "béna",
    "N;ON+ESS;PL",
    "bénákon"
@@ -1168,9 +1608,19 @@
    "győzelemtől"
   ],
   [
+   "szívtipró",
+   "N;TRANS;PL",
+   "szívtiprókká"
+  ],
+  [
    "beszéd",
    "N;ON+ESS;SG",
    "beszéden"
+  ],
+  [
+   "enyészet",
+   "N;TERM;SG",
+   "enyészetig"
   ],
   [
    "beruházás",
@@ -1181,6 +1631,11 @@
    "növényzet",
    "N;ON+ESS;SG",
    "növényzeten"
+  ],
+  [
+   "égőáldozat",
+   "N;NOM;PL",
+   "égőáldozatok"
   ],
   [
    "roma",
@@ -1198,9 +1653,29 @@
    "huszonkettőre"
   ],
   [
+   "robotrepülőgép",
+   "N;AT+ESS;PL",
+   "robotrepülőgépeknél"
+  ],
+  [
+   "mértékrendszer",
+   "N;AT+ESS;SG",
+   "mértékrendszernél"
+  ],
+  [
+   "turnus",
+   "N;INS;PL",
+   "turnusokkal"
+  ],
+  [
    "dodzsem",
    "N;ON+ABL;SG",
    "dodzsemről"
+  ],
+  [
+   "nyelvállás",
+   "N;IN+ESS;PL",
+   "nyelvállásokban"
   ],
   [
    "nyáj",
@@ -1238,6 +1713,11 @@
    "ágyútöltelékké"
   ],
   [
+   "gyógyintézet",
+   "N;IN+ABL;SG",
+   "gyógyintézetből"
+  ],
+  [
    "avantgárd",
    "N;ON+ABL;PL",
    "avantgárdokról"
@@ -1251,6 +1731,16 @@
    "hájas",
    "N;ON+ABL;SG",
    "hájasról"
+  ],
+  [
+   "vitathatatlanság",
+   "N;IN+ALL;PL",
+   "vitathatatlanságokba"
+  ],
+  [
+   "lutheránus",
+   "N;IN+ABL;PL",
+   "lutheránusokból"
   ],
   [
    "kockázat",
@@ -1278,6 +1768,11 @@
    "bobokhoz"
   ],
   [
+   "rendőrőrs",
+   "N;ON+ALL;PL",
+   "rendőrőrsökre"
+  ],
+  [
    "akó",
    "N;AT+ABL;PL",
    "akóktól"
@@ -1286,6 +1781,11 @@
    "emberiség",
    "N;AT+ESS;SG",
    "emberiségnél"
+  ],
+  [
+   "igazságérzet",
+   "N;ACC;SG",
+   "igazságérzetet"
   ],
   [
    "pulcsi",
@@ -1298,9 +1798,19 @@
    "vallomásoknál"
   ],
   [
+   "kéregetés",
+   "N;NOM;PL",
+   "kéregetések"
+  ],
+  [
    "fogat",
    "N;ON+ALL;PL",
    "fogatokra"
+  ],
+  [
+   "államvasút",
+   "N;AT+ALL;SG",
+   "államvasúthoz"
   ],
   [
    "tündér",
@@ -1308,14 +1818,44 @@
    "tündérekért"
   ],
   [
+   "genealógia",
+   "N;ON+ALL;SG",
+   "genealógiára"
+  ],
+  [
    "kotló",
    "N;AT+ALL;PL",
    "kotlókhoz"
   ],
   [
+   "apsziskápolna",
+   "N;TRANS;PL",
+   "apsziskápolnákká"
+  ],
+  [
+   "kezelőfelület",
+   "N;ON+ABL;PL",
+   "kezelőfelületekről"
+  ],
+  [
+   "segítőtárs",
+   "N;IN+ESS;SG",
+   "segítőtársban"
+  ],
+  [
+   "cella",
+   "N;TRANS;SG",
+   "cellává"
+  ],
+  [
    "orientalista",
    "N;ON+ABL;SG",
    "orientalistáról"
+  ],
+  [
+   "lemma",
+   "N;AT+ABL;SG",
+   "lemmától"
   ],
   [
    "szúnyogháló",
@@ -1328,9 +1868,34 @@
    "futásokért"
   ],
   [
+   "tűzhal",
+   "N;AT+ALL;PL",
+   "tűzhalakhoz"
+  ],
+  [
+   "lehelet",
+   "N;ON+ABL;SG",
+   "leheletről"
+  ],
+  [
+   "hegyfok",
+   "N;IN+ABL;PL",
+   "hegyfokokból"
+  ],
+  [
+   "építkezés",
+   "N;IN+ABL;SG",
+   "építkezésből"
+  ],
+  [
    "igazolvány",
    "N;ON+ESS;PL",
    "igazolványokon"
+  ],
+  [
+   "jeles",
+   "N;AT+ESS;SG",
+   "jelesnél"
   ],
   [
    "tortúra",
@@ -1341,6 +1906,11 @@
    "erjesztés",
    "N;ON+ALL;PL",
    "erjesztésekre"
+  ],
+  [
+   "szőlőfürt",
+   "N;TRANS;SG",
+   "szőlőfürtté"
   ],
   [
    "nyeregalátét",
@@ -1358,14 +1928,29 @@
    "pszichoterapeutáig"
   ],
   [
+   "kesudió",
+   "N;ON+ESS;SG",
+   "kesudión"
+  ],
+  [
    "haditengerészet",
    "N;IN+ALL;PL",
    "haditengerészetekbe"
   ],
   [
+   "feketedoboz",
+   "N;IN+ABL;PL",
+   "feketedobozokból"
+  ],
+  [
    "semmisség",
    "N;AT+ABL;SG",
    "semmisségtől"
+  ],
+  [
+   "testszőrzet",
+   "N;INS;SG",
+   "testszőrzettel"
   ],
   [
    "dalszínház",
@@ -1388,6 +1973,11 @@
    "kinematikát"
   ],
   [
+   "monacói",
+   "N;DAT;PL",
+   "monacóiaknak"
+  ],
+  [
    "pontosvessző",
    "N;AT+ALL;SG",
    "pontosvesszőhöz"
@@ -1403,6 +1993,11 @@
    "ágyúnaszáddal"
   ],
   [
+   "csúcsforgalom",
+   "N;AT+ABL;PL",
+   "csúcsforgalmaktól"
+  ],
+  [
    "marha",
    "N;TERM;SG",
    "marháig"
@@ -1413,9 +2008,19 @@
    "útikalauzt"
   ],
   [
+   "nadály",
+   "N;DAT;PL",
+   "nadályoknak"
+  ],
+  [
    "barka",
    "N;IN+ALL;SG",
    "barkába"
+  ],
+  [
+   "számjel",
+   "N;ON+ABL;PL",
+   "számjelekről"
   ],
   [
    "internetprotokoll",
@@ -1426,6 +2031,11 @@
    "hitelesség",
    "N;IN+ALL;SG",
    "hitelességbe"
+  ],
+  [
+   "kérelmező",
+   "N;AT+ABL;PL",
+   "kérelmezőktől"
   ],
   [
    "asztrológia",
@@ -1461,6 +2071,11 @@
    "futóverseny",
    "N;IN+ESS;PL",
    "futóversenyekben"
+  ],
+  [
+   "kardvirág",
+   "N;TERM;SG",
+   "kardvirágig"
   ],
   [
    "bagdadi",
@@ -1578,9 +2193,19 @@
    "bunyókat"
   ],
   [
+   "muszáj",
+   "N;ON+ABL;SG",
+   "muszájról"
+  ],
+  [
    "tévhit",
    "N;PRP;SG",
    "tévhitért"
+  ],
+  [
+   "csattanó",
+   "N;ACC;PL",
+   "csattanókat"
   ],
   [
    "gránátalma",
@@ -1606,6 +2231,16 @@
    "szolidaritás",
    "N;ON+ESS;PL",
    "szolidaritásokon"
+  ],
+  [
+   "felmondás",
+   "N;PRP;PL",
+   "felmondásokért"
+  ],
+  [
+   "oroszlánrész",
+   "N;ACC;PL",
+   "oroszlánrészeket"
   ],
   [
    "vízikutya",
@@ -1636,6 +2271,11 @@
    "tizenháromszög",
    "N;IN+ESS;PL",
    "tizenháromszögekben"
+  ],
+  [
+   "szardella",
+   "N;ON+ALL;SG",
+   "szardellára"
   ],
   [
    "bolhapiac",
@@ -1683,6 +2323,11 @@
    "érzékeltetésekkel"
   ],
   [
+   "megjelentetés",
+   "N;IN+ABL;PL",
+   "megjelentetésekből"
+  ],
+  [
    "cégér",
    "N;AT+ABL;PL",
    "cégérektől"
@@ -1696,6 +2341,11 @@
    "hardver",
    "N;PRP;PL",
    "hardverekért"
+  ],
+  [
+   "magánóvoda",
+   "N;ACC;PL",
+   "magánóvodákat"
   ],
   [
    "rendszermag",
@@ -1733,6 +2383,11 @@
    "kocsmává"
   ],
   [
+   "hirdetőoszlop",
+   "N;ON+ALL;SG",
+   "hirdetőoszlopra"
+  ],
+  [
    "fűtő",
    "N;AT+ESS;PL",
    "fűtőknél"
@@ -1746,6 +2401,11 @@
    "golfpálya",
    "N;AT+ESS;SG",
    "golfpályánál"
+  ],
+  [
+   "alaplap",
+   "N;TRANS;PL",
+   "alaplapokká"
   ],
   [
    "párkány",
@@ -1763,14 +2423,29 @@
    "fogassá"
   ],
   [
+   "maki",
+   "N;ON+ABL;PL",
+   "makikról"
+  ],
+  [
    "orgonavirág",
    "N;INS;SG",
    "orgonavirággal"
   ],
   [
+   "rovás",
+   "N;IN+ABL;PL",
+   "rovásokból"
+  ],
+  [
    "páternoszter",
    "N;IN+ALL;PL",
    "páternoszterekbe"
+  ],
+  [
+   "békediktátum",
+   "N;ON+ALL;SG",
+   "békediktátumra"
   ],
   [
    "pesszárium",
@@ -1783,14 +2458,29 @@
    "gyerekszobákat"
   ],
   [
+   "angolkóros",
+   "N;IN+ABL;PL",
+   "angolkórosokból"
+  ],
+  [
    "citrancs",
    "N;AT+ABL;PL",
    "citrancsoktól"
   ],
   [
+   "öttusa",
+   "N;AT+ESS;SG",
+   "öttusánál"
+  ],
+  [
    "bátya",
    "N;AT+ALL;PL",
    "bátyákhoz"
+  ],
+  [
+   "cink-klorid",
+   "N;DAT;PL",
+   "cink-kloridoknak"
   ],
   [
    "banán",
@@ -1813,6 +2503,11 @@
    "faliórából"
   ],
   [
+   "festék",
+   "N;ON+ESS;PL",
+   "festékeken"
+  ],
+  [
    "élesztő",
    "N;IN+ESS;PL",
    "élesztőkben"
@@ -1833,14 +2528,44 @@
    "konzervativizmusokról"
   ],
   [
+   "alkóv",
+   "N;IN+ESS;SG",
+   "alkóvban"
+  ],
+  [
    "recesszió",
    "N;NOM;PL",
    "recessziók"
   ],
   [
+   "szélsőbaloldal",
+   "N;INS;SG",
+   "szélsőbaloldallal"
+  ],
+  [
+   "írásmód",
+   "N;AT+ABL;PL",
+   "írásmódoktól"
+  ],
+  [
    "portugál",
    "N;IN+ALL;SG",
    "portugálba"
+  ],
+  [
+   "álomszuszék",
+   "N;IN+ABL;SG",
+   "álomszuszékból"
+  ],
+  [
+   "vezérlés",
+   "N;IN+ABL;SG",
+   "vezérlésből"
+  ],
+  [
+   "körgyűrű",
+   "N;DAT;PL",
+   "körgyűrűknek"
   ],
   [
    "vásárló",
@@ -1853,6 +2578,11 @@
    "szőlőzsírokban"
   ],
   [
+   "összeférhetetlenség",
+   "N;ON+ALL;PL",
+   "összeférhetetlenségekre"
+  ],
+  [
    "borsmenta",
    "N;TERM;SG",
    "borsmentáig"
@@ -1863,6 +2593,11 @@
    "rendőrkocsikból"
   ],
   [
+   "élelem",
+   "N;TERM;SG",
+   "élelemig"
+  ],
+  [
    "béna",
    "N;TRANS;PL",
    "bénákká"
@@ -1871,6 +2606,11 @@
    "gólyahír",
    "N;DAT;SG",
    "gólyahírnek"
+  ],
+  [
+   "kettősség",
+   "N;ON+ALL;PL",
+   "kettősségekre"
   ],
   [
    "babér",
@@ -1888,9 +2628,24 @@
    "szinonimahalmozásokká"
   ],
   [
+   "sportszív",
+   "N;DAT;SG",
+   "sportszívnek"
+  ],
+  [
+   "csapatember",
+   "N;ON+ALL;SG",
+   "csapatemberre"
+  ],
+  [
    "tekervény",
    "N;ACC;PL",
    "tekervényeket"
+  ],
+  [
+   "boltkóros",
+   "N;AT+ESS;PL",
+   "boltkórosoknál"
   ],
   [
    "hölgy",
@@ -1908,6 +2663,11 @@
    "illetményből"
   ],
   [
+   "összhangzattan",
+   "N;INS;PL",
+   "összhangzattanokkal"
+  ],
+  [
    "dudva",
    "N;AT+ABL;PL",
    "dudváktól"
@@ -1918,9 +2678,19 @@
    "hátából"
   ],
   [
+   "porfészek",
+   "N;IN+ABL;SG",
+   "porfészekből"
+  ],
+  [
    "bizonytalanság",
    "N;TRANS;SG",
    "bizonytalansággá"
+  ],
+  [
+   "rovás",
+   "N;AT+ESS;PL",
+   "rovásoknál"
   ],
   [
    "mágnás",
@@ -1938,6 +2708,11 @@
    "megállapítást"
   ],
   [
+   "szén-monoxid",
+   "N;DAT;SG",
+   "szén-monoxidnak"
+  ],
+  [
    "előváladék",
    "N;IN+ALL;PL",
    "előváladékokba"
@@ -1948,9 +2723,24 @@
    "mitológiákban"
   ],
   [
+   "gyermekelhelyezés",
+   "N;NOM;PL",
+   "gyermekelhelyezések"
+  ],
+  [
+   "oszthatóság",
+   "N;ON+ALL;SG",
+   "oszthatóságra"
+  ],
+  [
    "vigasztalás",
    "N;TERM;PL",
    "vigasztalásokig"
+  ],
+  [
+   "kerékagy",
+   "N;TERM;PL",
+   "kerékagyakig"
   ],
   [
    "szólás",
@@ -1983,6 +2773,11 @@
    "hegyvonulatra"
   ],
   [
+   "szócska",
+   "N;TERM;PL",
+   "szócskákig"
+  ],
+  [
    "elkerülés",
    "N;DAT;SG",
    "elkerülésnek"
@@ -1991,6 +2786,11 @@
    "esemény",
    "N;IN+ABL;PL",
    "eseményekből"
+  ],
+  [
+   "páli",
+   "N;IN+ESS;SG",
+   "páliban"
   ],
   [
    "jogai",
@@ -2008,6 +2808,21 @@
    "hazaárulóból"
   ],
   [
+   "pattanás",
+   "N;ON+ABL;SG",
+   "pattanásról"
+  ],
+  [
+   "mérv",
+   "N;NOM;PL",
+   "mérvek"
+  ],
+  [
+   "téesz",
+   "N;IN+ABL;SG",
+   "téeszből"
+  ],
+  [
    "homály",
    "N;ON+ESS;PL",
    "homályokon"
@@ -2018,14 +2833,69 @@
    "őrbódékba"
   ],
   [
+   "felülvizsgálat",
+   "N;AT+ESS;PL",
+   "felülvizsgálatoknál"
+  ],
+  [
+   "pünkösdvasárnap",
+   "N;AT+ESS;SG",
+   "pünkösdvasárnapnál"
+  ],
+  [
+   "patkányvakond",
+   "N;IN+ABL;SG",
+   "patkányvakondból"
+  ],
+  [
    "gyakornok",
    "N;ON+ALL;PL",
    "gyakornokokra"
   ],
   [
+   "hűtőmágnes",
+   "N;AT+ABL;SG",
+   "hűtőmágnestől"
+  ],
+  [
+   "faodú",
+   "N;ON+ESS;SG",
+   "faodún"
+  ],
+  [
+   "kosárlabdacsapat",
+   "N;IN+ESS;SG",
+   "kosárlabdacsapatban"
+  ],
+  [
    "asztrológia",
    "N;ACC;PL",
    "asztrológiákat"
+  ],
+  [
+   "abroncsnyomás",
+   "N;AT+ABL;SG",
+   "abroncsnyomástól"
+  ],
+  [
+   "pornófüggőség",
+   "N;AT+ALL;PL",
+   "pornófüggőségekhez"
+  ],
+  [
+   "kvantumfizika",
+   "N;IN+ALL;PL",
+   "kvantumfizikákba"
+  ],
+  [
+   "deres",
+   "N;IN+ESS;SG",
+   "deresben"
+  ],
+  [
+   "maltóz",
+   "N;TERM;SG",
+   "maltózig"
   ],
   [
    "objektum",
@@ -2043,6 +2913,16 @@
    "cesszé"
   ],
   [
+   "főszereplés",
+   "N;TRANS;PL",
+   "főszereplésekké"
+  ],
+  [
+   "stádium",
+   "N;DAT;SG",
+   "stádiumnak"
+  ],
+  [
    "script",
    "N;TERM;PL",
    "scriptekig"
@@ -2058,6 +2938,16 @@
    "sztetoszkópokhoz"
   ],
   [
+   "éggömb",
+   "N;IN+ABL;PL",
+   "éggömbökből"
+  ],
+  [
+   "eretnekség",
+   "N;NOM;PL",
+   "eretnekségek"
+  ],
+  [
    "kupa",
    "N;TRANS;SG",
    "kupává"
@@ -2066,6 +2956,11 @@
    "harmónia",
    "N;AT+ESS;PL",
    "harmóniáknál"
+  ],
+  [
+   "fotográfia",
+   "N;AT+ESS;PL",
+   "fotográfiáknál"
   ],
   [
    "tarló",
@@ -2081,6 +2976,16 @@
    "kőzet",
    "N;AT+ABL;PL",
    "kőzetektől"
+  ],
+  [
+   "pele",
+   "N;PRP;SG",
+   "peléért"
+  ],
+  [
+   "nyitóünnepség",
+   "N;IN+ALL;SG",
+   "nyitóünnepségbe"
   ],
   [
    "lika",
@@ -2101,6 +3006,11 @@
    "légyott",
    "N;ON+ESS;SG",
    "légyotton"
+  ],
+  [
+   "fénymásodperc",
+   "N;IN+ALL;SG",
+   "fénymásodpercbe"
   ],
   [
    "fiziológia",
@@ -2128,9 +3038,19 @@
    "szeméremdombokról"
   ],
   [
+   "egyenértékűség",
+   "N;ACC;PL",
+   "egyenértékűségeket"
+  ],
+  [
    "díjlovaglás",
    "N;PRP;SG",
    "díjlovaglásért"
+  ],
+  [
+   "töklámpás",
+   "N;AT+ALL;PL",
+   "töklámpásokhoz"
   ],
   [
    "kalandozó",
@@ -2153,9 +3073,24 @@
    "6-osokon"
   ],
   [
+   "alaktalanság",
+   "N;IN+ESS;SG",
+   "alaktalanságban"
+  ],
+  [
+   "bugyelláris",
+   "N;IN+ALL;PL",
+   "bugyellárisokba"
+  ],
+  [
    "búr",
    "N;DAT;SG",
    "búrnak"
+  ],
+  [
+   "mesterképzés",
+   "N;AT+ABL;SG",
+   "mesterképzéstől"
   ],
   [
    "aberráció",
@@ -2178,9 +3113,24 @@
    "áltudományokon"
   ],
   [
+   "elégedetlenség",
+   "N;ON+ALL;SG",
+   "elégedetlenségre"
+  ],
+  [
+   "negyeddöntő",
+   "N;ACC;SG",
+   "negyeddöntőt"
+  ],
+  [
    "uzsorás",
    "N;AT+ABL;SG",
    "uzsorástól"
+  ],
+  [
+   "pénzeszköz",
+   "N;ON+ALL;SG",
+   "pénzeszközre"
   ],
   [
    "keresőlámpa",
@@ -2238,14 +3188,44 @@
    "azerikkel"
   ],
   [
+   "azeri",
+   "N;INS;PL",
+   "azeriekkel"
+  ],
+  [
+   "azeri",
+   "N;INS;PL",
+   "azeriakkal"
+  ],
+  [
    "kívánat",
    "N;ON+ESS;PL",
    "kívánatokon"
   ],
   [
+   "kardcsörtetés",
+   "N;IN+ESS;PL",
+   "kardcsörtetésekben"
+  ],
+  [
+   "utánozhatatlanság",
+   "N;AT+ALL;SG",
+   "utánozhatatlansághoz"
+  ],
+  [
    "olvashatóság",
    "N;INS;SG",
    "olvashatósággal"
+  ],
+  [
+   "kutatómunka",
+   "N;TRANS;SG",
+   "kutatómunkává"
+  ],
+  [
+   "elszigeteltség",
+   "N;INS;SG",
+   "elszigeteltséggel"
   ],
   [
    "devalváció",
@@ -2263,6 +3243,11 @@
    "medvékre"
   ],
   [
+   "liberalizmus",
+   "N;IN+ABL;SG",
+   "liberalizmusból"
+  ],
+  [
    "tészta",
    "N;IN+ESS;SG",
    "tésztában"
@@ -2276,6 +3261,11 @@
    "pókerarc",
    "N;IN+ABL;SG",
    "pókerarcból"
+  ],
+  [
+   "középosztály",
+   "N;ON+ESS;PL",
+   "középosztályokon"
   ],
   [
    "extra",
@@ -2298,6 +3288,16 @@
    "dagerrotípiára"
   ],
   [
+   "aloé",
+   "N;AT+ABL;PL",
+   "aloéktól"
+  ],
+  [
+   "fókuszcsoport",
+   "N;AT+ALL;SG",
+   "fókuszcsoporthoz"
+  ],
+  [
    "licenc",
    "N;ON+ABL;SG",
    "licencről"
@@ -2311,6 +3311,16 @@
    "iratkapocs",
    "N;TRANS;PL",
    "iratkapcsokká"
+  ],
+  [
+   "faxpapír",
+   "N;AT+ALL;SG",
+   "faxpapírhoz"
+  ],
+  [
+   "marógép",
+   "N;ON+ABL;PL",
+   "marógépekről"
   ],
   [
    "szappanhab",
@@ -2331,6 +3341,11 @@
    "börtön",
    "N;DAT;PL",
    "börtönöknek"
+  ],
+  [
+   "forgalmazó",
+   "N;AT+ESS;PL",
+   "forgalmazóknál"
   ],
   [
    "vízikutya",
@@ -2383,6 +3398,11 @@
    "ökörszemekig"
   ],
   [
+   "grammsúly",
+   "N;TERM;SG",
+   "grammsúlyig"
+  ],
+  [
    "métely",
    "N;TERM;SG",
    "mételyig"
@@ -2393,9 +3413,29 @@
    "sakkbábuknak"
   ],
   [
+   "részvét",
+   "N;TRANS;SG",
+   "részvétté"
+  ],
+  [
+   "azonosító",
+   "N;ON+ABL;SG",
+   "azonosítóról"
+  ],
+  [
+   "előválasztás",
+   "N;AT+ESS;PL",
+   "előválasztásoknál"
+  ],
+  [
    "érc",
    "N;IN+ALL;SG",
    "ércbe"
+  ],
+  [
+   "boroskancsó",
+   "N;PRP;PL",
+   "boroskancsókért"
   ],
   [
    "mázli",
@@ -2406,6 +3446,11 @@
    "könyvelő",
    "N;ON+ABL;PL",
    "könyvelőkről"
+  ],
+  [
+   "státusz",
+   "N;INS;PL",
+   "státuszokkal"
   ],
   [
    "seb",
@@ -2443,6 +3488,11 @@
    "futóversenytől"
   ],
   [
+   "lekötelezettség",
+   "N;AT+ALL;SG",
+   "lekötelezettséghez"
+  ],
+  [
    "territórium",
    "N;ON+ESS;SG",
    "territóriumon"
@@ -2466,6 +3516,11 @@
    "balta",
    "N;INS;SG",
    "baltával"
+  ],
+  [
+   "tépőzár",
+   "N;DAT;PL",
+   "tépőzáraknak"
   ],
   [
    "légifelvétel",
@@ -2503,6 +3558,16 @@
    "kurzuson"
   ],
   [
+   "betűfokozat",
+   "N;TERM;SG",
+   "betűfokozatig"
+  ],
+  [
+   "védnök",
+   "N;INS;SG",
+   "védnökkel"
+  ],
+  [
    "fűrészpor",
    "N;INS;PL",
    "fűrészporokkal"
@@ -2523,9 +3588,19 @@
    "álmatlanságért"
   ],
   [
+   "oroszbarát",
+   "N;DAT;PL",
+   "oroszbarátoknak"
+  ],
+  [
    "koleszterin",
    "N;ON+ABL;PL",
    "koleszterinekről"
+  ],
+  [
+   "elnökjelöltség",
+   "N;PRP;SG",
+   "elnökjelöltségért"
   ],
   [
    "közgazda",
@@ -2578,6 +3653,21 @@
    "gyakorlatok"
   ],
   [
+   "differenciálszámítás",
+   "N;PRP;SG",
+   "differenciálszámításért"
+  ],
+  [
+   "forgács",
+   "N;ON+ABL;SG",
+   "forgácsról"
+  ],
+  [
+   "kürtőskalács",
+   "N;ON+ALL;PL",
+   "kürtőskalácsokra"
+  ],
+  [
    "süllő",
    "N;AT+ESS;PL",
    "süllőknél"
@@ -2588,6 +3678,11 @@
    "rinocéroszba"
   ],
   [
+   "fáraóhangya",
+   "N;ACC;SG",
+   "fáraóhangyát"
+  ],
+  [
    "erózió",
    "N;AT+ESS;PL",
    "erózióknál"
@@ -2596,6 +3691,16 @@
    "főiskola",
    "N;INS;PL",
    "főiskolákkal"
+  ],
+  [
+   "parszek",
+   "N;ACC;PL",
+   "parszekeket"
+  ],
+  [
+   "parszek",
+   "N;ACC;PL",
+   "parszekokat"
   ],
   [
    "admin",
@@ -2618,6 +3723,16 @@
    "antológiától"
   ],
   [
+   "gázpedál",
+   "N;IN+ABL;SG",
+   "gázpedálból"
+  ],
+  [
+   "hasszium",
+   "N;ACC;SG",
+   "hassziumot"
+  ],
+  [
    "apatit",
    "N;INS;SG",
    "apatittal"
@@ -2636,6 +3751,11 @@
    "inga",
    "N;DAT;PL",
    "ingáknak"
+  ],
+  [
+   "különnyugdíj",
+   "N;IN+ESS;PL",
+   "különnyugdíjakban"
   ],
   [
    "arabisztika",
@@ -2683,9 +3803,19 @@
    "elődig"
   ],
   [
+   "dubnium",
+   "N;INS;SG",
+   "dubniummal"
+  ],
+  [
    "sógun",
    "N;IN+ESS;PL",
    "sógunokban"
+  ],
+  [
+   "küzdőtér",
+   "N;ON+ABL;SG",
+   "küzdőtérről"
   ],
   [
    "fény",
@@ -2698,9 +3828,24 @@
    "ablakcsákból"
   ],
   [
+   "hozzáférés",
+   "N;AT+ABL;PL",
+   "hozzáférésektől"
+  ],
+  [
    "álef",
    "N;INS;PL",
    "álefekkel"
+  ],
+  [
+   "vas-oxid",
+   "N;IN+ALL;PL",
+   "vas-oxidokba"
+  ],
+  [
+   "hercegprímás",
+   "N;TERM;PL",
+   "hercegprímásokig"
   ],
   [
    "alkalmazott",
@@ -2723,6 +3868,16 @@
    "stopposokat"
   ],
   [
+   "eleség",
+   "N;IN+ABL;PL",
+   "eleségekből"
+  ],
+  [
+   "indulatszó",
+   "N;IN+ALL;PL",
+   "indulatszókba"
+  ],
+  [
    "vonzat",
    "N;ON+ESS;PL",
    "vonzatokon"
@@ -2733,9 +3888,39 @@
    "méhészborzba"
   ],
   [
+   "chat",
+   "N;ON+ALL;PL",
+   "chatekre"
+  ],
+  [
+   "füllentés",
+   "N;TRANS;SG",
+   "füllentéssé"
+  ],
+  [
+   "összehasonlítás",
+   "N;TRANS;PL",
+   "összehasonlításokká"
+  ],
+  [
    "működés",
    "N;AT+ALL;SG",
    "működéshez"
+  ],
+  [
+   "bérház",
+   "N;ON+ALL;SG",
+   "bérházra"
+  ],
+  [
+   "emisszió",
+   "N;AT+ALL;PL",
+   "emissziókhoz"
+  ],
+  [
+   "véleményezés",
+   "N;AT+ALL;SG",
+   "véleményezéshez"
   ],
   [
    "bíbic",
@@ -2758,6 +3943,16 @@
    "közüzemre"
   ],
   [
+   "hőfok",
+   "N;AT+ALL;PL",
+   "hőfokokhoz"
+  ],
+  [
+   "péló",
+   "N;TRANS;SG",
+   "pélóvá"
+  ],
+  [
    "gerinc",
    "N;TERM;PL",
    "gerincekig"
@@ -2773,9 +3968,19 @@
    "dramaturgiáért"
   ],
   [
+   "tudatalatti",
+   "N;IN+ABL;SG",
+   "tudatalattiból"
+  ],
+  [
    "cirkusz",
    "N;IN+ESS;SG",
    "cirkuszban"
+  ],
+  [
+   "képeskönyv",
+   "N;INS;SG",
+   "képeskönyvvel"
   ],
   [
    "távoktatás",
@@ -2801,6 +4006,11 @@
    "folyamkilométer",
    "N;DAT;PL",
    "folyamkilométereknek"
+  ],
+  [
+   "megszületés",
+   "N;AT+ABL;SG",
+   "megszületéstől"
   ],
   [
    "kisbaba",
@@ -2843,6 +4053,11 @@
    "vidékéről"
   ],
   [
+   "ofszetnyomás",
+   "N;ACC;PL",
+   "ofszetnyomásokat"
+  ],
+  [
    "tokány",
    "N;TRANS;SG",
    "tokánnyá"
@@ -2863,6 +4078,11 @@
    "lakássá"
   ],
   [
+   "szópár",
+   "N;ON+ALL;PL",
+   "szópárokra"
+  ],
+  [
    "hangyaboly",
    "N;AT+ESS;PL",
    "hangyabolyoknál"
@@ -2881,6 +4101,11 @@
    "bizánci",
    "N;AT+ABL;SG",
    "bizáncitól"
+  ],
+  [
+   "jobbkéz-szabály",
+   "N;AT+ABL;PL",
+   "jobbkéz-szabályoktól"
   ],
   [
    "póling",
@@ -2958,6 +4183,16 @@
    "tócsáktól"
   ],
   [
+   "pöcegödör",
+   "N;TRANS;SG",
+   "pöcegödörré"
+  ],
+  [
+   "pápaság",
+   "N;AT+ABL;PL",
+   "pápaságoktól"
+  ],
+  [
    "pánsíp",
    "N;IN+ALL;PL",
    "pánsípokba"
@@ -3008,9 +4243,29 @@
    "lappnak"
   ],
   [
+   "körültekintés",
+   "N;TRANS;PL",
+   "körültekintésekké"
+  ],
+  [
+   "kuruzsló",
+   "N;ON+ABL;SG",
+   "kuruzslóról"
+  ],
+  [
+   "bizonyíték",
+   "N;INS;PL",
+   "bizonyítékokkal"
+  ],
+  [
    "kálvária",
    "N;ACC;SG",
    "kálváriát"
+  ],
+  [
+   "eposz",
+   "N;IN+ALL;PL",
+   "eposzokba"
   ],
   [
    "sejtbiológia",
@@ -3026,6 +4281,16 @@
    "őrület",
    "N;TRANS;PL",
    "őrületekké"
+  ],
+  [
+   "mogyi",
+   "N;INS;PL",
+   "mogyikkal"
+  ],
+  [
+   "adatállomány",
+   "N;PRP;PL",
+   "adatállományokért"
   ],
   [
    "tömés",
@@ -3046,6 +4311,11 @@
    "múzeum",
    "N;ACC;PL",
    "múzeumokat"
+  ],
+  [
+   "kvíz",
+   "N;DAT;SG",
+   "kvíznek"
   ],
   [
    "lódarázs",
@@ -3093,6 +4363,16 @@
    "mousse-okra"
   ],
   [
+   "sikér",
+   "N;ON+ABL;PL",
+   "sikérekről"
+  ],
+  [
+   "nemzetköziesítés",
+   "N;TERM;PL",
+   "nemzetköziesítésekig"
+  ],
+  [
    "szeptember",
    "N;ACC;SG",
    "szeptembert"
@@ -3101,6 +4381,11 @@
    "sakkjátékos",
    "N;AT+ESS;PL",
    "sakkjátékosoknál"
+  ],
+  [
+   "tüdővéna",
+   "N;INS;SG",
+   "tüdővénával"
   ],
   [
    "szakácskönyv",
@@ -3118,6 +4403,11 @@
    "ravaszságokká"
   ],
   [
+   "megszületés",
+   "N;ON+ESS;PL",
+   "megszületéseken"
+  ],
+  [
    "bejelentés",
    "N;AT+ABL;PL",
    "bejelentésektől"
@@ -3126,6 +4416,11 @@
    "vágó",
    "N;ON+ALL;SG",
    "vágóra"
+  ],
+  [
+   "antifasizmus",
+   "N;IN+ESS;PL",
+   "antifasizmusokban"
   ],
   [
    "észszerűség",
@@ -3138,6 +4433,21 @@
    "kariogámiánál"
   ],
   [
+   "sodor",
+   "N;ON+ALL;SG",
+   "sodorra"
+  ],
+  [
+   "meghallgatás",
+   "N;IN+ESS;PL",
+   "meghallgatásokban"
+  ],
+  [
+   "áldomás",
+   "N;DAT;PL",
+   "áldomásoknak"
+  ],
+  [
    "egészségbiztosítás",
    "N;ON+ESS;PL",
    "egészségbiztosításokon"
@@ -3148,14 +4458,39 @@
    "dzsehennemekből"
   ],
   [
+   "bojár",
+   "N;TERM;PL",
+   "bojárokig"
+  ],
+  [
+   "látványtervezés",
+   "N;ON+ALL;PL",
+   "látványtervezésekre"
+  ],
+  [
    "rudas",
    "N;AT+ESS;SG",
    "rudasnál"
   ],
   [
+   "oldószer",
+   "N;IN+ESS;SG",
+   "oldószerben"
+  ],
+  [
+   "szalmasúly",
+   "N;ON+ESS;SG",
+   "szalmasúlyon"
+  ],
+  [
    "hossz",
    "N;IN+ABL;PL",
    "hosszakból"
+  ],
+  [
+   "hossz",
+   "N;IN+ABL;PL",
+   "hosszokból"
   ],
   [
    "távolság",
@@ -3203,6 +4538,11 @@
    "konglomerátumra"
   ],
   [
+   "40-es",
+   "N;AT+ABL;PL",
+   "40-esektől"
+  ],
+  [
    "bankszámlakivonat",
    "N;AT+ESS;PL",
    "bankszámlakivonatoknál"
@@ -3223,6 +4563,11 @@
    "feminizmusokban"
   ],
   [
+   "hiperinfláció",
+   "N;TRANS;SG",
+   "hiperinflációvá"
+  ],
+  [
    "tobozmirigy",
    "N;ON+ESS;PL",
    "tobozmirigyeken"
@@ -3231,6 +4576,11 @@
    "öre",
    "N;IN+ABL;PL",
    "örékből"
+  ],
+  [
+   "mandulavaj",
+   "N;TRANS;PL",
+   "mandulavajakká"
   ],
   [
    "hefti",
@@ -3248,9 +4598,34 @@
    "túltermeléseken"
   ],
   [
+   "forgástengely",
+   "N;ON+ESS;PL",
+   "forgástengelyeken"
+  ],
+  [
+   "alakíthatóság",
+   "N;IN+ESS;SG",
+   "alakíthatóságban"
+  ],
+  [
    "református",
    "N;TRANS;PL",
    "reformátusokká"
+  ],
+  [
+   "mikrofonláz",
+   "N;TRANS;PL",
+   "mikrofonlázakká"
+  ],
+  [
+   "esernyő",
+   "N;AT+ESS;SG",
+   "esernyőnél"
+  ],
+  [
+   "rögbi",
+   "N;TRANS;SG",
+   "rögbivé"
   ],
   [
    "irodalomtörténész",
@@ -3263,9 +4638,24 @@
    "megkezdésbe"
   ],
   [
+   "almazöld",
+   "N;AT+ESS;SG",
+   "almazöldnél"
+  ],
+  [
+   "besenyő",
+   "N;TRANS;PL",
+   "besenyőkké"
+  ],
+  [
    "szék",
    "N;IN+ALL;PL",
    "székekbe"
+  ],
+  [
+   "hordágykocsi",
+   "N;TRANS;PL",
+   "hordágykocsikká"
   ],
   [
    "garnéla",
@@ -3278,9 +4668,19 @@
    "törtetekké"
   ],
   [
+   "szörfdeszka",
+   "N;AT+ESS;PL",
+   "szörfdeszkáknál"
+  ],
+  [
    "katana",
    "N;ON+ESS;SG",
    "katanán"
+  ],
+  [
+   "összehasonlítás",
+   "N;AT+ABL;SG",
+   "összehasonlítástól"
   ],
   [
    "tutaj",
@@ -3308,6 +4708,11 @@
    "ólomkatonáknak"
   ],
   [
+   "nióbium",
+   "N;DAT;SG",
+   "nióbiumnak"
+  ],
+  [
    "szocializmus",
    "N;ON+ALL;PL",
    "szocializmusokra"
@@ -3316,6 +4721,11 @@
    "kitüntetés",
    "N;ON+ESS;SG",
    "kitüntetésen"
+  ],
+  [
+   "tápkábel",
+   "N;ON+ESS;SG",
+   "tápkábelen"
   ],
   [
    "létesítés",
@@ -3338,6 +4748,11 @@
    "szállítókon"
   ],
   [
+   "surc",
+   "N;PRP;SG",
+   "surcért"
+  ],
+  [
    "kínszenvedés",
    "N;IN+ESS;PL",
    "kínszenvedésekben"
@@ -3351,6 +4766,11 @@
    "kantin",
    "N;DAT;SG",
    "kantinnak"
+  ],
+  [
+   "röppálya",
+   "N;ON+ABL;PL",
+   "röppályákról"
   ],
   [
    "sakkjátszma",
@@ -3383,6 +4803,21 @@
    "verésbe"
   ],
   [
+   "elvonulás",
+   "N;IN+ALL;PL",
+   "elvonulásokba"
+  ],
+  [
+   "hajtóka",
+   "N;TERM;PL",
+   "hajtókákig"
+  ],
+  [
+   "biblia",
+   "N;IN+ESS;PL",
+   "bibliákban"
+  ],
+  [
    "húskonzerv",
    "N;AT+ABL;PL",
    "húskonzervektől"
@@ -3391,6 +4826,11 @@
    "vörösbegy",
    "N;ON+ALL;PL",
    "vörösbegyekre"
+  ],
+  [
+   "egyharmad",
+   "N;PRP;PL",
+   "egyharmadokért"
   ],
   [
    "intolerancia",
@@ -3408,14 +4848,39 @@
    "lélektantól"
   ],
   [
+   "sütőpapír",
+   "N;INS;SG",
+   "sütőpapírral"
+  ],
+  [
    "kritika",
    "N;NOM;PL",
    "kritikák"
   ],
   [
+   "részvénytőzsde",
+   "N;IN+ALL;SG",
+   "részvénytőzsdébe"
+  ],
+  [
+   "keresztlevél",
+   "N;DAT;SG",
+   "keresztlevélnek"
+  ],
+  [
+   "középhatalom",
+   "N;TRANS;PL",
+   "középhatalmakká"
+  ],
+  [
    "elektrosokk",
    "N;ACC;SG",
    "elektrosokkot"
+  ],
+  [
+   "gombamérgezés",
+   "N;PRP;SG",
+   "gombamérgezésért"
   ],
   [
    "prérifarkas",
@@ -3433,6 +4898,16 @@
    "ólmot"
   ],
   [
+   "ingázás",
+   "N;AT+ALL;SG",
+   "ingázáshoz"
+  ],
+  [
+   "pozitivista",
+   "N;AT+ALL;SG",
+   "pozitivistához"
+  ],
+  [
    "misszió",
    "N;ACC;SG",
    "missziót"
@@ -3441,6 +4916,11 @@
    "forradalmár",
    "N;ON+ALL;SG",
    "forradalmárra"
+  ],
+  [
+   "egyszerűség",
+   "N;TERM;PL",
+   "egyszerűségekig"
   ],
   [
    "gengszter",
@@ -3463,6 +4943,11 @@
    "folklorizmusnál"
   ],
   [
+   "rántás",
+   "N;ON+ABL;PL",
+   "rántásokról"
+  ],
+  [
    "trichológia",
    "N;ACC;SG",
    "trichológiát"
@@ -3481,6 +4966,11 @@
    "szeráj",
    "N;AT+ABL;SG",
    "szerájtól"
+  ],
+  [
+   "gépjármű",
+   "N;PRP;PL",
+   "gépjárművekért"
   ],
   [
    "programozó",
@@ -3518,14 +5008,29 @@
    "kézfogásokról"
   ],
   [
+   "szépségideál",
+   "N;IN+ESS;SG",
+   "szépségideálban"
+  ],
+  [
    "cégbíróság",
    "N;ON+ESS;PL",
    "cégbíróságokon"
   ],
   [
+   "küzdelem",
+   "N;ON+ESS;SG",
+   "küzdelmen"
+  ],
+  [
    "kiadvány",
    "N;AT+ESS;PL",
    "kiadványoknál"
+  ],
+  [
+   "pu.",
+   "N;ON+ALL;PL",
+   "pu.-okra"
   ],
   [
    "novella",
@@ -3538,6 +5043,11 @@
    "acetonommá"
   ],
   [
+   "oszthatóság",
+   "N;ACC;PL",
+   "oszthatóságokat"
+  ],
+  [
    "rengés",
    "N;IN+ALL;PL",
    "rengésekbe"
@@ -3548,14 +5058,39 @@
    "masamódoktól"
   ],
   [
+   "rekeszizom",
+   "N;IN+ESS;SG",
+   "rekeszizomban"
+  ],
+  [
+   "mellékszög",
+   "N;DAT;SG",
+   "mellékszögnek"
+  ],
+  [
+   "rajztábla",
+   "N;ON+ABL;PL",
+   "rajztáblákról"
+  ],
+  [
    "támogató",
    "N;AT+ABL;SG",
    "támogatótól"
   ],
   [
+   "raktárnok",
+   "N;IN+ABL;PL",
+   "raktárnokokból"
+  ],
+  [
    "ágybetét",
    "N;IN+ESS;SG",
    "ágybetétben"
+  ],
+  [
+   "terminál",
+   "N;IN+ALL;SG",
+   "terminálba"
   ],
   [
    "apokalipszis",
@@ -3598,6 +5133,11 @@
    "sortokkal"
   ],
   [
+   "keserv",
+   "N;ACC;SG",
+   "keservet"
+  ],
+  [
    "cs.",
    "N;IN+ESS;SG",
    "cs.-ban"
@@ -3618,6 +5158,16 @@
    "erősítővel"
   ],
   [
+   "adattárház",
+   "N;AT+ALL;SG",
+   "adattárházhoz"
+  ],
+  [
+   "szökőnap",
+   "N;AT+ABL;PL",
+   "szökőnapoktól"
+  ],
+  [
    "jégkorszak",
    "N;IN+ABL;PL",
    "jégkorszakokból"
@@ -3631,6 +5181,11 @@
    "kedvenc",
    "N;INS;PL",
    "kedvencekkel"
+  ],
+  [
+   "hangyaleső",
+   "N;ACC;SG",
+   "hangyalesőt"
   ],
   [
    "világosság",
@@ -3653,6 +5208,11 @@
    "rezisztenciára"
   ],
   [
+   "kezelt",
+   "N;DAT;PL",
+   "kezelteknek"
+  ],
+  [
    "kormánypárt",
    "N;ON+ESS;PL",
    "kormánypártokon"
@@ -3673,9 +5233,24 @@
    "konspirációkkal"
   ],
   [
+   "méltánytalanság",
+   "N;ACC;PL",
+   "méltánytalanságokat"
+  ],
+  [
    "zsizsik",
    "N;IN+ABL;SG",
    "zsizsikből"
+  ],
+  [
+   "szorzótábla",
+   "N;ON+ESS;PL",
+   "szorzótáblákon"
+  ],
+  [
+   "gyalogsül",
+   "N;ON+ESS;PL",
+   "gyalogsülökön"
   ],
   [
    "kincstárnok",
@@ -3691,6 +5266,11 @@
    "csillag",
    "N;ACC;PL",
    "csillagokat"
+  ],
+  [
+   "névérték",
+   "N;ON+ALL;PL",
+   "névértékekre"
   ],
   [
    "játékelmélet",
@@ -3711,6 +5291,11 @@
    "scsí",
    "N;NOM;PL",
    "scsík"
+  ],
+  [
+   "jelzálog",
+   "N;INS;SG",
+   "jelzáloggal"
   ],
   [
    "honvágy",
@@ -3758,14 +5343,29 @@
    "helyszínre"
   ],
   [
+   "virágágyás",
+   "N;IN+ESS;PL",
+   "virágágyásokban"
+  ],
+  [
    "hasábburgonya",
    "N;INS;SG",
    "hasábburgonyával"
   ],
   [
+   "szteroid",
+   "N;IN+ABL;SG",
+   "szteroidból"
+  ],
+  [
    "gyermekruházat",
    "N;ON+ESS;SG",
    "gyermekruházaton"
+  ],
+  [
+   "kiskutya",
+   "N;IN+ALL;SG",
+   "kiskutyába"
   ],
   [
    "mulya",
@@ -3793,9 +5393,24 @@
    "ármányost"
   ],
   [
+   "műtárgy",
+   "N;NOM;PL",
+   "műtárgyak"
+  ],
+  [
    "értékelés",
    "N;ON+ESS;SG",
    "értékelésen"
+  ],
+  [
+   "sűrű",
+   "N;DAT;SG",
+   "sűrűnek"
+  ],
+  [
+   "pocegér",
+   "N;ON+ESS;SG",
+   "pocegéren"
   ],
   [
    "fölé",
@@ -3808,6 +5423,26 @@
    "dec.-ig"
   ],
   [
+   "parádé",
+   "N;DAT;SG",
+   "parádénak"
+  ],
+  [
+   "árucikk",
+   "N;IN+ESS;PL",
+   "árucikkekben"
+  ],
+  [
+   "nyílhegy",
+   "N;AT+ABL;SG",
+   "nyílhegytől"
+  ],
+  [
+   "turmalin",
+   "N;AT+ESS;PL",
+   "turmalinoknál"
+  ],
+  [
    "konkrétum",
    "N;IN+ALL;PL",
    "konkrétumokba"
@@ -3818,6 +5453,11 @@
    "ösztöndíjasokat"
   ],
   [
+   "tbc",
+   "N;ON+ESS;PL",
+   "tbc-ken"
+  ],
+  [
    "tőgy",
    "N;ON+ABL;PL",
    "tőgyekről"
@@ -3826,6 +5466,11 @@
    "szög",
    "N;INS;PL",
    "szögekkel"
+  ],
+  [
+   "irodalomelmélet",
+   "N;ON+ESS;PL",
+   "irodalomelméleteken"
   ],
   [
    "mindhárom",
@@ -3841,6 +5486,21 @@
    "kétszeres",
    "N;ON+ALL;SG",
    "kétszeresre"
+  ],
+  [
+   "boglárka",
+   "N;AT+ESS;PL",
+   "boglárkáknál"
+  ],
+  [
+   "nézőpont",
+   "N;TERM;SG",
+   "nézőpontig"
+  ],
+  [
+   "ezüst-klorid",
+   "N;IN+ESS;PL",
+   "ezüst-kloridokban"
   ],
   [
    "másolás",
@@ -3866,6 +5526,11 @@
    "buszpályaudvar",
    "N;TRANS;PL",
    "buszpályaudvarokká"
+  ],
+  [
+   "holdrengés",
+   "N;IN+ABL;PL",
+   "holdrengésekből"
   ],
   [
    "amfóra",
@@ -3898,6 +5563,11 @@
    "sertéseken"
   ],
   [
+   "főszerep",
+   "N;ON+ALL;SG",
+   "főszerepre"
+  ],
+  [
    "pszichiátria",
    "N;ACC;PL",
    "pszichiátriákat"
@@ -3928,9 +5598,19 @@
    "tüsszentéstől"
   ],
   [
+   "édeskevés",
+   "N;ON+ABL;SG",
+   "édeskevésről"
+  ],
+  [
    "csendőrség",
    "N;ACC;SG",
    "csendőrséget"
+  ],
+  [
+   "kártalanítás",
+   "N;ON+ALL;PL",
+   "kártalanításokra"
   ],
   [
    "fénykard",
@@ -3948,6 +5628,11 @@
    "deszkát"
   ],
   [
+   "részmunkaidő",
+   "N;DAT;PL",
+   "részmunkaidőknek"
+  ],
+  [
    "ászok",
    "N;ON+ESS;SG",
    "ászokon"
@@ -3956,6 +5641,11 @@
    "ászok",
    "N;ON+ESS;SG",
    "ászkon"
+  ],
+  [
+   "berillium-nitrid",
+   "N;AT+ESS;SG",
+   "berillium-nitridnél"
   ],
   [
    "szecesszió",
@@ -3973,9 +5663,34 @@
    "kernelért"
   ],
   [
+   "rivalizálás",
+   "N;ON+ABL;PL",
+   "rivalizálásokról"
+  ],
+  [
    "facsavar",
    "N;DAT;SG",
    "facsavarnak"
+  ],
+  [
+   "előrejelzés",
+   "N;ACC;SG",
+   "előrejelzést"
+  ],
+  [
+   "véredény",
+   "N;IN+ABL;SG",
+   "véredényből"
+  ],
+  [
+   "pallos",
+   "N;TRANS;SG",
+   "pallossá"
+  ],
+  [
+   "színhőmérséklet",
+   "N;PRP;SG",
+   "színhőmérsékletért"
   ],
   [
    "alku",
@@ -3991,6 +5706,16 @@
    "zubbony",
    "N;PRP;PL",
    "zubbonyokért"
+  ],
+  [
+   "néne",
+   "N;PRP;SG",
+   "nénéért"
+  ],
+  [
+   "erőfeszítés",
+   "N;TERM;PL",
+   "erőfeszítésekig"
   ],
   [
    "rum",
@@ -4011,6 +5736,11 @@
    "zsonglőr",
    "N;DAT;PL",
    "zsonglőröknek"
+  ],
+  [
+   "grammsúly",
+   "N;NOM;PL",
+   "grammsúlyok"
   ],
   [
    "hálóköntös",
@@ -4036,6 +5766,11 @@
    "karszt",
    "N;IN+ESS;SG",
    "karsztban"
+  ],
+  [
+   "hegyfok",
+   "N;AT+ALL;PL",
+   "hegyfokokhoz"
   ],
   [
    "lornyon",
@@ -4078,6 +5813,11 @@
    "munkáltatóhoz"
   ],
   [
+   "kovácsműhely",
+   "N;IN+ABL;SG",
+   "kovácsműhelyből"
+  ],
+  [
    "kolostor",
    "N;ON+ESS;SG",
    "kolostoron"
@@ -4098,6 +5838,11 @@
    "sulikból"
   ],
   [
+   "90-es",
+   "N;TRANS;PL",
+   "90-esekké"
+  ],
+  [
    "télikabát",
    "N;IN+ALL;PL",
    "télikabátokba"
@@ -4106,6 +5851,11 @@
    "plafon",
    "N;IN+ESS;SG",
    "plafonban"
+  ],
+  [
+   "bajnoknő",
+   "N;INS;PL",
+   "bajnoknőkkel"
   ],
   [
    "matrac",
@@ -4121,6 +5871,11 @@
    "versenyló",
    "N;INS;PL",
    "versenylovakkal"
+  ],
+  [
+   "expanzionizmus",
+   "N;ON+ABL;PL",
+   "expanzionizmusokról"
   ],
   [
    "polgárháború",
@@ -4151,6 +5906,11 @@
    "óvoda",
    "N;AT+ESS;SG",
    "óvodánál"
+  ],
+  [
+   "hirdető",
+   "N;ON+ALL;PL",
+   "hirdetőkre"
   ],
   [
    "adata",
@@ -4218,9 +5978,24 @@
    "tromfoktól"
   ],
   [
+   "aminosav",
+   "N;TRANS;SG",
+   "aminosavvá"
+  ],
+  [
+   "olvadáspont",
+   "N;TRANS;SG",
+   "olvadásponttá"
+  ],
+  [
    "asztronauta",
    "N;ON+ABL;PL",
    "asztronautákról"
+  ],
+  [
+   "kapzsi",
+   "N;TERM;PL",
+   "kapzsikig"
   ],
   [
    "jelölt",
@@ -4253,6 +6028,11 @@
    "deltoidokat"
   ],
   [
+   "szókapcsolat",
+   "N;INS;SG",
+   "szókapcsolattal"
+  ],
+  [
    "rím",
    "N;IN+ESS;SG",
    "rímben"
@@ -4283,6 +6063,11 @@
    "jütre"
   ],
   [
+   "segédeszköz",
+   "N;ACC;PL",
+   "segédeszközöket"
+  ],
+  [
    "fanatizmus",
    "N;DAT;SG",
    "fanatizmusnak"
@@ -4291,6 +6076,16 @@
    "vasbeton",
    "N;IN+ALL;SG",
    "vasbetonba"
+  ],
+  [
+   "eresz",
+   "N;ON+ESS;SG",
+   "ereszen"
+  ],
+  [
+   "kivonulás",
+   "N;ACC;PL",
+   "kivonulásokat"
   ],
   [
    "tét",
@@ -4323,6 +6118,16 @@
    "szenvedélyekig"
   ],
   [
+   "sajtófőnök",
+   "N;TERM;PL",
+   "sajtófőnökökig"
+  ],
+  [
+   "ingaóra",
+   "N;IN+ESS;PL",
+   "ingaórákban"
+  ],
+  [
    "él",
    "N;TRANS;PL",
    "élekké"
@@ -4331,6 +6136,11 @@
    "koriander",
    "N;PRP;PL",
    "korianderekért"
+  ],
+  [
+   "megaláztatás",
+   "N;IN+ESS;SG",
+   "megaláztatásban"
   ],
   [
    "tábla",
@@ -4346,6 +6156,11 @@
    "megismertetés",
    "N;IN+ABL;SG",
    "megismertetésből"
+  ],
+  [
+   "répalepke",
+   "N;ON+ABL;PL",
+   "répalepkékről"
   ],
   [
    "szűr",
@@ -4383,6 +6198,11 @@
    "nagyestélyinél"
   ],
   [
+   "tarokk",
+   "N;ON+ESS;PL",
+   "tarokkokon"
+  ],
+  [
    "széklet",
    "N;AT+ESS;PL",
    "székleteknél"
@@ -4398,9 +6218,29 @@
    "homokosokon"
   ],
   [
+   "csapattárs",
+   "N;DAT;SG",
+   "csapattársnak"
+  ],
+  [
    "ejtőernyő",
    "N;AT+ESS;PL",
    "ejtőernyőknél"
+  ],
+  [
+   "nadálytő",
+   "N;AT+ALL;PL",
+   "nadálytövekhez"
+  ],
+  [
+   "hétszög",
+   "N;ON+ABL;SG",
+   "hétszögről"
+  ],
+  [
+   "klór-dioxid",
+   "N;TERM;SG",
+   "klór-dioxidig"
   ],
   [
    "pozíció",
@@ -4423,9 +6263,19 @@
    "faragásokba"
   ],
   [
+   "ciszterna",
+   "N;PRP;PL",
+   "ciszternákért"
+  ],
+  [
    "szobalány",
    "N;DAT;SG",
    "szobalánynak"
+  ],
+  [
+   "hintőpor",
+   "N;ON+ABL;SG",
+   "hintőporról"
   ],
   [
    "megjelenítés",
@@ -4471,6 +6321,11 @@
    "várostérkép",
    "N;PRP;SG",
    "várostérképért"
+  ],
+  [
+   "projektmenedzser",
+   "N;NOM;PL",
+   "projektmenedzserek"
   ],
   [
    "ventilátor",
@@ -4558,9 +6413,24 @@
    "impresszionizmusokért"
   ],
   [
+   "folyóvíz",
+   "N;TERM;PL",
+   "folyóvizekig"
+  ],
+  [
    "paratölgy",
    "N;IN+ESS;PL",
    "paratölgyekben"
+  ],
+  [
+   "beás",
+   "N;ACC;SG",
+   "beást"
+  ],
+  [
+   "élelem",
+   "N;AT+ESS;PL",
+   "élelmeknél"
   ],
   [
    "küllő",
@@ -4643,6 +6513,16 @@
    "nacionalizmusban"
   ],
   [
+   "girland",
+   "N;INS;SG",
+   "girlanddal"
+  ],
+  [
+   "kövérség",
+   "N;AT+ABL;PL",
+   "kövérségektől"
+  ],
+  [
    "rovó",
    "N;ON+ALL;SG",
    "rovóra"
@@ -4653,6 +6533,11 @@
    "szemgolyóra"
   ],
   [
+   "mirtusz",
+   "N;IN+ALL;PL",
+   "mirtuszokba"
+  ],
+  [
    "elnézés",
    "N;IN+ALL;SG",
    "elnézésbe"
@@ -4661,6 +6546,11 @@
    "keresés",
    "N;AT+ABL;PL",
    "keresésektől"
+  ],
+  [
+   "gümőkór",
+   "N;AT+ALL;SG",
+   "gümőkórhoz"
   ],
   [
    "korszellem",
@@ -4723,6 +6613,11 @@
    "nagyságig"
   ],
   [
+   "minőség-ellenőrzés",
+   "N;AT+ALL;PL",
+   "minőség-ellenőrzésekhez"
+  ],
+  [
    "sebhely",
    "N;AT+ESS;SG",
    "sebhelynél"
@@ -4733,9 +6628,24 @@
    "dörgéssé"
   ],
   [
+   "építőanyag",
+   "N;AT+ALL;SG",
+   "építőanyaghoz"
+  ],
+  [
    "hasonlóság",
    "N;IN+ESS;PL",
    "hasonlóságokban"
+  ],
+  [
+   "bélmozgás",
+   "N;ON+ESS;SG",
+   "bélmozgáson"
+  ],
+  [
+   "járhatatlanság",
+   "N;TRANS;PL",
+   "járhatatlanságokká"
   ],
   [
    "növénygyűjtemény",
@@ -4753,9 +6663,19 @@
    "méhészetek"
   ],
   [
+   "recésgyomor",
+   "N;TERM;SG",
+   "recésgyomorig"
+  ],
+  [
    "szil",
    "N;AT+ESS;SG",
    "szilnél"
+  ],
+  [
+   "szil",
+   "N;AT+ESS;SG",
+   "szilnál"
   ],
   [
    "nyugágy",
@@ -4793,6 +6713,11 @@
    "rendhez"
   ],
   [
+   "zöldcitrom",
+   "N;AT+ALL;PL",
+   "zöldcitromokhoz"
+  ],
+  [
    "környék",
    "N;AT+ABL;SG",
    "környéktől"
@@ -4801,6 +6726,11 @@
    "megkoronázás",
    "N;ON+ALL;SG",
    "megkoronázásra"
+  ],
+  [
+   "hamuzsír",
+   "N;DAT;SG",
+   "hamuzsírnak"
   ],
   [
    "glasznoszty",
@@ -4821,6 +6751,11 @@
    "vasreszelék",
    "N;INS;PL",
    "vasreszelékekkel"
+  ],
+  [
+   "netovább",
+   "N;IN+ABL;SG",
+   "netovábból"
   ],
   [
    "töke",
@@ -4858,6 +6793,21 @@
    "szótagnak"
   ],
   [
+   "egyenlítő",
+   "N;AT+ABL;SG",
+   "egyenlítőtől"
+  ],
+  [
+   "neonáci",
+   "N;PRP;PL",
+   "neonácikért"
+  ],
+  [
+   "időutazó",
+   "N;IN+ESS;PL",
+   "időutazókban"
+  ],
+  [
    "fotográfus",
    "N;IN+ABL;SG",
    "fotográfusból"
@@ -4893,9 +6843,24 @@
    "cserre"
   ],
   [
+   "ezredforduló",
+   "N;INS;PL",
+   "ezredfordulókkal"
+  ],
+  [
+   "napkitörés",
+   "N;ON+ABL;PL",
+   "napkitörésekről"
+  ],
+  [
    "tapintat",
    "N;AT+ABL;PL",
    "tapintatoktól"
+  ],
+  [
+   "bóbita",
+   "N;DAT;PL",
+   "bóbitáknak"
   ],
   [
    "zsibvásár",
@@ -4908,14 +6873,39 @@
    "rákkutatáson"
   ],
   [
+   "hondurasi",
+   "N;INS;SG",
+   "hondurasival"
+  ],
+  [
    "felmosó",
    "N;IN+ABL;PL",
    "felmosókból"
   ],
   [
+   "e-cigaretta",
+   "N;TRANS;SG",
+   "e-cigarettává"
+  ],
+  [
+   "révátkelés",
+   "N;ON+ABL;SG",
+   "révátkelésről"
+  ],
+  [
+   "kronobiológia",
+   "N;DAT;SG",
+   "kronobiológiának"
+  ],
+  [
    "kefehaj",
    "N;AT+ALL;SG",
    "kefehajhoz"
+  ],
+  [
+   "kontrapunkt",
+   "N;AT+ABL;SG",
+   "kontrapunkttól"
   ],
   [
    "omlett",
@@ -4926,6 +6916,11 @@
    "internetprotokoll",
    "N;ON+ESS;PL",
    "internetprotokollokon"
+  ],
+  [
+   "beszerezhetőség",
+   "N;IN+ESS;PL",
+   "beszerezhetőségekben"
   ],
   [
    "hexán",
@@ -4941,6 +6936,11 @@
    "románc",
    "N;DAT;SG",
    "románcnak"
+  ],
+  [
+   "gyógyítás",
+   "N;INS;PL",
+   "gyógyításokkal"
   ],
   [
    "váltás",
@@ -4973,14 +6973,34 @@
    "manikűrön"
   ],
   [
+   "kálium-klorid",
+   "N;DAT;SG",
+   "kálium-kloridnak"
+  ],
+  [
    "bejelentés",
    "N;ACC;SG",
    "bejelentést"
   ],
   [
+   "vendégkönyv",
+   "N;IN+ALL;SG",
+   "vendégkönyvbe"
+  ],
+  [
+   "posztpozíció",
+   "N;AT+ABL;SG",
+   "posztpozíciótól"
+  ],
+  [
    "mosakodás",
    "N;DAT;SG",
    "mosakodásnak"
+  ],
+  [
+   "fénymérő",
+   "N;NOM;PL",
+   "fénymérők"
   ],
   [
    "energia",
@@ -5028,6 +7048,11 @@
    "vitába"
   ],
   [
+   "tönkölybúza",
+   "N;ON+ESS;SG",
+   "tönkölybúzán"
+  ],
+  [
    "négyük",
    "N;TERM;SG",
    "négyükig"
@@ -5063,9 +7088,34 @@
    "panorámákká"
   ],
   [
+   "üresjárat",
+   "N;TERM;PL",
+   "üresjáratokig"
+  ],
+  [
+   "bajrám",
+   "N;ON+ALL;PL",
+   "bajrámokra"
+  ],
+  [
    "kapucni",
    "N;INS;PL",
    "kapucnikkal"
+  ],
+  [
+   "meghajtó",
+   "N;DAT;PL",
+   "meghajtóknak"
+  ],
+  [
+   "érvénytelenítés",
+   "N;IN+ABL;PL",
+   "érvénytelenítésekből"
+  ],
+  [
+   "párizsi",
+   "N;AT+ALL;SG",
+   "párizsihoz"
   ],
   [
    "ruházat",
@@ -5076,6 +7126,11 @@
    "injekció",
    "N;IN+ALL;SG",
    "injekcióba"
+  ],
+  [
+   "kronobiológia",
+   "N;IN+ALL;PL",
+   "kronobiológiákba"
   ],
   [
    "úthenger",
@@ -5091,6 +7146,11 @@
    "pocak",
    "N;AT+ALL;PL",
    "pocakokhoz"
+  ],
+  [
+   "emlőrák",
+   "N;AT+ALL;SG",
+   "emlőrákhoz"
   ],
   [
    "treff",
@@ -5143,6 +7203,16 @@
    "versenytársaknál"
   ],
   [
+   "dezoxiribonukleinsav",
+   "N;AT+ALL;SG",
+   "dezoxiribonukleinsavhoz"
+  ],
+  [
+   "deres",
+   "N;ON+ABL;PL",
+   "deresekről"
+  ],
+  [
    "bivaly",
    "N;ON+ESS;PL",
    "bivalyokon"
@@ -5151,6 +7221,11 @@
    "gáncs",
    "N;IN+ALL;PL",
    "gáncsokba"
+  ],
+  [
+   "gombakalap",
+   "N;AT+ALL;SG",
+   "gombakalaphoz"
   ],
   [
    "antibiotikum",
@@ -5181,6 +7256,11 @@
    "libanoni",
    "N;AT+ABL;SG",
    "libanonitól"
+  ],
+  [
+   "fölső",
+   "N;ON+ALL;SG",
+   "fölsőre"
   ],
   [
    "kormányválság",
@@ -5243,6 +7323,16 @@
    "blattokba"
   ],
   [
+   "keh",
+   "N;AT+ABL;PL",
+   "kehektől"
+  ],
+  [
+   "alumínium-hidroxid",
+   "N;TERM;SG",
+   "alumínium-hidroxidig"
+  ],
+  [
    "reakció",
    "N;AT+ABL;PL",
    "reakcióktól"
@@ -5278,14 +7368,49 @@
    "bocsok"
   ],
   [
+   "cárnő",
+   "N;ON+ABL;PL",
+   "cárnőkről"
+  ],
+  [
    "marxizmus",
    "N;ON+ABL;PL",
    "marxizmusokról"
   ],
   [
+   "ser",
+   "N;IN+ALL;PL",
+   "serekbe"
+  ],
+  [
+   "pöcegödör",
+   "N;IN+ESS;SG",
+   "pöcegödörben"
+  ],
+  [
    "gyomorhurut",
    "N;ACC;SG",
    "gyomorhurutot"
+  ],
+  [
+   "kráter",
+   "N;IN+ALL;SG",
+   "kráterbe"
+  ],
+  [
+   "kráter",
+   "N;IN+ALL;SG",
+   "kráterba"
+  ],
+  [
+   "egyenesség",
+   "N;AT+ESS;SG",
+   "egyenességnél"
+  ],
+  [
+   "futópálya",
+   "N;AT+ABL;PL",
+   "futópályáktól"
   ],
   [
    "hélium",
@@ -5318,9 +7443,19 @@
    "produktumig"
   ],
   [
+   "iPhone",
+   "N;AT+ESS;PL",
+   "iPhone-oknál"
+  ],
+  [
    "üdvözlőkártya",
    "N;ON+ESS;SG",
    "üdvözlőkártyán"
+  ],
+  [
+   "kisgyerek",
+   "N;TRANS;SG",
+   "kisgyerekké"
   ],
   [
    "úszásnem",
@@ -5348,6 +7483,11 @@
    "sóskákra"
   ],
   [
+   "rózsatermesztés",
+   "N;ON+ABL;SG",
+   "rózsatermesztésről"
+  ],
+  [
    "tus",
    "N;AT+ALL;SG",
    "tushoz"
@@ -5358,14 +7498,34 @@
    "sajátságnál"
   ],
   [
+   "stockfotó",
+   "N;AT+ABL;SG",
+   "stockfotótól"
+  ],
+  [
    "kűrium",
    "N;PRP;PL",
    "kűriumokért"
   ],
   [
+   "pontméret",
+   "N;IN+ESS;SG",
+   "pontméretben"
+  ],
+  [
    "elem",
    "N;AT+ABL;PL",
    "elemektől"
+  ],
+  [
+   "parázna",
+   "N;TRANS;SG",
+   "paráznává"
+  ],
+  [
+   "amil-nitrát",
+   "N;ON+ALL;PL",
+   "amil-nitrátokra"
   ],
   [
    "nyombél",
@@ -5376,6 +7536,11 @@
    "komló",
    "N;INS;SG",
    "komlóval"
+  ],
+  [
+   "monotónia",
+   "N;IN+ALL;SG",
+   "monotóniába"
   ],
   [
    "cseléd",
@@ -5418,9 +7583,29 @@
    "szinonimákról"
   ],
   [
+   "napszél",
+   "N;TERM;SG",
+   "napszélig"
+  ],
+  [
+   "túloldal",
+   "N;PRP;SG",
+   "túloldalért"
+  ],
+  [
+   "feka",
+   "N;INS;SG",
+   "fekával"
+  ],
+  [
    "fridzsider",
    "N;TERM;SG",
    "fridzsiderig"
+  ],
+  [
+   "egységmátrix",
+   "N;DAT;SG",
+   "egységmátrixnak"
   ],
   [
    "májelégtelenség",
@@ -5428,9 +7613,19 @@
    "májelégtelenségekért"
   ],
   [
+   "szőlőprés",
+   "N;AT+ALL;SG",
+   "szőlőpréshez"
+  ],
+  [
    "bor",
    "N;INS;PL",
    "borokkal"
+  ],
+  [
+   "vészmadár",
+   "N;IN+ABL;PL",
+   "vészmadarakból"
   ],
   [
    "varrógép",
@@ -5441,6 +7636,21 @@
    "rongyrázás",
    "N;TRANS;PL",
    "rongyrázásokká"
+  ],
+  [
+   "zanót",
+   "N;ON+ALL;SG",
+   "zanótra"
+  ],
+  [
+   "rendőrállam",
+   "N;PRP;PL",
+   "rendőrállamokért"
+  ],
+  [
+   "lótolvaj",
+   "N;NOM;PL",
+   "lótolvajok"
   ],
   [
    "törvényalkotás",
@@ -5473,9 +7683,49 @@
    "mártíromságra"
   ],
   [
+   "csöröge",
+   "N;INS;PL",
+   "csörögékkel"
+  ],
+  [
+   "cirkáló",
+   "N;ON+ABL;SG",
+   "cirkálóról"
+  ],
+  [
+   "disznóság",
+   "N;ACC;SG",
+   "disznóságot"
+  ],
+  [
+   "zönge",
+   "N;AT+ABL;SG",
+   "zöngétől"
+  ],
+  [
+   "argumentáció",
+   "N;ON+ALL;PL",
+   "argumentációkra"
+  ],
+  [
+   "kézmosás",
+   "N;INS;PL",
+   "kézmosásokkal"
+  ],
+  [
+   "népgazdaság",
+   "N;TERM;PL",
+   "népgazdaságokig"
+  ],
+  [
    "buldog",
    "N;ON+ABL;PL",
    "buldogokról"
+  ],
+  [
+   "ördögűző",
+   "N;ON+ALL;PL",
+   "ördögűzőkre"
   ],
   [
    "nagyság",
@@ -5486,6 +7736,16 @@
    "kibertámadás",
    "N;PRP;PL",
    "kibertámadásokért"
+  ],
+  [
+   "békedíj",
+   "N;ON+ALL;PL",
+   "békedíjakra"
+  ],
+  [
+   "kőzettan",
+   "N;ON+ALL;PL",
+   "kőzettanokra"
   ],
   [
    "intő",
@@ -5578,6 +7838,11 @@
    "hidroplánról"
   ],
   [
+   "keresztvetés",
+   "N;AT+ALL;SG",
+   "keresztvetéshez"
+  ],
+  [
    "szillogizmus",
    "N;ON+ABL;PL",
    "szillogizmusokról"
@@ -5633,6 +7898,11 @@
    "kompániává"
   ],
   [
+   "rizskása",
+   "N;ON+ABL;SG",
+   "rizskásáról"
+  ],
+  [
    "újonc",
    "N;INS;PL",
    "újoncokkal"
@@ -5641,6 +7911,11 @@
    "vádli",
    "N;ON+ABL;SG",
    "vádliról"
+  ],
+  [
+   "sátorlap",
+   "N;DAT;SG",
+   "sátorlapnak"
   ],
   [
    "operaénekes",
@@ -5668,9 +7943,24 @@
    "jelnyelvekbe"
   ],
   [
+   "karing",
+   "N;AT+ESS;PL",
+   "karingeknél"
+  ],
+  [
+   "huncut",
+   "N;TRANS;SG",
+   "huncuttá"
+  ],
+  [
    "dadaista",
    "N;AT+ESS;PL",
    "dadaistáknál"
+  ],
+  [
+   "garázssor",
+   "N;AT+ALL;PL",
+   "garázssorokhoz"
   ],
   [
    "könyvszekrény",
@@ -5698,6 +7988,11 @@
    "őrökre"
   ],
   [
+   "bombatölcsér",
+   "N;ON+ESS;SG",
+   "bombatölcséren"
+  ],
+  [
    "orvosságosüveg",
    "N;ON+ALL;PL",
    "orvosságosüvegekre"
@@ -5723,6 +8018,11 @@
    "gyomirtókká"
   ],
   [
+   "melegágy",
+   "N;AT+ESS;PL",
+   "melegágyaknál"
+  ],
+  [
    "evőeszköz",
    "N;ACC;PL",
    "evőeszközöket"
@@ -5741,6 +8041,11 @@
    "ezrelék",
    "N;INS;SG",
    "ezrelékkel"
+  ],
+  [
+   "finomítás",
+   "N;INS;PL",
+   "finomításokkal"
   ],
   [
    "elég",
@@ -5771,6 +8076,11 @@
    "zakó",
    "N;INS;SG",
    "zakóval"
+  ],
+  [
+   "fonetika",
+   "N;ACC;SG",
+   "fonetikát"
   ],
   [
    "dzsehennem",
@@ -5818,9 +8128,19 @@
    "égboltoknak"
   ],
   [
+   "díszzsebkendő",
+   "N;DAT;SG",
+   "díszzsebkendőnek"
+  ],
+  [
    "rénszarvas",
    "N;IN+ABL;PL",
    "rénszarvasokból"
+  ],
+  [
+   "mókuskerék",
+   "N;AT+ALL;PL",
+   "mókuskerekekhez"
   ],
   [
    "hajfestés",
@@ -5838,14 +8158,34 @@
    "modalitást"
   ],
   [
+   "merisztéma",
+   "N;IN+ESS;SG",
+   "merisztémában"
+  ],
+  [
+   "kárókatona",
+   "N;ON+ESS;SG",
+   "kárókatonán"
+  ],
+  [
    "moly",
    "N;TERM;SG",
    "molyig"
   ],
   [
+   "hozzászóló",
+   "N;ON+ALL;SG",
+   "hozzászólóra"
+  ],
+  [
    "póréhagyma",
    "N;ON+ALL;PL",
    "póréhagymákra"
+  ],
+  [
+   "késedelem",
+   "N;IN+ESS;PL",
+   "késedelmekben"
   ],
   [
    "haris",
@@ -5861,6 +8201,16 @@
    "pacsuli",
    "N;ON+ABL;SG",
    "pacsuliról"
+  ],
+  [
+   "impulzusnyomaték",
+   "N;IN+ESS;PL",
+   "impulzusnyomatékokban"
+  ],
+  [
+   "jogtulajdonos",
+   "N;NOM;PL",
+   "jogtulajdonosok"
   ],
   [
    "őrnagy",
@@ -5883,9 +8233,29 @@
    "síntől"
   ],
   [
+   "jégpálya",
+   "N;ACC;SG",
+   "jégpályát"
+  ],
+  [
+   "sületlenség",
+   "N;AT+ESS;PL",
+   "sületlenségeknél"
+  ],
+  [
+   "helyiség",
+   "N;TERM;SG",
+   "helyiségig"
+  ],
+  [
    "jóváírás",
    "N;DAT;PL",
    "jóváírásoknak"
+  ],
+  [
+   "nagyságrend",
+   "N;DAT;PL",
+   "nagyságrendeknek"
   ],
   [
    "zászlóvivő",
@@ -5948,6 +8318,11 @@
    "hadüzenetet"
   ],
   [
+   "kicsi",
+   "N;AT+ABL;PL",
+   "kicsiktől"
+  ],
+  [
    "tolmács",
    "N;ON+ABL;SG",
    "tolmácsról"
@@ -5973,6 +8348,11 @@
    "gyógyírré"
   ],
   [
+   "halasztgatás",
+   "N;DAT;PL",
+   "halasztgatásoknak"
+  ],
+  [
    "jövendőmondó",
    "N;AT+ALL;PL",
    "jövendőmondókhoz"
@@ -5993,9 +8373,29 @@
    "malmává"
   ],
   [
+   "sörösüveg",
+   "N;INS;SG",
+   "sörösüveggel"
+  ],
+  [
+   "szívesség",
+   "N;IN+ABL;PL",
+   "szívességekből"
+  ],
+  [
+   "röpte",
+   "N;ON+ALL;SG",
+   "röptére"
+  ],
+  [
    "felsőoktatás",
    "N;ACC;SG",
    "felsőoktatást"
+  ],
+  [
+   "maláta",
+   "N;AT+ESS;PL",
+   "malátáknál"
   ],
   [
    "zigóta",
@@ -6028,6 +8428,11 @@
    "minisztériumokért"
   ],
   [
+   "emlékezőtehetség",
+   "N;IN+ABL;PL",
+   "emlékezőtehetségekből"
+  ],
+  [
    "stopfürdő",
    "N;ON+ESS;SG",
    "stopfürdőn"
@@ -6041,6 +8446,11 @@
    "megvalósítás",
    "N;IN+ABL;PL",
    "megvalósításokból"
+  ],
+  [
+   "gyes",
+   "N;IN+ALL;PL",
+   "gyesekbe"
   ],
   [
    "csődör",
@@ -6088,6 +8498,11 @@
    "munkahelybe"
   ],
   [
+   "belügyminisztérium",
+   "N;IN+ESS;PL",
+   "belügyminisztériumokban"
+  ],
+  [
    "sértés",
    "N;DAT;SG",
    "sértésnek"
@@ -6126,6 +8541,11 @@
    "futóverseny",
    "N;ACC;SG",
    "futóversenyt"
+  ],
+  [
+   "portásfülke",
+   "N;TRANS;PL",
+   "portásfülkékké"
   ],
   [
    "lábbilincs",
@@ -6178,6 +8598,16 @@
    "tévhiteket"
   ],
   [
+   "béketárgyalás",
+   "N;DAT;SG",
+   "béketárgyalásnak"
+  ],
+  [
+   "szívtipró",
+   "N;AT+ABL;SG",
+   "szívtiprótól"
+  ],
+  [
    "kebelbarát",
    "N;ON+ABL;PL",
    "kebelbarátokról"
@@ -6198,6 +8628,26 @@
    "rágalmazáson"
   ],
   [
+   "keszeg",
+   "N;AT+ABL;SG",
+   "keszegtől"
+  ],
+  [
+   "tárna",
+   "N;IN+ABL;PL",
+   "tárnákból"
+  ],
+  [
+   "lelkesedés",
+   "N;ACC;SG",
+   "lelkesedést"
+  ],
+  [
+   "húszszög",
+   "N;DAT;SG",
+   "húszszögnek"
+  ],
+  [
    "parkolóház",
    "N;TERM;SG",
    "parkolóházig"
@@ -6206,6 +8656,11 @@
    "kézbesítés",
    "N;AT+ABL;SG",
    "kézbesítéstől"
+  ],
+  [
+   "földdarab",
+   "N;AT+ABL;PL",
+   "földdaraboktól"
   ],
   [
    "zamat",
@@ -6228,6 +8683,16 @@
    "trombózisból"
   ],
   [
+   "képkocka",
+   "N;ACC;SG",
+   "képkockát"
+  ],
+  [
+   "értekezlet",
+   "N;IN+ESS;SG",
+   "értekezletben"
+  ],
+  [
    "mászó",
    "N;IN+ESS;PL",
    "mászókban"
@@ -6241,6 +8706,11 @@
    "falusi",
    "N;IN+ESS;PL",
    "falusiakban"
+  ],
+  [
+   "nyelvtanulás",
+   "N;IN+ALL;PL",
+   "nyelvtanulásokba"
   ],
   [
    "örökkévaló",
@@ -6266,6 +8736,21 @@
    "citromfagylalt",
    "N;DAT;PL",
    "citromfagylaltoknak"
+  ],
+  [
+   "đồng",
+   "N;ACC;PL",
+   "đồngokat"
+  ],
+  [
+   "szavazócédula",
+   "N;NOM;PL",
+   "szavazócédulák"
+  ],
+  [
+   "mellékcselekmény",
+   "N;ON+ESS;SG",
+   "mellékcselekményen"
   ],
   [
    "ágens",
@@ -6298,9 +8783,29 @@
    "vaksággal"
   ],
   [
+   "vegykonyha",
+   "N;INS;SG",
+   "vegykonyhával"
+  ],
+  [
+   "oldalpár",
+   "N;IN+ESS;SG",
+   "oldalpárban"
+  ],
+  [
    "szeretet",
    "N;AT+ESS;PL",
    "szereteteknél"
+  ],
+  [
+   "táborhely",
+   "N;TERM;SG",
+   "táborhelyig"
+  ],
+  [
+   "bőrbaj",
+   "N;DAT;PL",
+   "bőrbajoknak"
   ],
   [
    "kazal",
@@ -6313,14 +8818,34 @@
    "kisbolygóövekig"
   ],
   [
+   "2-es",
+   "N;DAT;PL",
+   "2-eseknek"
+  ],
+  [
    "hűség",
    "N;AT+ALL;SG",
    "hűséghez"
   ],
   [
+   "paradicsomszósz",
+   "N;DAT;PL",
+   "paradicsomszószoknak"
+  ],
+  [
    "lárma",
    "N;AT+ESS;SG",
    "lármánál"
+  ],
+  [
+   "elképzelhetetlenség",
+   "N;AT+ALL;SG",
+   "elképzelhetetlenséghez"
+  ],
+  [
+   "alsóház",
+   "N;AT+ALL;SG",
+   "alsóházhoz"
   ],
   [
    "futótűz",
@@ -6338,9 +8863,24 @@
    "buszmegállókért"
   ],
   [
+   "tartalomkészítő",
+   "N;AT+ESS;PL",
+   "tartalomkészítőknél"
+  ],
+  [
+   "írószer",
+   "N;IN+ABL;SG",
+   "írószerből"
+  ],
+  [
    "fogadás",
    "N;ACC;PL",
    "fogadásokat"
+  ],
+  [
+   "elhalás",
+   "N;TERM;PL",
+   "elhalásokig"
   ],
   [
    "csajka",
@@ -6368,9 +8908,24 @@
    "hímnemeknek"
   ],
   [
+   "kántor",
+   "N;AT+ESS;SG",
+   "kántornál"
+  ],
+  [
    "ütőér",
    "N;INS;PL",
    "ütőerekkel"
+  ],
+  [
+   "árjelzés",
+   "N;PRP;SG",
+   "árjelzésért"
+  ],
+  [
+   "élettér",
+   "N;ACC;PL",
+   "élettereket"
   ],
   [
    "hullamerevség",
@@ -6383,6 +8938,11 @@
    "unalomnak"
   ],
   [
+   "röplap",
+   "N;ON+ESS;PL",
+   "röplapokon"
+  ],
+  [
    "kullancs",
    "N;NOM;PL",
    "kullancsok"
@@ -6391,6 +8951,11 @@
    "kisbőgő",
    "N;AT+ABL;PL",
    "kisbőgőktől"
+  ],
+  [
+   "nagyságrend",
+   "N;INS;SG",
+   "nagyságrenddel"
   ],
   [
    "gallicizmus",
@@ -6413,6 +8978,16 @@
    "zörejbe"
   ],
   [
+   "bélfodor",
+   "N;IN+ALL;SG",
+   "bélfodorba"
+  ],
+  [
+   "könyvsiker",
+   "N;NOM;PL",
+   "könyvsikerek"
+  ],
+  [
    "spontaneitás",
    "N;ON+ALL;SG",
    "spontaneitásra"
@@ -6426,6 +9001,11 @@
    "vízvezeték",
    "N;ACC;PL",
    "vízvezetékeket"
+  ],
+  [
+   "mutatvány",
+   "N;ACC;SG",
+   "mutatványt"
   ],
   [
    "lepel",
@@ -6448,6 +9028,11 @@
    "transzszexuálisokon"
   ],
   [
+   "monarcha",
+   "N;IN+ESS;SG",
+   "monarchában"
+  ],
+  [
    "geológus",
    "N;AT+ABL;PL",
    "geológusoktól"
@@ -6468,14 +9053,29 @@
    "sokadikokat"
   ],
   [
+   "fűtőtest",
+   "N;IN+ESS;SG",
+   "fűtőtestben"
+  ],
+  [
    "svihák",
    "N;PRP;SG",
    "svihákért"
   ],
   [
+   "trágyaeltávolítás",
+   "N;ON+ABL;PL",
+   "trágyaeltávolításokról"
+  ],
+  [
    "búbánat",
    "N;IN+ALL;SG",
    "búbánatba"
+  ],
+  [
+   "függvénytan",
+   "N;ON+ESS;SG",
+   "függvénytanon"
   ],
   [
    "társadalomkutató",
@@ -6486,6 +9086,11 @@
    "rendőrkocsi",
    "N;AT+ABL;PL",
    "rendőrkocsiktól"
+  ],
+  [
+   "motorolaj",
+   "N;ON+ALL;SG",
+   "motorolajra"
   ],
   [
    "üdvözlőlap",
@@ -6523,9 +9128,24 @@
    "ablakpárkányokba"
   ],
   [
+   "végezte",
+   "N;IN+ESS;SG",
+   "végeztében"
+  ],
+  [
    "kultuszminisztérium",
    "N;INS;PL",
    "kultuszminisztériumokkal"
+  ],
+  [
+   "agykárosodás",
+   "N;ON+ALL;PL",
+   "agykárosodásokra"
+  ],
+  [
+   "negyvenes",
+   "N;AT+ABL;SG",
+   "negyvenestől"
   ],
   [
    "farkasa",
@@ -6556,6 +9176,11 @@
    "autószerelő",
    "N;AT+ESS;SG",
    "autószerelőnél"
+  ],
+  [
+   "tizenegyes",
+   "N;ON+ESS;SG",
+   "tizenegyesen"
   ],
   [
    "karom",
@@ -6593,6 +9218,11 @@
    "muszlinoknak"
   ],
   [
+   "bérc",
+   "N;TRANS;SG",
+   "bérccé"
+  ],
+  [
    "egyenruha",
    "N;INS;SG",
    "egyenruhával"
@@ -6606,6 +9236,11 @@
    "felirat",
    "N;IN+ALL;PL",
    "feliratokba"
+  ],
+  [
+   "évkönyv",
+   "N;IN+ESS;PL",
+   "évkönyvekben"
   ],
   [
    "közvélemény",
@@ -6633,9 +9268,24 @@
    "vízrajzokra"
   ],
   [
+   "gúnya",
+   "N;ON+ALL;PL",
+   "gúnyákra"
+  ],
+  [
    "türelem",
    "N;ON+ABL;PL",
    "türelmekről"
+  ],
+  [
+   "fájdalomdíj",
+   "N;AT+ABL;PL",
+   "fájdalomdíjaktól"
+  ],
+  [
+   "műkönny",
+   "N;INS;PL",
+   "műkönnyekkel"
   ],
   [
    "zsuga",
@@ -6646,6 +9296,11 @@
    "kaikdzsi",
    "N;IN+ALL;PL",
    "kaikdzsikbe"
+  ],
+  [
+   "vállízület",
+   "N;DAT;PL",
+   "vállízületeknek"
   ],
   [
    "szörnyűség",
@@ -6668,6 +9323,11 @@
    "mikrométerré"
   ],
   [
+   "esszencia",
+   "N;AT+ALL;PL",
+   "esszenciákhoz"
+  ],
+  [
    "óriás",
    "N;INS;SG",
    "óriással"
@@ -6686,6 +9346,11 @@
    "felhasználó",
    "N;IN+ESS;PL",
    "felhasználókban"
+  ],
+  [
+   "keretelem",
+   "N;TERM;SG",
+   "keretelemig"
   ],
   [
    "kémkedés",
@@ -6728,6 +9393,11 @@
    "állományról"
   ],
   [
+   "lapolvasó",
+   "N;TRANS;SG",
+   "lapolvasóvá"
+  ],
+  [
    "vevőkör",
    "N;NOM;PL",
    "vevőkörök"
@@ -6763,6 +9433,11 @@
    "ligatúráknál"
   ],
   [
+   "rögzítésvezető",
+   "N;AT+ABL;PL",
+   "rögzítésvezetőktől"
+  ],
+  [
    "bíróság",
    "N;AT+ALL;SG",
    "bírósághoz"
@@ -6793,9 +9468,19 @@
    "lambdákkal"
   ],
   [
+   "logarléc",
+   "N;AT+ESS;SG",
+   "logarlécnél"
+  ],
+  [
    "féregnyúlvány",
    "N;IN+ESS;SG",
    "féregnyúlványban"
+  ],
+  [
+   "szorzandó",
+   "N;IN+ALL;SG",
+   "szorzandóba"
   ],
   [
    "oktatóvideó",
@@ -6823,6 +9508,16 @@
    "indoknál"
   ],
   [
+   "gyászinduló",
+   "N;ON+ABL;PL",
+   "gyászindulókról"
+  ],
+  [
+   "tragacs",
+   "N;ON+ALL;SG",
+   "tragacsra"
+  ],
+  [
    "pere",
    "N;ON+ALL;SG",
    "perére"
@@ -6843,9 +9538,19 @@
    "fürdőköpenytől"
   ],
   [
+   "egyenesszög",
+   "N;ON+ALL;PL",
+   "egyenesszögekre"
+  ],
+  [
    "veszteség",
    "N;IN+ALL;PL",
    "veszteségekbe"
+  ],
+  [
+   "gyógyszerhatástan",
+   "N;IN+ALL;SG",
+   "gyógyszerhatástanba"
   ],
   [
    "kaszinó",
@@ -6856,6 +9561,11 @@
    "óbester",
    "N;TERM;PL",
    "óbesterekig"
+  ],
+  [
+   "rakás",
+   "N;TRANS;PL",
+   "rakásokká"
   ],
   [
    "töredezettség",
@@ -6888,6 +9598,11 @@
    "papucsférjig"
   ],
   [
+   "hálapénz",
+   "N;PRP;PL",
+   "hálapénzekért"
+  ],
+  [
    "sejk",
    "N;ACC;PL",
    "sejkeket"
@@ -6901,6 +9616,16 @@
    "fazekas",
    "N;ACC;SG",
    "fazekast"
+  ],
+  [
+   "nyílbillentyű",
+   "N;PRP;SG",
+   "nyílbillentyűért"
+  ],
+  [
+   "irányelv",
+   "N;IN+ALL;SG",
+   "irányelvbe"
   ],
   [
    "mérőszalag",
@@ -6918,9 +9643,24 @@
    "forradalommá"
   ],
   [
+   "bevándorlás",
+   "N;ON+ESS;PL",
+   "bevándorlásokon"
+  ],
+  [
+   "kandallópárkány",
+   "N;TERM;PL",
+   "kandallópárkányokig"
+  ],
+  [
    "billentyűzetfigyelő",
    "N;AT+ALL;PL",
    "billentyűzetfigyelőkhöz"
+  ],
+  [
+   "napsugár",
+   "N;TRANS;PL",
+   "napsugarakká"
   ],
   [
    "szövegkörnyezet",
@@ -6953,6 +9693,11 @@
    "feltételezésben"
   ],
   [
+   "sejtosztódás",
+   "N;IN+ESS;PL",
+   "sejtosztódásokban"
+  ],
+  [
    "zongoraóra",
    "N;ON+ABL;PL",
    "zongoraórákról"
@@ -6968,9 +9713,24 @@
    "hangfalnak"
   ],
   [
+   "mesebeszéd",
+   "N;PRP;PL",
+   "mesebeszédekért"
+  ],
+  [
    "szólánc",
    "N;ON+ABL;SG",
    "szóláncról"
+  ],
+  [
+   "alkoholtartalom",
+   "N;AT+ESS;SG",
+   "alkoholtartalomnál"
+  ],
+  [
+   "érrendszer",
+   "N;IN+ALL;PL",
+   "érrendszerekbe"
   ],
   [
    "orientalisztika",
@@ -6988,6 +9748,11 @@
    "közöket"
   ],
   [
+   "csillaghatszög",
+   "N;ACC;PL",
+   "csillaghatszögeket"
+  ],
+  [
    "professzor",
    "N;AT+ALL;SG",
    "professzorhoz"
@@ -6998,14 +9763,34 @@
    "kérgekbe"
   ],
   [
+   "fakalán",
+   "N;ON+ALL;PL",
+   "fakalánokra"
+  ],
+  [
    "morzsa",
    "N;INS;SG",
    "morzsával"
   ],
   [
+   "vilajet",
+   "N;AT+ABL;SG",
+   "vilajettől"
+  ],
+  [
    "neurózis",
    "N;IN+ESS;PL",
    "neurózisokban"
+  ],
+  [
+   "mondatszó",
+   "N;IN+ABL;SG",
+   "mondatszóból"
+  ],
+  [
+   "korál",
+   "N;AT+ESS;PL",
+   "koráloknál"
   ],
   [
    "kocsi",
@@ -7016,6 +9801,11 @@
    "szükségem",
    "N;ON+ESS;SG",
    "szükségemen"
+  ],
+  [
+   "protkó",
+   "N;AT+ABL;SG",
+   "protkótól"
   ],
   [
    "diadalív",
@@ -7068,14 +9858,34 @@
    "impresszionistáknak"
   ],
   [
+   "fókusztávolság",
+   "N;IN+ESS;SG",
+   "fókusztávolságban"
+  ],
+  [
    "verem",
    "N;ON+ABL;PL",
    "vermekről"
   ],
   [
+   "klubtag",
+   "N;TRANS;SG",
+   "klubtaggá"
+  ],
+  [
    "kozmetikus",
    "N;PRP;SG",
    "kozmetikusért"
+  ],
+  [
+   "faxpapír",
+   "N;TERM;PL",
+   "faxpapírokig"
+  ],
+  [
+   "tibetológus",
+   "N;IN+ESS;SG",
+   "tibetológusban"
   ],
   [
    "kaszinó",
@@ -7103,6 +9913,16 @@
    "szarvashúson"
   ],
   [
+   "portfólió",
+   "N;IN+ABL;SG",
+   "portfólióból"
+  ],
+  [
+   "jogszerűség",
+   "N;AT+ALL;PL",
+   "jogszerűségekhez"
+  ],
+  [
    "hajnalka",
    "N;AT+ABL;PL",
    "hajnalkáktól"
@@ -7111,6 +9931,11 @@
    "vetés",
    "N;DAT;SG",
    "vetésnek"
+  ],
+  [
+   "makulátlanság",
+   "N;ACC;SG",
+   "makulátlanságot"
   ],
   [
    "karakter",
@@ -7123,6 +9948,16 @@
    "területfejlesztéstől"
   ],
   [
+   "piskóta",
+   "N;IN+ALL;PL",
+   "piskótákba"
+  ],
+  [
+   "körültekintés",
+   "N;DAT;SG",
+   "körültekintésnek"
+  ],
+  [
    "bizmut",
    "N;IN+ABL;SG",
    "bizmutból"
@@ -7133,9 +9968,24 @@
    "muszkliról"
   ],
   [
+   "élénkség",
+   "N;ON+ESS;PL",
+   "élénkségeken"
+  ],
+  [
    "videoklip",
    "N;IN+ABL;PL",
    "videoklipekből"
+  ],
+  [
+   "vivő",
+   "N;TERM;PL",
+   "vivőkig"
+  ],
+  [
+   "űrutazás",
+   "N;TERM;PL",
+   "űrutazásokig"
   ],
   [
    "toldalék",
@@ -7151,6 +10001,11 @@
    "gémeskút",
    "N;ON+ABL;SG",
    "gémeskútról"
+  ],
+  [
+   "fehérfolyás",
+   "N;ON+ESS;SG",
+   "fehérfolyáson"
   ],
   [
    "kapacitás",
@@ -7213,6 +10068,11 @@
    "zsébe"
   ],
   [
+   "kretén",
+   "N;IN+ABL;PL",
+   "kreténekből"
+  ],
+  [
    "seregély",
    "N;AT+ABL;SG",
    "seregélytől"
@@ -7238,6 +10098,11 @@
    "piócától"
   ],
   [
+   "árjelzés",
+   "N;ON+ALL;SG",
+   "árjelzésre"
+  ],
+  [
    "szalonka",
    "N;TRANS;SG",
    "szalonkává"
@@ -7248,14 +10113,34 @@
    "kivételnél"
   ],
   [
+   "nemfém",
+   "N;AT+ABL;SG",
+   "nemfémtől"
+  ],
+  [
    "vízpára",
    "N;AT+ALL;SG",
    "vízpárához"
   ],
   [
+   "szemetesláda",
+   "N;ON+ESS;PL",
+   "szemetesládákon"
+  ],
+  [
    "szónok",
    "N;TERM;SG",
    "szónokig"
+  ],
+  [
+   "hamisítás",
+   "N;IN+ESS;PL",
+   "hamisításokban"
+  ],
+  [
+   "elviselhetetlenség",
+   "N;IN+ALL;SG",
+   "elviselhetetlenségbe"
   ],
   [
    "lakó",
@@ -7266,6 +10151,11 @@
    "objektum",
    "N;AT+ABL;SG",
    "objektumtól"
+  ],
+  [
+   "kalligráfia",
+   "N;ACC;PL",
+   "kalligráfiákat"
   ],
   [
    "hitelező",
@@ -7283,6 +10173,11 @@
    "újdondászban"
   ],
   [
+   "csúcstechnológia",
+   "N;IN+ALL;PL",
+   "csúcstechnológiákba"
+  ],
+  [
    "sziámi",
    "N;AT+ABL;PL",
    "sziámiaktól"
@@ -7296,6 +10191,11 @@
    "marxista",
    "N;TERM;SG",
    "marxistáig"
+  ],
+  [
+   "mosókonyha",
+   "N;IN+ALL;PL",
+   "mosókonyhákba"
   ],
   [
    "hordár",
@@ -7338,6 +10238,11 @@
    "helységnevekre"
   ],
   [
+   "bróker",
+   "N;INS;SG",
+   "brókerrel"
+  ],
+  [
    "szénaboglya",
    "N;IN+ESS;SG",
    "szénaboglyában"
@@ -7358,6 +10263,11 @@
    "eszményhez"
   ],
   [
+   "borpince",
+   "N;IN+ESS;SG",
+   "borpincében"
+  ],
+  [
    "tőzegáfonya",
    "N;IN+ALL;SG",
    "tőzegáfonyába"
@@ -7366,6 +10276,11 @@
    "civakodás",
    "N;AT+ABL;PL",
    "civakodásoktól"
+  ],
+  [
+   "autósztráda",
+   "N;AT+ABL;SG",
+   "autósztrádától"
   ],
   [
    "dadaista",
@@ -7388,6 +10303,21 @@
    "kilométerről"
   ],
   [
+   "jövetel",
+   "N;IN+ESS;PL",
+   "jövetelekben"
+  ],
+  [
+   "forgásfelület",
+   "N;IN+ESS;SG",
+   "forgásfelületben"
+  ],
+  [
+   "csapatember",
+   "N;ON+ESS;SG",
+   "csapatemberen"
+  ],
+  [
    "kezdet",
    "N;DAT;SG",
    "kezdetnek"
@@ -7401,6 +10331,21 @@
    "fogadósné",
    "N;IN+ESS;PL",
    "fogadósnékban"
+  ],
+  [
+   "ékírás",
+   "N;IN+ABL;PL",
+   "ékírásokból"
+  ],
+  [
+   "madárijesztő",
+   "N;IN+ABL;PL",
+   "madárijesztőkből"
+  ],
+  [
+   "követelmény",
+   "N;ACC;PL",
+   "követelményeket"
   ],
   [
    "taxisofőr",
@@ -7423,9 +10368,19 @@
    "vegetációkban"
   ],
   [
+   "évf.",
+   "N;IN+ESS;PL",
+   "évf.-okban"
+  ],
+  [
    "bagolyvár",
    "N;DAT;SG",
    "bagolyvárnak"
+  ],
+  [
+   "malacpersely",
+   "N;ON+ESS;SG",
+   "malacperselyen"
   ],
   [
    "kanyaró",
@@ -7468,6 +10423,11 @@
    "rezsimekben"
   ],
   [
+   "rendszerváltozás",
+   "N;TRANS;SG",
+   "rendszerváltozássá"
+  ],
+  [
    "ebihal",
    "N;ON+ABL;SG",
    "ebihalról"
@@ -7483,9 +10443,39 @@
    "héliummal"
   ],
   [
+   "gyengeség",
+   "N;PRP;PL",
+   "gyengeségekért"
+  ],
+  [
    "jelenség",
    "N;TERM;PL",
    "jelenségekig"
+  ],
+  [
+   "unalmasság",
+   "N;DAT;SG",
+   "unalmasságnak"
+  ],
+  [
+   "lipinka",
+   "N;INS;PL",
+   "lipinkákkal"
+  ],
+  [
+   "hirdetőoszlop",
+   "N;ACC;SG",
+   "hirdetőoszlopot"
+  ],
+  [
+   "sírrabló",
+   "N;IN+ALL;SG",
+   "sírrablóba"
+  ],
+  [
+   "meghatalmazás",
+   "N;AT+ESS;PL",
+   "meghatalmazásoknál"
   ],
   [
    "bocsa",
@@ -7513,6 +10503,11 @@
    "zsalugáterba"
   ],
   [
+   "pénzadomány",
+   "N;ON+ESS;PL",
+   "pénzadományokon"
+  ],
+  [
    "közöny",
    "N;IN+ESS;SG",
    "közönyben"
@@ -7521,6 +10516,11 @@
    "nonstop",
    "N;IN+ALL;PL",
    "nonstopokba"
+  ],
+  [
+   "munkásosztály",
+   "N;TERM;SG",
+   "munkásosztályig"
   ],
   [
    "védőszent",
@@ -7538,14 +10538,29 @@
    "sakk-mattokhoz"
   ],
   [
+   "révátkelés",
+   "N;IN+ABL;PL",
+   "révátkelésekből"
+  ],
+  [
    "sikoly",
    "N;IN+ESS;SG",
    "sikolyban"
   ],
   [
+   "karszalag",
+   "N;TERM;SG",
+   "karszalagig"
+  ],
+  [
    "közösség",
    "N;AT+ABL;SG",
    "közösségtől"
+  ],
+  [
+   "lábujjhegy",
+   "N;DAT;PL",
+   "lábujjhegyeknek"
   ],
   [
    "kém",
@@ -7556,6 +10571,11 @@
    "dugvány",
    "N;IN+ESS;SG",
    "dugványban"
+  ],
+  [
+   "beosztott",
+   "N;INS;PL",
+   "beosztottakkal"
   ],
   [
    "szemantika",
@@ -7583,6 +10603,11 @@
    "köntösökről"
   ],
   [
+   "mélységélesség",
+   "N;ON+ESS;SG",
+   "mélységélességen"
+  ],
+  [
    "kancellár",
    "N;IN+ESS;SG",
    "kancellárban"
@@ -7591,6 +10616,11 @@
    "síkság",
    "N;AT+ALL;SG",
    "síksághoz"
+  ],
+  [
+   "fordítóiroda",
+   "N;IN+ABL;PL",
+   "fordítóirodákból"
   ],
   [
    "derítés",
@@ -7618,6 +10648,11 @@
    "böglyökkel"
   ],
   [
+   "medvefóka",
+   "N;ON+ESS;PL",
+   "medvefókákon"
+  ],
+  [
    "zsakett",
    "N;ON+ESS;SG",
    "zsaketten"
@@ -7636,6 +10671,11 @@
    "javasasszony",
    "N;IN+ABL;SG",
    "javasasszonyból"
+  ],
+  [
+   "pótolhatatlanság",
+   "N;INS;SG",
+   "pótolhatatlansággal"
   ],
   [
    "széklet",
@@ -7668,6 +10708,16 @@
    "villámháborúkért"
   ],
   [
+   "bon",
+   "N;NOM;PL",
+   "bonok"
+  ],
+  [
+   "krizopráz",
+   "N;ON+ALL;SG",
+   "krizoprázra"
+  ],
+  [
    "szabadkőműves",
    "N;AT+ALL;SG",
    "szabadkőműveshez"
@@ -7681,6 +10731,11 @@
    "cézium",
    "N;IN+ESS;SG",
    "céziumban"
+  ],
+  [
+   "kifejezésmód",
+   "N;INS;PL",
+   "kifejezésmódokkal"
   ],
   [
    "kamara",
@@ -7698,6 +10753,11 @@
    "könyvelésig"
   ],
   [
+   "valótlanság",
+   "N;ON+ALL;PL",
+   "valótlanságokra"
+  ],
+  [
    "kollekció",
    "N;TRANS;SG",
    "kollekcióvá"
@@ -7706,6 +10766,11 @@
    "ká",
    "N;ON+ESS;SG",
    "kán"
+  ],
+  [
+   "papírkép",
+   "N;DAT;PL",
+   "papírképeknek"
   ],
   [
    "tanzániai",
@@ -7718,6 +10783,11 @@
    "aranyig"
   ],
   [
+   "abortuszbizottság",
+   "N;DAT;PL",
+   "abortuszbizottságoknak"
+  ],
+  [
    "világgazdaság",
    "N;TRANS;PL",
    "világgazdaságokká"
@@ -7726,6 +10796,11 @@
    "óír",
    "N;AT+ALL;SG",
    "óírhez"
+  ],
+  [
+   "pacemaker",
+   "N;ON+ABL;PL",
+   "pacemakerekről"
   ],
   [
    "talp",
@@ -7778,6 +10853,11 @@
    "iránytűt"
   ],
   [
+   "fotópapír",
+   "N;AT+ABL;SG",
+   "fotópapírtól"
+  ],
+  [
    "cetli",
    "N;ON+ESS;SG",
    "cetlin"
@@ -7798,9 +10878,19 @@
    "falatokért"
   ],
   [
+   "entrópia",
+   "N;IN+ABL;SG",
+   "entrópiából"
+  ],
+  [
    "reklámszoftver",
    "N;INS;PL",
    "reklámszoftverekkel"
+  ],
+  [
+   "egyező",
+   "N;INS;PL",
+   "egyezőkkel"
   ],
   [
    "pakisztáni",
@@ -7823,6 +10913,11 @@
    "kínálatról"
   ],
   [
+   "germán",
+   "N;ON+ALL;SG",
+   "germánra"
+  ],
+  [
    "vérkeringés",
    "N;IN+ESS;SG",
    "vérkeringésben"
@@ -7836,6 +10931,11 @@
    "ábécé",
    "N;TERM;SG",
    "ábécéig"
+  ],
+  [
+   "stagfláció",
+   "N;ON+ABL;PL",
+   "stagflációkról"
   ],
   [
    "tévé",
@@ -7853,9 +10953,39 @@
    "pénzügyminisztériumig"
   ],
   [
+   "csupor",
+   "N;AT+ABL;SG",
+   "csuportól"
+  ],
+  [
    "asztrológia",
    "N;DAT;SG",
    "asztrológiának"
+  ],
+  [
+   "bifenil",
+   "N;ON+ALL;PL",
+   "bifenilekre"
+  ],
+  [
+   "berillium-klorid",
+   "N;ACC;SG",
+   "berillium-kloridot"
+  ],
+  [
+   "kókuszbél",
+   "N;ON+ESS;PL",
+   "kókuszbeleken"
+  ],
+  [
+   "papondekli",
+   "N;INS;PL",
+   "papondeklikkel"
+  ],
+  [
+   "halpikkely",
+   "N;IN+ABL;SG",
+   "halpikkelyből"
   ],
   [
    "könyvecske",
@@ -7888,6 +11018,16 @@
    "címszóknak"
   ],
   [
+   "címszó",
+   "N;DAT;PL",
+   "címszavaknak"
+  ],
+  [
+   "összehasonlítás",
+   "N;PRP;SG",
+   "összehasonlításért"
+  ],
+  [
    "gyorsaság",
    "N;INS;SG",
    "gyorsasággal"
@@ -7918,6 +11058,16 @@
    "tökfilkóért"
   ],
   [
+   "felismerhetetlenség",
+   "N;TERM;SG",
+   "felismerhetetlenségig"
+  ],
+  [
+   "differenciálegyenlet",
+   "N;IN+ABL;SG",
+   "differenciálegyenletből"
+  ],
+  [
    "záradék",
    "N;IN+ESS;SG",
    "záradékban"
@@ -7933,14 +11083,39 @@
    "úszógumitól"
   ],
   [
+   "butaság",
+   "N;AT+ESS;SG",
+   "butaságnál"
+  ],
+  [
+   "terepjáró",
+   "N;AT+ESS;SG",
+   "terepjárónál"
+  ],
+  [
    "felnőtt",
    "N;DAT;PL",
    "felnőtteknek"
   ],
   [
+   "guatemalai",
+   "N;TRANS;PL",
+   "guatemalaiakká"
+  ],
+  [
    "arató",
    "N;IN+ABL;PL",
    "aratókból"
+  ],
+  [
+   "koffer",
+   "N;IN+ABL;PL",
+   "kofferekből"
+  ],
+  [
+   "koffer",
+   "N;IN+ABL;PL",
+   "kofferokból"
   ],
   [
    "viaszgyertya",
@@ -7956,6 +11131,11 @@
    "erőszak",
    "N;ON+ABL;SG",
    "erőszakról"
+  ],
+  [
+   "fuvolista",
+   "N;ACC;PL",
+   "fuvolistákat"
   ],
   [
    "strázsamester",
@@ -7988,6 +11168,11 @@
    "sebességekké"
   ],
   [
+   "virágágyás",
+   "N;DAT;SG",
+   "virágágyásnak"
+  ],
+  [
    "szimuláns",
    "N;IN+ABL;SG",
    "szimulánsból"
@@ -8018,6 +11203,11 @@
    "óhajoknak"
   ],
   [
+   "leíró",
+   "N;ON+ALL;SG",
+   "leíróra"
+  ],
+  [
    "vetítés",
    "N;ON+ALL;PL",
    "vetítésekre"
@@ -8026,6 +11216,11 @@
    "kalcium",
    "N;AT+ESS;SG",
    "kalciumnál"
+  ],
+  [
+   "5000-es",
+   "N;INS;PL",
+   "5000-esekkel"
   ],
   [
    "ideggyógyász",
@@ -8053,9 +11248,19 @@
    "jellemzőnek"
   ],
   [
+   "utol",
+   "N;TERM;PL",
+   "utolokig"
+  ],
+  [
    "turista",
    "N;PRP;PL",
    "turistákért"
+  ],
+  [
+   "galandféreg",
+   "N;ON+ABL;SG",
+   "galandféregről"
   ],
   [
    "sort",
@@ -8103,6 +11308,16 @@
    "bejegyzéssé"
   ],
   [
+   "magánóvoda",
+   "N;ON+ABL;PL",
+   "magánóvodákról"
+  ],
+  [
+   "eposz",
+   "N;ACC;PL",
+   "eposzokat"
+  ],
+  [
    "gyilkos",
    "N;ON+ESS;PL",
    "gyilkosokon"
@@ -8111,6 +11326,11 @@
    "csap",
    "N;IN+ABL;PL",
    "csapokból"
+  ],
+  [
+   "közreműködő",
+   "N;AT+ESS;PL",
+   "közreműködőknél"
   ],
   [
    "taré",
@@ -8173,14 +11393,34 @@
    "bojtorjánokban"
   ],
   [
+   "gráfelmélet",
+   "N;ON+ALL;SG",
+   "gráfelméletre"
+  ],
+  [
    "lepel",
    "N;TRANS;PL",
    "leplekké"
   ],
   [
+   "bányamérnök",
+   "N;AT+ALL;PL",
+   "bányamérnökökhöz"
+  ],
+  [
    "részegség",
    "N;AT+ABL;SG",
    "részegségtől"
+  ],
+  [
+   "gulyáságyú",
+   "N;IN+ABL;PL",
+   "gulyáságyúkból"
+  ],
+  [
+   "szervdonáció",
+   "N;ON+ALL;PL",
+   "szervdonációkra"
   ],
   [
    "hidrográfia",
@@ -8208,14 +11448,34 @@
    "amőbákkal"
   ],
   [
+   "málha",
+   "N;INS;PL",
+   "málhákkal"
+  ],
+  [
    "kegyelem",
    "N;ON+ABL;PL",
    "kegyelmekről"
   ],
   [
+   "képzelőerő",
+   "N;IN+ALL;SG",
+   "képzelőerőbe"
+  ],
+  [
    "pisztoly",
    "N;IN+ALL;PL",
    "pisztolyokba"
+  ],
+  [
+   "kisfröccs",
+   "N;TERM;SG",
+   "kisfröccsig"
+  ],
+  [
+   "pint",
+   "N;IN+ABL;SG",
+   "pintből"
   ],
   [
    "ravasz",
@@ -8238,6 +11498,11 @@
    "aránytalansággá"
   ],
   [
+   "kábeltévé",
+   "N;ON+ALL;PL",
+   "kábeltévékre"
+  ],
+  [
    "köröm",
    "N;AT+ABL;SG",
    "körömtől"
@@ -8258,9 +11523,24 @@
    "glutaminba"
   ],
   [
+   "kisgazda",
+   "N;AT+ABL;PL",
+   "kisgazdáktól"
+  ],
+  [
    "közvélemény-kutatás",
    "N;IN+ESS;SG",
    "közvélemény-kutatásban"
+  ],
+  [
+   "kordé",
+   "N;AT+ESS;PL",
+   "kordéknál"
+  ],
+  [
+   "kislány",
+   "N;ACC;PL",
+   "kislányokat"
   ],
   [
    "flopi",
@@ -8288,6 +11568,11 @@
    "sahért"
   ],
   [
+   "paradicsomszósz",
+   "N;INS;SG",
+   "paradicsomszósszal"
+  ],
+  [
    "kiscsikó",
    "N;TRANS;PL",
    "kiscsikókká"
@@ -8296,6 +11581,11 @@
    "fekély",
    "N;TERM;PL",
    "fekélyekig"
+  ],
+  [
+   "ipartelep",
+   "N;NOM;PL",
+   "ipartelepek"
   ],
   [
    "geometria",
@@ -8308,9 +11598,24 @@
    "kolostoroknak"
   ],
   [
+   "földbirtok",
+   "N;TRANS;SG",
+   "földbirtokká"
+  ],
+  [
    "széled",
    "N;IN+ALL;SG",
    "széledbe"
+  ],
+  [
+   "rúdtánc",
+   "N;IN+ESS;SG",
+   "rúdtáncban"
+  ],
+  [
+   "kötelesség",
+   "N;IN+ALL;SG",
+   "kötelességbe"
   ],
   [
    "huzam",
@@ -8348,6 +11653,16 @@
    "tantestületben"
   ],
   [
+   "zsákfalu",
+   "N;IN+ALL;PL",
+   "zsákfalukba"
+  ],
+  [
+   "zsákfalu",
+   "N;IN+ALL;PL",
+   "zsákfalvakba"
+  ],
+  [
    "ördög",
    "N;TRANS;PL",
    "ördögökké"
@@ -8368,6 +11683,11 @@
    "távozásig"
   ],
   [
+   "sparhert",
+   "N;PRP;SG",
+   "sparhertért"
+  ],
+  [
    "szivárvány",
    "N;PRP;PL",
    "szivárványokért"
@@ -8376,6 +11696,11 @@
    "zablakarika",
    "N;IN+ABL;SG",
    "zablakarikából"
+  ],
+  [
+   "megjegyzés",
+   "N;ON+ALL;PL",
+   "megjegyzésekre"
   ],
   [
    "szívélyesség",
@@ -8408,9 +11733,24 @@
    "algoritmust"
   ],
   [
+   "moszlim",
+   "N;TRANS;SG",
+   "moszlimmá"
+  ],
+  [
    "gyógytorna",
    "N;DAT;SG",
    "gyógytornának"
+  ],
+  [
+   "rádióműsor",
+   "N;TRANS;PL",
+   "rádióműsorokká"
+  ],
+  [
+   "délszláv",
+   "N;PRP;SG",
+   "délszlávért"
   ],
   [
    "kozmetikum",
@@ -8448,6 +11788,16 @@
    "hatvanharmadikakkal"
   ],
   [
+   "vékonya",
+   "N;INS;SG",
+   "vékonyával"
+  ],
+  [
+   "cukrászat",
+   "N;IN+ALL;SG",
+   "cukrászatba"
+  ],
+  [
    "szútra",
    "N;PRP;PL",
    "szútrákért"
@@ -8466,6 +11816,11 @@
    "támaszpont",
    "N;ON+ABL;PL",
    "támaszpontokról"
+  ],
+  [
+   "pánszlávizmus",
+   "N;ON+ESS;PL",
+   "pánszlávizmusokon"
   ],
   [
    "centiméter",
@@ -8488,6 +11843,16 @@
    "légibetegségekig"
   ],
   [
+   "otrombaság",
+   "N;IN+ESS;SG",
+   "otrombaságban"
+  ],
+  [
+   "megjelentetés",
+   "N;DAT;PL",
+   "megjelentetéseknek"
+  ],
+  [
    "nőgyűlölő",
    "N;INS;SG",
    "nőgyűlölővel"
@@ -8496,6 +11861,16 @@
    "nevelés",
    "N;AT+ABL;SG",
    "neveléstől"
+  ],
+  [
+   "oklevél",
+   "N;IN+ABL;PL",
+   "oklevelekből"
+  ],
+  [
+   "cucli",
+   "N;ACC;SG",
+   "cuclit"
   ],
   [
    "riboszóma",
@@ -8528,9 +11903,34 @@
    "patnit"
   ],
   [
+   "ártalmasság",
+   "N;IN+ABL;PL",
+   "ártalmasságokból"
+  ],
+  [
+   "felismerhetetlenség",
+   "N;ON+ABL;SG",
+   "felismerhetetlenségről"
+  ],
+  [
+   "találgatás",
+   "N;AT+ALL;SG",
+   "találgatáshoz"
+  ],
+  [
    "solymász",
    "N;AT+ALL;SG",
    "solymászhoz"
+  ],
+  [
+   "csokiszelet",
+   "N;TRANS;SG",
+   "csokiszeletté"
+  ],
+  [
+   "öncenzúra",
+   "N;AT+ABL;SG",
+   "öncenzúrától"
   ],
   [
    "prófétanő",
@@ -8543,14 +11943,29 @@
    "vevést"
   ],
   [
+   "elképzelhetetlenség",
+   "N;IN+ALL;PL",
+   "elképzelhetetlenségekbe"
+  ],
+  [
    "architektúra",
    "N;ON+ESS;SG",
    "architektúrán"
   ],
   [
+   "betűméret",
+   "N;ON+ALL;PL",
+   "betűméretekre"
+  ],
+  [
    "szlogen",
    "N;AT+ABL;SG",
    "szlogentől"
+  ],
+  [
+   "menetjegy",
+   "N;TRANS;SG",
+   "menetjeggyé"
   ],
   [
    "giliszta",
@@ -8561,6 +11976,11 @@
    "erdőség",
    "N;AT+ABL;PL",
    "erdőségektől"
+  ],
+  [
+   "csoportelmélet",
+   "N;ON+ALL;PL",
+   "csoportelméletekre"
   ],
   [
    "hátsó",
@@ -8578,9 +11998,19 @@
    "nyomdafestékért"
   ],
   [
+   "pótló",
+   "N;IN+ABL;SG",
+   "pótlóból"
+  ],
+  [
    "gyógyszertár",
    "N;ON+ABL;PL",
    "gyógyszertárakról"
+  ],
+  [
+   "pötty",
+   "N;AT+ESS;PL",
+   "pöttyöknél"
   ],
   [
    "mérséklet",
@@ -8598,14 +12028,49 @@
    "honfiktól"
   ],
   [
+   "honfi",
+   "N;AT+ABL;PL",
+   "honfiaktól"
+  ],
+  [
+   "kurátor",
+   "N;DAT;PL",
+   "kurátoroknak"
+  ],
+  [
    "rüh",
    "N;ON+ABL;SG",
    "rühről"
   ],
   [
+   "madárijesztő",
+   "N;DAT;PL",
+   "madárijesztőknek"
+  ],
+  [
    "gallium",
    "N;IN+ALL;PL",
    "galliumokba"
+  ],
+  [
+   "fiatalság",
+   "N;IN+ESS;PL",
+   "fiatalságokban"
+  ],
+  [
+   "metropolisztérség",
+   "N;ON+ALL;PL",
+   "metropolisztérségekre"
+  ],
+  [
+   "vérellátás",
+   "N;TERM;PL",
+   "vérellátásokig"
+  ],
+  [
+   "retina",
+   "N;TRANS;PL",
+   "retinákká"
   ],
   [
    "űrlap",
@@ -8618,6 +12083,16 @@
    "csilikig"
   ],
   [
+   "mangalica",
+   "N;DAT;PL",
+   "mangalicáknak"
+  ],
+  [
+   "aranytartalék",
+   "N;NOM;PL",
+   "aranytartalékok"
+  ],
+  [
    "sértés",
    "N;TRANS;PL",
    "sértésekké"
@@ -8626,6 +12101,16 @@
    "vályogtégla",
    "N;IN+ABL;SG",
    "vályogtéglából"
+  ],
+  [
+   "prognosztika",
+   "N;PRP;SG",
+   "prognosztikáért"
+  ],
+  [
+   "diszprózium",
+   "N;ACC;SG",
+   "diszpróziumot"
   ],
   [
    "gyökérzöldség",
@@ -8663,6 +12148,16 @@
    "kajdácsokká"
   ],
   [
+   "ketchup",
+   "N;ON+ALL;PL",
+   "ketchupökre"
+  ],
+  [
+   "ketchup",
+   "N;ON+ALL;PL",
+   "ketchupokra"
+  ],
+  [
    "gyermekülés",
    "N;ACC;SG",
    "gyermekülést"
@@ -8688,14 +12183,34 @@
    "karfákról"
   ],
   [
+   "iatrokémia",
+   "N;IN+ESS;PL",
+   "iatrokémiákban"
+  ],
+  [
    "székrekedés",
    "N;ON+ALL;SG",
    "székrekedésre"
   ],
   [
+   "megszólítás",
+   "N;AT+ABL;SG",
+   "megszólítástól"
+  ],
+  [
+   "prioritás",
+   "N;INS;SG",
+   "prioritással"
+  ],
+  [
    "elégtelenség",
    "N;AT+ABL;PL",
    "elégtelenségektől"
+  ],
+  [
+   "szóelvonás",
+   "N;IN+ESS;SG",
+   "szóelvonásban"
   ],
   [
    "csata",
@@ -8708,14 +12223,34 @@
    "titánokért"
   ],
   [
+   "lázadó",
+   "N;INS;PL",
+   "lázadókkal"
+  ],
+  [
+   "peres",
+   "N;ON+ABL;PL",
+   "peresekről"
+  ],
+  [
    "győztes",
    "N;DAT;SG",
    "győztesnek"
   ],
   [
+   "lakcím",
+   "N;DAT;SG",
+   "lakcímnek"
+  ],
+  [
    "gudzsaráti",
    "N;NOM;PL",
    "gudzsarátiak"
+  ],
+  [
+   "gudzsaráti",
+   "N;NOM;PL",
+   "gudzsarátik"
   ],
   [
    "alj",
@@ -8728,14 +12263,39 @@
    "szélvédőktől"
   ],
   [
+   "előzékenység",
+   "N;ON+ALL;SG",
+   "előzékenységre"
+  ],
+  [
    "medúza",
    "N;AT+ESS;PL",
    "medúzáknál"
   ],
   [
+   "jogállamiság",
+   "N;PRP;SG",
+   "jogállamiságért"
+  ],
+  [
+   "princípium",
+   "N;ON+ABL;SG",
+   "princípiumról"
+  ],
+  [
    "linóleum",
    "N;DAT;PL",
    "linóleumoknak"
+  ],
+  [
+   "paradicsomsűrítmény",
+   "N;IN+ESS;SG",
+   "paradicsomsűrítményben"
+  ],
+  [
+   "repkény",
+   "N;AT+ABL;SG",
+   "repkénytől"
   ],
   [
    "rész",
@@ -8758,6 +12318,11 @@
    "tanúival"
   ],
   [
+   "könnyűsúly",
+   "N;ON+ALL;SG",
+   "könnyűsúlyra"
+  ],
+  [
    "szájhős",
    "N;AT+ESS;PL",
    "szájhősöknél"
@@ -8766,6 +12331,11 @@
    "xilofon",
    "N;TRANS;SG",
    "xilofonná"
+  ],
+  [
+   "emberalak",
+   "N;INS;SG",
+   "emberalakkal"
   ],
   [
    "vasútvonal",
@@ -8813,9 +12383,24 @@
    "taxiban"
   ],
   [
+   "bikafuttatás",
+   "N;ACC;PL",
+   "bikafuttatásokat"
+  ],
+  [
+   "uszító",
+   "N;AT+ALL;SG",
+   "uszítóhoz"
+  ],
+  [
    "gamma",
    "N;AT+ALL;PL",
    "gammákhoz"
+  ],
+  [
+   "vegyérték",
+   "N;INS;PL",
+   "vegyértékekkel"
   ],
   [
    "parapszichológia",
@@ -8838,9 +12423,24 @@
    "nápolyik"
   ],
   [
+   "étek",
+   "N;AT+ABL;SG",
+   "étektől"
+  ],
+  [
+   "érzéstelenítő",
+   "N;ON+ALL;PL",
+   "érzéstelenítőkre"
+  ],
+  [
    "konzultáns",
    "N;IN+ABL;PL",
    "konzultánsokból"
+  ],
+  [
+   "muzsik",
+   "N;ON+ABL;SG",
+   "muzsikról"
   ],
   [
    "holland",
@@ -8903,6 +12503,16 @@
    "ekhókat"
   ],
   [
+   "kerengő",
+   "N;TERM;SG",
+   "kerengőig"
+  ],
+  [
+   "db",
+   "N;IN+ALL;SG",
+   "db-ba"
+  ],
+  [
    "önmérséklet",
    "N;TERM;SG",
    "önmérsékletig"
@@ -8913,14 +12523,34 @@
    "olívákhoz"
   ],
   [
+   "mennykő",
+   "N;PRP;PL",
+   "mennykövekért"
+  ],
+  [
+   "mennykő",
+   "N;PRP;PL",
+   "mennykőkért"
+  ],
+  [
    "aprópénz",
    "N;ON+ABL;SG",
    "aprópénzről"
   ],
   [
+   "baksis",
+   "N;TERM;SG",
+   "baksisig"
+  ],
+  [
    "világbajnokság",
    "N;IN+ABL;PL",
    "világbajnokságokból"
+  ],
+  [
+   "májkapugyűjtőér",
+   "N;IN+ALL;SG",
+   "májkapugyűjtőérbe"
   ],
   [
    "őrület",
@@ -8933,9 +12563,19 @@
    "ingatlanokká"
   ],
   [
+   "aranylánc",
+   "N;TRANS;SG",
+   "aranylánccá"
+  ],
+  [
    "ultrahang",
    "N;TRANS;PL",
    "ultrahangokká"
+  ],
+  [
+   "árusítás",
+   "N;AT+ABL;SG",
+   "árusítástól"
   ],
   [
    "sarc",
@@ -8946,6 +12586,11 @@
    "közkívánat",
    "N;DAT;PL",
    "közkívánatoknak"
+  ],
+  [
+   "exférj",
+   "N;AT+ESS;PL",
+   "exférjeknél"
   ],
   [
    "rongyrázás",
@@ -9003,6 +12648,11 @@
    "időutazáshoz"
   ],
   [
+   "oszmán-török",
+   "N;PRP;SG",
+   "oszmán-törökért"
+  ],
+  [
    "kenotáfium",
    "N;ACC;PL",
    "kenotáfiumokat"
@@ -9028,9 +12678,19 @@
    "pénisznél"
   ],
   [
+   "rendűség",
+   "N;IN+ESS;PL",
+   "rendűségekben"
+  ],
+  [
    "hócipője",
    "N;TERM;SG",
    "hócipőjéig"
+  ],
+  [
+   "félegyenes",
+   "N;AT+ABL;PL",
+   "félegyenesektől"
   ],
   [
    "zseb",
@@ -9043,6 +12703,21 @@
    "konglomerátumokkal"
   ],
   [
+   "csihány",
+   "N;TRANS;PL",
+   "csihányokká"
+  ],
+  [
+   "slussz",
+   "N;TRANS;PL",
+   "slusszokká"
+  ],
+  [
+   "riasztó",
+   "N;DAT;SG",
+   "riasztónak"
+  ],
+  [
    "nyű",
    "N;IN+ESS;PL",
    "nyüvekben"
@@ -9051,6 +12726,11 @@
    "nyű",
    "N;IN+ESS;PL",
    "nyűkben"
+  ],
+  [
+   "munkaviszony",
+   "N;NOM;PL",
+   "munkaviszonyok"
   ],
   [
    "svindler",
@@ -9143,6 +12823,11 @@
    "tárhelyek"
   ],
   [
+   "bántalom",
+   "N;IN+ABL;SG",
+   "bántalomból"
+  ],
+  [
    "tartozék",
    "N;PRP;SG",
    "tartozékért"
@@ -9163,6 +12848,11 @@
    "tériszonnyá"
   ],
   [
+   "csemegeszőlő",
+   "N;ACC;PL",
+   "csemegeszőlőket"
+  ],
+  [
    "százezer",
    "N;NOM;PL",
    "százezrek"
@@ -9178,6 +12868,16 @@
    "nyelvészetért"
   ],
   [
+   "rajzasztal",
+   "N;INS;SG",
+   "rajzasztallal"
+  ],
+  [
+   "levélboríték",
+   "N;AT+ESS;PL",
+   "levélborítékoknál"
+  ],
+  [
    "memória",
    "N;ON+ABL;PL",
    "memóriákról"
@@ -9186,6 +12886,16 @@
    "gyújtogatás",
    "N;AT+ABL;SG",
    "gyújtogatástól"
+  ],
+  [
+   "figyelmetlenség",
+   "N;ON+ESS;SG",
+   "figyelmetlenségen"
+  ],
+  [
+   "rendűség",
+   "N;IN+ALL;SG",
+   "rendűségbe"
   ],
   [
    "portás",
@@ -9203,9 +12913,19 @@
    "pitékig"
   ],
   [
+   "füves",
+   "N;IN+ESS;PL",
+   "füvesekben"
+  ],
+  [
    "gengszter",
    "N;IN+ESS;PL",
    "gengszterekben"
+  ],
+  [
+   "gránát",
+   "N;INS;SG",
+   "gránáttal"
   ],
   [
    "kornett",
@@ -9216,6 +12936,21 @@
    "tekerőlant",
    "N;IN+ESS;SG",
    "tekerőlantban"
+  ],
+  [
+   "visszavonhatatlanság",
+   "N;TRANS;SG",
+   "visszavonhatatlansággá"
+  ],
+  [
+   "kénkő",
+   "N;AT+ALL;PL",
+   "kénkövekhez"
+  ],
+  [
+   "rombolás",
+   "N;ACC;SG",
+   "rombolást"
   ],
   [
    "csavarhúzó",
@@ -9243,9 +12978,24 @@
    "kádikkal"
   ],
   [
+   "grafit",
+   "N;ON+ABL;PL",
+   "grafitokról"
+  ],
+  [
    "mindhárom",
    "N;IN+ESS;SG",
    "mindháromban"
+  ],
+  [
+   "zrt.",
+   "N;ON+ALL;PL",
+   "zrt.-kre"
+  ],
+  [
+   "vadászgép",
+   "N;ACC;PL",
+   "vadászgépeket"
   ],
   [
    "jacht",
@@ -9258,6 +13008,21 @@
    "szétúszásra"
   ],
   [
+   "irka",
+   "N;AT+ABL;SG",
+   "irkától"
+  ],
+  [
+   "esztergálás",
+   "N;AT+ABL;PL",
+   "esztergálásoktól"
+  ],
+  [
+   "sóbálvány",
+   "N;ON+ESS;SG",
+   "sóbálványon"
+  ],
+  [
    "barátságtalanság",
    "N;ACC;SG",
    "barátságtalanságot"
@@ -9268,14 +13033,29 @@
    "irodáért"
   ],
   [
+   "fej.",
+   "N;ACC;PL",
+   "fej.-eket"
+  ],
+  [
    "sci-fi",
    "N;ON+ALL;PL",
    "sci-fikre"
   ],
   [
+   "borát",
+   "N;TERM;PL",
+   "borátokig"
+  ],
+  [
    "környezetvédő",
    "N;ON+ABL;PL",
    "környezetvédőkről"
+  ],
+  [
+   "kizsákmányoló",
+   "N;IN+ALL;SG",
+   "kizsákmányolóba"
   ],
   [
    "heteroszexuális",
@@ -9286,6 +13066,11 @@
    "epe",
    "N;ON+ALL;SG",
    "epére"
+  ],
+  [
+   "hatóanyag",
+   "N;INS;SG",
+   "hatóanyaggal"
   ],
   [
    "társadalom",
@@ -9303,9 +13088,24 @@
    "fotóalbumban"
   ],
   [
+   "disznódelfin",
+   "N;AT+ABL;SG",
+   "disznódelfintől"
+  ],
+  [
+   "népszaporodás",
+   "N;NOM;PL",
+   "népszaporodások"
+  ],
+  [
    "törvényjavaslat",
    "N;ON+ABL;PL",
    "törvényjavaslatokról"
+  ],
+  [
+   "mánia",
+   "N;ON+ESS;PL",
+   "mániákon"
   ],
   [
    "számvitel",
@@ -9328,9 +13128,24 @@
    "zürjéneknek"
   ],
   [
+   "kormányrendelet",
+   "N;TRANS;SG",
+   "kormányrendeletté"
+  ],
+  [
    "feromon",
    "N;ON+ALL;SG",
    "feromonra"
+  ],
+  [
+   "kettősség",
+   "N;TRANS;PL",
+   "kettősségekké"
+  ],
+  [
+   "fényóra",
+   "N;NOM;PL",
+   "fényórák"
   ],
   [
    "tealevél",
@@ -9346,6 +13161,11 @@
    "választókerület",
    "N;ON+ALL;SG",
    "választókerületre"
+  ],
+  [
+   "hidrogén-cianid",
+   "N;ON+ALL;PL",
+   "hidrogén-cianidokra"
   ],
   [
    "definíció",
@@ -9371,6 +13191,11 @@
    "huzal",
    "N;TRANS;PL",
    "huzalokká"
+  ],
+  [
+   "szuverenitás",
+   "N;INS;SG",
+   "szuverenitással"
   ],
   [
    "tárgyalóterem",
@@ -9403,6 +13228,16 @@
    "malgasból"
   ],
   [
+   "külterület",
+   "N;ON+ABL;PL",
+   "külterületekről"
+  ],
+  [
+   "hisztamin",
+   "N;TERM;PL",
+   "hisztaminokig"
+  ],
+  [
    "vonzat",
    "N;IN+ABL;PL",
    "vonzatokból"
@@ -9413,9 +13248,24 @@
    "jótevőkké"
   ],
   [
+   "csecsemőmirigy",
+   "N;IN+ESS;PL",
+   "csecsemőmirigyekben"
+  ],
+  [
    "tömeggyilkos",
    "N;PRP;SG",
    "tömeggyilkosért"
+  ],
+  [
+   "papírgyártás",
+   "N;DAT;PL",
+   "papírgyártásoknak"
+  ],
+  [
+   "atomenergia",
+   "N;IN+ALL;PL",
+   "atomenergiákba"
   ],
   [
    "erősítés",
@@ -9468,6 +13318,11 @@
    "tőzsdeügynökön"
   ],
   [
+   "folyadékkristály",
+   "N;TRANS;SG",
+   "folyadékkristállyá"
+  ],
+  [
    "zárvány",
    "N;INS;PL",
    "zárványokkal"
@@ -9488,9 +13343,19 @@
    "gyógyfürdőket"
   ],
   [
+   "pestisjárvány",
+   "N;IN+ESS;SG",
+   "pestisjárványban"
+  ],
+  [
    "szimuláns",
    "N;ON+ABL;SG",
    "szimulánsról"
+  ],
+  [
+   "sajtómágnás",
+   "N;IN+ALL;SG",
+   "sajtómágnásba"
   ],
   [
    "kedvezőtlenség",
@@ -9528,6 +13393,11 @@
    "reformátusokban"
   ],
   [
+   "hasonmás",
+   "N;PRP;PL",
+   "hasonmásokért"
+  ],
+  [
    "gólyaláb",
    "N;ACC;SG",
    "gólyalábat"
@@ -9541,6 +13411,11 @@
    "őssejtkutatás",
    "N;AT+ALL;SG",
    "őssejtkutatáshoz"
+  ],
+  [
+   "webböngésző",
+   "N;AT+ALL;SG",
+   "webböngészőhöz"
   ],
   [
    "szeme",
@@ -9571,6 +13446,11 @@
    "magániskola",
    "N;TRANS;PL",
    "magániskolákká"
+  ],
+  [
+   "ezerszög",
+   "N;ON+ESS;SG",
+   "ezerszögön"
   ],
   [
    "ementáli",
@@ -9638,6 +13518,11 @@
    "hajcsavarókban"
   ],
   [
+   "kijelző",
+   "N;AT+ABL;PL",
+   "kijelzőktől"
+  ],
+  [
    "kávézó",
    "N;AT+ABL;PL",
    "kávézóktól"
@@ -9663,6 +13548,11 @@
    "kontinenstől"
   ],
   [
+   "kivagyiság",
+   "N;AT+ALL;PL",
+   "kivagyiságokhoz"
+  ],
+  [
    "erkély",
    "N;IN+ALL;PL",
    "erkélyekbe"
@@ -9678,6 +13568,26 @@
    "fűzőnél"
   ],
   [
+   "műteremablak",
+   "N;ON+ALL;SG",
+   "műteremablakra"
+  ],
+  [
+   "cipős",
+   "N;AT+ALL;SG",
+   "cipőshöz"
+  ],
+  [
+   "optimalizálás",
+   "N;ON+ABL;PL",
+   "optimalizálásokról"
+  ],
+  [
+   "dezoxiribonukleinsav",
+   "N;ON+ESS;PL",
+   "dezoxiribonukleinsavakon"
+  ],
+  [
    "lovász",
    "N;IN+ESS;PL",
    "lovászokban"
@@ -9691,6 +13601,11 @@
    "estélyi",
    "N;TERM;SG",
    "estélyiig"
+  ],
+  [
+   "vadmák",
+   "N;IN+ESS;SG",
+   "vadmákban"
   ],
   [
    "magnetofon",
@@ -9738,6 +13653,11 @@
    "rozéborokig"
   ],
   [
+   "makrofág",
+   "N;IN+ALL;SG",
+   "makrofágba"
+  ],
+  [
    "gránátalma",
    "N;AT+ESS;SG",
    "gránátalmánál"
@@ -9758,9 +13678,19 @@
    "egészségügyekért"
   ],
   [
+   "ársapka",
+   "N;INS;SG",
+   "ársapkával"
+  ],
+  [
    "hanti",
    "N;DAT;SG",
    "hantinak"
+  ],
+  [
+   "kilencszög",
+   "N;IN+ALL;PL",
+   "kilencszögekbe"
   ],
   [
    "képzőművészet",
@@ -9768,9 +13698,19 @@
    "képzőművészetig"
   ],
   [
+   "egyszerű",
+   "N;ON+ESS;PL",
+   "egyszerűkön"
+  ],
+  [
    "kongói",
    "N;INS;SG",
    "kongóival"
+  ],
+  [
+   "bőrgomba",
+   "N;ACC;PL",
+   "bőrgombákat"
   ],
   [
    "egérút",
@@ -9781,6 +13721,11 @@
    "faj",
    "N;IN+ALL;PL",
    "fajokba"
+  ],
+  [
+   "pele",
+   "N;AT+ABL;PL",
+   "peléktől"
   ],
   [
    "mandulaolaj",
@@ -9798,6 +13743,11 @@
    "szereknek"
   ],
   [
+   "ikozaéder",
+   "N;IN+ESS;PL",
+   "ikozaéderekben"
+  ],
+  [
    "tanga",
    "N;PRP;SG",
    "tangáért"
@@ -9808,6 +13758,11 @@
    "rétesért"
   ],
   [
+   "nyelvérzék",
+   "N;AT+ESS;PL",
+   "nyelvérzékeknél"
+  ],
+  [
    "szaft",
    "N;TRANS;SG",
    "szafttá"
@@ -9816,6 +13771,21 @@
    "felkarcsont",
    "N;INS;SG",
    "felkarcsonttal"
+  ],
+  [
+   "éberség",
+   "N;TRANS;SG",
+   "éberséggé"
+  ],
+  [
+   "keh",
+   "N;ON+ALL;SG",
+   "kehre"
+  ],
+  [
+   "riadó",
+   "N;ACC;PL",
+   "riadókat"
   ],
   [
    "nyomdász",
@@ -9838,6 +13808,16 @@
    "illatszerbolthoz"
   ],
   [
+   "szorzásjel",
+   "N;PRP;SG",
+   "szorzásjelért"
+  ],
+  [
+   "befogadás",
+   "N;AT+ALL;SG",
+   "befogadáshoz"
+  ],
+  [
    "hózentróger",
    "N;DAT;PL",
    "hózentrógereknek"
@@ -9851,6 +13831,11 @@
    "póni",
    "N;ON+ESS;SG",
    "pónin"
+  ],
+  [
+   "fülzsír",
+   "N;IN+ALL;PL",
+   "fülzsírokba"
   ],
   [
    "orrszarvú",
@@ -9868,6 +13853,11 @@
    "uszonyokba"
   ],
   [
+   "etiológia",
+   "N;TRANS;SG",
+   "etiológiává"
+  ],
+  [
    "segédige",
    "N;TRANS;PL",
    "segédigékké"
@@ -9883,9 +13873,29 @@
    "variációt"
   ],
   [
+   "mintagazdaság",
+   "N;AT+ALL;PL",
+   "mintagazdaságokhoz"
+  ],
+  [
+   "mellékvesekéreg",
+   "N;ON+ABL;SG",
+   "mellékvesekéregről"
+  ],
+  [
    "formatervezés",
    "N;AT+ABL;SG",
    "formatervezéstől"
+  ],
+  [
+   "bádog",
+   "N;IN+ABL;PL",
+   "bádogokból"
+  ],
+  [
+   "hormonkészítmény",
+   "N;ON+ABL;SG",
+   "hormonkészítményről"
   ],
   [
    "szorb",
@@ -9896,6 +13906,11 @@
    "xilofon",
    "N;TERM;PL",
    "xilofonokig"
+  ],
+  [
+   "minőség-ellenőrzés",
+   "N;TRANS;PL",
+   "minőség-ellenőrzésekké"
   ],
   [
    "szuvenír",
@@ -9918,6 +13933,11 @@
    "pereceitől"
   ],
   [
+   "bohó",
+   "N;PRP;SG",
+   "bohóért"
+  ],
+  [
    "hetetek",
    "N;PRP;SG",
    "hetetekért"
@@ -9931,6 +13951,11 @@
    "üröm",
    "N;IN+ALL;SG",
    "ürömbe"
+  ],
+  [
+   "rágózás",
+   "N;ON+ABL;PL",
+   "rágózásokról"
   ],
   [
    "őskor",
@@ -9963,9 +13988,19 @@
    "orrcsontoktól"
   ],
   [
+   "öngól",
+   "N;TERM;PL",
+   "öngólokig"
+  ],
+  [
    "méhecske",
    "N;AT+ABL;PL",
    "méhecskéktől"
+  ],
+  [
+   "magnézium-oxid",
+   "N;TRANS;SG",
+   "magnézium-oxiddá"
   ],
   [
    "humbug",
@@ -9976,6 +14011,16 @@
    "eufemizmus",
    "N;ON+ABL;SG",
    "eufemizmusról"
+  ],
+  [
+   "nácitlanítás",
+   "N;ON+ALL;PL",
+   "nácitlanításokra"
+  ],
+  [
+   "cianogén-klorid",
+   "N;IN+ALL;PL",
+   "cianogén-kloridokba"
   ],
   [
    "flakon",
@@ -9993,6 +14038,11 @@
    "sásokba"
   ],
   [
+   "ábrajegyzék",
+   "N;AT+ABL;SG",
+   "ábrajegyzéktől"
+  ],
+  [
    "verő",
    "N;IN+ESS;PL",
    "verőkben"
@@ -10001,6 +14051,16 @@
    "vízfestmény",
    "N;TRANS;PL",
    "vízfestményekké"
+  ],
+  [
+   "kövérség",
+   "N;ACC;SG",
+   "kövérséget"
+  ],
+  [
+   "cirkon",
+   "N;ON+ABL;SG",
+   "cirkonról"
   ],
   [
    "kikerics",
@@ -10038,6 +14098,11 @@
    "törpebolygóból"
   ],
   [
+   "hektikás",
+   "N;AT+ESS;PL",
+   "hektikásoknál"
+  ],
+  [
    "unokatesó",
    "N;TERM;PL",
    "unokatesókig"
@@ -10051,6 +14116,11 @@
    "bomba",
    "N;IN+ESS;PL",
    "bombákban"
+  ],
+  [
+   "döblec",
+   "N;DAT;PL",
+   "döbleceknek"
   ],
   [
    "közvetítés",
@@ -10078,6 +14148,11 @@
    "papírpénzért"
   ],
   [
+   "jobblét",
+   "N;IN+ALL;SG",
+   "jobblétbe"
+  ],
+  [
    "amerikanizmus",
    "N;PRP;PL",
    "amerikanizmusokért"
@@ -10086,6 +14161,11 @@
    "kamara",
    "N;TERM;SG",
    "kamaráig"
+  ],
+  [
+   "megbánás",
+   "N;DAT;SG",
+   "megbánásnak"
   ],
   [
    "platform",
@@ -10103,6 +14183,11 @@
    "idegrendszerekre"
   ],
   [
+   "galandféreg",
+   "N;ACC;PL",
+   "galandférgeket"
+  ],
+  [
    "bírság",
    "N;ACC;SG",
    "bírságot"
@@ -10113,9 +14198,24 @@
    "kopoltyúval"
   ],
   [
+   "puki",
+   "N;TERM;PL",
+   "pukikig"
+  ],
+  [
+   "gyengeség",
+   "N;IN+ABL;PL",
+   "gyengeségekből"
+  ],
+  [
    "migrén",
    "N;PRP;SG",
    "migrénért"
+  ],
+  [
+   "kifejezésmód",
+   "N;AT+ESS;SG",
+   "kifejezésmódnál"
   ],
   [
    "közhely",
@@ -10168,6 +14268,11 @@
    "begóniákhoz"
   ],
   [
+   "alantas",
+   "N;ACC;SG",
+   "alantast"
+  ],
+  [
    "sebtapasz",
    "N;PRP;PL",
    "sebtapaszokért"
@@ -10186,6 +14291,11 @@
    "kappan",
    "N;TRANS;SG",
    "kappanná"
+  ],
+  [
+   "csökönyösség",
+   "N;IN+ABL;PL",
+   "csökönyösségekből"
   ],
   [
    "hosszúság",
@@ -10213,9 +14323,19 @@
    "vállalkozóhoz"
   ],
   [
+   "reménytelenség",
+   "N;AT+ALL;PL",
+   "reménytelenségekhez"
+  ],
+  [
    "szakácskönyv",
    "N;DAT;PL",
    "szakácskönyveknek"
+  ],
+  [
+   "hisztamin",
+   "N;ACC;PL",
+   "hisztaminokat"
   ],
   [
    "kuglóf",
@@ -10223,14 +14343,29 @@
    "kuglófból"
   ],
   [
+   "mérés",
+   "N;DAT;SG",
+   "mérésnek"
+  ],
+  [
    "mosómedve",
    "N;ACC;PL",
    "mosómedvéket"
   ],
   [
+   "lélekvándorlás",
+   "N;ACC;SG",
+   "lélekvándorlást"
+  ],
+  [
    "kudarc",
    "N;IN+ALL;PL",
    "kudarcokba"
+  ],
+  [
+   "kézápolás",
+   "N;ON+ALL;SG",
+   "kézápolásra"
   ],
   [
    "hematológia",
@@ -10258,14 +14393,39 @@
    "interpretációnál"
   ],
   [
+   "fagyasztás",
+   "N;IN+ALL;PL",
+   "fagyasztásokba"
+  ],
+  [
+   "nyújtás",
+   "N;AT+ABL;SG",
+   "nyújtástól"
+  ],
+  [
    "frigy",
    "N;PRP;SG",
    "frigyért"
   ],
   [
+   "gümőkór",
+   "N;ACC;SG",
+   "gümőkórt"
+  ],
+  [
+   "pángermanizmus",
+   "N;TRANS;PL",
+   "pángermanizmusokká"
+  ],
+  [
    "vonom",
    "N;AT+ALL;SG",
    "vonomhoz"
+  ],
+  [
+   "relapszus",
+   "N;IN+ABL;SG",
+   "relapszusból"
   ],
   [
    "rendelet",
@@ -10308,14 +14468,34 @@
    "bohémért"
   ],
   [
+   "fizu",
+   "N;INS;PL",
+   "fizukkal"
+  ],
+  [
+   "ernyőszervezet",
+   "N;AT+ABL;SG",
+   "ernyőszervezettől"
+  ],
+  [
    "csizmadia",
    "N;TRANS;PL",
    "csizmadiákká"
   ],
   [
+   "fenntarthatóság",
+   "N;IN+ALL;PL",
+   "fenntarthatóságokba"
+  ],
+  [
    "taréj",
    "N;AT+ABL;SG",
    "taréjtól"
+  ],
+  [
+   "kvasz",
+   "N;PRP;PL",
+   "kvaszokért"
   ],
   [
    "preferencia",
@@ -10328,6 +14508,16 @@
    "orrvérzésbe"
   ],
   [
+   "képviselőjelölt",
+   "N;AT+ABL;PL",
+   "képviselőjelöltektől"
+  ],
+  [
+   "hajléktalanszálló",
+   "N;DAT;SG",
+   "hajléktalanszállónak"
+  ],
+  [
    "etetőszék",
    "N;TRANS;SG",
    "etetőszékké"
@@ -10338,9 +14528,24 @@
    "köleseken"
   ],
   [
+   "homográf",
+   "N;TERM;SG",
+   "homográfig"
+  ],
+  [
    "operátor",
    "N;IN+ABL;SG",
    "operátorból"
+  ],
+  [
+   "kaput",
+   "N;AT+ABL;SG",
+   "kaputtól"
+  ],
+  [
+   "rendelés",
+   "N;ON+ABL;PL",
+   "rendelésekről"
   ],
   [
    "bankom",
@@ -10351,6 +14556,11 @@
    "félszoba",
    "N;ON+ALL;PL",
    "félszobákra"
+  ],
+  [
+   "bukta",
+   "N;NOM;PL",
+   "bukták"
   ],
   [
    "kapcsolat",
@@ -10366,6 +14576,16 @@
    "áradmány",
    "N;AT+ABL;SG",
    "áradmánytól"
+  ],
+  [
+   "optimalizálás",
+   "N;NOM;PL",
+   "optimalizálások"
+  ],
+  [
+   "nagyközönség",
+   "N;INS;SG",
+   "nagyközönséggel"
   ],
   [
    "lefoglalás",
@@ -10413,9 +14633,19 @@
    "linkekhez"
   ],
   [
+   "szörfdeszka",
+   "N;IN+ESS;PL",
+   "szörfdeszkákban"
+  ],
+  [
    "pénzügyminisztérium",
    "N;AT+ALL;SG",
    "pénzügyminisztériumhoz"
+  ],
+  [
+   "bibe",
+   "N;AT+ESS;PL",
+   "bibéknél"
   ],
   [
    "pofaszíj",
@@ -10423,9 +14653,19 @@
    "pofaszíjakhoz"
   ],
   [
+   "állapotos",
+   "N;INS;SG",
+   "állapotossal"
+  ],
+  [
    "hadnagy",
    "N;IN+ESS;SG",
    "hadnagyban"
+  ],
+  [
+   "fuvolista",
+   "N;AT+ESS;PL",
+   "fuvolistáknál"
   ],
   [
    "inas",
@@ -10448,6 +14688,11 @@
    "kontingenshez"
   ],
   [
+   "körömágy",
+   "N;INS;PL",
+   "körömágyakkal"
+  ],
+  [
    "vétó",
    "N;TRANS;PL",
    "vétókká"
@@ -10456,6 +14701,11 @@
    "csín",
    "N;IN+ALL;PL",
    "csínokba"
+  ],
+  [
+   "surc",
+   "N;DAT;PL",
+   "surcoknak"
   ],
   [
    "bárszekrény",
@@ -10478,9 +14728,29 @@
    "reformátustól"
   ],
   [
+   "gonosztett",
+   "N;IN+ESS;PL",
+   "gonosztettekben"
+  ],
+  [
+   "gondolkodásmód",
+   "N;INS;PL",
+   "gondolkodásmódokkal"
+  ],
+  [
    "mechanizmus",
    "N;DAT;PL",
    "mechanizmusoknak"
+  ],
+  [
+   "főtitkár",
+   "N;IN+ABL;PL",
+   "főtitkárokból"
+  ],
+  [
+   "konvoj",
+   "N;ON+ESS;SG",
+   "konvojon"
   ],
   [
    "popó",
@@ -10503,6 +14773,11 @@
    "szendvicsekké"
   ],
   [
+   "ingaóra",
+   "N;IN+ALL;SG",
+   "ingaórába"
+  ],
+  [
    "szerviz",
    "N;IN+ALL;SG",
    "szervizbe"
@@ -10523,9 +14798,29 @@
    "világkiállítások"
   ],
   [
+   "emlőrák",
+   "N;AT+ESS;SG",
+   "emlőráknál"
+  ],
+  [
    "védekezés",
    "N;AT+ESS;SG",
    "védekezésnél"
+  ],
+  [
+   "felmérés",
+   "N;AT+ALL;PL",
+   "felmérésekhez"
+  ],
+  [
+   "kecsege",
+   "N;TERM;PL",
+   "kecsegékig"
+  ],
+  [
+   "csinovnyik",
+   "N;ON+ESS;PL",
+   "csinovnyikokon"
   ],
   [
    "frizsider",
@@ -10573,6 +14868,11 @@
    "mackóra"
   ],
   [
+   "kurátor",
+   "N;INS;SG",
+   "kurátorral"
+  ],
+  [
    "bakó",
    "N;INS;PL",
    "bakókkal"
@@ -10603,6 +14903,11 @@
    "földszintekhez"
   ],
   [
+   "izgató",
+   "N;INS;SG",
+   "izgatóval"
+  ],
+  [
    "kojot",
    "N;TERM;SG",
    "kojotig"
@@ -10618,9 +14923,24 @@
    "baktériumölőről"
   ],
   [
+   "névsor",
+   "N;IN+ALL;PL",
+   "névsorokba"
+  ],
+  [
    "áradmány",
    "N;ON+ESS;PL",
    "áradmányokon"
+  ],
+  [
+   "trióda",
+   "N;INS;SG",
+   "triódával"
+  ],
+  [
+   "éhbél",
+   "N;TERM;SG",
+   "éhbélig"
   ],
   [
    "csavarhúzó",
@@ -10663,6 +14983,11 @@
    "szőrökért"
   ],
   [
+   "textilipar",
+   "N;ON+ESS;PL",
+   "textiliparokon"
+  ],
+  [
    "hárs",
    "N;IN+ALL;SG",
    "hársba"
@@ -10676,4331 +15001,6 @@
    "fordítás",
    "N;AT+ABL;PL",
    "fordításoktól"
-  ],
-  [
-   "düh",
-   "N;IN+ESS;PL",
-   "dühökben"
-  ],
-  [
-   "mínusz",
-   "N;TRANS;SG",
-   "mínusszá"
-  ],
-  [
-   "zsír",
-   "N;AT+ESS;PL",
-   "zsíroknál"
-  ],
-  [
-   "telepítő",
-   "N;INS;PL",
-   "telepítőkkel"
-  ],
-  [
-   "vonzódás",
-   "N;ACC;SG",
-   "vonzódást"
-  ],
-  [
-   "törvénykönyv",
-   "N;ACC;SG",
-   "törvénykönyvet"
-  ],
-  [
-   "hangyászsün",
-   "N;PRP;PL",
-   "hangyászsünökért"
-  ],
-  [
-   "menyét",
-   "N;AT+ABL;PL",
-   "menyétektől"
-  ],
-  [
-   "alvás",
-   "N;ON+ABL;SG",
-   "alvásról"
-  ],
-  [
-   "vasreszelék",
-   "N;IN+ESS;SG",
-   "vasreszelékben"
-  ],
-  [
-   "korlát",
-   "N;AT+ABL;PL",
-   "korlátoktól"
-  ],
-  [
-   "lószerszám",
-   "N;ON+ALL;SG",
-   "lószerszámra"
-  ],
-  [
-   "bomba",
-   "N;PRP;SG",
-   "bombáért"
-  ],
-  [
-   "főváros",
-   "N;ON+ALL;PL",
-   "fővárosokra"
-  ],
-  [
-   "tőkehal",
-   "N;TRANS;PL",
-   "tőkehalakká"
-  ],
-  [
-   "néni",
-   "N;TERM;PL",
-   "nénikig"
-  ],
-  [
-   "benzin",
-   "N;TERM;SG",
-   "benzinig"
-  ],
-  [
-   "rizs",
-   "N;ON+ALL;PL",
-   "rizsekre"
-  ],
-  [
-   "találkozó",
-   "N;DAT;PL",
-   "találkozóknak"
-  ],
-  [
-   "nefelejcs",
-   "N;TERM;SG",
-   "nefelejcsig"
-  ],
-  [
-   "vízfesték",
-   "N;IN+ESS;SG",
-   "vízfestékben"
-  ],
-  [
-   "guru",
-   "N;TRANS;PL",
-   "gurukká"
-  ],
-  [
-   "nyugtalanság",
-   "N;IN+ALL;PL",
-   "nyugtalanságokba"
-  ],
-  [
-   "folt",
-   "N;IN+ALL;PL",
-   "foltokba"
-  ],
-  [
-   "miniatűrfestő",
-   "N;AT+ABL;PL",
-   "miniatűrfestőktől"
-  ],
-  [
-   "ege",
-   "N;AT+ABL;SG",
-   "egétől"
-  ],
-  [
-   "végzet",
-   "N;ON+ESS;SG",
-   "végzeten"
-  ],
-  [
-   "mérnök",
-   "N;INS;SG",
-   "mérnökkel"
-  ],
-  [
-   "ébenfa",
-   "N;TERM;PL",
-   "ébenfákig"
-  ],
-  [
-   "briganti",
-   "N;AT+ABL;SG",
-   "brigantitól"
-  ],
-  [
-   "alkoholtilalom",
-   "N;AT+ABL;SG",
-   "alkoholtilalomtól"
-  ],
-  [
-   "bokor",
-   "N;INS;PL",
-   "bokrokkal"
-  ],
-  [
-   "szolga",
-   "N;TRANS;PL",
-   "szolgákká"
-  ],
-  [
-   "információ",
-   "N;ON+ABL;PL",
-   "információkról"
-  ],
-  [
-   "puska",
-   "N;IN+ALL;PL",
-   "puskákba"
-  ],
-  [
-   "seggfej",
-   "N;TRANS;SG",
-   "seggfejjé"
-  ],
-  [
-   "gael",
-   "N;IN+ESS;PL",
-   "gaelekben"
-  ],
-  [
-   "kakastaréj",
-   "N;IN+ABL;PL",
-   "kakastaréjokból"
-  ],
-  [
-   "asztrahán",
-   "N;ACC;PL",
-   "asztrahánokat"
-  ],
-  [
-   "labdarúgó",
-   "N;TRANS;SG",
-   "labdarúgóvá"
-  ],
-  [
-   "szavazófülke",
-   "N;AT+ESS;PL",
-   "szavazófülkéknél"
-  ],
-  [
-   "kéró",
-   "N;INS;PL",
-   "kérókkal"
-  ],
-  [
-   "rotring",
-   "N;DAT;SG",
-   "rotringnak"
-  ],
-  [
-   "proton",
-   "N;IN+ALL;SG",
-   "protonba"
-  ],
-  [
-   "manikűrös",
-   "N;IN+ESS;PL",
-   "manikűrösökben"
-  ],
-  [
-   "megelőzés",
-   "N;INS;SG",
-   "megelőzéssel"
-  ],
-  [
-   "földrajz",
-   "N;IN+ABL;SG",
-   "földrajzból"
-  ],
-  [
-   "szénbányász",
-   "N;DAT;SG",
-   "szénbányásznak"
-  ],
-  [
-   "nehézfém",
-   "N;ON+ALL;SG",
-   "nehézfémre"
-  ],
-  [
-   "tele",
-   "N;TERM;SG",
-   "teléig"
-  ],
-  [
-   "topáz",
-   "N;ACC;PL",
-   "topázokat"
-  ],
-  [
-   "koktélparadicsom",
-   "N;DAT;SG",
-   "koktélparadicsomnak"
-  ],
-  [
-   "zavar",
-   "N;TRANS;PL",
-   "zavarokká"
-  ],
-  [
-   "perecem",
-   "N;TRANS;SG",
-   "perecemmé"
-  ],
-  [
-   "bárd",
-   "N;ON+ALL;SG",
-   "bárdra"
-  ],
-  [
-   "naptej",
-   "N;AT+ALL;PL",
-   "naptejekhez"
-  ],
-  [
-   "tűzgolyó",
-   "N;TERM;SG",
-   "tűzgolyóig"
-  ],
-  [
-   "eszem",
-   "N;TERM;SG",
-   "eszemig"
-  ],
-  [
-   "megítélés",
-   "N;ACC;PL",
-   "megítéléseket"
-  ],
-  [
-   "buzgalom",
-   "N;IN+ABL;SG",
-   "buzgalomból"
-  ],
-  [
-   "ismétlés",
-   "N;TRANS;PL",
-   "ismétlésekké"
-  ],
-  [
-   "nézés",
-   "N;IN+ALL;SG",
-   "nézésbe"
-  ],
-  [
-   "választó",
-   "N;ON+ALL;SG",
-   "választóra"
-  ],
-  [
-   "csekk",
-   "N;PRP;PL",
-   "csekkekért"
-  ],
-  [
-   "hücpe",
-   "N;ON+ESS;PL",
-   "hücpéken"
-  ],
-  [
-   "építmény",
-   "N;PRP;PL",
-   "építményekért"
-  ],
-  [
-   "eszmecsere",
-   "N;IN+ESS;SG",
-   "eszmecserében"
-  ],
-  [
-   "díszcserje",
-   "N;IN+ESS;SG",
-   "díszcserjében"
-  ],
-  [
-   "cipőkanál",
-   "N;PRP;SG",
-   "cipőkanálért"
-  ],
-  [
-   "héja",
-   "N;TERM;SG",
-   "héjáig"
-  ],
-  [
-   "nejlonzacskó",
-   "N;ON+ESS;PL",
-   "nejlonzacskókon"
-  ],
-  [
-   "sajka",
-   "N;IN+ABL;PL",
-   "sajkákból"
-  ],
-  [
-   "háziállat",
-   "N;ON+ALL;SG",
-   "háziállatra"
-  ],
-  [
-   "családfa",
-   "N;ON+ABL;PL",
-   "családfákról"
-  ],
-  [
-   "konspirátor",
-   "N;IN+ESS;PL",
-   "konspirátorokban"
-  ],
-  [
-   "beosztás",
-   "N;IN+ESS;SG",
-   "beosztásban"
-  ],
-  [
-   "kőr",
-   "N;DAT;PL",
-   "kőröknek"
-  ],
-  [
-   "baseballsapka",
-   "N;AT+ALL;SG",
-   "baseballsapkához"
-  ],
-  [
-   "lőfegyver",
-   "N;IN+ESS;PL",
-   "lőfegyverekben"
-  ],
-  [
-   "ideológia",
-   "N;DAT;PL",
-   "ideológiáknak"
-  ],
-  [
-   "internetprotokoll",
-   "N;ON+ALL;SG",
-   "internetprotokollra"
-  ],
-  [
-   "burnót",
-   "N;IN+ALL;PL",
-   "burnótokba"
-  ],
-  [
-   "csőre",
-   "N;ON+ALL;SG",
-   "csőrére"
-  ],
-  [
-   "vakáció",
-   "N;INS;PL",
-   "vakációkkal"
-  ],
-  [
-   "követelés",
-   "N;TRANS;SG",
-   "követeléssé"
-  ],
-  [
-   "zsebtolvaj",
-   "N;PRP;PL",
-   "zsebtolvajokért"
-  ],
-  [
-   "anyagcsere",
-   "N;NOM;PL",
-   "anyagcserék"
-  ],
-  [
-   "lárva",
-   "N;IN+ALL;PL",
-   "lárvákba"
-  ],
-  [
-   "szilva",
-   "N;IN+ABL;PL",
-   "szilvákból"
-  ],
-  [
-   "karvalybagoly",
-   "N;INS;PL",
-   "karvalybaglyokkal"
-  ],
-  [
-   "kapui",
-   "N;DAT;PL",
-   "kapuinak"
-  ],
-  [
-   "súlyosság",
-   "N;ON+ESS;SG",
-   "súlyosságon"
-  ],
-  [
-   "korom",
-   "N;ON+ABL;PL",
-   "kormokról"
-  ],
-  [
-   "vallásosság",
-   "N;ON+ESS;SG",
-   "vallásosságon"
-  ],
-  [
-   "szentély",
-   "N;IN+ALL;SG",
-   "szentélybe"
-  ],
-  [
-   "szadista",
-   "N;PRP;PL",
-   "szadistákért"
-  ],
-  [
-   "szelekció",
-   "N;IN+ALL;PL",
-   "szelekciókba"
-  ],
-  [
-   "porcelánbolt",
-   "N;AT+ESS;PL",
-   "porcelánboltoknál"
-  ],
-  [
-   "kalapács",
-   "N;ON+ESS;PL",
-   "kalapácsokon"
-  ],
-  [
-   "tutaj",
-   "N;ON+ESS;SG",
-   "tutajon"
-  ],
-  [
-   "hóra",
-   "N;TERM;SG",
-   "hóráig"
-  ],
-  [
-   "mentőcsónak",
-   "N;ON+ABL;SG",
-   "mentőcsónakról"
-  ],
-  [
-   "sólyomféle",
-   "N;ACC;PL",
-   "sólyomféléket"
-  ],
-  [
-   "futás",
-   "N;IN+ALL;SG",
-   "futásba"
-  ],
-  [
-   "levéltárosnő",
-   "N;DAT;SG",
-   "levéltárosnőnek"
-  ],
-  [
-   "doktornő",
-   "N;IN+ALL;PL",
-   "doktornőkbe"
-  ],
-  [
-   "cipó",
-   "N;ON+ALL;SG",
-   "cipóra"
-  ],
-  [
-   "macskajaj",
-   "N;ON+ABL;PL",
-   "macskajajokról"
-  ],
-  [
-   "vásárlás",
-   "N;IN+ABL;SG",
-   "vásárlásból"
-  ],
-  [
-   "gramm",
-   "N;NOM;PL",
-   "grammok"
-  ],
-  [
-   "május",
-   "N;ACC;SG",
-   "májust"
-  ],
-  [
-   "tiszteletdíj",
-   "N;ON+ABL;SG",
-   "tiszteletdíjról"
-  ],
-  [
-   "körömkefe",
-   "N;IN+ALL;PL",
-   "körömkefékbe"
-  ],
-  [
-   "tanulandó",
-   "N;TERM;PL",
-   "tanulandókig"
-  ],
-  [
-   "újhold",
-   "N;AT+ALL;PL",
-   "újholdakhoz"
-  ],
-  [
-   "gulyás",
-   "N;IN+ALL;PL",
-   "gulyásokba"
-  ],
-  [
-   "petrezselyem",
-   "N;DAT;PL",
-   "petrezselymeknek"
-  ],
-  [
-   "tájkép",
-   "N;AT+ALL;PL",
-   "tájképekhez"
-  ],
-  [
-   "időjárás",
-   "N;AT+ESS;PL",
-   "időjárásoknál"
-  ],
-  [
-   "fényképezés",
-   "N;TRANS;PL",
-   "fényképezésekké"
-  ],
-  [
-   "alkat",
-   "N;ACC;PL",
-   "alkatokat"
-  ],
-  [
-   "potyka",
-   "N;ON+ABL;PL",
-   "potykákról"
-  ],
-  [
-   "balhé",
-   "N;AT+ESS;SG",
-   "balhénál"
-  ],
-  [
-   "bohém",
-   "N;NOM;PL",
-   "bohémek"
-  ],
-  [
-   "bohém",
-   "N;NOM;PL",
-   "bohémok"
-  ],
-  [
-   "diviz",
-   "N;IN+ESS;PL",
-   "divizekben"
-  ],
-  [
-   "műköröm",
-   "N;AT+ESS;SG",
-   "műkörömnél"
-  ],
-  [
-   "szappan",
-   "N;ON+ESS;PL",
-   "szappanokon"
-  ],
-  [
-   "másolat",
-   "N;TRANS;SG",
-   "másolattá"
-  ],
-  [
-   "zsoltároskönyv",
-   "N;ON+ABL;PL",
-   "zsoltároskönyvekről"
-  ],
-  [
-   "nyitó",
-   "N;ON+ALL;PL",
-   "nyitókra"
-  ],
-  [
-   "rozmaring",
-   "N;AT+ALL;SG",
-   "rozmaringhoz"
-  ],
-  [
-   "érvényesség",
-   "N;IN+ESS;SG",
-   "érvényességben"
-  ],
-  [
-   "huszonharmadika",
-   "N;AT+ABL;SG",
-   "huszonharmadikától"
-  ],
-  [
-   "könnycsepp",
-   "N;AT+ALL;PL",
-   "könnycseppekhez"
-  ],
-  [
-   "sorköz",
-   "N;TERM;SG",
-   "sorközig"
-  ],
-  [
-   "energiaellátás",
-   "N;AT+ESS;PL",
-   "energiaellátásoknál"
-  ],
-  [
-   "mutató",
-   "N;ACC;SG",
-   "mutatót"
-  ],
-  [
-   "rt.",
-   "N;IN+ESS;PL",
-   "rt.-kben"
-  ],
-  [
-   "sugárzó",
-   "N;DAT;SG",
-   "sugárzónak"
-  ],
-  [
-   "február",
-   "N;ON+ALL;SG",
-   "februárra"
-  ],
-  [
-   "kivetnivaló",
-   "N;ON+ESS;SG",
-   "kivetnivalón"
-  ],
-  [
-   "közigazgatás",
-   "N;IN+ABL;SG",
-   "közigazgatásból"
-  ],
-  [
-   "többlet",
-   "N;ACC;SG",
-   "többletet"
-  ],
-  [
-   "közoktatás",
-   "N;AT+ALL;PL",
-   "közoktatásokhoz"
-  ],
-  [
-   "vadászbombázó",
-   "N;AT+ABL;PL",
-   "vadászbombázóktól"
-  ],
-  [
-   "időtlenség",
-   "N;ACC;SG",
-   "időtlenséget"
-  ],
-  [
-   "őrmester",
-   "N;IN+ABL;SG",
-   "őrmesterből"
-  ],
-  [
-   "cukortartó",
-   "N;IN+ABL;SG",
-   "cukortartóból"
-  ],
-  [
-   "szezámmag",
-   "N;ON+ESS;PL",
-   "szezámmagokon"
-  ],
-  [
-   "egykerekű",
-   "N;ACC;PL",
-   "egykerekűket"
-  ],
-  [
-   "tiszta",
-   "N;AT+ALL;SG",
-   "tisztához"
-  ],
-  [
-   "alabástrom",
-   "N;DAT;PL",
-   "alabástromoknak"
-  ],
-  [
-   "óz",
-   "N;AT+ALL;PL",
-   "ózokhoz"
-  ],
-  [
-   "nagyság",
-   "N;AT+ALL;PL",
-   "nagyságokhoz"
-  ],
-  [
-   "ismeretlen",
-   "N;TRANS;PL",
-   "ismeretlenekké"
-  ],
-  [
-   "palota",
-   "N;ON+ABL;SG",
-   "palotáról"
-  ],
-  [
-   "bárgyúság",
-   "N;ACC;SG",
-   "bárgyúságot"
-  ],
-  [
-   "korrupció",
-   "N;IN+ESS;SG",
-   "korrupcióban"
-  ],
-  [
-   "látomás",
-   "N;IN+ESS;SG",
-   "látomásban"
-  ],
-  [
-   "rostacsont",
-   "N;IN+ESS;PL",
-   "rostacsontokban"
-  ],
-  [
-   "városrész",
-   "N;IN+ABL;SG",
-   "városrészből"
-  ],
-  [
-   "mogyoróhagyma",
-   "N;IN+ALL;PL",
-   "mogyoróhagymákba"
-  ],
-  [
-   "pala",
-   "N;NOM;PL",
-   "palák"
-  ],
-  [
-   "súlygolyó",
-   "N;PRP;PL",
-   "súlygolyókért"
-  ],
-  [
-   "görbület",
-   "N;ON+ESS;SG",
-   "görbületen"
-  ],
-  [
-   "ceruzafaragó",
-   "N;ON+ALL;PL",
-   "ceruzafaragókra"
-  ],
-  [
-   "pénzmosás",
-   "N;INS;PL",
-   "pénzmosásokkal"
-  ],
-  [
-   "lakóház",
-   "N;IN+ABL;SG",
-   "lakóházból"
-  ],
-  [
-   "amőba",
-   "N;DAT;SG",
-   "amőbának"
-  ],
-  [
-   "véletlenszerűség",
-   "N;NOM;PL",
-   "véletlenszerűségek"
-  ],
-  [
-   "tehénistálló",
-   "N;IN+ESS;SG",
-   "tehénistállóban"
-  ],
-  [
-   "hegedűs",
-   "N;IN+ABL;SG",
-   "hegedűsből"
-  ],
-  [
-   "bornit",
-   "N;DAT;PL",
-   "bornitoknak"
-  ],
-  [
-   "kóma",
-   "N;INS;SG",
-   "kómával"
-  ],
-  [
-   "hallótávolság",
-   "N;IN+ABL;PL",
-   "hallótávolságokból"
-  ],
-  [
-   "orvostanhallgató",
-   "N;NOM;PL",
-   "orvostanhallgatók"
-  ],
-  [
-   "temperamentum",
-   "N;PRP;PL",
-   "temperamentumokért"
-  ],
-  [
-   "meccs",
-   "N;DAT;SG",
-   "meccsnek"
-  ],
-  [
-   "permutáció",
-   "N;AT+ESS;PL",
-   "permutációknál"
-  ],
-  [
-   "minisztérium",
-   "N;AT+ESS;SG",
-   "minisztériumnál"
-  ],
-  [
-   "bát",
-   "N;IN+ALL;SG",
-   "bátba"
-  ],
-  [
-   "joga",
-   "N;AT+ALL;SG",
-   "jogához"
-  ],
-  [
-   "utazómagasság",
-   "N;IN+ALL;SG",
-   "utazómagasságba"
-  ],
-  [
-   "gyilkos",
-   "N;TRANS;SG",
-   "gyilkossá"
-  ],
-  [
-   "miniszter",
-   "N;NOM;PL",
-   "miniszterek"
-  ],
-  [
-   "zenész",
-   "N;IN+ABL;PL",
-   "zenészekből"
-  ],
-  [
-   "animáció",
-   "N;ON+ALL;PL",
-   "animációkra"
-  ],
-  [
-   "síbajnok",
-   "N;AT+ABL;PL",
-   "síbajnokoktól"
-  ],
-  [
-   "asztma",
-   "N;PRP;SG",
-   "asztmáért"
-  ],
-  [
-   "húgyhólyag",
-   "N;AT+ESS;PL",
-   "húgyhólyagoknál"
-  ],
-  [
-   "cár",
-   "N;ON+ABL;PL",
-   "cárokról"
-  ],
-  [
-   "határidő",
-   "N;IN+ESS;PL",
-   "határidőkben"
-  ],
-  [
-   "gennyláda",
-   "N;AT+ALL;SG",
-   "gennyládához"
-  ],
-  [
-   "spácium",
-   "N;AT+ESS;PL",
-   "spáciumoknál"
-  ],
-  [
-   "gerinc",
-   "N;IN+ABL;PL",
-   "gerincekből"
-  ],
-  [
-   "lelkiismeretesség",
-   "N;ON+ALL;SG",
-   "lelkiismeretességre"
-  ],
-  [
-   "államiság",
-   "N;ON+ALL;SG",
-   "államiságra"
-  ],
-  [
-   "jégsaláta",
-   "N;TERM;SG",
-   "jégsalátáig"
-  ],
-  [
-   "hegytető",
-   "N;ON+ALL;SG",
-   "hegytetőre"
-  ],
-  [
-   "özvegyasszony",
-   "N;TERM;SG",
-   "özvegyasszonyig"
-  ],
-  [
-   "papné",
-   "N;ON+ABL;SG",
-   "papnéról"
-  ],
-  [
-   "álomgyár",
-   "N;TRANS;SG",
-   "álomgyárrá"
-  ],
-  [
-   "szinkronúszás",
-   "N;AT+ABL;PL",
-   "szinkronúszásoktól"
-  ],
-  [
-   "lignin",
-   "N;AT+ESS;PL",
-   "lignineknél"
-  ],
-  [
-   "vezeklés",
-   "N;IN+ESS;SG",
-   "vezeklésben"
-  ],
-  [
-   "működtetés",
-   "N;AT+ABL;PL",
-   "működtetésektől"
-  ],
-  [
-   "pékség",
-   "N;ACC;SG",
-   "pékséget"
-  ],
-  [
-   "cukrász",
-   "N;AT+ABL;PL",
-   "cukrászoktól"
-  ],
-  [
-   "lerontás",
-   "N;AT+ABL;SG",
-   "lerontástól"
-  ],
-  [
-   "reklámozás",
-   "N;IN+ESS;SG",
-   "reklámozásban"
-  ],
-  [
-   "suna",
-   "N;IN+ABL;SG",
-   "sunából"
-  ],
-  [
-   "méh",
-   "N;ON+ESS;SG",
-   "méhen"
-  ],
-  [
-   "hege",
-   "N;AT+ESS;SG",
-   "hegénél"
-  ],
-  [
-   "helyesírás",
-   "N;IN+ESS;SG",
-   "helyesírásban"
-  ],
-  [
-   "üzletasszony",
-   "N;NOM;PL",
-   "üzletasszonyok"
-  ],
-  [
-   "történetírás",
-   "N;AT+ABL;PL",
-   "történetírásoktól"
-  ],
-  [
-   "hajlat",
-   "N;TRANS;PL",
-   "hajlatokká"
-  ],
-  [
-   "boszorka",
-   "N;AT+ESS;SG",
-   "boszorkánál"
-  ],
-  [
-   "gém",
-   "N;ON+ESS;PL",
-   "gémeken"
-  ],
-  [
-   "eszkaláció",
-   "N;ON+ALL;SG",
-   "eszkalációra"
-  ],
-  [
-   "sóhaj",
-   "N;ON+ESS;PL",
-   "sóhajokon"
-  ],
-  [
-   "kappan",
-   "N;PRP;PL",
-   "kappanokért"
-  ],
-  [
-   "nehézség",
-   "N;DAT;SG",
-   "nehézségnek"
-  ],
-  [
-   "olívaolaj",
-   "N;ON+ALL;SG",
-   "olívaolajra"
-  ],
-  [
-   "libéria",
-   "N;PRP;SG",
-   "libériáért"
-  ],
-  [
-   "pali",
-   "N;TERM;PL",
-   "palikig"
-  ],
-  [
-   "étteremlánc",
-   "N;IN+ESS;PL",
-   "étteremláncokban"
-  ],
-  [
-   "tájszólás",
-   "N;AT+ALL;SG",
-   "tájszóláshoz"
-  ],
-  [
-   "kútház",
-   "N;IN+ALL;PL",
-   "kútházakba"
-  ],
-  [
-   "mérték",
-   "N;AT+ALL;PL",
-   "mértékekhez"
-  ],
-  [
-   "tejszín",
-   "N;TRANS;PL",
-   "tejszínekké"
-  ],
-  [
-   "kifutópálya",
-   "N;ON+ALL;SG",
-   "kifutópályára"
-  ],
-  [
-   "parfé",
-   "N;IN+ALL;PL",
-   "parfékba"
-  ],
-  [
-   "spray",
-   "N;AT+ESS;PL",
-   "spray-knél"
-  ],
-  [
-   "brazil",
-   "N;TRANS;PL",
-   "brazilokká"
-  ],
-  [
-   "kiszállítás",
-   "N;IN+ESS;SG",
-   "kiszállításban"
-  ],
-  [
-   "vénember",
-   "N;ON+ABL;PL",
-   "vénemberekről"
-  ],
-  [
-   "nyilvánosház",
-   "N;DAT;SG",
-   "nyilvánosháznak"
-  ],
-  [
-   "bonc",
-   "N;TERM;SG",
-   "boncig"
-  ],
-  [
-   "meggyfa",
-   "N;AT+ABL;PL",
-   "meggyfáktól"
-  ],
-  [
-   "mozaik",
-   "N;AT+ESS;PL",
-   "mozaikoknál"
-  ],
-  [
-   "cenzúra",
-   "N;AT+ABL;SG",
-   "cenzúrától"
-  ],
-  [
-   "járőr",
-   "N;IN+ALL;PL",
-   "járőrökbe"
-  ],
-  [
-   "lett",
-   "N;ON+ESS;PL",
-   "letteken"
-  ],
-  [
-   "anyu",
-   "N;ON+ABL;PL",
-   "anyukról"
-  ],
-  [
-   "tanonc",
-   "N;ON+ABL;PL",
-   "tanoncokról"
-  ],
-  [
-   "tarja",
-   "N;DAT;SG",
-   "tarjának"
-  ],
-  [
-   "vonás",
-   "N;IN+ALL;SG",
-   "vonásba"
-  ],
-  [
-   "kulcsár",
-   "N;AT+ESS;SG",
-   "kulcsárnál"
-  ],
-  [
-   "turf",
-   "N;DAT;SG",
-   "turfnak"
-  ],
-  [
-   "zsírsav",
-   "N;AT+ABL;PL",
-   "zsírsavaktól"
-  ],
-  [
-   "rovar",
-   "N;DAT;SG",
-   "rovarnak"
-  ],
-  [
-   "bútor",
-   "N;IN+ESS;SG",
-   "bútorban"
-  ],
-  [
-   "demográfia",
-   "N;ACC;SG",
-   "demográfiát"
-  ],
-  [
-   "vaku",
-   "N;ON+ESS;SG",
-   "vakun"
-  ],
-  [
-   "máglya",
-   "N;ON+ALL;PL",
-   "máglyákra"
-  ],
-  [
-   "közeg",
-   "N;ON+ESS;PL",
-   "közegeken"
-  ],
-  [
-   "zsömle",
-   "N;ON+ALL;SG",
-   "zsömlére"
-  ],
-  [
-   "ellenőrző",
-   "N;TERM;PL",
-   "ellenőrzőkig"
-  ],
-  [
-   "bensőség",
-   "N;TERM;SG",
-   "bensőségig"
-  ],
-  [
-   "szimmetria",
-   "N;IN+ALL;PL",
-   "szimmetriákba"
-  ],
-  [
-   "ütés",
-   "N;AT+ABL;PL",
-   "ütésektől"
-  ],
-  [
-   "pozíció",
-   "N;AT+ALL;PL",
-   "pozíciókhoz"
-  ],
-  [
-   "párbajtőr",
-   "N;NOM;PL",
-   "párbajtőrök"
-  ],
-  [
-   "fáklyafény",
-   "N;PRP;PL",
-   "fáklyafényekért"
-  ],
-  [
-   "legény",
-   "N;TERM;PL",
-   "legényekig"
-  ],
-  [
-   "pesszárium",
-   "N;AT+ABL;PL",
-   "pesszáriumoktól"
-  ],
-  [
-   "visszásság",
-   "N;IN+ABL;SG",
-   "visszásságból"
-  ],
-  [
-   "szójegyzék",
-   "N;AT+ABL;SG",
-   "szójegyzéktől"
-  ],
-  [
-   "csapolás",
-   "N;DAT;SG",
-   "csapolásnak"
-  ],
-  [
-   "közép",
-   "N;INS;PL",
-   "közepekkel"
-  ],
-  [
-   "huszonnyolc",
-   "N;IN+ABL;SG",
-   "huszonnyolcból"
-  ],
-  [
-   "korund",
-   "N;TRANS;PL",
-   "korundokká"
-  ],
-  [
-   "werkfilm",
-   "N;TERM;SG",
-   "werkfilmig"
-  ],
-  [
-   "sugárzó",
-   "N;IN+ALL;PL",
-   "sugárzókba"
-  ],
-  [
-   "alföld",
-   "N;ON+ALL;PL",
-   "alföldekre"
-  ],
-  [
-   "hús",
-   "N;ON+ESS;PL",
-   "húsokon"
-  ],
-  [
-   "repertoár",
-   "N;ACC;PL",
-   "repertoárokat"
-  ],
-  [
-   "monopólium",
-   "N;AT+ESS;PL",
-   "monopóliumoknál"
-  ],
-  [
-   "gyöngyvirág",
-   "N;DAT;PL",
-   "gyöngyvirágoknak"
-  ],
-  [
-   "fúró",
-   "N;TERM;SG",
-   "fúróig"
-  ],
-  [
-   "légörvény",
-   "N;TRANS;SG",
-   "légörvénnyé"
-  ],
-  [
-   "mentőcsónak",
-   "N;IN+ABL;PL",
-   "mentőcsónakokból"
-  ],
-  [
-   "magatartás",
-   "N;ON+ESS;SG",
-   "magatartáson"
-  ],
-  [
-   "repülőgép",
-   "N;DAT;PL",
-   "repülőgépeknek"
-  ],
-  [
-   "makrofotó",
-   "N;AT+ABL;SG",
-   "makrofotótól"
-  ],
-  [
-   "gólem",
-   "N;IN+ALL;PL",
-   "gólemekbe"
-  ],
-  [
-   "kohászat",
-   "N;IN+ABL;SG",
-   "kohászatból"
-  ],
-  [
-   "negyvenhatodik",
-   "N;IN+ESS;PL",
-   "negyvenhatodikokban"
-  ],
-  [
-   "negyvenhatodik",
-   "N;IN+ESS;PL",
-   "negyvenhatodikakban"
-  ],
-  [
-   "gusztus",
-   "N;INS;SG",
-   "gusztussal"
-  ],
-  [
-   "alapfém",
-   "N;INS;PL",
-   "alapfémekkel"
-  ],
-  [
-   "következetesség",
-   "N;ON+ALL;PL",
-   "következetességekre"
-  ],
-  [
-   "bizalmas",
-   "N;AT+ALL;PL",
-   "bizalmasokhoz"
-  ],
-  [
-   "krumpli",
-   "N;IN+ABL;PL",
-   "krumplikból"
-  ],
-  [
-   "téglaház",
-   "N;AT+ESS;SG",
-   "téglaháznál"
-  ],
-  [
-   "földelés",
-   "N;AT+ABL;SG",
-   "földeléstől"
-  ],
-  [
-   "csendélet",
-   "N;DAT;SG",
-   "csendéletnek"
-  ],
-  [
-   "rizsliszt",
-   "N;INS;PL",
-   "rizslisztekkel"
-  ],
-  [
-   "asztalos",
-   "N;IN+ABL;PL",
-   "asztalosokból"
-  ],
-  [
-   "főnix",
-   "N;TERM;SG",
-   "főnixig"
-  ],
-  [
-   "játékos",
-   "N;AT+ALL;SG",
-   "játékoshoz"
-  ],
-  [
-   "tanulmányozás",
-   "N;ACC;SG",
-   "tanulmányozást"
-  ],
-  [
-   "vektor",
-   "N;IN+ABL;PL",
-   "vektorokból"
-  ],
-  [
-   "populista",
-   "N;IN+ESS;SG",
-   "populistában"
-  ],
-  [
-   "légzőszerv",
-   "N;AT+ABL;PL",
-   "légzőszervektől"
-  ],
-  [
-   "szükség",
-   "N;NOM;PL",
-   "szükségek"
-  ],
-  [
-   "félsz",
-   "N;DAT;SG",
-   "félsznek"
-  ],
-  [
-   "hobbitok",
-   "N;TERM;SG",
-   "hobbitokig"
-  ],
-  [
-   "medikus",
-   "N;INS;SG",
-   "medikussal"
-  ],
-  [
-   "alkirályné",
-   "N;ACC;PL",
-   "alkirálynékat"
-  ],
-  [
-   "igemódosító",
-   "N;AT+ABL;PL",
-   "igemódosítóktól"
-  ],
-  [
-   "tagország",
-   "N;INS;PL",
-   "tagországokkal"
-  ],
-  [
-   "vára",
-   "N;IN+ABL;SG",
-   "várából"
-  ],
-  [
-   "töltény",
-   "N;PRP;SG",
-   "töltényért"
-  ],
-  [
-   "őrs",
-   "N;IN+ALL;SG",
-   "őrsbe"
-  ],
-  [
-   "madám",
-   "N;ON+ESS;PL",
-   "madámokon"
-  ],
-  [
-   "alt",
-   "N;IN+ABL;SG",
-   "altból"
-  ],
-  [
-   "juha",
-   "N;DAT;SG",
-   "juhának"
-  ],
-  [
-   "csillagjóslás",
-   "N;NOM;PL",
-   "csillagjóslások"
-  ],
-  [
-   "búza",
-   "N;IN+ALL;PL",
-   "búzákba"
-  ],
-  [
-   "védjegy",
-   "N;DAT;SG",
-   "védjegynek"
-  ],
-  [
-   "csín",
-   "N;AT+ALL;PL",
-   "csínokhoz"
-  ],
-  [
-   "ütőgardon",
-   "N;TERM;PL",
-   "ütőgardonokig"
-  ],
-  [
-   "háború",
-   "N;TERM;PL",
-   "háborúkig"
-  ],
-  [
-   "búcsúzás",
-   "N;IN+ESS;SG",
-   "búcsúzásban"
-  ],
-  [
-   "előítélet",
-   "N;ACC;PL",
-   "előítéleteket"
-  ],
-  [
-   "jelzőtűz",
-   "N;TERM;SG",
-   "jelzőtűzig"
-  ],
-  [
-   "hajlék",
-   "N;ON+ESS;SG",
-   "hajlékon"
-  ],
-  [
-   "akasztó",
-   "N;ON+ALL;PL",
-   "akasztókra"
-  ],
-  [
-   "dög",
-   "N;NOM;PL",
-   "dögök"
-  ],
-  [
-   "dohány",
-   "N;IN+ESS;SG",
-   "dohányban"
-  ],
-  [
-   "pszichológia",
-   "N;AT+ALL;PL",
-   "pszichológiákhoz"
-  ],
-  [
-   "igyekezet",
-   "N;ACC;SG",
-   "igyekezetet"
-  ],
-  [
-   "kerecsensólyom",
-   "N;INS;PL",
-   "kerecsensólymokkal"
-  ],
-  [
-   "app",
-   "N;DAT;PL",
-   "appoknak"
-  ],
-  [
-   "negyvenöt",
-   "N;ON+ABL;PL",
-   "negyvenötökről"
-  ],
-  [
-   "beteg",
-   "N;AT+ESS;PL",
-   "betegeknél"
-  ],
-  [
-   "zubbony",
-   "N;AT+ESS;PL",
-   "zubbonyoknál"
-  ],
-  [
-   "szükség",
-   "N;PRP;PL",
-   "szükségekért"
-  ],
-  [
-   "1-es",
-   "N;TERM;PL",
-   "1-esekig"
-  ],
-  [
-   "jelző",
-   "N;TERM;PL",
-   "jelzőkig"
-  ],
-  [
-   "gerely",
-   "N;IN+ESS;PL",
-   "gerelyekben"
-  ],
-  [
-   "tagállam",
-   "N;IN+ESS;SG",
-   "tagállamban"
-  ],
-  [
-   "vadkecske",
-   "N;INS;PL",
-   "vadkecskékkel"
-  ],
-  [
-   "homály",
-   "N;PRP;SG",
-   "homályért"
-  ],
-  [
-   "tulajdonosnő",
-   "N;AT+ALL;SG",
-   "tulajdonosnőhöz"
-  ],
-  [
-   "leveskocka",
-   "N;DAT;PL",
-   "leveskockáknak"
-  ],
-  [
-   "harc",
-   "N;IN+ABL;SG",
-   "harcból"
-  ],
-  [
-   "szibériai",
-   "N;INS;PL",
-   "szibériaiakkal"
-  ],
-  [
-   "gé",
-   "N;IN+ESS;PL",
-   "gékben"
-  ],
-  [
-   "liga",
-   "N;ON+ESS;PL",
-   "ligákon"
-  ],
-  [
-   "töredezettség",
-   "N;ACC;SG",
-   "töredezettséget"
-  ],
-  [
-   "bé",
-   "N;PRP;SG",
-   "béért"
-  ],
-  [
-   "szemfesték",
-   "N;TERM;PL",
-   "szemfestékekig"
-  ],
-  [
-   "kiépítés",
-   "N;TRANS;SG",
-   "kiépítéssé"
-  ],
-  [
-   "jósnő",
-   "N;AT+ABL;SG",
-   "jósnőtől"
-  ],
-  [
-   "abakusz",
-   "N;TRANS;PL",
-   "abakuszokká"
-  ],
-  [
-   "rakomány",
-   "N;PRP;SG",
-   "rakományért"
-  ],
-  [
-   "harminchat",
-   "N;DAT;PL",
-   "harminchatoknak"
-  ],
-  [
-   "program",
-   "N;PRP;SG",
-   "programért"
-  ],
-  [
-   "bot",
-   "N;TRANS;PL",
-   "botokká"
-  ],
-  [
-   "tartó",
-   "N;ON+ESS;SG",
-   "tartón"
-  ],
-  [
-   "szauna",
-   "N;DAT;SG",
-   "szaunának"
-  ],
-  [
-   "törvénykezés",
-   "N;ON+ESS;PL",
-   "törvénykezéseken"
-  ],
-  [
-   "közért",
-   "N;AT+ABL;SG",
-   "közérttől"
-  ],
-  [
-   "küsz",
-   "N;ON+ESS;SG",
-   "küszön"
-  ],
-  [
-   "pártfogás",
-   "N;INS;SG",
-   "pártfogással"
-  ],
-  [
-   "miniatűr",
-   "N;DAT;PL",
-   "miniatűröknek"
-  ],
-  [
-   "oláh",
-   "N;ACC;SG",
-   "oláhot"
-  ],
-  [
-   "früstök",
-   "N;ON+ESS;SG",
-   "früstökön"
-  ],
-  [
-   "válltömés",
-   "N;ON+ESS;SG",
-   "válltömésen"
-  ],
-  [
-   "funktor",
-   "N;TERM;PL",
-   "funktorokig"
-  ],
-  [
-   "tengerfenék",
-   "N;AT+ALL;SG",
-   "tengerfenékhez"
-  ],
-  [
-   "földgáz",
-   "N;ON+ABL;SG",
-   "földgázról"
-  ],
-  [
-   "szűzhártya",
-   "N;AT+ESS;SG",
-   "szűzhártyánál"
-  ],
-  [
-   "deklaráció",
-   "N;AT+ESS;SG",
-   "deklarációnál"
-  ],
-  [
-   "tömegsír",
-   "N;ON+ABL;SG",
-   "tömegsírról"
-  ],
-  [
-   "eszperantó",
-   "N;TERM;PL",
-   "eszperantókig"
-  ],
-  [
-   "sebészet",
-   "N;ON+ALL;PL",
-   "sebészetekre"
-  ],
-  [
-   "felügyelő",
-   "N;ON+ESS;PL",
-   "felügyelőkön"
-  ],
-  [
-   "bekezdés",
-   "N;INS;PL",
-   "bekezdésekkel"
-  ],
-  [
-   "cs.",
-   "N;ON+ALL;SG",
-   "cs.-ra"
-  ],
-  [
-   "zászló",
-   "N;IN+ABL;SG",
-   "zászlóból"
-  ],
-  [
-   "dialógus",
-   "N;AT+ABL;SG",
-   "dialógustól"
-  ],
-  [
-   "kereszthalál",
-   "N;IN+ALL;SG",
-   "kereszthalálba"
-  ],
-  [
-   "bog",
-   "N;TERM;PL",
-   "bogokig"
-  ],
-  [
-   "gyök",
-   "N;TERM;SG",
-   "gyökig"
-  ],
-  [
-   "árny",
-   "N;AT+ESS;SG",
-   "árnynál"
-  ],
-  [
-   "tízórai",
-   "N;INS;PL",
-   "tízóraikkal"
-  ],
-  [
-   "reciprok",
-   "N;IN+ESS;SG",
-   "reciprokban"
-  ],
-  [
-   "tópart",
-   "N;NOM;PL",
-   "tópartok"
-  ],
-  [
-   "fésű",
-   "N;AT+ABL;SG",
-   "fésűtől"
-  ],
-  [
-   "nyelem",
-   "N;AT+ALL;SG",
-   "nyelemhez"
-  ],
-  [
-   "páncélszekrény",
-   "N;ACC;PL",
-   "páncélszekrényeket"
-  ],
-  [
-   "napellenző",
-   "N;TRANS;SG",
-   "napellenzővé"
-  ],
-  [
-   "családfenntartó",
-   "N;ON+ESS;PL",
-   "családfenntartókon"
-  ],
-  [
-   "póker",
-   "N;IN+ALL;PL",
-   "pókerekbe"
-  ],
-  [
-   "bevásárlókosár",
-   "N;AT+ESS;PL",
-   "bevásárlókosaraknál"
-  ],
-  [
-   "ládika",
-   "N;ON+ALL;SG",
-   "ládikára"
-  ],
-  [
-   "flotta",
-   "N;DAT;PL",
-   "flottáknak"
-  ],
-  [
-   "patrícius",
-   "N;ON+ALL;SG",
-   "patríciusra"
-  ],
-  [
-   "western",
-   "N;NOM;PL",
-   "westernek"
-  ],
-  [
-   "folyamat",
-   "N;TERM;PL",
-   "folyamatokig"
-  ],
-  [
-   "bajor",
-   "N;TRANS;PL",
-   "bajorokká"
-  ],
-  [
-   "tanár",
-   "N;IN+ALL;SG",
-   "tanárba"
-  ],
-  [
-   "platina",
-   "N;ON+ALL;SG",
-   "platinára"
-  ],
-  [
-   "vezérmotívum",
-   "N;AT+ALL;PL",
-   "vezérmotívumokhoz"
-  ],
-  [
-   "szelén",
-   "N;TRANS;PL",
-   "szelénekké"
-  ],
-  [
-   "égbolt",
-   "N;AT+ABL;PL",
-   "égboltoktól"
-  ],
-  [
-   "bolsevizmus",
-   "N;AT+ALL;PL",
-   "bolsevizmusokhoz"
-  ],
-  [
-   "szolgáltatás",
-   "N;PRP;PL",
-   "szolgáltatásokért"
-  ],
-  [
-   "lakáj",
-   "N;IN+ABL;PL",
-   "lakájokból"
-  ],
-  [
-   "tradíció",
-   "N;ACC;PL",
-   "tradíciókat"
-  ],
-  [
-   "egérút",
-   "N;AT+ALL;SG",
-   "egérúthoz"
-  ],
-  [
-   "kerékvágás",
-   "N;IN+ABL;SG",
-   "kerékvágásból"
-  ],
-  [
-   "cukorbetegség",
-   "N;PRP;PL",
-   "cukorbetegségekért"
-  ],
-  [
-   "üvegcse",
-   "N;PRP;SG",
-   "üvegcséért"
-  ],
-  [
-   "játékelmélet",
-   "N;ON+ESS;SG",
-   "játékelméleten"
-  ],
-  [
-   "focilabda",
-   "N;IN+ESS;PL",
-   "focilabdákban"
-  ],
-  [
-   "tárcsafék",
-   "N;AT+ALL;SG",
-   "tárcsafékhez"
-  ],
-  [
-   "ótvar",
-   "N;AT+ABL;PL",
-   "ótvaroktól"
-  ],
-  [
-   "szőnyeg",
-   "N;ON+ALL;SG",
-   "szőnyegre"
-  ],
-  [
-   "retyerutya",
-   "N;TERM;PL",
-   "retyerutyákig"
-  ],
-  [
-   "falevél",
-   "N;ON+ESS;SG",
-   "falevélen"
-  ],
-  [
-   "rendszertan",
-   "N;AT+ESS;SG",
-   "rendszertannál"
-  ],
-  [
-   "kotta",
-   "N;TERM;SG",
-   "kottáig"
-  ],
-  [
-   "ökörszem",
-   "N;ON+ABL;SG",
-   "ökörszemről"
-  ],
-  [
-   "iratkapocs",
-   "N;NOM;PL",
-   "iratkapcsok"
-  ],
-  [
-   "bejelentkezés",
-   "N;IN+ESS;SG",
-   "bejelentkezésben"
-  ],
-  [
-   "fajta",
-   "N;IN+ABL;PL",
-   "fajtákból"
-  ],
-  [
-   "ágens",
-   "N;IN+ABL;PL",
-   "ágensekből"
-  ],
-  [
-   "tintatartó",
-   "N;IN+ALL;PL",
-   "tintatartókba"
-  ],
-  [
-   "hozzátartozó",
-   "N;AT+ESS;SG",
-   "hozzátartozónál"
-  ],
-  [
-   "hentes",
-   "N;IN+ALL;SG",
-   "hentesbe"
-  ],
-  [
-   "aggodalom",
-   "N;NOM;PL",
-   "aggodalmak"
-  ],
-  [
-   "község",
-   "N;AT+ABL;SG",
-   "községtől"
-  ],
-  [
-   "elemózsia",
-   "N;ON+ESS;PL",
-   "elemózsiákon"
-  ],
-  [
-   "kékvér",
-   "N;AT+ESS;SG",
-   "kékvérnél"
-  ],
-  [
-   "coboly",
-   "N;DAT;PL",
-   "cobolyoknak"
-  ],
-  [
-   "festés",
-   "N;AT+ALL;SG",
-   "festéshez"
-  ],
-  [
-   "ellen",
-   "N;AT+ALL;SG",
-   "ellenhez"
-  ],
-  [
-   "diszkréció",
-   "N;TRANS;SG",
-   "diszkrécióvá"
-  ],
-  [
-   "vakáció",
-   "N;AT+ABL;SG",
-   "vakációtól"
-  ],
-  [
-   "lovassport",
-   "N;AT+ABL;SG",
-   "lovassporttól"
-  ],
-  [
-   "komponista",
-   "N;TRANS;PL",
-   "komponistákká"
-  ],
-  [
-   "hadászat",
-   "N;ACC;SG",
-   "hadászatot"
-  ],
-  [
-   "előkelő",
-   "N;INS;SG",
-   "előkelővel"
-  ],
-  [
-   "boy",
-   "N;IN+ESS;PL",
-   "boyokban"
-  ],
-  [
-   "kajszibarackfa",
-   "N;NOM;PL",
-   "kajszibarackfák"
-  ],
-  [
-   "csillagrendszer",
-   "N;AT+ALL;PL",
-   "csillagrendszerekhez"
-  ],
-  [
-   "háromság",
-   "N;TERM;PL",
-   "háromságokig"
-  ],
-  [
-   "melegítőnadrág",
-   "N;INS;PL",
-   "melegítőnadrágokkal"
-  ],
-  [
-   "spam",
-   "N;ON+ALL;SG",
-   "spamre"
-  ],
-  [
-   "közkívánat",
-   "N;AT+ALL;SG",
-   "közkívánathoz"
-  ],
-  [
-   "fejletlenség",
-   "N;IN+ABL;SG",
-   "fejletlenségből"
-  ],
-  [
-   "érdem",
-   "N;IN+ESS;PL",
-   "érdemekben"
-  ],
-  [
-   "szörnyűség",
-   "N;PRP;PL",
-   "szörnyűségekért"
-  ],
-  [
-   "tripper",
-   "N;IN+ABL;PL",
-   "tripperekből"
-  ],
-  [
-   "főút",
-   "N;AT+ALL;PL",
-   "főutakhoz"
-  ],
-  [
-   "kipa",
-   "N;AT+ABL;SG",
-   "kipától"
-  ],
-  [
-   "fax",
-   "N;IN+ABL;PL",
-   "faxokból"
-  ],
-  [
-   "torony",
-   "N;PRP;PL",
-   "tornyokért"
-  ],
-  [
-   "csendőr",
-   "N;NOM;PL",
-   "csendőrök"
-  ],
-  [
-   "tyé",
-   "N;AT+ESS;SG",
-   "tyénél"
-  ],
-  [
-   "raktárépület",
-   "N;PRP;SG",
-   "raktárépületért"
-  ],
-  [
-   "pír",
-   "N;IN+ESS;PL",
-   "pírokban"
-  ],
-  [
-   "zenede",
-   "N;ON+ALL;PL",
-   "zenedékre"
-  ],
-  [
-   "balfasz",
-   "N;TRANS;PL",
-   "balfaszokká"
-  ],
-  [
-   "követés",
-   "N;AT+ESS;PL",
-   "követéseknél"
-  ],
-  [
-   "cipőfűző",
-   "N;IN+ABL;PL",
-   "cipőfűzőkből"
-  ],
-  [
-   "zeneszerző",
-   "N;INS;PL",
-   "zeneszerzőkkel"
-  ],
-  [
-   "beruházás",
-   "N;ON+ALL;SG",
-   "beruházásra"
-  ],
-  [
-   "könyvesbolt",
-   "N;INS;PL",
-   "könyvesboltokkal"
-  ],
-  [
-   "rajzoló",
-   "N;ON+ALL;PL",
-   "rajzolókra"
-  ],
-  [
-   "lézer",
-   "N;AT+ESS;PL",
-   "lézereknél"
-  ],
-  [
-   "ifjú",
-   "N;DAT;SG",
-   "ifjúnak"
-  ],
-  [
-   "műanyag",
-   "N;ON+ABL;SG",
-   "műanyagról"
-  ],
-  [
-   "lakk",
-   "N;INS;SG",
-   "lakkal"
-  ],
-  [
-   "egység",
-   "N;DAT;SG",
-   "egységnek"
-  ],
-  [
-   "játszma",
-   "N;ON+ABL;SG",
-   "játszmáról"
-  ],
-  [
-   "díván",
-   "N;TERM;PL",
-   "dívánokig"
-  ],
-  [
-   "neurózis",
-   "N;IN+ALL;SG",
-   "neurózisba"
-  ],
-  [
-   "lépcsőház",
-   "N;ACC;SG",
-   "lépcsőházat"
-  ],
-  [
-   "nyafogás",
-   "N;IN+ESS;SG",
-   "nyafogásban"
-  ],
-  [
-   "búr",
-   "N;IN+ALL;PL",
-   "búrokba"
-  ],
-  [
-   "pletyka",
-   "N;IN+ESS;SG",
-   "pletykában"
-  ],
-  [
-   "kisebbrendűség",
-   "N;TERM;SG",
-   "kisebbrendűségig"
-  ],
-  [
-   "koala",
-   "N;AT+ESS;SG",
-   "koalánál"
-  ],
-  [
-   "félhomály",
-   "N;DAT;PL",
-   "félhomályoknak"
-  ],
-  [
-   "műcsarnok",
-   "N;INS;PL",
-   "műcsarnokokkal"
-  ],
-  [
-   "bögre",
-   "N;ON+ABL;PL",
-   "bögrékről"
-  ],
-  [
-   "zongoraverseny",
-   "N;ON+ESS;PL",
-   "zongoraversenyeken"
-  ],
-  [
-   "perec",
-   "N;INS;SG",
-   "pereccel"
-  ],
-  [
-   "isi",
-   "N;IN+ABL;PL",
-   "isikből"
-  ],
-  [
-   "fémhalogénlámpa",
-   "N;PRP;SG",
-   "fémhalogénlámpáért"
-  ],
-  [
-   "retyerutya",
-   "N;ON+ABL;SG",
-   "retyerutyáról"
-  ],
-  [
-   "korai",
-   "N;AT+ABL;PL",
-   "koraitól"
-  ],
-  [
-   "szívbillentyű",
-   "N;DAT;SG",
-   "szívbillentyűnek"
-  ],
-  [
-   "sárvédő",
-   "N;IN+ALL;SG",
-   "sárvédőbe"
-  ],
-  [
-   "mérték",
-   "N;PRP;PL",
-   "mértékekért"
-  ],
-  [
-   "csonttan",
-   "N;AT+ESS;PL",
-   "csonttanoknál"
-  ],
-  [
-   "ótvar",
-   "N;DAT;SG",
-   "ótvarnak"
-  ],
-  [
-   "vonzalom",
-   "N;AT+ABL;SG",
-   "vonzalomtól"
-  ],
-  [
-   "folyamodvány",
-   "N;IN+ABL;PL",
-   "folyamodványokból"
-  ],
-  [
-   "könyvesbolt",
-   "N;IN+ABL;PL",
-   "könyvesboltokból"
-  ],
-  [
-   "varázslás",
-   "N;TRANS;SG",
-   "varázslássá"
-  ],
-  [
-   "folyamkilométer",
-   "N;ON+ALL;PL",
-   "folyamkilométerekre"
-  ],
-  [
-   "fülészet",
-   "N;ON+ALL;PL",
-   "fülészetekre"
-  ],
-  [
-   "karima",
-   "N;TRANS;SG",
-   "karimává"
-  ],
-  [
-   "hányinger",
-   "N;TERM;SG",
-   "hányingerig"
-  ],
-  [
-   "könyves",
-   "N;AT+ESS;SG",
-   "könyvesnél"
-  ],
-  [
-   "kancacsikó",
-   "N;NOM;PL",
-   "kancacsikók"
-  ],
-  [
-   "ruhatár",
-   "N;ON+ESS;PL",
-   "ruhatárakon"
-  ],
-  [
-   "túlnépesedés",
-   "N;ACC;PL",
-   "túlnépesedéseket"
-  ],
-  [
-   "fülbemászó",
-   "N;ON+ESS;SG",
-   "fülbemászón"
-  ],
-  [
-   "késed",
-   "N;PRP;SG",
-   "késedért"
-  ],
-  [
-   "megbízás",
-   "N;TRANS;PL",
-   "megbízásokká"
-  ],
-  [
-   "ráspoly",
-   "N;TRANS;SG",
-   "ráspollyá"
-  ],
-  [
-   "keresztcsont",
-   "N;IN+ESS;PL",
-   "keresztcsontokban"
-  ],
-  [
-   "illat",
-   "N;INS;PL",
-   "illatokkal"
-  ],
-  [
-   "alaposság",
-   "N;INS;SG",
-   "alapossággal"
-  ],
-  [
-   "gimnasztika",
-   "N;AT+ABL;PL",
-   "gimnasztikáktól"
-  ],
-  [
-   "kerékpáros",
-   "N;TERM;PL",
-   "kerékpárosokig"
-  ],
-  [
-   "rádió",
-   "N;ON+ALL;SG",
-   "rádióra"
-  ],
-  [
-   "nyúlvány",
-   "N;ON+ALL;PL",
-   "nyúlványokra"
-  ],
-  [
-   "villanyóra",
-   "N;IN+ABL;PL",
-   "villanyórákból"
-  ],
-  [
-   "papírszelet",
-   "N;IN+ESS;PL",
-   "papírszeletekben"
-  ],
-  [
-   "hám",
-   "N;ON+ALL;PL",
-   "hámokra"
-  ],
-  [
-   "sekrestye",
-   "N;DAT;PL",
-   "sekrestyéknek"
-  ],
-  [
-   "sáfrány",
-   "N;ON+ESS;PL",
-   "sáfrányokon"
-  ],
-  [
-   "kankalin",
-   "N;ON+ABL;PL",
-   "kankalinokról"
-  ],
-  [
-   "karima",
-   "N;ON+ABL;PL",
-   "karimákról"
-  ],
-  [
-   "helységnév",
-   "N;DAT;PL",
-   "helységneveknek"
-  ],
-  [
-   "részeg",
-   "N;IN+ABL;PL",
-   "részegekből"
-  ],
-  [
-   "fagy",
-   "N;IN+ALL;SG",
-   "fagyba"
-  ],
-  [
-   "koleszterin",
-   "N;TRANS;SG",
-   "koleszterinné"
-  ],
-  [
-   "sportújságírás",
-   "N;AT+ESS;SG",
-   "sportújságírásnál"
-  ],
-  [
-   "jellem",
-   "N;NOM;PL",
-   "jellemek"
-  ],
-  [
-   "tett",
-   "N;AT+ALL;SG",
-   "tetthez"
-  ],
-  [
-   "puttony",
-   "N;ON+ABL;PL",
-   "puttonyokról"
-  ],
-  [
-   "édesség",
-   "N;ON+ALL;PL",
-   "édességekre"
-  ],
-  [
-   "nád",
-   "N;AT+ABL;SG",
-   "nádtól"
-  ],
-  [
-   "planetárium",
-   "N;ON+ESS;SG",
-   "planetáriumon"
-  ],
-  [
-   "nagybácsi",
-   "N;IN+ABL;PL",
-   "nagybácsikból"
-  ],
-  [
-   "ladik",
-   "N;TRANS;SG",
-   "ladikká"
-  ],
-  [
-   "madarász",
-   "N;TERM;SG",
-   "madarászig"
-  ],
-  [
-   "megbetegedés",
-   "N;NOM;PL",
-   "megbetegedések"
-  ],
-  [
-   "vadász",
-   "N;AT+ESS;PL",
-   "vadászoknál"
-  ],
-  [
-   "kétéltű",
-   "N;IN+ESS;PL",
-   "kétéltűekben"
-  ],
-  [
-   "mogyoróhagyma",
-   "N;AT+ALL;PL",
-   "mogyoróhagymákhoz"
-  ],
-  [
-   "bemutató",
-   "N;AT+ALL;PL",
-   "bemutatókhoz"
-  ],
-  [
-   "hágó",
-   "N;ON+ABL;SG",
-   "hágóról"
-  ],
-  [
-   "szívroham",
-   "N;INS;SG",
-   "szívrohammal"
-  ],
-  [
-   "szerződés",
-   "N;ACC;SG",
-   "szerződést"
-  ],
-  [
-   "harmincöt",
-   "N;ACC;SG",
-   "harmincötöt"
-  ],
-  [
-   "műkő",
-   "N;TERM;PL",
-   "műkövekig"
-  ],
-  [
-   "víz",
-   "N;NOM;PL",
-   "vizek"
-  ],
-  [
-   "alabástrom",
-   "N;INS;SG",
-   "alabástrommal"
-  ],
-  [
-   "mérgezés",
-   "N;PRP;SG",
-   "mérgezésért"
-  ],
-  [
-   "ödéma",
-   "N;TRANS;PL",
-   "ödémákká"
-  ],
-  [
-   "ell",
-   "N;IN+ESS;SG",
-   "ellben"
-  ],
-  [
-   "barátnő",
-   "N;TERM;SG",
-   "barátnőig"
-  ],
-  [
-   "gyűjtés",
-   "N;ON+ALL;PL",
-   "gyűjtésekre"
-  ],
-  [
-   "orsó",
-   "N;IN+ESS;PL",
-   "orsókban"
-  ],
-  [
-   "hám",
-   "N;ACC;PL",
-   "hámokat"
-  ],
-  [
-   "kurbli",
-   "N;INS;PL",
-   "kurblikkal"
-  ],
-  [
-   "csalogány",
-   "N;ACC;PL",
-   "csalogányokat"
-  ],
-  [
-   "fogadás",
-   "N;ON+ALL;SG",
-   "fogadásra"
-  ],
-  [
-   "műasztalos",
-   "N;IN+ABL;SG",
-   "műasztalosból"
-  ],
-  [
-   "endodermisz",
-   "N;PRP;PL",
-   "endodermiszekért"
-  ],
-  [
-   "kesztyű",
-   "N;INS;PL",
-   "kesztyűkkel"
-  ],
-  [
-   "seb",
-   "N;AT+ALL;SG",
-   "sebhez"
-  ],
-  [
-   "borotva",
-   "N;ON+ALL;SG",
-   "borotvára"
-  ],
-  [
-   "marka",
-   "N;ON+ESS;SG",
-   "markán"
-  ],
-  [
-   "szünet",
-   "N;ON+ABL;SG",
-   "szünetről"
-  ],
-  [
-   "legyező",
-   "N;ON+ESS;PL",
-   "legyezőkön"
-  ],
-  [
-   "hermelin",
-   "N;IN+ESS;PL",
-   "hermelinekben"
-  ],
-  [
-   "felkiáltójel",
-   "N;IN+ABL;SG",
-   "felkiáltójelből"
-  ],
-  [
-   "szakértő",
-   "N;ACC;SG",
-   "szakértőt"
-  ],
-  [
-   "trampli",
-   "N;DAT;PL",
-   "trampliknak"
-  ],
-  [
-   "áldozat",
-   "N;TERM;SG",
-   "áldozatig"
-  ],
-  [
-   "parallaxis",
-   "N;AT+ABL;PL",
-   "parallaxisoktól"
-  ],
-  [
-   "rezsi",
-   "N;NOM;PL",
-   "rezsik"
-  ],
-  [
-   "mostohaanya",
-   "N;ACC;SG",
-   "mostohaanyát"
-  ],
-  [
-   "forgószél",
-   "N;ACC;PL",
-   "forgószeleket"
-  ],
-  [
-   "görkorcsolya",
-   "N;NOM;PL",
-   "görkorcsolyák"
-  ],
-  [
-   "növényzet",
-   "N;TRANS;SG",
-   "növényzetté"
-  ],
-  [
-   "cipőkanál",
-   "N;AT+ABL;SG",
-   "cipőkanáltól"
-  ],
-  [
-   "év",
-   "N;NOM;PL",
-   "évek"
-  ],
-  [
-   "duó",
-   "N;ON+ABL;PL",
-   "duókról"
-  ],
-  [
-   "főnév",
-   "N;TRANS;SG",
-   "főnévvé"
-  ],
-  [
-   "apátnő",
-   "N;IN+ABL;PL",
-   "apátnőkből"
-  ],
-  [
-   "írógép",
-   "N;AT+ALL;PL",
-   "írógépekhez"
-  ],
-  [
-   "önkéntes",
-   "N;DAT;PL",
-   "önkénteseknek"
-  ],
-  [
-   "premier",
-   "N;IN+ESS;PL",
-   "premierekben"
-  ],
-  [
-   "kérdezett",
-   "N;PRP;SG",
-   "kérdezettért"
-  ],
-  [
-   "alátámasztás",
-   "N;AT+ESS;SG",
-   "alátámasztásnál"
-  ],
-  [
-   "megoldás",
-   "N;IN+ABL;SG",
-   "megoldásból"
-  ],
-  [
-   "bűntény",
-   "N;INS;PL",
-   "bűntényekkel"
-  ],
-  [
-   "rizspehely",
-   "N;IN+ABL;PL",
-   "rizspelyhekből"
-  ],
-  [
-   "törvényhozás",
-   "N;AT+ESS;SG",
-   "törvényhozásnál"
-  ],
-  [
-   "korreláció",
-   "N;IN+ESS;PL",
-   "korrelációkban"
-  ],
-  [
-   "snóder",
-   "N;IN+ESS;PL",
-   "snóderekben"
-  ],
-  [
-   "folyam",
-   "N;ACC;SG",
-   "folyamot"
-  ],
-  [
-   "molnár",
-   "N;NOM;PL",
-   "molnárok"
-  ],
-  [
-   "megbocsáthatatlanság",
-   "N;IN+ABL;PL",
-   "megbocsáthatatlanságokból"
-  ],
-  [
-   "lefejezés",
-   "N;NOM;PL",
-   "lefejezések"
-  ],
-  [
-   "darázs",
-   "N;TRANS;SG",
-   "darázzsá"
-  ],
-  [
-   "petróleumlámpa",
-   "N;AT+ALL;SG",
-   "petróleumlámpához"
-  ],
-  [
-   "szabályozás",
-   "N;IN+ESS;SG",
-   "szabályozásban"
-  ],
-  [
-   "beleszólás",
-   "N;TRANS;SG",
-   "beleszólássá"
-  ],
-  [
-   "illatszer",
-   "N;IN+ESS;PL",
-   "illatszerekben"
-  ],
-  [
-   "ütköző",
-   "N;DAT;SG",
-   "ütközőnek"
-  ],
-  [
-   "kézügyesség",
-   "N;ACC;PL",
-   "kézügyességeket"
-  ],
-  [
-   "hölgyemény",
-   "N;ACC;SG",
-   "hölgyeményt"
-  ],
-  [
-   "gálya",
-   "N;DAT;PL",
-   "gályáknak"
-  ],
-  [
-   "ügynökség",
-   "N;ACC;PL",
-   "ügynökségeket"
-  ],
-  [
-   "pofaszíj",
-   "N;TERM;PL",
-   "pofaszíjakig"
-  ],
-  [
-   "bútordarab",
-   "N;ACC;SG",
-   "bútordarabot"
-  ],
-  [
-   "becsvágy",
-   "N;ACC;SG",
-   "becsvágyat"
-  ],
-  [
-   "kalapácsvetés",
-   "N;AT+ALL;SG",
-   "kalapácsvetéshez"
-  ],
-  [
-   "szekeres",
-   "N;PRP;SG",
-   "szekeresért"
-  ],
-  [
-   "kínszenvedés",
-   "N;IN+ALL;PL",
-   "kínszenvedésekbe"
-  ],
-  [
-   "lovasság",
-   "N;NOM;PL",
-   "lovasságok"
-  ],
-  [
-   "testamentum",
-   "N;ON+ESS;SG",
-   "testamentumon"
-  ],
-  [
-   "igekötő",
-   "N;INS;SG",
-   "igekötővel"
-  ],
-  [
-   "zsarnok",
-   "N;TRANS;SG",
-   "zsarnokká"
-  ],
-  [
-   "orvvadászat",
-   "N;ACC;SG",
-   "orvvadászatot"
-  ],
-  [
-   "animizmus",
-   "N;AT+ABL;PL",
-   "animizmusoktól"
-  ],
-  [
-   "kegyenc",
-   "N;DAT;SG",
-   "kegyencnek"
-  ],
-  [
-   "győzelem",
-   "N;IN+ABL;PL",
-   "győzelmekből"
-  ],
-  [
-   "éhbér",
-   "N;AT+ABL;SG",
-   "éhbértől"
-  ],
-  [
-   "biztatás",
-   "N;IN+ABL;PL",
-   "biztatásokból"
-  ],
-  [
-   "feltöltés",
-   "N;NOM;PL",
-   "feltöltések"
-  ],
-  [
-   "előfordulás",
-   "N;TERM;PL",
-   "előfordulásokig"
-  ],
-  [
-   "rémület",
-   "N;NOM;PL",
-   "rémületek"
-  ],
-  [
-   "neodímium",
-   "N;ON+ESS;SG",
-   "neodímiumon"
-  ],
-  [
-   "víziló",
-   "N;ON+ABL;SG",
-   "vízilóról"
-  ],
-  [
-   "párbeszédjel",
-   "N;TERM;PL",
-   "párbeszédjelekig"
-  ],
-  [
-   "tájékoztatás",
-   "N;IN+ESS;SG",
-   "tájékoztatásban"
-  ],
-  [
-   "zsoltáréneklés",
-   "N;ON+ABL;PL",
-   "zsoltáréneklésekről"
-  ],
-  [
-   "trombitás",
-   "N;AT+ESS;PL",
-   "trombitásoknál"
-  ],
-  [
-   "neologizmus",
-   "N;ON+ABL;PL",
-   "neologizmusokról"
-  ],
-  [
-   "sors",
-   "N;PRP;SG",
-   "sorsért"
-  ],
-  [
-   "bordély",
-   "N;AT+ABL;PL",
-   "bordélyoktól"
-  ],
-  [
-   "működés",
-   "N;ON+ABL;PL",
-   "működésekről"
-  ],
-  [
-   "névjegy",
-   "N;TRANS;PL",
-   "névjegyekké"
-  ],
-  [
-   "csúcsragadozó",
-   "N;IN+ALL;PL",
-   "csúcsragadozókba"
-  ],
-  [
-   "atlétanő",
-   "N;ON+ESS;SG",
-   "atlétanőn"
-  ],
-  [
-   "ács",
-   "N;AT+ALL;SG",
-   "ácshoz"
-  ],
-  [
-   "fikció",
-   "N;AT+ABL;SG",
-   "fikciótól"
-  ],
-  [
-   "modernizáció",
-   "N;ON+ESS;PL",
-   "modernizációkon"
-  ],
-  [
-   "zsírkréta",
-   "N;PRP;PL",
-   "zsírkrétákért"
-  ],
-  [
-   "jegyes",
-   "N;AT+ESS;SG",
-   "jegyesnél"
-  ],
-  [
-   "műanyag",
-   "N;IN+ABL;PL",
-   "műanyagokból"
-  ],
-  [
-   "tüntetés",
-   "N;TRANS;PL",
-   "tüntetésekké"
-  ],
-  [
-   "pszichiáter",
-   "N;AT+ALL;SG",
-   "pszichiáterhez"
-  ],
-  [
-   "nonstop",
-   "N;ON+ESS;PL",
-   "nonstopokon"
-  ],
-  [
-   "felhőkarcoló",
-   "N;AT+ESS;SG",
-   "felhőkarcolónál"
-  ],
-  [
-   "csehó",
-   "N;IN+ABL;PL",
-   "csehókból"
-  ],
-  [
-   "ellentét",
-   "N;AT+ESS;SG",
-   "ellentétnél"
-  ],
-  [
-   "gengszter",
-   "N;ACC;SG",
-   "gengsztert"
-  ],
-  [
-   "szigetelő",
-   "N;ON+ESS;PL",
-   "szigetelőkön"
-  ],
-  [
-   "fénysugár",
-   "N;TERM;SG",
-   "fénysugárig"
-  ],
-  [
-   "bankjegy",
-   "N;AT+ESS;SG",
-   "bankjegynél"
-  ],
-  [
-   "kérelem",
-   "N;IN+ABL;SG",
-   "kérelemből"
-  ],
-  [
-   "fokozat",
-   "N;ON+ALL;SG",
-   "fokozatra"
-  ],
-  [
-   "lóca",
-   "N;ON+ALL;PL",
-   "lócákra"
-  ],
-  [
-   "ajánlás",
-   "N;IN+ESS;PL",
-   "ajánlásokban"
-  ],
-  [
-   "varázsige",
-   "N;TERM;PL",
-   "varázsigékig"
-  ],
-  [
-   "lőszer",
-   "N;AT+ESS;SG",
-   "lőszernél"
-  ],
-  [
-   "fejfedő",
-   "N;IN+ESS;SG",
-   "fejfedőben"
-  ],
-  [
-   "esküdt",
-   "N;ON+ESS;SG",
-   "esküdtön"
-  ],
-  [
-   "hegycsúcs",
-   "N;TRANS;PL",
-   "hegycsúcsokká"
-  ],
-  [
-   "tonna",
-   "N;ACC;PL",
-   "tonnákat"
-  ],
-  [
-   "mari",
-   "N;IN+ABL;PL",
-   "marikból"
-  ],
-  [
-   "adattípus",
-   "N;AT+ABL;SG",
-   "adattípustól"
-  ],
-  [
-   "toalett",
-   "N;INS;PL",
-   "toalettekkel"
-  ],
-  [
-   "túra",
-   "N;ON+ABL;PL",
-   "túrákról"
-  ],
-  [
-   "atrocitás",
-   "N;AT+ABL;PL",
-   "atrocitásoktól"
-  ],
-  [
-   "hastánc",
-   "N;INS;PL",
-   "hastáncokkal"
-  ],
-  [
-   "tetszés",
-   "N;TRANS;SG",
-   "tetszéssé"
-  ],
-  [
-   "technikus",
-   "N;IN+ALL;SG",
-   "technikusba"
-  ],
-  [
-   "csatolmány",
-   "N;ACC;SG",
-   "csatolmányt"
-  ],
-  [
-   "nagyapa",
-   "N;TERM;SG",
-   "nagyapáig"
-  ],
-  [
-   "megnyitás",
-   "N;IN+ESS;SG",
-   "megnyitásban"
-  ],
-  [
-   "park",
-   "N;AT+ALL;SG",
-   "parkhoz"
-  ],
-  [
-   "tünetegyüttes",
-   "N;ON+ALL;SG",
-   "tünetegyüttesre"
-  ],
-  [
-   "turbánliliom",
-   "N;AT+ESS;PL",
-   "turbánliliomoknál"
-  ],
-  [
-   "gyanúsított",
-   "N;ON+ALL;SG",
-   "gyanúsítottra"
-  ],
-  [
-   "vonat",
-   "N;ACC;SG",
-   "vonatot"
-  ],
-  [
-   "deka",
-   "N;IN+ESS;SG",
-   "dekában"
-  ],
-  [
-   "festőművész",
-   "N;AT+ALL;SG",
-   "festőművészhez"
-  ],
-  [
-   "ghánai",
-   "N;TERM;PL",
-   "ghánaiakig"
-  ],
-  [
-   "vétek",
-   "N;AT+ABL;PL",
-   "vétkektől"
-  ],
-  [
-   "tartály",
-   "N;ON+ESS;SG",
-   "tartályon"
-  ],
-  [
-   "eljegyzés",
-   "N;NOM;PL",
-   "eljegyzések"
-  ],
-  [
-   "albán",
-   "N;DAT;PL",
-   "albánoknak"
-  ],
-  [
-   "kincstár",
-   "N;NOM;PL",
-   "kincstárak"
-  ],
-  [
-   "mechanizmus",
-   "N;AT+ESS;SG",
-   "mechanizmusnál"
-  ],
-  [
-   "petróleumlámpa",
-   "N;PRP;PL",
-   "petróleumlámpákért"
-  ],
-  [
-   "kösöntyű",
-   "N;PRP;SG",
-   "kösöntyűért"
-  ],
-  [
-   "behúzás",
-   "N;AT+ESS;SG",
-   "behúzásnál"
-  ],
-  [
-   "visszhang",
-   "N;ON+ALL;PL",
-   "visszhangokra"
-  ],
-  [
-   "varrószoba",
-   "N;INS;SG",
-   "varrószobával"
-  ],
-  [
-   "okt.",
-   "N;PRP;PL",
-   "okt.-ekért"
-  ],
-  [
-   "lucerna",
-   "N;IN+ABL;PL",
-   "lucernákból"
-  ],
-  [
-   "bolyongás",
-   "N;IN+ESS;SG",
-   "bolyongásban"
-  ],
-  [
-   "hipó",
-   "N;TRANS;SG",
-   "hipóvá"
-  ],
-  [
-   "ház",
-   "N;IN+ABL;SG",
-   "házból"
-  ],
-  [
-   "lakóhely",
-   "N;ON+ALL;PL",
-   "lakóhelyekre"
-  ],
-  [
-   "bíbornok",
-   "N;AT+ALL;PL",
-   "bíbornokokhoz"
-  ],
-  [
-   "pascal",
-   "N;IN+ESS;SG",
-   "pascalban"
-  ],
-  [
-   "szike",
-   "N;ACC;SG",
-   "szikét"
-  ],
-  [
-   "gazember",
-   "N;INS;SG",
-   "gazemberrel"
-  ],
-  [
-   "mente",
-   "N;IN+ALL;SG",
-   "mentébe"
-  ],
-  [
-   "atka",
-   "N;INS;SG",
-   "atkával"
-  ],
-  [
-   "hapták",
-   "N;TERM;SG",
-   "haptákig"
-  ],
-  [
-   "fogolycsere",
-   "N;IN+ABL;PL",
-   "fogolycserékből"
-  ],
-  [
-   "összevisszaság",
-   "N;ON+ALL;SG",
-   "összevisszaságra"
-  ],
-  [
-   "medencecsont",
-   "N;AT+ALL;PL",
-   "medencecsontokhoz"
-  ],
-  [
-   "impresszionizmus",
-   "N;IN+ABL;SG",
-   "impresszionizmusból"
-  ],
-  [
-   "cinikus",
-   "N;AT+ALL;SG",
-   "cinikushoz"
-  ],
-  [
-   "íz",
-   "N;AT+ALL;PL",
-   "ízekhez"
-  ],
-  [
-   "cinke",
-   "N;AT+ABL;SG",
-   "cinkétől"
-  ],
-  [
-   "bár",
-   "N;AT+ABL;SG",
-   "bártól"
-  ],
-  [
-   "szorb",
-   "N;IN+ABL;PL",
-   "szorbokból"
-  ],
-  [
-   "osztag",
-   "N;TERM;SG",
-   "osztagig"
-  ],
-  [
-   "vakbél",
-   "N;TERM;PL",
-   "vakbelekig"
-  ],
-  [
-   "csúnyaság",
-   "N;TERM;PL",
-   "csúnyaságokig"
-  ],
-  [
-   "feljelentés",
-   "N;ACC;PL",
-   "feljelentéseket"
-  ],
-  [
-   "citrom",
-   "N;DAT;SG",
-   "citromnak"
-  ],
-  [
-   "kelvirág",
-   "N;ON+ESS;SG",
-   "kelvirágon"
-  ],
-  [
-   "vadkecske",
-   "N;AT+ESS;SG",
-   "vadkecskénél"
-  ],
-  [
-   "szoros",
-   "N;IN+ESS;SG",
-   "szorosban"
-  ],
-  [
-   "dokumentálás",
-   "N;DAT;PL",
-   "dokumentálásoknak"
-  ],
-  [
-   "stroke",
-   "N;TRANS;SG",
-   "stroke-ká"
-  ],
-  [
-   "traktor",
-   "N;ON+ABL;PL",
-   "traktorokról"
-  ],
-  [
-   "tarló",
-   "N;AT+ALL;PL",
-   "tarlókhoz"
-  ],
-  [
-   "bú",
-   "N;AT+ALL;PL",
-   "búkhoz"
-  ],
-  [
-   "nyitvatartás",
-   "N;IN+ALL;SG",
-   "nyitvatartásba"
-  ],
-  [
-   "igazgató",
-   "N;IN+ABL;PL",
-   "igazgatókból"
-  ],
-  [
-   "ükunoka",
-   "N;INS;PL",
-   "ükunokákkal"
-  ],
-  [
-   "febr.",
-   "N;ON+ALL;SG",
-   "febr.-ra"
-  ],
-  [
-   "faktum",
-   "N;INS;SG",
-   "faktummal"
-  ],
-  [
-   "aludttej",
-   "N;INS;PL",
-   "aludttejekkel"
-  ],
-  [
-   "pulzus",
-   "N;TERM;PL",
-   "pulzusokig"
-  ],
-  [
-   "külföldi",
-   "N;ON+ESS;PL",
-   "külföldieken"
-  ],
-  [
-   "vágódeszka",
-   "N;ON+ALL;PL",
-   "vágódeszkákra"
-  ],
-  [
-   "szájhagyomány",
-   "N;INS;SG",
-   "szájhagyománnyal"
-  ],
-  [
-   "búcsúzás",
-   "N;DAT;SG",
-   "búcsúzásnak"
-  ],
-  [
-   "temető",
-   "N;AT+ESS;SG",
-   "temetőnél"
-  ],
-  [
-   "hadihajó",
-   "N;IN+ALL;SG",
-   "hadihajóba"
-  ],
-  [
-   "rekonstrukció",
-   "N;ON+ALL;SG",
-   "rekonstrukcióra"
-  ],
-  [
-   "rubin",
-   "N;INS;SG",
-   "rubinnal"
-  ],
-  [
-   "fénycső",
-   "N;IN+ESS;SG",
-   "fénycsőben"
-  ],
-  [
-   "hajtó",
-   "N;ON+ESS;PL",
-   "hajtókon"
-  ],
-  [
-   "győzelem",
-   "N;TRANS;PL",
-   "győzelmekké"
-  ],
-  [
-   "derítés",
-   "N;AT+ABL;SG",
-   "derítéstől"
-  ],
-  [
-   "irányítószám",
-   "N;IN+ABL;SG",
-   "irányítószámból"
-  ],
-  [
-   "pandémia",
-   "N;IN+ALL;PL",
-   "pandémiákba"
-  ],
-  [
-   "ész",
-   "N;TERM;SG",
-   "észig"
-  ],
-  [
-   "becsillanás",
-   "N;DAT;SG",
-   "becsillanásnak"
-  ],
-  [
-   "tenyésztő",
-   "N;DAT;PL",
-   "tenyésztőknek"
-  ],
-  [
-   "vakulás",
-   "N;IN+ALL;SG",
-   "vakulásba"
-  ],
-  [
-   "bifórium",
-   "N;DAT;PL",
-   "bifóriumoknak"
-  ],
-  [
-   "huszonkilenc",
-   "N;AT+ABL;SG",
-   "huszonkilenctől"
-  ],
-  [
-   "gang",
-   "N;IN+ESS;PL",
-   "gangokban"
-  ],
-  [
-   "mobil",
-   "N;INS;SG",
-   "mobillal"
-  ],
-  [
-   "állkapocs",
-   "N;DAT;SG",
-   "állkapocsnak"
-  ],
-  [
-   "úszásnem",
-   "N;IN+ESS;SG",
-   "úszásnemben"
-  ],
-  [
-   "valósi",
-   "N;ON+ABL;SG",
-   "valósiról"
-  ],
-  [
-   "hefti",
-   "N;DAT;SG",
-   "heftinek"
-  ],
-  [
-   "salátaöntet",
-   "N;INS;SG",
-   "salátaöntettel"
-  ],
-  [
-   "július",
-   "N;IN+ABL;SG",
-   "júliusból"
-  ],
-  [
-   "tanga",
-   "N;IN+ALL;SG",
-   "tangába"
-  ],
-  [
-   "csúfnév",
-   "N;ON+ALL;PL",
-   "csúfnevekre"
-  ],
-  [
-   "szivárvány",
-   "N;INS;SG",
-   "szivárvánnyal"
-  ],
-  [
-   "érv",
-   "N;ON+ALL;SG",
-   "érvre"
-  ],
-  [
-   "kormányzás",
-   "N;INS;PL",
-   "kormányzásokkal"
-  ],
-  [
-   "pszichiáter",
-   "N;DAT;SG",
-   "pszichiáternek"
-  ],
-  [
-   "telefonfülke",
-   "N;NOM;PL",
-   "telefonfülkék"
-  ],
-  [
-   "kuka",
-   "N;INS;PL",
-   "kukákkal"
-  ],
-  [
-   "lakhely",
-   "N;TRANS;PL",
-   "lakhelyekké"
-  ],
-  [
-   "menedzser",
-   "N;TRANS;PL",
-   "menedzserekké"
-  ],
-  [
-   "fagyi",
-   "N;AT+ALL;PL",
-   "fagyikhoz"
-  ],
-  [
-   "bandikut",
-   "N;ON+ESS;SG",
-   "bandikuton"
-  ],
-  [
-   "konyha",
-   "N;IN+ESS;SG",
-   "konyhában"
-  ],
-  [
-   "platina",
-   "N;NOM;PL",
-   "platinák"
-  ],
-  [
-   "szaruhártya",
-   "N;NOM;PL",
-   "szaruhártyák"
-  ],
-  [
-   "skanzen",
-   "N;IN+ALL;SG",
-   "skanzenbe"
-  ],
-  [
-   "betű",
-   "N;IN+ABL;PL",
-   "betűkből"
-  ],
-  [
-   "ük",
-   "N;IN+ESS;PL",
-   "ükökben"
-  ],
-  [
-   "vagyon",
-   "N;IN+ABL;SG",
-   "vagyonból"
-  ],
-  [
-   "lakk",
-   "N;TRANS;PL",
-   "lakkokká"
-  ],
-  [
-   "producer",
-   "N;IN+ABL;SG",
-   "producerből"
-  ],
-  [
-   "panamakalap",
-   "N;NOM;PL",
-   "panamakalapok"
-  ],
-  [
-   "tengerpart",
-   "N;AT+ALL;SG",
-   "tengerparthoz"
-  ],
-  [
-   "kémszoftver",
-   "N;AT+ABL;SG",
-   "kémszoftvertől"
-  ],
-  [
-   "szimmetria",
-   "N;INS;PL",
-   "szimmetriákkal"
-  ],
-  [
-   "névrokon",
-   "N;AT+ABL;SG",
-   "névrokontól"
-  ],
-  [
-   "hátcsigolya",
-   "N;IN+ABL;PL",
-   "hátcsigolyákból"
-  ],
-  [
-   "asztalom",
-   "N;IN+ALL;SG",
-   "asztalomba"
-  ],
-  [
-   "légifelvétel",
-   "N;IN+ABL;SG",
-   "légifelvételből"
-  ],
-  [
-   "tengelykapcsoló",
-   "N;AT+ABL;PL",
-   "tengelykapcsolóktól"
-  ],
-  [
-   "terrorista",
-   "N;AT+ALL;PL",
-   "terroristákhoz"
-  ],
-  [
-   "lábközép",
-   "N;ACC;SG",
-   "lábközepet"
-  ],
-  [
-   "rudam",
-   "N;ON+ABL;SG",
-   "rudamról"
-  ],
-  [
-   "foxtrott",
-   "N;ON+ABL;PL",
-   "foxtrottokról"
-  ],
-  [
-   "intrika",
-   "N;IN+ESS;PL",
-   "intrikákban"
-  ],
-  [
-   "kakaóvaj",
-   "N;ON+ALL;SG",
-   "kakaóvajra"
-  ],
-  [
-   "narancs",
-   "N;AT+ALL;SG",
-   "narancshoz"
-  ],
-  [
-   "fényerő",
-   "N;PRP;SG",
-   "fényerőért"
-  ],
-  [
-   "főút",
-   "N;PRP;SG",
-   "főútért"
-  ],
-  [
-   "átfogó",
-   "N;DAT;PL",
-   "átfogóknak"
-  ],
-  [
-   "hajlakk",
-   "N;TRANS;SG",
-   "hajlakká"
-  ],
-  [
-   "rövidnadrág",
-   "N;IN+ALL;SG",
-   "rövidnadrágba"
-  ],
-  [
-   "játékszín",
-   "N;ON+ABL;PL",
-   "játékszínekről"
-  ],
-  [
-   "dobaj",
-   "N;AT+ALL;SG",
-   "dobajhoz"
-  ],
-  [
-   "piramis",
-   "N;ON+ALL;PL",
-   "piramisokra"
-  ],
-  [
-   "hólyag",
-   "N;DAT;SG",
-   "hólyagnak"
-  ],
-  [
-   "dinnye",
-   "N;DAT;PL",
-   "dinnyéknek"
-  ],
-  [
-   "kisebbség",
-   "N;PRP;PL",
-   "kisebbségekért"
-  ],
-  [
-   "félvér",
-   "N;AT+ESS;SG",
-   "félvérnél"
-  ],
-  [
-   "agitáció",
-   "N;DAT;PL",
-   "agitációknak"
-  ],
-  [
-   "kozma",
-   "N;IN+ABL;SG",
-   "kozmából"
-  ],
-  [
-   "él",
-   "N;IN+ESS;SG",
-   "élben"
-  ],
-  [
-   "dirndli",
-   "N;TERM;SG",
-   "dirndliig"
-  ],
-  [
-   "tárcsa",
-   "N;AT+ABL;SG",
-   "tárcsától"
-  ],
-  [
-   "vérontás",
-   "N;IN+ABL;PL",
-   "vérontásokból"
-  ],
-  [
-   "kabasólyom",
-   "N;TERM;SG",
-   "kabasólyomig"
-  ],
-  [
-   "puma",
-   "N;TRANS;PL",
-   "pumákká"
-  ],
-  [
-   "nagypéntek",
-   "N;ON+ESS;PL",
-   "nagypéntekeken"
-  ],
-  [
-   "puskás",
-   "N;TERM;PL",
-   "puskásokig"
-  ],
-  [
-   "ízelítő",
-   "N;TRANS;PL",
-   "ízelítőkké"
-  ],
-  [
-   "szentjánosbogár",
-   "N;DAT;PL",
-   "szentjánosbogaraknak"
-  ],
-  [
-   "harkály",
-   "N;IN+ESS;SG",
-   "harkályban"
-  ],
-  [
-   "fiad",
-   "N;AT+ABL;SG",
-   "fiadtól"
-  ],
-  [
-   "holdfázis",
-   "N;INS;SG",
-   "holdfázissal"
-  ],
-  [
-   "hab",
-   "N;IN+ESS;PL",
-   "habokban"
-  ],
-  [
-   "kisebbség",
-   "N;TERM;SG",
-   "kisebbségig"
-  ],
-  [
-   "szülőfalu",
-   "N;IN+ABL;SG",
-   "szülőfaluból"
-  ],
-  [
-   "cigány",
-   "N;ON+ESS;PL",
-   "cigányokon"
-  ],
-  [
-   "judaizmus",
-   "N;ACC;SG",
-   "judaizmust"
-  ],
-  [
-   "sílift",
-   "N;PRP;SG",
-   "síliftért"
-  ],
-  [
-   "monostor",
-   "N;INS;SG",
-   "monostorral"
-  ],
-  [
-   "hiúz",
-   "N;ON+ESS;SG",
-   "hiúzon"
-  ],
-  [
-   "lepel",
-   "N;AT+ABL;PL",
-   "leplektől"
-  ],
-  [
-   "paripa",
-   "N;AT+ALL;PL",
-   "paripákhoz"
-  ],
-  [
-   "iszlám",
-   "N;AT+ALL;PL",
-   "iszlámokhoz"
-  ],
-  [
-   "tegnap",
-   "N;ON+ALL;SG",
-   "tegnapra"
-  ],
-  [
-   "komondor",
-   "N;PRP;PL",
-   "komondorokért"
-  ],
-  [
-   "áll",
-   "N;PRP;PL",
-   "állakért"
-  ],
-  [
-   "mogyoró",
-   "N;ON+ESS;PL",
-   "mogyorókon"
-  ],
-  [
-   "szept.",
-   "N;PRP;SG",
-   "szept.-ért"
-  ],
-  [
-   "autóbusz-állomás",
-   "N;AT+ESS;PL",
-   "autóbusz-állomásoknál"
-  ],
-  [
-   "jog",
-   "N;TERM;PL",
-   "jogokig"
-  ],
-  [
-   "iskolabusz",
-   "N;AT+ESS;SG",
-   "iskolabusznál"
-  ],
-  [
-   "szú",
-   "N;ON+ABL;SG",
-   "szúról"
-  ],
-  [
-   "tömjén",
-   "N;NOM;PL",
-   "tömjének"
-  ],
-  [
-   "vivát",
-   "N;AT+ESS;SG",
-   "vivátnál"
-  ],
-  [
-   "fékfolyadék",
-   "N;AT+ABL;PL",
-   "fékfolyadékoktól"
-  ],
-  [
-   "ragadvány",
-   "N;NOM;PL",
-   "ragadványok"
   ]
  ]
 }

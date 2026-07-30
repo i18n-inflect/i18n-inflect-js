@@ -19,7 +19,12 @@ import { inflectNounRules } from "../packages/i18n-inflect/src/hu/suffixes.js";
 import { HU_CASE_TAGS, type HuCase } from "../packages/i18n-inflect/src/hu/tags.js";
 
 import { diffAll, rulesAccuracy } from "./diff-hu.js";
-import { CURATED_STEM_LINES, SEED_OVERRIDE_LINES, SEED_STEM_LINES } from "./seed-hu.js";
+import {
+  CURATED_OVERRIDE_LINES,
+  CURATED_STEM_LINES,
+  SEED_OVERRIDE_LINES,
+  SEED_STEM_LINES,
+} from "./seed-hu.js";
 import {
   fnv1a,
   groupByLemma,
@@ -31,6 +36,7 @@ import {
   UNIMORPH_HUN_SHA,
   UNIMORPH_HUN_URL,
 } from "./unimorph.js";
+import { loadWiktionaryRows } from "./wiktionary.js";
 
 const TAG_TO_CASE = new Map<string, HuCase>(
   (Object.entries(HU_CASE_TAGS) as [HuCase, string][]).map(([c, t]) => [t, c]),
@@ -38,6 +44,7 @@ const TAG_TO_CASE = new Map<string, HuCase>(
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const RAW = `${ROOT}data/raw/hun.tsv`;
+const RAW_WIKTIONARY = `${ROOT}data/raw/hu-wiktionary.jsonl`;
 const GEN = `${ROOT}packages/i18n-inflect/src/hu/exceptions.gen.ts`;
 const FIXTURES_DIR = `${ROOT}packages/i18n-inflect/test/fixtures`;
 const TRAINING_DIR = `${ROOT}data/training`;
@@ -45,7 +52,7 @@ const TRAINING_DIR = `${ROOT}data/training`;
 /** Gates (fail the run when unmet). */
 const GATE_TRAIN_WITH_LEXICON = 0.97;
 const GATE_HELDOUT_RULES_ONLY = 0.85;
-const GATE_GZIP_BYTES = 25 * 1024;
+const GATE_GZIP_BYTES = 32 * 1024;
 const FIXTURE_ROWS = 3000;
 
 function download(): void {
@@ -157,9 +164,31 @@ function lemmasBrokenBySplitting(
   return broken;
 }
 
-function main(): void {
+async function main(): Promise<void> {
   download();
   const rows = loadRows(RAW);
+  console.log(`UniMorph: ${rows.length} forms`);
+
+  // Wiktionary is optional: the generated lexicon is committed, so neither
+  // CI nor a contributor needs the 580 MB dump to build the package. When it
+  // is present it roughly doubles the vocabulary.
+  if (existsSync(RAW_WIKTIONARY)) {
+    const { rows: extra, stats } = await loadWiktionaryRows(RAW_WIKTIONARY);
+    const known = new Set(rows.map((r) => `${r.lemma} ${r.tag} ${r.form}`));
+    let added = 0;
+    for (const row of extra) {
+      if (known.has(`${row.lemma} ${row.tag} ${row.form}`)) continue;
+      rows.push(row);
+      added++;
+    }
+    console.log(`Wiktionary: ${stats.rows} forms over ${stats.lemmas} lemmas, ${added} new`);
+  } else {
+    console.log("Wiktionary: dump absent, using UniMorph only.");
+    console.log(
+      `  to include it: curl -o data/raw/hu-wiktionary.jsonl https://kaikki.org/dictionary/Hungarian/kaikki.org-dictionary-Hungarian.jsonl`,
+    );
+  }
+
   const train: Row[] = [];
   const heldOut: Row[] = [];
   for (const row of rows) (isHeldOut(row.lemma) ? heldOut : train).push(row);
@@ -262,7 +291,21 @@ function main(): void {
     }
   }
   for (const line of curated.values()) stemLines.push(line);
-  console.log(`curated homonym decisions applied: ${CURATED_STEM_LINES.length}`);
+  const curatedOverrides = new Map(
+    CURATED_OVERRIDE_LINES.map((line) => [line.split("|").slice(0, 2).join("|"), line]),
+  );
+  for (let i = 0; i < overrideOut.length; i++) {
+    const key = (overrideOut[i] as string).split("|").slice(0, 2).join("|");
+    const replacement = curatedOverrides.get(key);
+    if (replacement !== undefined) {
+      overrideOut[i] = replacement;
+      curatedOverrides.delete(key);
+    }
+  }
+  for (const line of curatedOverrides.values()) overrideOut.push(line);
+  console.log(
+    `curated decisions applied: ${CURATED_STEM_LINES.length} stems, ${CURATED_OVERRIDE_LINES.length} forms`,
+  );
 
   let seededStems = 0;
   let seededOverrides = 0;
@@ -490,4 +533,4 @@ export const UNSAFE_COMPOUND_HEADS: ReadonlySet<string> = new Set(
 );
 `;
 
-main();
+await main();

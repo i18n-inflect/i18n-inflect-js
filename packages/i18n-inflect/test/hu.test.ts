@@ -253,8 +253,8 @@ describe("hu: oracle protocol for digits/acronyms and unknown words", () => {
       reqs.map((r) => `${r.lemma}ot`),
     );
     registerFallback({ locale: "hu", predict });
-    const result = await inflectAsync("hu", "byte", { case: "accusative" });
+    const result = await inflectAsync("hu", "qwertyx", { case: "accusative" });
     expect(predict).toHaveBeenCalledOnce();
-    expect(result).toBe("byteot");
+    expect(result).toBe("qwertyxot");
   });
 });

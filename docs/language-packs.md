@@ -78,6 +78,20 @@ number and initialism suffixation ("6-ot", "SMS-t") looks like a job for the neu
 fallback, but it is fully rule-derivable once you spell the token's spoken form —
 see `hu/numerals.ts`. Rules are exact, need no download, and work synchronously.
 
+## Two sources beat one
+
+The Hungarian lexicon is built from UniMorph *and* the current Wiktionary
+(through the wiktextract dumps at kaikki.org). Merging them added 40% more
+vocabulary, but the more valuable result was the cross-check: where both
+describe the same form they agree 99.8% of the time, which is evidence
+neither source alone could give. `data-pipeline/compare-sources.ts` prints
+that comparison — run it before adopting any new source, and look at the
+disagreements, not just the headline number.
+
+The dump is 580 MB and is not required to build the package: the generated
+lexicon is committed, and the pipeline falls back to UniMorph alone when the
+file is absent.
+
 ## Test against the authority, not only the corpus
 
 A corpus tells you what people wrote; a style authority tells you what is

@@ -6,6 +6,7 @@ dist/
 coverage/
 
 # downloaded / regenerated data (never committed; see data-pipeline/)
+# includes the 580 MB Wiktionary dump
 data/raw/
 data/training/
 

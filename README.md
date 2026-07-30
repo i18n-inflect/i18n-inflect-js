@@ -135,8 +135,10 @@ orthography — *A magyar helyesírás szabályai*, 12th edition
 ([AkH. 12.](https://helyesiras.mta.hu/helyesiras/default/akh12)) — with every
 worked example from rule 82 (the -val/-vel and -vá/-vé alternations) asserted
 in the test suite, and against [UniMorph](https://unimorph.github.io/)
-(1M+ forms): **99.6% on the covered vocabulary — all ~12k UniMorph noun lemmas ship in the
-generated lexicon — and 94.6% on lemmas the lexicon has never seen at all.** The lexicon, golden test
+(1M+ forms): **~17k noun lemmas ship in the generated lexicon**, merged from UniMorph and the
+current Wiktionary (the two agree on 99.8% of the forms they share, which is
+worth as much as either source alone). Accuracy on that vocabulary is 99.6%;
+on lemmas the lexicon has never seen at all, 94.2%. The lexicon, golden test
 fixtures and neural weights are UniMorph/Wiktionary derivatives (CC BY-SA 3.0 — see
 [LICENSE-DATA.md](LICENSE-DATA.md)); all code is MIT.
 
