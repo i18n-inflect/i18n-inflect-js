@@ -1,6 +1,7 @@
 # Template specification
 
 The template layer understood by `format()` / `formatAsync()`.
+The [playground](https://i18n-inflect.github.io/i18n-inflect-js/) runs these templates live if you would rather try than read.
 
 ## Grammar
 

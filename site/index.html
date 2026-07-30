@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>i18n-inflect — see a word change shape</title>
+    <meta
+      name="description"
+      content="A live playground for i18n-inflect: type a word and watch it take the right article, case suffix or particle in Hungarian, English, German, French, Spanish and Korean."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ── tokens ────────────────────────────────────────────────────────
+         Two of the colours carry meaning rather than mood: violet marks
+         what the library added, rust marks where it had to change the
+         stem itself. Everything else stays quiet so those two read. */
+      :root {
+        --paper: #fcfcfe;
+        --paper-sunk: #f4f3f9;
+        --ink: #16151f;
+        --muted: #6e6b85;
+        --rule: #e4e2ef;
+        --suffix: #6d28d9;
+        --suffix-wash: #f1ebfe;
+        --altered: #c2410c;
+        --measure: 68rem;
+        --step: clamp(1rem, 0.6rem + 1.2vw, 1.5rem);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-underline-offset: 0.2em;
+        text-decoration-thickness: from-font;
+      }
+
+      .wrap {
+        width: min(100% - 2.5rem, var(--measure));
+        margin-inline: auto;
+      }
+
+      /* ── masthead ──────────────────────────────────────────────────── */
+      .masthead {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid var(--rule);
+        flex-wrap: wrap;
+      }
+
+      .wordmark {
+        font-family: "IBM Plex Mono", ui-monospace, monospace;
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+      }
+
+      .wordmark b {
+        font-weight: 400;
+        color: var(--suffix);
+      }
+
+      .masthead nav {
+        display: flex;
+        gap: 1.25rem;
+        font-size: 0.875rem;
+        color: var(--muted);
+      }
+
+      /* ── stage ─────────────────────────────────────────────────────── */
+      .stage {
+        padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(2rem, 4vw, 3rem);
+      }
+
+      h1 {
+        font-family: Literata, Georgia, serif;
+        font-weight: 600;
+        font-size: clamp(2.1rem, 1.2rem + 3.4vw, 3.6rem);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        margin: 0 0 0.6rem;
+        max-width: 20ch;
+      }
+
+      .lede {
+        color: var(--muted);
+        max-width: 56ch;
+        margin: 0 0 2.25rem;
+        font-size: 1.05rem;
+      }
+
+      /* ── composer: language + word ─────────────────────────────────── */
+      .composer {
+        display: flex;
+        align-items: stretch;
+        border: 1px solid var(--ink);
+        border-radius: 2px;
+        background: var(--paper);
+        overflow: hidden;
+      }
+
+      .composer select {
+        appearance: none;
+        border: 0;
+        border-right: 1px solid var(--rule);
+        background: var(--paper-sunk);
+        padding: 0 2.25rem 0 1rem;
+        font: inherit;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.9rem;
+        color: var(--ink);
+        cursor: pointer;
+        background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+          linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+        background-position: calc(100% - 1.05rem) 55%, calc(100% - 0.75rem) 55%;
+        background-size: 0.3rem 0.3rem, 0.3rem 0.3rem;
+        background-repeat: no-repeat;
+      }
+
+      .composer input {
+        flex: 1;
+        min-width: 0;
+        border: 0;
+        padding: 0.85rem 1rem;
+        font-family: Literata, Georgia, serif;
+        font-size: clamp(1.3rem, 0.9rem + 1.4vw, 1.9rem);
+        color: var(--ink);
+        background: transparent;
+      }
+
+      .composer input::placeholder {
+        color: #b6b3c8;
+      }
+
+      .composer:focus-within {
+        outline: 2px solid var(--suffix);
+        outline-offset: 2px;
+      }
+
+      .composer select:focus-visible,
+      .composer input:focus {
+        outline: none;
+      }
+
+      .presets {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin: 0.85rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .presets button {
+        font-family: Literata, Georgia, serif;
+        font-size: 0.95rem;
+        border: 1px solid var(--rule);
+        border-radius: 999px;
+        background: var(--paper);
+        color: var(--muted);
+        padding: 0.2rem 0.8rem;
+        cursor: pointer;
+        transition: border-color 0.15s, color 0.15s;
+      }
+
+      .presets button:hover,
+      .presets button:focus-visible {
+        border-color: var(--suffix);
+        color: var(--ink);
+      }
+
+      /* ── the paradigm: the page's signature ────────────────────────── */
+      .paradigm {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 2rem;
+      }
+
+      .paradigm caption {
+        text-align: left;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        padding-bottom: 0.6rem;
+      }
+
+      .paradigm tr {
+        border-top: 1px solid var(--rule);
+      }
+
+      .paradigm tr:last-child {
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .paradigm th {
+        text-align: left;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: var(--muted);
+        padding: 0.7rem 1rem 0.7rem 0;
+        white-space: nowrap;
+        vertical-align: baseline;
+        width: 1%;
+      }
+
+      .paradigm th small {
+        display: block;
+        font-size: 0.78rem;
+        font-weight: 400;
+        color: #9b98ad;
+      }
+
+      .paradigm td {
+        padding: 0.7rem 0;
+        font-family: Literata, Georgia, serif;
+        font-size: clamp(1.05rem, 0.9rem + 0.6vw, 1.35rem);
+        vertical-align: baseline;
+      }
+
+      /* The features that produced the row, in the form you would type. */
+      .paradigm td.code {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.78rem;
+        color: #9b98ad;
+        text-align: right;
+        white-space: nowrap;
+        padding-left: 1rem;
+        width: 1%;
+      }
+
+      @media (max-width: 40rem) {
+        .paradigm td.code {
+          display: none;
+        }
+      }
+
+      /* the split that makes morphology visible */
+      .kept {
+        color: var(--ink);
+      }
+
+      .added {
+        color: var(--suffix);
+        background: var(--suffix-wash);
+        padding: 0.05em 0.12em;
+        margin-inline: -0.02em;
+        border-radius: 2px;
+      }
+
+      .changed {
+        color: var(--altered);
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .paradigm td > span {
+          animation: settle 0.28s ease-out both;
+        }
+      }
+
+      @keyframes settle {
+        from {
+          opacity: 0;
+          transform: translateY(0.25em);
+        }
+      }
+
+      .legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        margin: 1rem 0 0;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .legend b {
+        font-weight: 500;
+      }
+
+      /* ── generic sections ──────────────────────────────────────────── */
+      .band {
+        border-top: 1px solid var(--rule);
+        padding: clamp(2.5rem, 5vw, 3.75rem) 0;
+      }
+
+      .band > h2 {
+        font-family: Literata, Georgia, serif;
+        font-weight: 600;
+        font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem);
+        letter-spacing: -0.01em;
+        margin: 0 0 0.4rem;
+      }
+
+      .band > p {
+        color: var(--muted);
+        max-width: 58ch;
+        margin: 0 0 1.75rem;
+      }
+
+      /* ── sentence playground ───────────────────────────────────────── */
+      .field {
+        display: block;
+        margin-bottom: 1rem;
+      }
+
+      .field span {
+        display: block;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 0.35rem;
+      }
+
+      .field textarea,
+      .field input {
+        width: 100%;
+        border: 1px solid var(--rule);
+        border-radius: 2px;
+        background: var(--paper);
+        padding: 0.7rem 0.85rem;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.9rem;
+        color: var(--ink);
+        resize: vertical;
+      }
+
+      .field textarea:focus,
+      .field input:focus {
+        outline: 2px solid var(--suffix);
+        outline-offset: 1px;
+        border-color: transparent;
+      }
+
+      .result {
+        border-left: 2px solid var(--suffix);
+        background: var(--paper-sunk);
+        padding: 1rem 1.15rem;
+        font-family: Literata, Georgia, serif;
+        font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.4rem);
+        min-height: 3.4rem;
+      }
+
+      .result.is-error {
+        border-left-color: var(--altered);
+        color: var(--altered);
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.85rem;
+      }
+
+      /* ── glossary ──────────────────────────────────────────────────── */
+      .terms {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+        gap: 0;
+        border-top: 1px solid var(--rule);
+      }
+
+      .terms div {
+        border-bottom: 1px solid var(--rule);
+        padding: 0.9rem 1.25rem 0.9rem 0;
+      }
+
+      .terms dt {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.82rem;
+        color: var(--suffix);
+        margin-bottom: 0.2rem;
+      }
+
+      .terms dd {
+        margin: 0;
+        font-size: 0.92rem;
+      }
+
+      .terms dd em {
+        display: block;
+        font-family: Literata, Georgia, serif;
+        font-style: normal;
+        color: var(--muted);
+        margin-top: 0.15rem;
+      }
+
+      /* ── install ───────────────────────────────────────────────────── */
+      pre {
+        background: var(--ink);
+        color: #efeefa;
+        padding: 1rem 1.15rem;
+        border-radius: 2px;
+        overflow-x: auto;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.85rem;
+        line-height: 1.7;
+        margin: 0 0 1rem;
+      }
+
+      pre .c {
+        color: #8d88a8;
+      }
+
+      pre .s {
+        color: #c4b5fd;
+      }
+
+      footer {
+        border-top: 1px solid var(--rule);
+        padding: 1.75rem 0 3rem;
+        font-size: 0.85rem;
+        color: var(--muted);
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 34rem) {
+        .composer {
+          flex-direction: column;
+        }
+        .composer select {
+          border-right: 0;
+          border-bottom: 1px solid var(--rule);
+          padding: 0.6rem 1rem;
+        }
+        .paradigm th {
+          white-space: normal;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="masthead">
+        <span class="wordmark">i18n-inflect<b>/playground</b></span>
+        <nav>
+          <a href="https://github.com/i18n-inflect/i18n-inflect-js">Source</a>
+          <a href="https://www.npmjs.com/package/i18n-inflect">npm</a>
+          <a href="https://github.com/i18n-inflect/i18n-inflect-js#readme">Docs</a>
+        </nav>
+      </header>
+
+      <section class="stage">
+        <h1>Type a word. Watch it change shape.</h1>
+        <p class="lede">
+          Localized text needs grammar that depends on a value you only know at runtime — the right
+          article, the right ending, the right particle. Here is every form this library can produce
+          for whatever you type, with the part it added
+          <span class="added">highlighted</span>.
+        </p>
+
+        <div class="composer">
+          <label class="visually-hidden" for="lang" hidden>Language</label>
+          <select id="lang" aria-label="Language"></select>
+          <label class="visually-hidden" for="word" hidden>Word or phrase</label>
+          <input id="word" aria-label="Word or phrase" autocomplete="off" spellcheck="false" />
+        </div>
+
+        <ul class="presets" id="presets"></ul>
+
+        <table class="paradigm">
+          <caption id="paradigm-caption">forms</caption>
+          <tbody id="paradigm"></tbody>
+        </table>
+
+        <p class="legend">
+          <span><b class="kept">stem</b> unchanged</span>
+          <span><b class="added">ending</b> added by the library</span>
+          <span><b class="changed">letter</b> the stem had to change</span>
+        </p>
+      </section>
+
+      <section class="band">
+        <h2>In a sentence</h2>
+        <p>
+          The same thing inside a localized string. Anything between
+          <code>^[</code> and <code>]</code> gets inflected, and
+          <code>{placeholders}</code> are substituted first — so the grammar agrees with the runtime
+          value, not with whatever the translator happened to write.
+        </p>
+        <label class="field">
+          <span>Template</span>
+          <textarea id="tpl" rows="2" spellcheck="false"></textarea>
+        </label>
+        <label class="field">
+          <span>Values (JSON)</span>
+          <input id="args" spellcheck="false" />
+        </label>
+        <div class="result" id="tpl-out"></div>
+      </section>
+
+      <section class="band">
+        <h2>What the terms mean</h2>
+        <p>
+          Grammar names sound forbidding and mean simple things. Each one below answers a question
+          you already ask in English with a preposition.
+        </p>
+        <dl class="terms" id="terms"></dl>
+      </section>
+
+      <section class="band">
+        <h2>Use it</h2>
+        <pre><span class="c">// zero dependencies, a few kB, browser and Node</span>
+npm install i18n-inflect
+
+<span class="c">// import only the languages you need</span>
+import { format, inflect } from <span class="s">"i18n-inflect"</span>;
+import <span class="s">"i18n-inflect/hu"</span>;
+
+format(<span class="s">"hu"</span>, <span class="s">"Nyertél ^[a {card}](case: instrumental)!"</span>, { card: <span class="s">"kőr ász"</span> });
+<span class="c">// → "Nyertél a kőr ásszal!"</span></pre>
+        <p style="margin-bottom: 0">
+          Six languages today — Hungarian, English, German, French, Spanish, Korean. If a form comes
+          out wrong in yours,
+          <a href="https://github.com/i18n-inflect/i18n-inflect-js/issues/new?template=wrong-form.yml"
+            >that is worth an issue</a
+          >
+          even without a fix.
+        </p>
+      </section>
+
+      <footer>
+        <span>MIT. Lexicons and fixtures derived from UniMorph, CC BY-SA 3.0.</span>
+        <span id="version">loading…</span>
+      </footer>
+    </div>
+
+    <script type="module">
+      const VERSION = "0.1.2";
+      const CDN = `https://cdn.jsdelivr.net/npm/i18n-inflect@${VERSION}/dist`;
+
+      /* Each row is one question a language answers with a form. The gloss is
+         written for someone who has never met the grammatical name. */
+      const LANGUAGES = {
+        hu: {
+          name: "Hungarian",
+          presets: ["kőr ász", "ház", "kéz", "bokor", "ló", "gyümölcs", "6", "MTA", "Budapest"],
+          start: "kőr ász",
+          rows: [
+            ["nominative", "the plain word", {}],
+            ["plural", "more than one", { number: "plural" }],
+            ["accusative", "…as the object", { case: "accusative" }],
+            ["dative", "to / for it", { case: "dative" }],
+            ["instrumental", "with it", { case: "instrumental" }],
+            ["inessive", "inside it", { case: "inessive" }],
+            ["illative", "into it", { case: "illative" }],
+            ["elative", "out of it", { case: "elative" }],
+            ["superessive", "on it", { case: "superessive" }],
+            ["sublative", "onto it", { case: "sublative" }],
+            ["delative", "off it", { case: "delative" }],
+            ["adessive", "at it", { case: "adessive" }],
+            ["allative", "to it", { case: "allative" }],
+            ["ablative", "away from it", { case: "ablative" }],
+            ["terminative", "as far as it", { case: "terminative" }],
+            ["causal", "for the sake of it", { case: "causalFinal" }],
+            ["definite article", "the …", { article: "definite" }],
+          ],
+        },
+        en: {
+          name: "English",
+          presets: ["ace", "king", "hour", "university", "MTA card", "knife", "8"],
+          start: "ace",
+          rows: [
+            ["nominative", "the plain word", {}],
+            ["indefinite article", "a or an, by sound", { article: "indefinite" }],
+            ["definite article", "the …", { article: "definite" }],
+            ["plural", "more than one", { number: "plural" }],
+          ],
+        },
+        de: {
+          name: "German",
+          presets: ["ein rotes Auto", "der Hund", "die Katze", "das Buch", "die Kinder"],
+          start: "ein rotes Auto",
+          rows: [
+            ["nominative", "…as the subject", { case: "nominative", gender: "neuter" }],
+            ["accusative", "…as the object", { case: "accusative", gender: "neuter" }],
+            ["dative", "to / for it", { case: "dative", gender: "neuter" }],
+            ["genitive", "belonging to it", { case: "genitive", gender: "neuter" }],
+            ["plural, dative", "to / for several", { case: "dative", number: "plural" }],
+          ],
+        },
+        fr: {
+          name: "French",
+          presets: ["le ami", "le haricot", "la école", "le journal", "un jeu"],
+          start: "le ami",
+          rows: [
+            ["as written", "article agreed, elision applied", {}],
+            ["definite article", "le, la or l′", { article: "definite" }],
+            ["indefinite article", "un or une", { article: "indefinite" }],
+            ["plural", "more than one", { number: "plural" }],
+          ],
+        },
+        es: {
+          name: "Spanish",
+          presets: ["agua", "carta", "libro", "canción", "el agua", "problema"],
+          start: "agua",
+          rows: [
+            ["as written", "article agreed", {}],
+            ["definite article", "el or la", { article: "definite" }],
+            ["indefinite article", "un or una", { article: "indefinite" }],
+            ["plural", "more than one", { number: "plural" }],
+          ],
+        },
+        ko: {
+          name: "Korean",
+          presets: ["사과", "책", "서울", "집", "지도", "8", "Chrome"],
+          start: "책",
+          rows: [
+            ["nominative", "…as the subject", { case: "nominative" }],
+            ["accusative", "…as the object", { case: "accusative" }],
+            ["topic", "as for it", { case: "topic" }],
+            ["instrumental", "by means of it", { case: "instrumental" }],
+            ["comitative", "and / with it", { case: "comitative" }],
+            ["genitive", "belonging to it", { case: "genitive" }],
+          ],
+        },
+      };
+
+      const GLOSSARY = [
+        ["accusative", "The thing an action happens to.", "I see the house."],
+        ["dative", "The one something is given to or done for.", "I gave it to the house."],
+        ["instrumental", "What you do it with.", "I paid with the card."],
+        ["inessive · illative · elative", "In, into, out of.", "in / into / out of the house"],
+        ["superessive · sublative · delative", "On, onto, off.", "on / onto / off the house"],
+        ["adessive · allative · ablative", "At, to, away from.", "at / to / away from the house"],
+        ["terminative", "Up to a limit.", "as far as the house"],
+        ["causalFinal", "For the sake of something.", "for the house"],
+        ["genitive", "Belonging to.", "the roof of the house"],
+        ["topic", "What the sentence is about.", "As for the book, …"],
+        ["comitative", "Together with.", "the book and the pen"],
+        ["number", "One or many.", "house → houses"],
+        ["gender", "Which class the noun belongs to.", "der / die / das"],
+        ["article", "The word before the noun.", "a / an / the"],
+      ];
+
+      const $ = (id) => document.getElementById(id);
+      const fold = (s) =>
+        s
+          .normalize("NFD")
+          .replace(/\p{Diacritic}/gu, "")
+          .toLowerCase();
+
+      const piece = (text, className) => {
+        const span = document.createElement("span");
+        span.className = className;
+        span.textContent = text;
+        return span;
+      };
+
+      /**
+       * Render a form so what the library added stands out from what it kept.
+       * Matches from both ends, because languages add material at either one:
+       * Hungarian suffixes at the back, articles at the front.
+       */
+      function morphology(source, result) {
+        const a = fold(source);
+        const b = fold(result);
+        let head = 0;
+        while (head < a.length && head < b.length && a[head] === b[head]) head++;
+        let tail = 0;
+        while (
+          tail < a.length - head &&
+          tail < b.length - head &&
+          a[a.length - 1 - tail] === b[b.length - 1 - tail]
+        )
+          tail++;
+
+        const holder = document.createElement("span");
+        for (let i = 0; i < head; i++) {
+          holder.append(piece(result[i], result[i] === source[i] ? "kept" : "changed"));
+        }
+        const middle = result.slice(head, result.length - tail);
+        if (middle) holder.append(piece(middle, "added"));
+        for (let i = result.length - tail; i < result.length; i++) {
+          const from = source[source.length - (result.length - i)];
+          holder.append(piece(result[i], result[i] === from ? "kept" : "changed"));
+        }
+        return holder;
+      }
+
+      /** The exact features that produced a row, as you would type them. */
+      function featureSnippet(features) {
+        const entries = Object.entries(features);
+        if (entries.length === 0) return "{}";
+        return `{ ${entries.map(([k, v]) => `${k}: "${v}"`).join(", ")} }`;
+      }
+
+      function boot(lib) {
+        const { inflect, format } = lib;
+        $("version").textContent = `i18n-inflect ${VERSION}`;
+
+        const langSelect = $("lang");
+        for (const [code, meta] of Object.entries(LANGUAGES)) {
+          const opt = document.createElement("option");
+          opt.value = code;
+          opt.textContent = `${meta.name}  ${code}`;
+          langSelect.append(opt);
+        }
+
+        const terms = $("terms");
+        for (const [term, meaning, example] of GLOSSARY) {
+          const cell = document.createElement("div");
+          const dt = document.createElement("dt");
+          dt.textContent = term;
+          const dd = document.createElement("dd");
+          dd.textContent = meaning;
+          const em = document.createElement("em");
+          em.textContent = example;
+          dd.append(em);
+          cell.append(dt, dd);
+          terms.append(cell);
+        }
+
+        function renderParadigm() {
+          const code = langSelect.value;
+          const source = $("word").value.trim();
+          const body = $("paradigm");
+          $("paradigm-caption").textContent = source
+            ? `${LANGUAGES[code].name} — every form of “${source}”`
+            : `${LANGUAGES[code].name} — forms`;
+          body.replaceChildren();
+          if (!source) return;
+          for (const [label, gloss, features] of LANGUAGES[code].rows) {
+            const tr = document.createElement("tr");
+            const th = document.createElement("th");
+            th.scope = "row";
+            th.textContent = label;
+            const small = document.createElement("small");
+            small.textContent = gloss;
+            th.append(small);
+            const td = document.createElement("td");
+            let form;
+            try {
+              form = inflect(code, source, features);
+            } catch (error) {
+              form = String(error);
+            }
+            td.append(morphology(source, form));
+            const code_ = document.createElement("td");
+            code_.className = "code";
+            code_.textContent = featureSnippet(features);
+            tr.append(th, td, code_);
+            body.append(tr);
+          }
+        }
+
+        function renderTemplate() {
+          const out = $("tpl-out");
+          let args = {};
+          try {
+            args = JSON.parse($("args").value || "{}");
+          } catch {
+            out.className = "result is-error";
+            out.textContent = "Values must be valid JSON, e.g. {\"card\": \"kőr ász\"}";
+            return;
+          }
+          out.className = "result";
+          out.textContent = format(langSelect.value, $("tpl").value, args);
+        }
+
+        function loadLanguage(code) {
+          const meta = LANGUAGES[code];
+          $("word").value = meta.start;
+          const presets = $("presets");
+          presets.replaceChildren();
+          for (const preset of meta.presets) {
+            const li = document.createElement("li");
+            const button = document.createElement("button");
+            button.type = "button";
+            button.textContent = preset;
+            button.addEventListener("click", () => {
+              $("word").value = preset;
+              renderParadigm();
+            });
+            li.append(button);
+            presets.append(li);
+          }
+          renderParadigm();
+        }
+
+        langSelect.addEventListener("change", () => {
+          loadLanguage(langSelect.value);
+          renderTemplate();
+        });
+        $("word").addEventListener("input", renderParadigm);
+        $("tpl").addEventListener("input", renderTemplate);
+        $("args").addEventListener("input", renderTemplate);
+
+        $("tpl").value = "Nyertél ^[a {card}](case: instrumental)!";
+        $("args").value = '{"card": "kőr ász"}';
+        loadLanguage("hu");
+        renderTemplate();
+      }
+
+      try {
+        const core = await import(`${CDN}/index.js`);
+        await Promise.all(
+          Object.keys(LANGUAGES).map((code) => import(`${CDN}/${code}/index.js`)),
+        );
+        boot(core);
+      } catch (error) {
+        $("paradigm-caption").textContent = "could not load the library";
+        $("tpl-out").className = "result is-error";
+        $("tpl-out").textContent = `Loading i18n-inflect from the CDN failed: ${error}`;
+      }
+    </script>
+  </body>
+</html>

@@ -15,6 +15,9 @@ runtime*. i18n-inflect fills that gap with an API inspired by Apple Foundation's
 (`^[...](inflect: true)`), but open source, extensible, and with languages Apple doesn't
 cover — starting with Hungarian.
 
+**[Try it in your browser →](https://i18n-inflect.github.io/i18n-inflect-js/)** Type a word and watch every form it can take, with the
+part the library added highlighted.
+
 ```ts
 import { format } from "i18n-inflect";
 import "i18n-inflect/hu";
@@ -120,7 +123,7 @@ fixtures and neural weights are UniMorph/Wiktionary derivatives (CC BY-SA 3.0 �
 | --- | --- |
 | `i18n-inflect` | core + template engine + all rule-based language packs (zero deps) |
 | `@i18n-inflect/neural` | neural fallback runtime with swappable inference engines |
-| `@i18n-inflect/model-hu` | Hungarian model weights (encoder + decoder ONNX + vocab) |
+| `@i18n-inflect/model-hu` | Hungarian model weights — built by the models workflow, not published yet |
 
 ## Try it
 
@@ -144,7 +147,7 @@ node scripts/size-gate.mjs   # bundle budgets
 The neural training pipeline (PyTorch → ONNX → int8) lives in
 [training/](training/README.md).
 
-**Docs:** [template spec](docs/template-spec.md) ·
+**Docs:** [playground](https://i18n-inflect.github.io/i18n-inflect-js/) · [template spec](docs/template-spec.md) ·
 [writing a language pack](docs/language-packs.md) · [neural setup](docs/neural.md) ·
 [React usage](docs/react.md) · [contributing](CONTRIBUTING.md)
 
@@ -160,7 +163,8 @@ fix. See [CONTRIBUTING.md](CONTRIBUTING.md) and
 v0.1 — the API is settled and the Hungarian pack is validated against a million
 UniMorph forms, but nothing is battle-tested in production yet. Expect the feature
 model to gain fields (possessives, verb agreement) rather than change shape.
-The neural model packages are not published yet; the rule engine works without them.
+The neural runtime is published; the Hungarian model weights are not yet, so the neural
+fallback needs a locally built model for now. The rule engine works without either.
 
 ## License
 

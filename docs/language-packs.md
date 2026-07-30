@@ -1,5 +1,7 @@
 # Writing a language pack
 
+See what the existing packs produce in the [playground](https://i18n-inflect.github.io/i18n-inflect-js/).
+
 A language pack is a pure, synchronous module implementing the `LanguagePack`
 interface. Importing its subpath registers it; everything asynchronous (the neural
 fallback protocol, caching) lives in core — packs never see a Promise.
