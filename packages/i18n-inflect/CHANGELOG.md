@@ -1,5 +1,26 @@
 # i18n-inflect
 
+## 0.3.1
+
+### Patch Changes
+
+- Hungarian: check the rules against the Academy's orthography, and settle two
+  cases the corpus alone could not.
+
+  Every worked example from AkH. 12. rule 82 — the -val/-vel and -vá/-vé
+  alternations — is now asserted in the test suite. All but one passed
+  already; the exception was symbols, so `%`, `€`, `$`, `£`, `°`, `+`, `&` and
+  `@` now have spoken forms and take their suffix accordingly: `15%-kal`.
+
+  Rule 82. e) permits both `dühvel` and `dühhel` for nouns whose final `h`
+  fluctuates in pronunciation. The library now consistently writes the
+  unassimilated form for that closed set (cseh, doh, düh, éh, juh, méh, oláh,
+  pléh, rüh).
+
+  Homonyms whose readings inflect differently — `nyár` summer/poplar, `szél`
+  wind/edge — are now resolved in favour of the commoner word rather than
+  whichever the corpus diff happened to pick: nyarat, szelet, telet.
+
 ## 0.3.0
 
 ### Minor Changes

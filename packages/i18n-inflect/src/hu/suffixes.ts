@@ -25,6 +25,13 @@ export interface InflectedParts {
   suffix: string;
 }
 
+/**
+ * Nouns ending in an `h` whose pronunciation fluctuates: AkH. 82. e) allows
+ * both `dühvel` and `dühhel`, so we write the unassimilated form, which is
+ * the one that keeps the word recognizable.
+ */
+const SILENT_H_NOUNS = new Set(["cseh", "doh", "düh", "éh", "juh", "méh", "oláh", "pléh", "rüh"]);
+
 /** Finals that take the accusative `-t` without a linking vowel (bort, pénzt). */
 const BARE_T_FINALS = new Set(["l", "ly", "j", "n", "ny", "r", "s", "sz", "z", "zs"]);
 
@@ -116,10 +123,14 @@ export function applyCaseParts(
     case "genitive":
       return { stem: plain, suffix: two(h, "nak", "nek") };
     case "instrumental":
-      if (vowelFinal) return { stem: long, suffix: two(h, "val", "vel") };
+      if (vowelFinal || SILENT_H_NOUNS.has(base.toLowerCase())) {
+        return { stem: vowelFinal ? long : base, suffix: two(h, "val", "vel") };
+      }
       return assimilatingParts(base, two(h, "al", "el"));
     case "translative":
-      if (vowelFinal) return { stem: long, suffix: two(h, "vá", "vé") };
+      if (vowelFinal || SILENT_H_NOUNS.has(base.toLowerCase())) {
+        return { stem: vowelFinal ? long : base, suffix: two(h, "vá", "vé") };
+      }
       return assimilatingParts(base, two(h, "á", "é"));
     case "causalFinal":
       return { stem: plain, suffix: "ért" };

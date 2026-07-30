@@ -78,6 +78,19 @@ number and initialism suffixation ("6-ot", "SMS-t") looks like a job for the neu
 fallback, but it is fully rule-derivable once you spell the token's spoken form —
 see `hu/numerals.ts`. Rules are exact, need no download, and work synchronously.
 
+## Test against the authority, not only the corpus
+
+A corpus tells you what people wrote; a style authority tells you what is
+correct, and its worked examples are free, high-quality test material. The
+Hungarian pack asserts every example from rule 82 of the Academy's
+orthography (`test/hu.akh.test.ts`) alongside the corpus-derived fixtures.
+Where the two disagree, say so in a comment rather than silently picking.
+
+Expect to find cases that are undecidable without context — homonyms whose
+readings inflect differently, or spellings the authority explicitly allows
+in more than one form. Encode the commoner choice, document it, and leave
+the caller a way to override it (`seedOracle`).
+
 ## Generated data
 
 If your language needs an exception lexicon, generate it — don't hand-write it.

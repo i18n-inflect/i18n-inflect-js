@@ -109,9 +109,32 @@ The inference engine is **swappable** ([docs/neural.md](docs/neural.md)): onnxru
 native bridge on Android/iOS — autodetected, or bring your own engine by implementing a
 three-method interface.
 
+## What it cannot know
+
+Some words are two words, and the two inflect differently. Hungarian `nyár`
+is "summer" (*nyarat*) and "poplar" (*nyárat*); `szél` is "wind" (*szelet*)
+and "edge" (*szélt*). A function from string to string has no way to tell
+them apart, so the library picks the commoner reading and documents the
+choice. When you know the sense, say so:
+
+```ts
+import { seedOracle, inflect } from "i18n-inflect";
+
+seedOracle("hu", { lemma: "nyár", tag: "N;ACC;SG" }, "nyárat"); // the tree
+inflect("hu", "nyár", { case: "accusative" }); // → "nyárat"
+```
+
+The same limit applies wherever orthography permits more than one form:
+AkH. 82. e) allows both `dühvel` and `dühhel`, and the library consistently
+writes the first.
+
 ## Data, accuracy, licensing
 
-The Hungarian rule engine is validated against [UniMorph](https://unimorph.github.io/)
+The Hungarian rules are checked against the Hungarian Academy of Sciences'
+orthography — *A magyar helyesírás szabályai*, 12th edition
+([AkH. 12.](https://helyesiras.mta.hu/helyesiras/default/akh12)) — with every
+worked example from rule 82 (the -val/-vel and -vá/-vé alternations) asserted
+in the test suite, and against [UniMorph](https://unimorph.github.io/)
 (1M+ forms): **99.6% on the covered vocabulary — all ~12k UniMorph noun lemmas ship in the
 generated lexicon — and 94.6% on lemmas the lexicon has never seen at all.** The lexicon, golden test
 fixtures and neural weights are UniMorph/Wiktionary derivatives (CC BY-SA 3.0 — see

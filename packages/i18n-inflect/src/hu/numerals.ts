@@ -120,6 +120,22 @@ export function numeralTail(digits: string): string | undefined {
   return "billió";
 }
 
+/**
+ * Symbols are read aloud too, and the suffix follows that reading:
+ * 15% is "tizenöt százalék", so it takes -kal (AkH. 82. f).
+ */
+const SYMBOL_READINGS: Record<string, string> = {
+  "%": "százalék",
+  "‰": "ezrelék",
+  "€": "euró",
+  $: "dollár",
+  "£": "font",
+  "°": "fok",
+  "+": "plusz",
+  "&": "és",
+  "@": "kukac",
+};
+
 /** True for initialisms read letter by letter (MTA, SMS, BKV). */
 function isInitialism(token: string): boolean {
   return /^[A-ZÁÉÍÓÖŐÚÜŰ]{2,}$/.test(token);
@@ -131,6 +147,8 @@ function isInitialism(token: string): boolean {
  * `undefined` when the token is an ordinary word.
  */
 export function spokenTailOf(token: string): string | undefined {
+  const symbol = SYMBOL_READINGS[token.at(-1) as string];
+  if (symbol !== undefined && token.length > 1) return symbol;
   const digits = numeralTail(token);
   if (digits !== undefined) return digits;
   if (isInitialism(token)) return LETTER_NAMES[token.at(-1) as string];

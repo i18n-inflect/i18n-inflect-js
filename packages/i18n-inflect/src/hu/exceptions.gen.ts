@@ -1000,7 +1000,7 @@ nyaksál|l
 nyakszirt|l,h:f
 nyál|l
 nyálmirigy|l,h:f
-nyár|l
+nyár|s:nyar
 nyárs|l
 nyél|s:nyel
 nyelünk|l
@@ -1259,7 +1259,7 @@ szekér|s:szeker
 székesegyház|l
 székesfehérvári|l
 székhely|l
-szél|h:f
+szél|s:szel
 szélmalom|f:szélmalm
 személyjel|l
 személynév|s:személynev
@@ -1799,8 +1799,6 @@ címzett|N;AT+ABL;SG|címzettől
 cowboy|N;ACC;SG|cowboyt
 cowboy|N;INS;SG|cowboyjal
 cowboy|N;TRANS;SG|cowboyjá
-cseh|N;INS;SG|csehvel
-cseh|N;TRANS;SG|csehvé
 délelőtt|N;AT+ABL;SG|délelőttől
 dobjai|N;ACC;PL|dobjait
 dobjai|N;AT+ABL;PL|dobjaitól
@@ -1818,6 +1816,8 @@ dobjai|N;ON+ESS;PL|dobjain
 dobjai|N;PRP;PL|dobjaiért
 dobjai|N;TERM;PL|dobjaiig
 dobjai|N;TRANS;PL|dobjaivá
+doh|N;INS;SG|dohhal
+doh|N;TRANS;SG|dohhá
 dolgozói|N;ACC;PL|dolgozóit
 dolgozói|N;AT+ABL;PL|dolgozóitól
 dolgozói|N;AT+ALL;PL|dolgozóihoz
@@ -1835,8 +1835,6 @@ dolgozói|N;PRP;PL|dolgozóiért
 dolgozói|N;TERM;PL|dolgozóiig
 dolgozói|N;TRANS;PL|dolgozóivá
 duett|N;AT+ABL;SG|duettől
-düh|N;INS;SG|dühvel
-düh|N;TRANS;SG|dühvé
 dzsinn|N;AT+ESS;SG|dzsinnél
 dzsinn|N;DAT;SG|dzsinnek
 egyenlítői|N;ACC;PL|egyenlítőit
@@ -1855,6 +1853,8 @@ egyenlítői|N;ON+ESS;PL|egyenlítőin
 egyenlítői|N;PRP;PL|egyenlítőiért
 egyenlítői|N;TERM;PL|egyenlítőiig
 egyenlítői|N;TRANS;PL|egyenlítőivé
+éh|N;INS;SG|éhhel
+éh|N;TRANS;SG|éhhé
 életrajz|N;ACC;SG|életrajzot
 előadói|N;ACC;PL|előadóit
 előadói|N;AT+ABL;PL|előadóitól
@@ -2288,8 +2288,6 @@ jogai|N;PRP;PL|jogaiért
 jogai|N;TERM;PL|jogaiig
 jogai|N;TRANS;PL|jogaivá
 jótett|N;AT+ABL;SG|jótettől
-juh|N;INS;SG|juhval
-juh|N;TRANS;SG|juhvá
 kapui|N;ACC;PL|kapuit
 kapui|N;AT+ABL;PL|kapuitól
 kapui|N;AT+ALL;PL|kapuihoz
@@ -2522,8 +2520,6 @@ mátrix|N;TRANS;SG|mátrixszá
 megbízott|N;AT+ABL;SG|megbízottól
 megkérdezett|N;AT+ABL;SG|megkérdezettől
 megszállott|N;AT+ABL;SG|megszállottól
-méh|N;INS;SG|méhvel
-méh|N;TRANS;SG|méhvé
 méhészborz|N;ACC;SG|méhészborzot
 mellei|N;ACC;PL|melleit
 mellei|N;AT+ABL;PL|melleitől
@@ -2652,8 +2648,6 @@ oktatói|N;ON+ESS;PL|oktatóin
 oktatói|N;PRP;PL|oktatóiért
 oktatói|N;TERM;PL|oktatóiig
 oktatói|N;TRANS;PL|oktatóivá
-oláh|N;INS;SG|oláhval
-oláh|N;TRANS;SG|oláhvá
 olvasói|N;ACC;PL|olvasóit
 olvasói|N;AT+ABL;PL|olvasóitól
 olvasói|N;AT+ALL;PL|olvasóihoz
@@ -2724,8 +2718,6 @@ piccolo|N;ON+ALL;SG|piccolra
 piccolo|N;PRP;SG|piccolért
 piccolo|N;TERM;SG|piccolig
 piccolo|N;TRANS;SG|piccollá
-pléh|N;INS;SG|pléhvel
-pléh|N;TRANS;SG|pléhvé
 rajongói|N;ACC;PL|rajongóit
 rajongói|N;AT+ABL;PL|rajongóitól
 rajongói|N;AT+ALL;PL|rajongóihoz
@@ -2796,8 +2788,6 @@ róid|N;TERM;PL|róidig
 róid|N;TRANS;PL|róiddá
 rovar|N;ACC;SG|rovarot
 rulett|N;AT+ABL;SG|rulettől
-rüh|N;INS;SG|rühvel
-rüh|N;TRANS;SG|rühvé
 sakk-matt|N;AT+ABL;SG|sakk-mattól
 sárgadinnye|N;ACC;PL|sárgadinnyéket
 sárgadinnye|N;AT+ABL;PL|sárgadinnyéktől

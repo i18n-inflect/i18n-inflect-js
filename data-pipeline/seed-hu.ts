@@ -85,3 +85,21 @@ szó|N;NOM;PL|szavak
 férfi|N;INS;SG|férfival
 férfi|N;DAT;SG|férfinak
 férfi|N;NOM;PL|férfiak`.split("\n");
+
+/**
+ * Homonyms whose readings inflect differently, resolved in favour of the
+ * commoner word.
+ *
+ * `nyár` is both "summer" (nyarat) and "poplar" (nyárat); `szél` is "wind"
+ * (szelet) and "edge" (szélt). A function from string to string cannot tell
+ * them apart, and the corpus attests both, so the diff picks arbitrarily.
+ * These entries pick deliberately instead. Callers who mean the other sense
+ * can seed the oracle cache with the form they want.
+ *
+ * Unlike SEED_STEM_LINES, these override whatever generation produced.
+ */
+export const CURATED_STEM_LINES: string[] = `nyár|s:nyar
+szél|s:szel
+tél|s:tel
+kéz|s:kez
+víz|s:viz`.split("\n");

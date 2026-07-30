@@ -19,7 +19,7 @@ import { inflectNounRules } from "../packages/i18n-inflect/src/hu/suffixes.js";
 import { HU_CASE_TAGS, type HuCase } from "../packages/i18n-inflect/src/hu/tags.js";
 
 import { diffAll, rulesAccuracy } from "./diff-hu.js";
-import { SEED_OVERRIDE_LINES, SEED_STEM_LINES } from "./seed-hu.js";
+import { CURATED_STEM_LINES, SEED_OVERRIDE_LINES, SEED_STEM_LINES } from "./seed-hu.js";
 import {
   fnv1a,
   groupByLemma,
@@ -250,6 +250,19 @@ function main(): void {
     lexicon.set(lemma, {});
   }
   console.log(`explicitly-regular lemmas (splitting would break them): ${regulars.size}`);
+
+  // Curated entries replace whatever the diff chose for the same lemma.
+  const curated = new Map(CURATED_STEM_LINES.map((line) => [line.split("|")[0] as string, line]));
+  for (let i = 0; i < stemLines.length; i++) {
+    const lemma = (stemLines[i] as string).split("|")[0] as string;
+    const replacement = curated.get(lemma);
+    if (replacement !== undefined) {
+      stemLines[i] = replacement;
+      curated.delete(lemma);
+    }
+  }
+  for (const line of curated.values()) stemLines.push(line);
+  console.log(`curated homonym decisions applied: ${CURATED_STEM_LINES.length}`);
 
   let seededStems = 0;
   let seededOverrides = 0;
