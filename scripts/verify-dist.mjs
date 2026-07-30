@@ -24,8 +24,16 @@ const CASES = [
   ["hu", "6", { case: "accusative" }, "6-ot"],
   ["en", "a ace", {}, "an ace"],
   ["ko", "책", { case: "topic" }, "책은"],
+  ["de", "Krankenhaus", { number: "plural" }, "Krankenhäuser"],
+  ["de", "Haus", { article: "definite" }, "das Haus"],
+  ["es", "agua", { article: "definite" }, "el agua"],
+  ["it", "zaino", { article: "definite" }, "lo zaino"],
+  ["pt", "cidade", { case: "dative" }, "à cidade"],
+  ["tr", "kitap", { case: "accusative" }, "kitabı"],
+  ["pl", "nowy dom", { case: "inessive" }, "nowym domu"],
+  ["ru", "красивый стол", { case: "genitive" }, "красивого стола"],
 ];
-const LANGS = ["hu", "en", "ko"];
+const LANGS = ["hu", "en", "de", "fr", "es", "it", "pt", "ko", "tr", "pl", "ru"];
 
 let failures = 0;
 

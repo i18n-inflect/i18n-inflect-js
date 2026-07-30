@@ -8,17 +8,20 @@
   },
   "scripts": {
     "build": "pnpm -r build",
-    "test": "pnpm -r test",
-    "typecheck": "pnpm -r typecheck",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "pipeline:hu": "tsx data-pipeline/run.ts hu",
+    "pipeline:nouns": "tsx data-pipeline/run-nouns.ts",
+    "pipeline:pl": "tsx data-pipeline/run-polish.ts",
+    "pipeline:ru": "tsx data-pipeline/run-russian.ts",
+    "pipeline:tr": "tsx data-pipeline/run-turkish.ts",
     "size": "node scripts/size-gate.mjs",
-    "verify:dist": "node scripts/verify-dist.mjs",
-    "pipeline:romance": "tsx data-pipeline/run-romance.ts"
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "verify:dist": "node scripts/verify-dist.mjs"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.5",
+    "@biomejs/biome": "2.2.5",
     "@changesets/cli": "^2.31.1",
     "@types/node": "^24.13.3",
     "esbuild": "^0.28.1",

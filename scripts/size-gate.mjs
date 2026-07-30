@@ -17,14 +17,25 @@ const GATES = [
   // coverage, and must not move to accommodate drift.
   { name: "hu", entry: "packages/i18n-inflect/dist/hu/index.js", budget: 200 * 1024 },
   { name: "en", entry: "packages/i18n-inflect/dist/en/index.js", budget: 8 * 1024 },
-  { name: "de", entry: "packages/i18n-inflect/dist/de/index.js", budget: 8 * 1024 },
+  // German carries gender *and* plural: both are lexical, and compounds are
+  // resolved from their final element, so the lexicon only has to know the
+  // simplex nouns.
+  { name: "de", entry: "packages/i18n-inflect/dist/de/index.js", budget: 70 * 1024 },
   { name: "fr", entry: "packages/i18n-inflect/dist/fr/index.js", budget: 8 * 1024 },
   // Spanish and Italian carry generated gender and plural lexicons: gender
   // is lexical in both, and making callers pass it on every call is work a
   // library should absorb.
   { name: "es", entry: "packages/i18n-inflect/dist/es/index.js", budget: 40 * 1024 },
   { name: "it", entry: "packages/i18n-inflect/dist/it/index.js", budget: 60 * 1024 },
+  { name: "pt", entry: "packages/i18n-inflect/dist/pt/index.js", budget: 45 * 1024 },
   { name: "ko", entry: "packages/i18n-inflect/dist/ko/index.js", budget: 8 * 1024 },
+  // Turkish is almost pure phonology: the lexicon only records which stems
+  // refuse to soften.
+  { name: "tr", entry: "packages/i18n-inflect/dist/tr/index.js", budget: 12 * 1024 },
+  // The Slavic packs store a compact per-noun paradigm signature rather than
+  // forms — a few letters each for seven cases in two numbers.
+  { name: "pl", entry: "packages/i18n-inflect/dist/pl/index.js", budget: 45 * 1024 },
+  { name: "ru", entry: "packages/i18n-inflect/dist/ru/index.js", budget: 80 * 1024 },
   { name: "neural", entry: "packages/neural/dist/index.js", budget: 8 * 1024 },
 ];
 

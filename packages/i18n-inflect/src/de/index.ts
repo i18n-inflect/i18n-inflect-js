@@ -15,15 +15,19 @@ import {
   type DeCase,
   type Declension,
 } from "./articles.js";
+import { LEXICON } from "./gender.gen.js";
+import { compoundHeadKey, decidedGender, resolveGender, resolvePlural } from "./nouns.js";
 
 /**
  * German language pack: full article matrix (definite/indefinite × 4 cases ×
- * 3 genders + plural), adjective-ending agreement (weak/mixed/strong) and
- * basic noun case endings (genitive -s/-es, dative-plural -n).
+ * 3 genders + plural), adjective-ending agreement (weak/mixed/strong), noun
+ * case endings (genitive -s/-es, dative-plural -n) and — from a generated
+ * lexicon — gender and plural formation.
  *
- * v1 limitations (documented): noun gender must come from `gender:` for
- * correct singular forms (no lexicon in the size budget), and plural noun
- * forms must be supplied by the caller — German nominal plurals are lexical.
+ * Give the phrase in the nominative singular; `number: "plural"` builds the
+ * plural itself. Pass `gender:` to override the lexicon, which is worth
+ * doing for a word it cannot know: it answers for anything, and reports
+ * `confidence: "low"` when the answer is only a guess from the ending.
  *
  * `import "i18n-inflect/de"` registers it as a side effect.
  */
@@ -51,6 +55,19 @@ function dativePluralNoun(noun: string): string {
   return /[ns]$/i.test(noun) ? noun : `${noun}n`;
 }
 
+/**
+ * Whether the lexicon really knows this noun, as opposed to guessing from
+ * its shape. A guess is often right — German endings are informative — but
+ * the caller deserves to be told which it got.
+ */
+function genderIsKnown(noun: string): boolean {
+  return (
+    LEXICON.genders.has(noun.toLowerCase()) ||
+    decidedGender(noun) !== undefined ||
+    compoundHeadKey(noun, LEXICON.genders, LEXICON.blockedHeads) !== undefined
+  );
+}
+
 function inflectPhrase(
   phrase: string,
   features: GrammaticalFeatures,
@@ -62,11 +79,17 @@ function inflectPhrase(
   const deCase = resolveCase(features, ctx);
   const plural = features.number === "plural";
 
+  // The head noun is the last word; its gender governs the whole phrase.
+  const headIdx = split.wordIndexes[split.words.length - 1] as number;
+  const [headCore, headPunct] = splitTrailingPunctuation(split.parts[headIdx] as string);
+
   let confidence: "high" | "low" = "high";
-  const gender: GrammaticalGender = features.gender ?? "neuter";
-  const needsGender = !plural;
-  if (needsGender && !features.gender) {
-    ctx.warn("missing-gender", `gender is required for German singular phrases: "${phrase}"`);
+  const gender: GrammaticalGender = features.gender ?? resolveGender(headCore, LEXICON);
+  if (!features.gender && !genderIsKnown(headCore)) {
+    ctx.warn(
+      "missing-gender",
+      `gender guessed from the ending for "${headCore}" — pass gender: to be sure`,
+    );
     confidence = "low";
   }
 
@@ -106,15 +129,16 @@ function inflectPhrase(
     split.parts[idx] = adjectiveStem(token) + ending;
   }
 
-  // Head noun endings (approximate, documented): genitive m/n -s, dative pl -n.
-  const headIdx = split.wordIndexes[split.words.length - 1] as number;
-  const [headCore, headPunct] = splitTrailingPunctuation(split.parts[headIdx] as string);
+  // The head noun: number first, then the case ending it takes in that
+  // number — genitive m/n -s, dative plural -n.
   if (headCore.length > 0 && split.words.length > (existingKind ? 1 : 0)) {
+    let head = plural ? resolvePlural(headCore, gender, LEXICON) : headCore;
     if (deCase === "genitive" && !plural && gender !== "feminine") {
-      split.parts[headIdx] = genitiveNoun(headCore) + headPunct;
+      head = genitiveNoun(head);
     } else if (deCase === "dative" && plural) {
-      split.parts[headIdx] = dativePluralNoun(headCore) + headPunct;
+      head = dativePluralNoun(head);
     }
+    split.parts[headIdx] = head + headPunct;
   }
 
   // Article rewrite / insertion / removal.
@@ -132,7 +156,9 @@ function inflectPhrase(
         split.parts[firstIdx] = isCapitalized(firstWord) ? capitalize(form) : form;
       }
     } else if (form !== undefined) {
-      split.parts[firstIdx] = `${form} ${firstWord}`;
+      // Not `firstWord`: in a one-word phrase the first word *is* the head,
+      // and the head has already been pluralized and case-marked.
+      split.parts[firstIdx] = `${form} ${split.parts[firstIdx]}`;
     }
   }
 

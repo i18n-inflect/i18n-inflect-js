@@ -1,7 +1,7 @@
 {
   "name": "i18n-inflect",
   "version": "0.5.0",
-  "description": "Grammatical inflection and agreement for i18n — articles, case suffixes, particles — in the browser, Node.js, and Cordova. API inspired by Apple's Morphology / automatic grammar agreement.",
+  "description": "Grammatical inflection and agreement for i18n \u2014 articles, case suffixes, particles \u2014 in the browser, Node.js, and Cordova. API inspired by Apple's Morphology / automatic grammar agreement.",
   "license": "MIT",
   "type": "module",
   "sideEffects": [
@@ -18,7 +18,15 @@
     "./dist/it/index.cjs",
     "./dist/it/index.js",
     "./dist/ko/index.cjs",
-    "./dist/ko/index.js"
+    "./dist/ko/index.js",
+    "./dist/pl/index.cjs",
+    "./dist/pl/index.js",
+    "./dist/pt/index.cjs",
+    "./dist/pt/index.js",
+    "./dist/ru/index.cjs",
+    "./dist/ru/index.js",
+    "./dist/tr/index.cjs",
+    "./dist/tr/index.js"
   ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -64,7 +72,27 @@
       "import": "./dist/ko/index.js",
       "require": "./dist/ko/index.cjs"
     },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./tr": {
+      "types": "./dist/tr/index.d.ts",
+      "import": "./dist/tr/index.js",
+      "require": "./dist/tr/index.cjs"
+    },
+    "./pt": {
+      "types": "./dist/pt/index.d.ts",
+      "import": "./dist/pt/index.js",
+      "require": "./dist/pt/index.cjs"
+    },
+    "./pl": {
+      "types": "./dist/pl/index.d.ts",
+      "import": "./dist/pl/index.js",
+      "require": "./dist/pl/index.cjs"
+    },
+    "./ru": {
+      "types": "./dist/ru/index.d.ts",
+      "import": "./dist/ru/index.js",
+      "require": "./dist/ru/index.cjs"
+    }
   },
   "files": [
     "dist",
@@ -99,7 +127,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "Bártházi András <magic@barthazi.hu> (https://github.com/boogie)",
+  "author": "B\u00e1rth\u00e1zi Andr\u00e1s <magic@barthazi.hu> (https://github.com/boogie)",
   "homepage": "https://github.com/i18n-inflect/i18n-inflect-js#readme",
   "bugs": {
     "url": "https://github.com/i18n-inflect/i18n-inflect-js/issues"

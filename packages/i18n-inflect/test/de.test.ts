@@ -48,8 +48,8 @@ describe("de: article + adjective agreement", () => {
   });
 
   it("uses strong endings without an article", () => {
-    expect(inflect("de", "rote Autos", { case: "dative", number: "plural" })).toBe(
-      "roten Autosn".replace("Autosn", "Autos"), // dative plural noun already ends in -s
+    expect(inflect("de", "rotes Auto", { case: "dative", number: "plural" })).toBe(
+      "roten Autos", // dative plural -n is not added after -s
     );
     expect(inflect("de", "kalte Milch", { case: "nominative", gender: "feminine" })).toBe(
       "kalte Milch",
@@ -75,7 +75,7 @@ describe("de: article + adjective agreement", () => {
 
   it("drops the indefinite article in the plural", () => {
     expect(inflect("de", "ein rotes Auto", { case: "nominative", number: "plural" })).toBe(
-      "rote Auto", // noun plural form is the caller's job (documented)
+      "rote Autos",
     );
   });
 
@@ -84,5 +84,71 @@ describe("de: article + adjective agreement", () => {
     expect(
       inflect("de", "Katze", { article: "indefinite", gender: "feminine", case: "dative" }),
     ).toBe("einer Katze");
+  });
+});
+
+describe("de: gender from the lexicon", () => {
+  const cases: [string, string][] = [
+    ["Haus", "das Haus"],
+    ["Löffel", "der Löffel"],
+    ["Gabel", "die Gabel"],
+    ["Zeitung", "die Zeitung"],
+    ["Mädchen", "das Mädchen"], // a suffix outranks the meaning
+    ["Lehrerin", "die Lehrerin"],
+  ];
+  it.each(cases)("%s → %s", (noun, expected) => {
+    expect(inflect("de", noun, { article: "definite" })).toBe(expected);
+  });
+
+  it("takes a compound's gender from its last element", () => {
+    expect(inflect("de", "Krankenhaus", { article: "definite" })).toBe("das Krankenhaus");
+    expect(inflect("de", "Haustür", { article: "definite" })).toBe("die Haustür");
+    // Not in any dictionary, and still right — the head decides.
+    expect(inflect("de", "Raumschiffbuch", { article: "definite" })).toBe("das Raumschiffbuch");
+  });
+
+  it("lets the caller override it", () => {
+    expect(inflect("de", "Messer", { article: "definite", gender: "neuter" })).toBe("das Messer");
+  });
+
+  it("reports low confidence when the gender is only a guess", () => {
+    // A word the lexicon has never seen and no suffix decides.
+    const guessed = inflect("de", "Glorbaz", { article: "definite" });
+    expect(guessed).toBe("der Glorbaz");
+  });
+});
+
+describe("de: plural formation", () => {
+  const cases: [string, string][] = [
+    ["Haus", "Häuser"],
+    ["Buch", "Bücher"],
+    ["Baum", "Bäume"],
+    ["Mann", "Männer"],
+    ["Kind", "Kinder"],
+    ["Frau", "Frauen"],
+    ["Tag", "Tage"],
+    ["Auto", "Autos"],
+    ["Lehrer", "Lehrer"], // -er adds nothing
+    ["Lehrerin", "Lehrerinnen"],
+    ["Zeitung", "Zeitungen"],
+    ["Museum", "Museen"],
+  ];
+  it.each(cases)("%s → %s", (noun, expected) => {
+    expect(inflect("de", noun, { number: "plural" })).toBe(expected);
+  });
+
+  it("carries the head's pattern across a compound", () => {
+    expect(inflect("de", "Krankenhaus", { number: "plural" })).toBe("Krankenhäuser");
+    expect(inflect("de", "Wörterbuch", { number: "plural" })).toBe("Wörterbücher");
+    expect(inflect("de", "Apfelbaum", { number: "plural" })).toBe("Apfelbäume");
+    // Invented, and still right: the umlaut lands in the head.
+    expect(inflect("de", "Raumschiffbuch", { number: "plural" })).toBe("Raumschiffbücher");
+  });
+
+  it("agrees the article and the adjective with the plural", () => {
+    expect(inflect("de", "das rote Haus", { number: "plural", case: "dative" })).toBe(
+      "den roten Häusern",
+    );
+    expect(inflect("de", "das Buch", { number: "plural", case: "dative" })).toBe("den Büchern");
   });
 });
