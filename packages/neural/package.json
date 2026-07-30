@@ -1,6 +1,6 @@
 {
   "name": "@i18n-inflect/neural",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Neural inflection fallback runtime for i18n-inflect — tiny char-level seq2seq models over a swappable inference engine (onnxruntime-web, onnxruntime-node, or the cordova-plugin-boogie-onnx native bridge).",
   "license": "MIT",
   "type": "module",
