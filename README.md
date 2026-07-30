@@ -39,13 +39,17 @@ format("en", "You drew ^[a {c}](article: indefinite)", { c: "ace" });
 | --- | --- |
 | 🇭🇺 **Hungarian** | 15 case suffixes + plural with full vowel harmony, stem alternations (kéz→kezet, bokor→bokrot, ló→lovat), v-assimilation (ász→ásszal, busz→busszal), a/az article by pronunciation ("az 5", "a 6", "az MTA", "a BKV"), and suffixes written after a hyphen for numbers, initialisms and foreign words — spelled from their spoken form: 6-ot, 5-tel, 1-gyel, 100-zal, 1000-et, SMS-t, MTA-ban, tv-vel. Compounds inflect after their final member (kávéház→kávéházat, tábortűz→tábortüzet), the relational adjective is derivable (Budapest→budapesti), and the full possessive paradigm is covered including its one lexical choice (háza but kertje, házaitok, kertjeik) |
 | 🇬🇧 **English** | a/an by sound (an hour, a university, an MTA card, an 8), pluralization |
-| 🇩🇪 **German** | full article matrix (4 cases × 3 genders), weak/mixed/strong adjective endings ("ein rotes Auto" → "einem roten Auto") |
+| 🇩🇪 **German** | full article matrix (4 cases × 3 genders), weak/mixed/strong adjective endings ("ein rotes Auto" → "einem roten Auto"), and generated gender *and* plural lexicons. Compounds are resolved from their final element, so `Krankenhaus` → `Krankenhäuser` works — and so does a compound no dictionary lists |
 | 🇫🇷 **French** | le/la/les/un/une with elision (l'ami) and h-aspiré (le haricot), pluralization |
 | 🇪🇸 **Spanish** | el/la/los/las/un/una incl. the stressed-á rule (el agua → las aguas), pluralization, and a generated gender lexicon covering the traps (el mapa, la mano) |
 | 🇮🇹 **Italian** | articles chosen by the sound that follows (il/lo/l'/la/i/gli/le), articulated prepositions (del, allo, nell', sui), plurals with the spelling rules that keep consonant sounds (amico→amici but fuoco→fuochi), and a generated gender lexicon so you rarely pass `gender` |
+| 🇵🇹 **Portuguese** | the obligatory preposition-article contractions (de+o→do, em+a→na, a+o→ao, por+as→pelas) including the crase (à), plurals with the -ão/-l/-m rules (coração→corações, animal→animais, homem→homens), and a generated gender lexicon |
+| 🇵🇱 **Polish** | seven cases in two numbers with the stem changes the endings force: palatalization (kot→kocie, książka→książce), the fleeting e (pies→psa), the ó/o alternation (stół→stołu) — plus adjective agreement and the masculine personal plural (student→studenci) |
+| 🇷🇺 **Russian** | six cases in two numbers over hard and soft stems, the two spelling rules that override them (книга→книги, немец→немцем), the fleeting vowel (немец→немца), animacy in the accusative (кота, котов), and adjective agreement |
+| 🇹🇷 **Turkish** | two vowel-harmony systems choosing the suffix vowel (evde/kitapta/gözü/okulu), final-consonant softening (kitap→kitabı) with the lexicon for the words that refuse it (top→topu), possessive compounds (göbek dansına) and the apostrophe after proper nouns (İstanbul'a) |
 | 🇰🇷 **Korean** | phonological particles by final batchim: 은/는, 이/가, 을/를, (으)로, 과/와 — with digit readings (8로, 3으로) and paired forms for Latin text (Chrome을(를)) |
 
-More European languages plus Vietnamese and Japanese are on the roadmap; the language
+More languages plus Vietnamese and Japanese are on the roadmap; the language
 pack API is public and documented — see [docs/language-packs.md](docs/language-packs.md).
 
 ## Install
@@ -139,9 +143,36 @@ in the test suite, and against [UniMorph](https://unimorph.github.io/)
 (1M+ forms): **~17k noun lemmas ship in the generated lexicon**, merged from UniMorph and the
 current Wiktionary (the two agree on 99.8% of the forms they share, which is
 worth as much as either source alone). Accuracy on that vocabulary is 99.6%;
-on lemmas the lexicon has never seen at all, 94.2%. The lexicon, golden test
-fixtures and neural weights are UniMorph/Wiktionary derivatives (CC BY-SA 3.0 — see
-[LICENSE-DATA.md](LICENSE-DATA.md)); all code is MIT.
+on lemmas the lexicon has never seen at all, 94.2%.
+
+Every lexicon in the library is built the same way: the rules are run against
+a corpus and **only what they get wrong is stored**. That keeps the data small,
+and it makes the rules' real coverage visible — a language needing thousands of
+entries is a language whose rules are worth improving first. Each pipeline
+therefore reports two numbers: how far the rules get on their own, and how the
+whole pack does on a deterministic tenth of the corpus held back from the build.
+The second is the honest one, because a lexicon cannot help with a word it has
+never seen — which is the gap the neural fallback exists to close.
+
+| | rules alone | on words it has seen | on unseen words |
+| --- | --- | --- | --- |
+| 🇭🇺 Hungarian | — | 99.6% | 94.2% |
+| 🇷🇺 Russian | 89.1% | 100% | 89.2% |
+| 🇵🇱 Polish | 86.6% | 100% | 85.6% |
+| 🇹🇷 Turkish | 97.5% | 100% | — |
+| 🇩🇪 German | 75.5% gender, 80.7% plural | 100% | 86.4% / 89.4% |
+| 🇵🇹 Portuguese | 92.1% gender, 93.9% plural | 100% | 92.6% / 93.8% |
+
+Measured per paradigm cell (Hungarian, Russian, Polish, Turkish) or per noun
+(German, Portuguese). German's rules look weak until you notice what fixes
+them: a compound takes the gender and plural of its final element, and adding
+that one step lifts gender from 75.5% to 88.1% — without storing a single
+compound. Reproduce any row with `pnpm pipeline:hu`, `pipeline:pl`, `pipeline:ru`,
+`pipeline:tr` or `pipeline:nouns` (German, Portuguese, Spanish, Italian).
+
+The lexicons, golden test fixtures and neural weights are UniMorph/Wiktionary
+derivatives (CC BY-SA 3.0 — see [LICENSE-DATA.md](LICENSE-DATA.md)); all code
+is MIT.
 
 ## Packages
 

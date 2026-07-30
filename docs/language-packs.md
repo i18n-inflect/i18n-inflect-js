@@ -83,14 +83,42 @@ see `hu/numerals.ts`. Rules are exact, need no download, and work synchronously.
 Spanish and Italian hang their agreement on gender, and the endings everyone
 teaches are wrong often enough to matter: `el mapa`, `la mano`, `il
 problema`, `la foto`. Requiring `gender` on every call pushes that work onto
-the application. `data-pipeline/run-romance.ts` extracts gender from
+the application. `data-pipeline/run-nouns.ts` extracts gender from
 Wiktionary and stores **only the nouns whose ending misleads** — 2,736 of
 58,492 for Spanish, 4,359 of 59,752 for Italian — which keeps the lexicon
 small and, more usefully, measures how good the heuristic actually is.
 
-Words with two genders (`il radio` the element, `la radio` the wireless) are
-dropped rather than guessed, exactly as with Hungarian homonyms: the string
-does not decide, so the caller's `gender` should.
+One spelling can be two words: `o coração` (heart) and `a coração`
+(blushing), `der Tag` (day) and the borrowed `das Tag`. The string cannot say
+which is meant, so the pipeline keeps the **better-attested** reading — the
+entry with more senses — and the caller's `gender` covers the other. An
+earlier version dropped both, which is defensible but loses the common word
+along with the rare one.
+
+## Compounds are the cheapest vocabulary you will ever get
+
+German gender rules look weak — 75.5% from the endings alone — until you
+notice what fixes them. A German compound takes the gender and the plural of
+its **last** element: `Krankenhaus` is a `Haus`, `Übersetzungswörterbuch` is
+a `Buch`, `Waffenstillstand` is a `Stand`. Resolving the head before falling
+back to the ending heuristic lifts gender to 88.1% and plural to 91.2%
+*without storing a single compound* — and it answers for compounds no
+dictionary lists, which is most of them, because German makes new ones freely.
+
+Two details make it work rather than backfire:
+
+- **Derivational suffixes outrank the head.** `Abbildung` is not a kind of
+  `Dung`, however convincingly it ends in one — `-ung` has already decided.
+  So the exceptionless suffix classes are consulted *before* the head.
+- **Some words are bad heads, and the corpus knows which.** `Ufer` turns
+  every `-läufer` neuter; `Feuer` turns every `-steuer` neuter. Each candidate
+  head is scored on the compounds it would answer for, and the ones that lose
+  more than they win are blocked. That is worth 0.5 points of held-out
+  accuracy — small, but it is 0.5 points of *wrong answers to unlisted words*,
+  which is the kind that reaches users.
+
+The same shape applies to Hungarian (`kávéház` → `kávéházat`). Where a
+language compounds productively, resolve the head before you store anything.
 
 ## Two sources beat one
 
@@ -127,6 +155,43 @@ explain mismatching lemmas with the *smallest* per-lemma property that fixes the
 whole paradigm, and store only the residue as full forms. Generated files carry the
 data license in their header (see `LICENSE-DATA.md`) and a gzip size budget is
 enforced at generation time.
+
+For a language with a large paradigm, do not search the property space — fit
+it. Polish has seven cases in two numbers and Russian six, but the cells are
+not independent: each *choice* a noun makes (is the masculine genitive `-a`
+or `-u`, does the accusative copy the genitive, how is the nominative plural
+formed) governs its own cells and no others. So each slot can be read
+straight off the attested form, one at a time, instead of searched in
+combination — linear rather than exponential, and the result is a paradigm
+signature a few characters long:
+
+```
+niemiec|s niemc,A,P          # oblique stem, animate, personal
+buch|uer                     # umlauted stem, -er plural
+```
+
+Some things are not spelling facts at all. Slavic animacy — whether the
+accusative copies the nominative or the genitive — depends on whether the
+noun names something alive, and no amount of phonology will tell you. Store
+it as a flag, and have the pack ask the fallback when it has to guess.
+
+## Report the honest number
+
+A lexicon built from a corpus scores 100% on that corpus by construction.
+That number means nothing. Every pipeline here holds back a deterministic
+tenth of the lemmas, builds from the rest, and reports accuracy on the part
+it never saw — which is what a user's vocabulary looks like:
+
+```
+Polish: 7190 lemmas, 95686 cells
+  rules alone:      86.63%
+  rules + lexicon:  100.00%
+  held out (723 unseen lemmas): 85.59%
+```
+
+The gap between the second and third lines is exactly what the neural
+fallback exists to close. Print both, and never quote the middle one on its
+own.
 
 ## Checklist for a new pack
 

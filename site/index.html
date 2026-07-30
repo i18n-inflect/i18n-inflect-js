@@ -531,7 +531,8 @@ import <span class="s">"i18n-inflect/hu"</span>;
 format(<span class="s">"hu"</span>, <span class="s">"Nyertél ^[a {card}](case: instrumental)!"</span>, { card: <span class="s">"kőr ász"</span> });
 <span class="c">// → "Nyertél a kőr ásszal!"</span></pre>
         <p style="margin-bottom: 0">
-          Seven languages today — Hungarian, English, German, French, Spanish, Italian, Korean. If a form comes
+          Eleven languages today — Hungarian, English, German, French, Spanish, Italian, Portuguese,
+          Polish, Russian, Turkish, Korean. If a form comes
           out wrong in yours,
           <a href="https://github.com/i18n-inflect/i18n-inflect-js/issues/new?template=wrong-form.yml"
             >that is worth an issue</a
@@ -547,8 +548,11 @@ format(<span class="s">"hu"</span>, <span class="s">"Nyertél ^[a {card}](case: 
     </div>
 
     <script type="module">
-      const VERSION = "0.1.2";
-      const CDN = `https://cdn.jsdelivr.net/npm/i18n-inflect@${VERSION}/dist`;
+      // Follow the published release rather than a pinned version: a hard-coded
+      // one silently rots, and this page had been demonstrating a library four
+      // minor versions old. What loaded is reported below the paradigm.
+      const CDN = "https://cdn.jsdelivr.net/npm/i18n-inflect@latest/dist";
+      let VERSION = "latest";
 
       /* Each row is one question a language answers with a form. The gloss is
          written for someone who has never met the grammatical name. */
@@ -595,14 +599,25 @@ format(<span class="s">"hu"</span>, <span class="s">"Nyertél ^[a {card}](case: 
         },
         de: {
           name: "German",
-          presets: ["ein rotes Auto", "der Hund", "die Katze", "das Buch", "die Kinder"],
-          start: "ein rotes Auto",
+          presets: [
+            "Haus",
+            "Krankenhaus",
+            "Raumschiffbuch",
+            "ein rotes Auto",
+            "Zeitung",
+            "Mädchen",
+            "Baum",
+            "Lehrerin",
+          ],
+          start: "Krankenhaus",
           rows: [
-            ["nominative", "…as the subject", { case: "nominative", gender: "neuter" }],
-            ["accusative", "…as the object", { case: "accusative", gender: "neuter" }],
-            ["dative", "to / for it", { case: "dative", gender: "neuter" }],
-            ["genitive", "belonging to it", { case: "genitive", gender: "neuter" }],
-            ["plural, dative", "to / for several", { case: "dative", number: "plural" }],
+            ["nominative", "…as the subject", { case: "nominative" }],
+            ["definite article", "der, die or das — from the lexicon", { article: "definite" }],
+            ["accusative", "…as the object", { case: "accusative", article: "definite" }],
+            ["dative", "to / for it", { case: "dative", article: "definite" }],
+            ["genitive", "belonging to it", { case: "genitive", article: "definite" }],
+            ["plural", "more than one", { number: "plural", article: "definite" }],
+            ["plural, dative", "to / for several", { case: "dative", number: "plural", article: "definite" }],
           ],
         },
         fr: {
@@ -642,6 +657,69 @@ format(<span class="s">"hu"</span>, <span class="s">"Nyertél ^[a {card}](case: 
             ["on the …", "su + article, fused", { case: "superessive" }],
           ],
         },
+        pt: {
+          name: "Portuguese",
+          presets: ["casa", "livro", "cidade", "coração", "pão", "animal", "país", "problema"],
+          start: "cidade",
+          rows: [
+            ["as written", "article agreed", {}],
+            ["definite article", "o, a, os, as", { article: "definite" }],
+            ["plural", "more than one", { number: "plural", article: "definite" }],
+            ["of the …", "de + article, fused", { case: "genitive" }],
+            ["to the …", "a + article — à is the crase", { case: "dative" }],
+            ["in the …", "em + article, fused", { case: "inessive" }],
+            ["with the …", "com does not fuse", { case: "instrumental" }],
+          ],
+        },
+        pl: {
+          name: "Polish",
+          presets: ["kot", "dom", "pies", "stół", "książka", "okno", "student", "nowy dom", "dobra książka"],
+          start: "nowy dom",
+          rows: [
+            ["nominative", "the plain word", {}],
+            ["genitive", "belonging to it", { case: "genitive" }],
+            ["dative", "to / for it", { case: "dative" }],
+            ["accusative", "…as the object", { case: "accusative" }],
+            ["instrumental", "with it", { case: "instrumental" }],
+            ["locative", "in / on it", { case: "inessive" }],
+            ["vocative", "calling it", { case: "vocative" }],
+            ["plural", "more than one", { number: "plural" }],
+            ["plural, genitive", "of several", { number: "plural", case: "genitive" }],
+            ["plural, instrumental", "with several", { number: "plural", case: "instrumental" }],
+          ],
+        },
+        ru: {
+          name: "Russian",
+          presets: ["стол", "кот", "книга", "окно", "ночь", "музей", "немец", "красивый стол", "новая книга"],
+          start: "красивый стол",
+          rows: [
+            ["nominative", "the plain word", {}],
+            ["genitive", "belonging to it", { case: "genitive" }],
+            ["dative", "to / for it", { case: "dative" }],
+            ["accusative", "…as the object", { case: "accusative" }],
+            ["instrumental", "with it", { case: "instrumental" }],
+            ["prepositional", "in / on it", { case: "inessive" }],
+            ["plural", "more than one", { number: "plural" }],
+            ["plural, genitive", "of several", { number: "plural", case: "genitive" }],
+            ["plural, instrumental", "with several", { number: "plural", case: "instrumental" }],
+          ],
+        },
+        tr: {
+          name: "Turkish",
+          presets: ["ev", "kitap", "göz", "okul", "araba", "top", "İstanbul", "göbek dansı"],
+          start: "kitap",
+          rows: [
+            ["nominative", "the plain word", {}],
+            ["accusative", "…as the object", { case: "accusative" }],
+            ["dative", "to it", { case: "dative" }],
+            ["locative", "in / at it", { case: "inessive" }],
+            ["ablative", "out of it", { case: "elative" }],
+            ["genitive", "belonging to it", { case: "genitive" }],
+            ["instrumental", "with it", { case: "instrumental" }],
+            ["plural", "more than one", { number: "plural" }],
+            ["plural, locative", "in several", { number: "plural", case: "inessive" }],
+          ],
+        },
         ko: {
           name: "Korean",
           presets: ["사과", "책", "서울", "집", "지도", "8", "Chrome"],
@@ -675,6 +753,9 @@ format(<span class="s">"hu"</span>, <span class="s">"Nyertél ^[a {card}](case: 
         ["derivation", "A different word, not a different ending.", "Budapest → budapesti"],
         ["possessor", "Who owns the thing.", "ház → házam (my house)"],
         ["essiveFormal", "Acting as something.", "tanárként (as a teacher)"],
+        ["locative · prepositional", "Where something is.", "in the house (Polish, Russian)"],
+        ["vocative", "Calling someone by name.", "Panie! (Sir!)"],
+        ["ablative · elative", "Out of, away from.", "out of the house"],
       ];
 
       const $ = (id) => document.getElementById(id);
@@ -732,6 +813,14 @@ format(<span class="s">"hu"</span>, <span class="s">"Nyertél ^[a {card}](case: 
       function boot(lib) {
         const { inflect, format } = lib;
         $("version").textContent = `i18n-inflect ${VERSION}`;
+        // Report the version that actually loaded, not the one we asked for.
+        fetch("https://cdn.jsdelivr.net/npm/i18n-inflect@latest/package.json")
+          .then((response) => response.json())
+          .then((meta) => {
+            VERSION = meta.version;
+            $("version").textContent = `i18n-inflect ${VERSION}`;
+          })
+          .catch(() => {});
 
         const langSelect = $("lang");
         for (const [code, meta] of Object.entries(LANGUAGES)) {
