@@ -1,11 +1,18 @@
 /**
- * Error analysis for the Hungarian rule engine on held-out lemmas.
+ * Error analysis for the Hungarian RULE LAYER.
  *
- * Classifies each wrong form so improvements can be aimed at the largest
- * class rather than at whatever example happens to be at hand.
+ * Measures `inflectNounRules` plus stem flags and compound resolution — not
+ * the language pack, which additionally consults full-form overrides and
+ * hyphen classes and is therefore more accurate. The point is to show where
+ * rules alone fall short, so improvements can be aimed at the largest class
+ * rather than at whatever example is at hand. For what users actually get,
+ * see the golden test.
  */
 import { resolveStemFlags } from "../packages/i18n-inflect/src/hu/compounds.js";
-import { STEM_FLAGS } from "../packages/i18n-inflect/src/hu/exceptions.gen.js";
+import {
+  STEM_FLAGS,
+  UNSAFE_COMPOUND_HEADS,
+} from "../packages/i18n-inflect/src/hu/exceptions.gen.js";
 import {
   BACK_NEUTRAL_LEMMAS,
   harmonyOf,
@@ -14,6 +21,7 @@ import {
 import { inflectNounRules } from "../packages/i18n-inflect/src/hu/suffixes.js";
 import { HU_CASE_TAGS, type HuCase } from "../packages/i18n-inflect/src/hu/tags.js";
 import { groupByLemma, isHeldOut, loadRows, parseTag } from "./unimorph.js";
+import { loadWiktionaryRows } from "./wiktionary.js";
 
 const TAG_TO_CASE = new Map<string, HuCase>(
   (Object.entries(HU_CASE_TAGS) as [HuCase, string][]).map(([c, t]) => [t, c]),
@@ -35,8 +43,12 @@ function compoundHead(lemma: string): string | undefined {
   return best;
 }
 
-const HEADS = new Set(STEM_FLAGS.keys());
-const rows = loadRows(`${new URL("..", import.meta.url).pathname}data/raw/hun.tsv`);
+const HEADS = new Set([...STEM_FLAGS.keys()].filter((h) => !UNSAFE_COMPOUND_HEADS.has(h)));
+const ROOT = new URL("..", import.meta.url).pathname;
+const rows = loadRows(`${ROOT}data/raw/hun.tsv`);
+const { rows: extra } = await loadWiktionaryRows(`${ROOT}data/raw/hu-wiktionary.jsonl`);
+const known = new Set(rows.map((r) => `${r.lemma} ${r.tag} ${r.form}`));
+for (const row of extra) if (!known.has(`${row.lemma} ${row.tag} ${row.form}`)) rows.push(row);
 const heldOut = rows.filter((r) => isHeldOut(r.lemma));
 const classes = new Map<string, { forms: number; lemmas: Set<string>; sample: string[] }>();
 let total = 0;
@@ -49,13 +61,25 @@ for (const [lemma, forms] of groupByLemma(heldOut)) {
     const huCase = caseTag === "NOM" ? undefined : TAG_TO_CASE.get(caseTag);
     const got = inflectNounRules(
       lemma,
-      resolveStemFlags(lemma, STEM_FLAGS, HEADS, BACK_NEUTRAL_LEMMAS),
+      resolveStemFlags(lemma, STEM_FLAGS, HEADS, BACK_NEUTRAL_LEMMAS, UNSAFE_COMPOUND_HEADS),
       plural,
       huCase,
       BACK_NEUTRAL_LEMMAS,
     );
     if (accepted.includes(got)) continue;
     wrong++;
+    if (accepted.length > 1) {
+      const e = classes.get("szabad változat — a másik alakot adtuk") ?? {
+        forms: 0,
+        lemmas: new Set<string>(),
+        sample: [],
+      };
+      e.forms++;
+      e.lemmas.add(lemma);
+      if (e.sample.length < 3) e.sample.push(`${lemma} ${tag}: ${got} vs ${accepted.join("/")}`);
+      classes.set("szabad változat — a másik alakot adtuk", e);
+      continue;
+    }
 
     const head = compoundHead(lemma);
     const vowels = vowelsOf(lemma);
