@@ -14,6 +14,12 @@ import type { StemFlags } from "./stems.js";
  * So when a word is not in the lexicon, look for the longest known lemma it
  * ends with and inherit that lemma's behaviour, rebasing any alternate stem
  * onto the full word.
+ *
+ * Not every match is a compound, though: `régész` is `rég` plus the agent
+ * suffix `-ész`, not a compound with the noun `ész`, and inheriting `ész`'s
+ * shortening stem would produce *régeszek. Which heads are trustworthy is
+ * measured by the data pipeline rather than guessed — see the blocklist it
+ * emits into the generated lexicon.
  */
 
 /**
@@ -36,10 +42,14 @@ export interface CompoundSplit {
  * Longest lemma in `known` that `word` ends with, subject to the length
  * guards. Returns `undefined` when the word does not look composed.
  */
-export function splitCompound(word: string, known: ReadonlySet<string>): CompoundSplit | undefined {
+export function splitCompound(
+  word: string,
+  known: ReadonlySet<string>,
+  blocked?: ReadonlySet<string>,
+): CompoundSplit | undefined {
   for (let start = MIN_PREFIX; start <= word.length - MIN_HEAD; start++) {
     const head = word.slice(start);
-    if (known.has(head)) return { prefix: word.slice(0, start), head };
+    if (known.has(head) && !blocked?.has(head)) return { prefix: word.slice(0, start), head };
   }
   return undefined;
 }
@@ -73,10 +83,11 @@ export function resolveStemFlags(
   lexicon: ReadonlyMap<string, StemFlags>,
   heads: ReadonlySet<string>,
   backSet?: ReadonlySet<string>,
+  blocked?: ReadonlySet<string>,
 ): StemFlags | undefined {
   const own = lexicon.get(lemma);
   if (own) return own;
-  const split = splitCompound(lemma, heads);
+  const split = splitCompound(lemma, heads, blocked);
   if (!split) return undefined;
   return flagsForCompound(split, lexicon.get(split.head), backSet);
 }

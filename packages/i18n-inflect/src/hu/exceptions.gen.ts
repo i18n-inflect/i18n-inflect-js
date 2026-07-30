@@ -2908,6 +2908,36 @@ tv|5
 vb|5
 `;
 
+const UNSAFE_HEAD_DATA = `agy
+agyar
+bácsi
+cső
+dér
+ell
+ész
+essz
+haj
+hely
+iker
+írom
+jel
+kád
+légy
+luk
+mell
+mész
+nád
+szár
+székhely
+tál
+tár
+tél
+vaj
+vár
+vas
+zár
+`;
+
 function parseStemData(data: string): {
   flags: Map<string, StemFlags>;
   back: Set<string>;
@@ -2985,4 +3015,13 @@ export const FORM_OVERRIDES: ReadonlyMap<string, string> = new Map(
 export const HYPHEN_SUFFIXES: ReadonlyMap<string, ReadonlyMap<string, string>> = parseHyphenData(
   HYPHEN_CLASS_DATA,
   HYPHEN_LEMMA_DATA,
+);
+
+/**
+ * Lemmas that look like compound heads but are really derivational suffixes
+ * (`régész` is `rég` + `-ész`, not a compound with `ész`). Measured, not
+ * guessed: each one loses more forms than it fixes across the corpus.
+ */
+export const UNSAFE_COMPOUND_HEADS: ReadonlySet<string> = new Set(
+  UNSAFE_HEAD_DATA.split("\n").filter((line) => line.length > 0),
 );

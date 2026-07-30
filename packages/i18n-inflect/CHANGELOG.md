@@ -1,5 +1,17 @@
 # i18n-inflect
 
+## 0.2.1
+
+### Patch Changes
+
+- Hungarian: stop treating derivational suffixes as compound heads. A word
+  ending in a known lemma is not necessarily a compound of it — `régész` is
+  `rég` plus the agent suffix `-ész`, and inheriting the noun `ész`'s
+  shortening stem produced \*régeszek. The data pipeline now scores every
+  candidate head across the corpus and blocklists the ones that lose more
+  forms than they fix (28 of them, including -ész, -tár and -vár), lifting
+  held-out accuracy from 94.7% to 94.9%.
+
 ## 0.2.0
 
 ### Minor Changes

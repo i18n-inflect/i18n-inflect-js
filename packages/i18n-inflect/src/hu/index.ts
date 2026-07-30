@@ -11,7 +11,13 @@ import { registerLanguage } from "../core/registry.js";
 import { definiteArticle } from "./article.js";
 import { resolveStemFlags } from "./compounds.js";
 import { RELATIONAL_FLAGS, relationalAdjective } from "./derivation.js";
-import { BACK_LEMMAS, FORM_OVERRIDES, HYPHEN_SUFFIXES, STEM_FLAGS } from "./exceptions.gen.js";
+import {
+  BACK_LEMMAS,
+  FORM_OVERRIDES,
+  HYPHEN_SUFFIXES,
+  STEM_FLAGS,
+  UNSAFE_COMPOUND_HEADS,
+} from "./exceptions.gen.js";
 import { hyphenatedForm } from "./numerals.js";
 import { BACK_NEUTRAL_LEMMAS, vowelsOf } from "./phonology.js";
 import { inflectNounRules } from "./suffixes.js";
@@ -35,10 +41,13 @@ const backSet = new Set([...BACK_NEUTRAL_LEMMAS, ...BACK_LEMMAS]);
 
 /**
  * Lemmas that may appear as the final member of a compound. Every lexicon
- * entry qualifies: if a word behaves irregularly on its own, compounds
- * ending in it behave the same way.
+ * entry qualifies — if a word behaves irregularly on its own, compounds
+ * ending in it behave the same way — except those the pipeline measured as
+ * suffix look-alikes rather than real heads.
  */
-const COMPOUND_HEADS: ReadonlySet<string> = new Set(STEM_FLAGS.keys());
+const COMPOUND_HEADS: ReadonlySet<string> = new Set(
+  [...STEM_FLAGS.keys()].filter((lemma) => !UNSAFE_COMPOUND_HEADS.has(lemma)),
+);
 
 /**
  * Heuristic uncertainty test: unknown lemmas that look foreign or whose

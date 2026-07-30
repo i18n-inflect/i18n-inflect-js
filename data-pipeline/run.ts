@@ -12,19 +12,29 @@
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { gzipSync } from "node:zlib";
-import type { StemFlags } from "../packages/i18n-inflect/src/hu/stems.js";
+import { resolveStemFlags, splitCompound } from "../packages/i18n-inflect/src/hu/compounds.js";
 import { BACK_NEUTRAL_LEMMAS, harmonyOf } from "../packages/i18n-inflect/src/hu/phonology.js";
+import type { StemFlags } from "../packages/i18n-inflect/src/hu/stems.js";
+import { inflectNounRules } from "../packages/i18n-inflect/src/hu/suffixes.js";
+import { HU_CASE_TAGS, type HuCase } from "../packages/i18n-inflect/src/hu/tags.js";
+
 import { diffAll, rulesAccuracy } from "./diff-hu.js";
 import { SEED_OVERRIDE_LINES, SEED_STEM_LINES } from "./seed-hu.js";
 import {
   fnv1a,
+  groupByLemma,
   isDev,
   isHeldOut,
   loadRows,
+  parseTag,
   type Row,
   UNIMORPH_HUN_SHA,
   UNIMORPH_HUN_URL,
 } from "./unimorph.js";
+
+const TAG_TO_CASE = new Map<string, HuCase>(
+  (Object.entries(HU_CASE_TAGS) as [HuCase, string][]).map(([c, t]) => [t, c]),
+);
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const RAW = `${ROOT}data/raw/hun.tsv`;
@@ -49,7 +59,6 @@ function pct(x: number): string {
   return `${(100 * x).toFixed(2)}%`;
 }
 
-
 /**
  * Compound heads whose harmony disagrees with the compound they appear in.
  *
@@ -72,6 +81,46 @@ function usefulHarmonyHeads(lemmas: string[]): Map<string, "back" | "front"> {
     }
   }
   return useful;
+}
+
+/**
+ * Heads that hurt more than they help.
+ *
+ * A word ending in a known lemma is not necessarily a compound of it:
+ * `régész` is `rég` + the agent suffix `-ész`, and inheriting the noun
+ * `ész`'s shortening stem turns it into *régeszek. Rather than guess which
+ * endings are suffixes, score every head over the whole training set and
+ * keep only the ones that come out ahead.
+ */
+function unsafeHeads(rows: Row[], lexicon: ReadonlyMap<string, StemFlags>): Set<string> {
+  const heads = new Set(lexicon.keys());
+  const tally = new Map<string, { fixed: number; broken: number }>();
+  for (const [lemma, forms] of groupByLemma(rows)) {
+    if (lexicon.has(lemma)) continue; // its own entry wins anyway
+    const split = splitCompound(lemma, heads);
+    if (!split) continue;
+    const flags = resolveStemFlags(lemma, lexicon, heads, BACK_NEUTRAL_LEMMAS);
+    let score = tally.get(split.head);
+    if (!score) {
+      score = { fixed: 0, broken: 0 };
+      tally.set(split.head, score);
+    }
+    for (const [tag, accepted] of forms) {
+      const { caseTag, plural } = parseTag(tag);
+      const huCase = caseTag === "NOM" ? undefined : TAG_TO_CASE.get(caseTag);
+      const withHead = accepted.includes(
+        inflectNounRules(lemma, flags, plural, huCase, BACK_NEUTRAL_LEMMAS),
+      );
+      const without = accepted.includes(
+        inflectNounRules(lemma, undefined, plural, huCase, BACK_NEUTRAL_LEMMAS),
+      );
+      if (withHead && !without) score.fixed++;
+      else if (without && !withHead) score.broken++;
+    }
+  }
+  const unsafe = new Set<string>();
+  for (const [head, score] of tally) if (score.broken > score.fixed) unsafe.add(head);
+  return unsafe;
 }
 
 function main(): void {
@@ -134,6 +183,11 @@ function main(): void {
     }
     for (const [tag, form] of r.overrides) overrideOut.push(`${r.lemma}|${tag}|${form}`);
   }
+  const unsafe = unsafeHeads(train, lexicon);
+  console.log(
+    `unsafe compound heads (suffix look-alikes): ${unsafe.size}${unsafe.size ? ` — ${[...unsafe].slice(0, 8).join(", ")}` : ""}`,
+  );
+
   const harmonyHeads = usefulHarmonyHeads([...new Set(train.map((r) => r.lemma))]);
   let harmonyAdded = 0;
   for (const [head, harmony] of harmonyHeads) {
@@ -165,7 +219,7 @@ function main(): void {
       `hand seeds merged for uncovered lemmas: ${seededStems} flags, ${seededOverrides} overrides`,
     );
   }
-  const ho = rulesAccuracy(heldOut, lexicon);
+  const ho = rulesAccuracy(heldOut, lexicon, unsafe);
   console.log(`held-out accuracy (+ compound heads):  ${pct(ho.correct / ho.total)}`);
 
   const collate = new Intl.Collator("hu").compare;
@@ -206,6 +260,9 @@ const HYPHEN_CLASS_DATA = \`${classLines.join("\n")}
 \`;
 
 const HYPHEN_LEMMA_DATA = \`${hyphenLemmaLines.join("\n")}
+\`;
+
+const UNSAFE_HEAD_DATA = \`${[...unsafe].sort(collate).join("\n")}
 \`;
 ${PARSER_SOURCE}`;
   writeFileSync(GEN, generated);
@@ -352,6 +409,15 @@ export const FORM_OVERRIDES: ReadonlyMap<string, string> = new Map(
 export const HYPHEN_SUFFIXES: ReadonlyMap<string, ReadonlyMap<string, string>> = parseHyphenData(
   HYPHEN_CLASS_DATA,
   HYPHEN_LEMMA_DATA,
+);
+
+/**
+ * Lemmas that look like compound heads but are really derivational suffixes
+ * (\`régész\` is \`rég\` + \`-ész\`, not a compound with \`ész\`). Measured, not
+ * guessed: each one loses more forms than it fixes across the corpus.
+ */
+export const UNSAFE_COMPOUND_HEADS: ReadonlySet<string> = new Set(
+  UNSAFE_HEAD_DATA.split("\\n").filter((line) => line.length > 0),
 );
 `;
 

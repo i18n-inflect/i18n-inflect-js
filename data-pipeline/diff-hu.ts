@@ -165,13 +165,14 @@ export function diffAll(rows: Row[]): LemmaResult[] {
 export function rulesAccuracy(
   rows: Row[],
   lexicon?: ReadonlyMap<string, StemFlags>,
+  blocked?: ReadonlySet<string>,
 ): { correct: number; total: number } {
   const heads = lexicon ? new Set(lexicon.keys()) : new Set<string>();
   let correct = 0;
   let total = 0;
   for (const [lemma, forms] of groupByLemma(rows)) {
     const flags = lexicon
-      ? resolveStemFlags(lemma, lexicon, heads, BACK_NEUTRAL_LEMMAS)
+      ? resolveStemFlags(lemma, lexicon, heads, BACK_NEUTRAL_LEMMAS, blocked)
       : undefined;
     for (const [tag, accepted] of forms) {
       total++;

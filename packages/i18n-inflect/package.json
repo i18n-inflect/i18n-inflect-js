@@ -1,6 +1,6 @@
 {
   "name": "i18n-inflect",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Grammatical inflection and agreement for i18n — articles, case suffixes, particles — in the browser, Node.js, and Cordova. API inspired by Apple's Morphology / automatic grammar agreement.",
   "license": "MIT",
   "type": "module",
