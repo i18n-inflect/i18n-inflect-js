@@ -33,6 +33,12 @@ export interface StemFlags {
    */
   harmony?: "back" | "front";
   /**
+   * Third-person possessive takes `-ja/-je` rather than `-a/-e`: kalapja,
+   * kertje, but háza, asztala. Purely lexical — nothing in the shape of the
+   * word predicts it.
+   */
+  possessiveJ?: boolean;
+  /**
    * Vowel-final lemma whose plural nevertheless takes a linking vowel:
    * thai → thai-o-k. (The lowered counterpart, vietnámi → vietnámi-a-k,
    * is expressed as `lowering: "plural"` on a vowel-final lemma.)

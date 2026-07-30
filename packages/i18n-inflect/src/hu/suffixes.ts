@@ -134,6 +134,10 @@ export function applyCaseParts(
       return assimilatingParts(base, two(h, "á", "é"));
     case "causalFinal":
       return { stem: plain, suffix: "ért" };
+    case "essiveFormal":
+      // -ként is invariant and takes the plain lemma, with no lengthening:
+      // almaként, kézként, bokorként.
+      return { stem: base, suffix: "ként" };
     case "terminative":
       return { stem: plain, suffix: "ig" };
     case "inessive":

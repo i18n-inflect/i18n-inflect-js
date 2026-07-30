@@ -15,6 +15,7 @@
  */
 import { resolveStemFlags } from "../packages/i18n-inflect/src/hu/compounds.js";
 import { BACK_NEUTRAL_LEMMAS, harmonyOf } from "../packages/i18n-inflect/src/hu/phonology.js";
+import { possessiveForm } from "../packages/i18n-inflect/src/hu/possessive.js";
 import type { StemFlags } from "../packages/i18n-inflect/src/hu/stems.js";
 import { inflectNounRules } from "../packages/i18n-inflect/src/hu/suffixes.js";
 import { HU_CASE_TAGS, type HuCase } from "../packages/i18n-inflect/src/hu/tags.js";
@@ -24,9 +25,24 @@ const TAG_TO_CASE = new Map<string, HuCase>(
   (Object.entries(HU_CASE_TAGS) as [HuCase, string][]).map(([c, t]) => [t, c]),
 );
 
+const PERSONS = { "1": "first", "2": "second", "3": "third" } as const;
+
 /** Predict one form with a candidate lexicon entry. */
 function predict(lemma: string, tag: string, flags: StemFlags | undefined): string {
   const { caseTag, plural } = parseTag(tag);
+  const possessive = /^PSS([123])([SP])$/.exec(caseTag);
+  if (possessive) {
+    return possessiveForm(
+      lemma,
+      flags,
+      {
+        person: PERSONS[possessive[1] as "1" | "2" | "3"],
+        plural: possessive[2] === "P",
+      },
+      plural,
+      BACK_NEUTRAL_LEMMAS,
+    );
+  }
   const huCase = caseTag === "NOM" ? undefined : TAG_TO_CASE.get(caseTag);
   return inflectNounRules(lemma, flags, plural, huCase, BACK_NEUTRAL_LEMMAS);
 }
@@ -82,9 +98,12 @@ function altStemCandidates(lemma: string, forms: Map<string, string[]>): Set<str
 function* explanationCandidates(lemma: string, forms: Map<string, string[]>): Generator<StemFlags> {
   const opposite: "back" | "front" =
     harmonyOf(lemma, BACK_NEUTRAL_LEMMAS) === "back" ? "front" : "back";
+  yield { possessiveJ: true };
   for (const lowering of ["both", "accusative", "plural"] as const) {
     yield { lowering };
+    yield { lowering, possessiveJ: true };
     yield { lowering, harmony: opposite };
+    yield { lowering, harmony: opposite, possessiveJ: true };
   }
   yield { harmony: opposite };
   yield { vowelPlural: "linking" };
@@ -93,7 +112,9 @@ function* explanationCandidates(lemma: string, forms: Map<string, string[]>): Ge
   for (const stem of altStemCandidates(lemma, forms)) {
     for (const kind of ["shortening", "fleeting", "vStem"] as const) {
       yield { [kind]: stem };
+      yield { [kind]: stem, possessiveJ: true };
       yield { [kind]: stem, lowering: "both" };
+      yield { [kind]: stem, lowering: "both", possessiveJ: true };
       yield { [kind]: stem, harmony: opposite };
       yield { [kind]: stem, lowering: "both", harmony: opposite };
     }

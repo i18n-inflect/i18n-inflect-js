@@ -53,6 +53,8 @@ export type GrammaticalCase =
   | "translative"
   | "causalFinal"
   | "terminative"
+  // Hungarian: -ként, "in the capacity of"
+  | "essiveFormal"
   // Korean particle semantics
   | "topic"
   | "comitative";
@@ -96,6 +98,15 @@ export interface GrammaticalFeatures {
   article?: ArticleRequest;
   /** Derive a different word before applying any of the above. */
   derivation?: Derivation;
+  /**
+   * Mark the noun as possessed by someone: Hungarian `ház` → `házam` (my
+   * house), `házunk` (our house). `number` keeps its usual meaning — how
+   * many things are possessed — so `{ possessor: "first", number: "plural" }`
+   * is "my houses".
+   */
+  possessor?: GrammaticalPerson;
+  /** Whether the possessor is plural: our house rather than my house. */
+  possessorNumber?: GrammaticalNumber;
 }
 
 const PART_OF_SPEECH: readonly PartOfSpeech[] = [
@@ -128,6 +139,7 @@ const CASES: readonly GrammaticalCase[] = [
   "translative",
   "causalFinal",
   "terminative",
+  "essiveFormal",
   "topic",
   "comitative",
 ];
@@ -197,6 +209,18 @@ export function normalizeFeatures(
         const v = pick(DERIVATIONS, value);
         if (v) out.derivation = v;
         else warn("unknown-feature-value", `derivation: ${value}`);
+        break;
+      }
+      case "possessor": {
+        const v = pick(PERSONS, value);
+        if (v) out.possessor = v;
+        else warn("unknown-feature-value", `possessor: ${value}`);
+        break;
+      }
+      case "possessorNumber": {
+        const v = pick(NUMBERS, value);
+        if (v) out.possessorNumber = v;
+        else warn("unknown-feature-value", `possessorNumber: ${value}`);
         break;
       }
       case "person": {

@@ -29,6 +29,23 @@ const TAG_TO_CASE = new Map<string, GrammaticalCase>(
   (Object.entries(HU_CASE_TAGS) as [GrammaticalCase, string][]).map(([c, t]) => [t, c]),
 );
 
+const PERSONS = { "1": "first", "2": "second", "3": "third" } as const;
+
+/** Turn a UniMorph tag into the features that should reproduce it. */
+function featuresFor(tag: string): Parameters<typeof inflect>[2] {
+  const [, slot, num] = tag.split(";") as [string, string, string];
+  const features: Parameters<typeof inflect>[2] = {};
+  if (num === "PL") features.number = "plural";
+  const possessive = /^PSS([123])([SP])$/.exec(slot);
+  if (possessive) {
+    features.possessor = PERSONS[possessive[1] as "1" | "2" | "3"];
+    if (possessive[2] === "P") features.possessorNumber = "plural";
+    return features;
+  }
+  if (slot !== "NOM") features.case = TAG_TO_CASE.get(slot) as GrammaticalCase;
+  return features;
+}
+
 describe("hu: golden held-out accuracy", () => {
   const golden: Golden = JSON.parse(
     readFileSync(new URL("./fixtures/hu.golden.json", import.meta.url), "utf8"),
@@ -48,10 +65,7 @@ describe("hu: golden held-out accuracy", () => {
     const misses: string[] = [];
     for (const [key, forms] of attested) {
       const [lemma, tag] = key.split("|") as [string, string];
-      const [, caseTag, num] = tag.split(";") as [string, string, string];
-      const features: Parameters<typeof inflect>[2] = {};
-      if (num === "PL") features.number = "plural";
-      if (caseTag !== "NOM") features.case = TAG_TO_CASE.get(caseTag) as GrammaticalCase;
+      const features = featuresFor(tag);
       if (forms.includes(inflect("hu", lemma, features))) correct++;
       else if (misses.length < 10) misses.push(`${lemma} ${tag}: expected ${forms.join(" / ")}`);
     }

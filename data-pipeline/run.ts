@@ -52,7 +52,10 @@ const TRAINING_DIR = `${ROOT}data/training`;
 /** Gates (fail the run when unmet). */
 const GATE_TRAIN_WITH_LEXICON = 0.97;
 const GATE_HELDOUT_RULES_ONLY = 0.85;
-const GATE_GZIP_BYTES = 32 * 1024;
+// The vocabulary is worth bytes: a complete Hungarian noun lexicon costs
+// about what one photograph does, and only loads for callers who import the
+// language.
+const GATE_GZIP_BYTES = 150 * 1024;
 const FIXTURE_ROWS = 3000;
 
 function download(): void {
@@ -246,6 +249,7 @@ async function main(): Promise<void> {
       else if (r.flags.lowering === "accusative") parts.push("la");
       else if (r.flags.lowering === "plural") parts.push("lp");
       if (r.flags.vowelPlural) parts.push("k");
+      if (r.flags.possessiveJ) parts.push("j");
       if (r.flags.shortening) parts.push(`s:${r.flags.shortening}`);
       if (r.flags.vStem) parts.push(`v:${r.flags.vStem}`);
       if (r.flags.fleeting) parts.push(`f:${r.flags.fleeting}`);
@@ -459,6 +463,7 @@ function parseStemData(data: string): {
       else if (flag === "la") entry.lowering = "accusative";
       else if (flag === "lp") entry.lowering = "plural";
       else if (flag === "k") entry.vowelPlural = "linking";
+      else if (flag === "j") entry.possessiveJ = true;
       else if (flag === "b") back.add(lemma);
       else if (flag === "h:b") entry.harmony = "back";
       else if (flag === "h:f") entry.harmony = "front";

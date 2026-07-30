@@ -36,7 +36,7 @@ const EU_REGULAR = new Set(["bleu", "pneu", "landau", "sarrau"]);
 export function pluralize(word: string): string {
   const lower = word.toLowerCase();
   if (/[sxz]$/.test(lower)) return word;
-  if (AIL_TO_AUX.has(lower)) return word.slice(0, -3) + "aux";
+  if (AIL_TO_AUX.has(lower)) return `${word.slice(0, -3)}aux`;
   if (lower.endsWith("al") && !AL_REGULAR.has(lower)) return `${word.slice(0, -2)}aux`;
   if (/(eau|au|eu)$/.test(lower) && !EU_REGULAR.has(lower)) return `${word}x`;
   return `${word}s`;

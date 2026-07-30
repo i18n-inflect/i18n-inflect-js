@@ -37,11 +37,12 @@ format("en", "You drew ^[a {c}](article: indefinite)", { c: "ace" });
 
 | | |
 | --- | --- |
-| 🇭🇺 **Hungarian** | 15 case suffixes + plural with full vowel harmony, stem alternations (kéz→kezet, bokor→bokrot, ló→lovat), v-assimilation (ász→ásszal, busz→busszal), a/az article by pronunciation ("az 5", "a 6", "az MTA", "a BKV"), and suffixes written after a hyphen for numbers, initialisms and foreign words — spelled from their spoken form: 6-ot, 5-tel, 1-gyel, 100-zal, 1000-et, SMS-t, MTA-ban, tv-vel. Compounds inflect after their final member (kávéház→kávéházat, tábortűz→tábortüzet), and the relational adjective is derivable: Budapest→budapesti |
+| 🇭🇺 **Hungarian** | 15 case suffixes + plural with full vowel harmony, stem alternations (kéz→kezet, bokor→bokrot, ló→lovat), v-assimilation (ász→ásszal, busz→busszal), a/az article by pronunciation ("az 5", "a 6", "az MTA", "a BKV"), and suffixes written after a hyphen for numbers, initialisms and foreign words — spelled from their spoken form: 6-ot, 5-tel, 1-gyel, 100-zal, 1000-et, SMS-t, MTA-ban, tv-vel. Compounds inflect after their final member (kávéház→kávéházat, tábortűz→tábortüzet), the relational adjective is derivable (Budapest→budapesti), and the full possessive paradigm is covered including its one lexical choice (háza but kertje, házaitok, kertjeik) |
 | 🇬🇧 **English** | a/an by sound (an hour, a university, an MTA card, an 8), pluralization |
 | 🇩🇪 **German** | full article matrix (4 cases × 3 genders), weak/mixed/strong adjective endings ("ein rotes Auto" → "einem roten Auto") |
 | 🇫🇷 **French** | le/la/les/un/une with elision (l'ami) and h-aspiré (le haricot), pluralization |
-| 🇪🇸 **Spanish** | el/la/los/las/un/una incl. the stressed-á rule (el agua → las aguas), pluralization |
+| 🇪🇸 **Spanish** | el/la/los/las/un/una incl. the stressed-á rule (el agua → las aguas), pluralization, and a generated gender lexicon covering the traps (el mapa, la mano) |
+| 🇮🇹 **Italian** | articles chosen by the sound that follows (il/lo/l'/la/i/gli/le), articulated prepositions (del, allo, nell', sui), plurals with the spelling rules that keep consonant sounds (amico→amici but fuoco→fuochi), and a generated gender lexicon so you rarely pass `gender` |
 | 🇰🇷 **Korean** | phonological particles by final batchim: 은/는, 이/가, 을/를, (으)로, 과/와 — with digit readings (8로, 3으로) and paired forms for Latin text (Chrome을(를)) |
 
 More European languages plus Vietnamese and Japanese are on the roadmap; the language

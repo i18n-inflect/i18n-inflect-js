@@ -1,5 +1,37 @@
 # i18n-inflect
 
+## 0.5.0
+
+### Minor Changes
+
+- Hungarian possession and the essive-formal case; a new Italian pack; gender
+  lexicons for Spanish and Italian.
+
+  **Hungarian.** The full possessive paradigm — `házam`, `házunk`, `házaitok`,
+  `kertjeik` — through new `possessor` and `possessorNumber` features, plus
+  `case: "essiveFormal"` for `-ként`. Possession is where every stem class
+  shows through at once, and where the language keeps one genuinely lexical
+  choice: the third person takes `-a/-e` for some words and `-ja/-je` for
+  others, with nothing in the shape of `ház` versus `kalap` to predict _háza_
+  against _kalapja_. That choice is learned from the corpus, not guessed.
+
+  **Italian**, a new pack. Articles are selected by the sound that follows —
+  il/lo/l'/la/i/gli/le — and prepositions fuse with them, which is most of what
+  makes generated Italian read naturally: `del libro`, `allo sport`,
+  `dell'amico`, `sugli amici`. Cases map onto the preposition that marks the
+  role, so `case: "genitive"` gives `di`, `"dative"` gives `a`, and the same
+  feature name works across languages that mark roles with endings and ones
+  that mark them with words.
+
+  **Spanish and Italian gender lexicons**, generated from Wiktionary. Gender is
+  lexical in both languages, and requiring `gender` on every call was work the
+  library should absorb: `el mapa`, `la mano`, `il problema` and `la foto` now
+  come out right unasked. Only nouns whose ending misleads are stored — 2,736
+  for Spanish out of 58,492, 4,359 for Italian out of 59,752 — along with the
+  plurals the spelling rules do not produce. Words with two genders (`il radio`
+  the element, `la radio` the wireless) are deliberately left out: nothing in
+  the string decides, so the caller's `gender` should.
+
 ## 0.4.0
 
 ### Minor Changes

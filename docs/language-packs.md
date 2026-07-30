@@ -78,6 +78,20 @@ number and initialism suffixation ("6-ot", "SMS-t") looks like a job for the neu
 fallback, but it is fully rule-derivable once you spell the token's spoken form —
 see `hu/numerals.ts`. Rules are exact, need no download, and work synchronously.
 
+## Gender is lexical — get it from data, not from the caller
+
+Spanish and Italian hang their agreement on gender, and the endings everyone
+teaches are wrong often enough to matter: `el mapa`, `la mano`, `il
+problema`, `la foto`. Requiring `gender` on every call pushes that work onto
+the application. `data-pipeline/run-romance.ts` extracts gender from
+Wiktionary and stores **only the nouns whose ending misleads** — 2,736 of
+58,492 for Spanish, 4,359 of 59,752 for Italian — which keeps the lexicon
+small and, more usefully, measures how good the heuristic actually is.
+
+Words with two genders (`il radio` the element, `la radio` the wireless) are
+dropped rather than guessed, exactly as with Hungarian homonyms: the string
+does not decide, so the caller's `gender` should.
+
 ## Two sources beat one
 
 The Hungarian lexicon is built from UniMorph *and* the current Wiktionary

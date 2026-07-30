@@ -20,8 +20,9 @@ import {
 } from "./exceptions.gen.js";
 import { hyphenatedForm } from "./numerals.js";
 import { BACK_NEUTRAL_LEMMAS, vowelsOf } from "./phonology.js";
+import { possessiveForm } from "./possessive.js";
 import { inflectNounRules } from "./suffixes.js";
-import { type HuCase, isHuCase, nounTag } from "./tags.js";
+import { type HuCase, isHuCase, nounTag, possessiveTag } from "./tags.js";
 
 /**
  * Hungarian language pack — the flagship module.
@@ -89,6 +90,8 @@ function inflectHead(
   plural: boolean,
   huCase: HuCase | undefined,
   derivation: GrammaticalFeatures["derivation"],
+  possessor: GrammaticalFeatures["possessor"],
+  possessorPlural: boolean,
   ctx: InflectionContext,
 ): HeadResult {
   let [core, punct] = splitTrailingPunctuation(token);
@@ -103,7 +106,32 @@ function inflectHead(
     return { form: form + punct, confident: true };
   }
 
-  if (core.length === 0 || (!plural && !huCase)) return { form: token, confident: true };
+  if (core.length === 0 || (!plural && !huCase && possessor === undefined)) {
+    return { form: token, confident: true };
+  }
+
+  const lower = core.toLowerCase();
+
+  // Possession replaces the case suffix: a possessed noun is a different
+  // word shape, and Hungarian does not stack the two in this paradigm.
+  if (possessor !== undefined) {
+    const flags = resolveStemFlags(
+      lower,
+      STEM_FLAGS,
+      COMPOUND_HEADS,
+      backSet,
+      UNSAFE_COMPOUND_HEADS,
+    );
+    const possTag = possessiveTag(possessor, possessorPlural, plural);
+    const override = FORM_OVERRIDES.get(`${lower}|${possTag}`);
+    const form =
+      override ??
+      possessiveForm(core, flags, { person: possessor, plural: possessorPlural }, plural, backSet);
+    return {
+      form: (isCapitalized(core) ? capitalize(form) : form) + punct,
+      confident: true,
+    };
+  }
 
   const tag = nounTag(huCase, plural);
 
@@ -115,8 +143,6 @@ function inflectHead(
     const form = lexical.endsWith(punct) ? lexical : lexical + punct;
     return { form, confident: true };
   }
-
-  const lower = core.toLowerCase();
 
   // Digits and initialisms take hyphenated suffixes derived from their
   // spoken form ("6-ot", "5-tel", "SMS-t") — see numerals.ts.
@@ -170,6 +196,8 @@ function inflectPhrase(
     plural,
     huCase,
     features.derivation,
+    features.possessor,
+    features.possessorNumber === "plural",
     ctx,
   );
   split.parts[headIdx] = head.form;

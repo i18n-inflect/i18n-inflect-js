@@ -8,6 +8,7 @@ import {
   splitTrailingPunctuation,
 } from "../core/phrase.js";
 import { registerLanguage } from "../core/registry.js";
+import { GENDERS, PLURALS } from "./gender.gen.js";
 
 /**
  * Spanish language pack: el/la/los/las/un/una articles (including the
@@ -78,6 +79,10 @@ interface GenderGuess {
 function resolveGender(features: GrammaticalFeatures, headNoun: string): GenderGuess {
   if (features.gender) return { gender: features.gender, guessed: false };
   const lower = headNoun.toLowerCase();
+  // The generated lexicon holds exactly those nouns whose ending misleads:
+  // el mapa, la mano, el problema.
+  const known = GENDERS.get(lower);
+  if (known) return { gender: known, guessed: false };
   if (FEMININE_O.has(lower)) return { gender: "feminine", guessed: false };
   if (MASCULINE_A.has(lower)) return { gender: "masculine", guessed: false };
   if (STRESSED_A_FEMININES.has(lower)) return { gender: "feminine", guessed: false };
@@ -93,6 +98,8 @@ const ACCENT_FOLD: Record<string, string> = { á: "a", é: "e", í: "i", ó: "o"
 /** Pluralize a Spanish noun. */
 export function pluralize(word: string): string {
   const lower = word.toLowerCase();
+  const attested = PLURALS.get(lower);
+  if (attested !== undefined) return attested;
   // canción → canciones, francés → franceses: accented vowel + n/s drops the accent.
   const accented = /([áéíóú])([ns])$/.exec(lower);
   if (accented) {

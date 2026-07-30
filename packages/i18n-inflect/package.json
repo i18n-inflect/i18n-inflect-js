@@ -1,22 +1,24 @@
 {
   "name": "i18n-inflect",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Grammatical inflection and agreement for i18n — articles, case suffixes, particles — in the browser, Node.js, and Cordova. API inspired by Apple's Morphology / automatic grammar agreement.",
   "license": "MIT",
   "type": "module",
   "sideEffects": [
-    "./dist/hu/index.js",
-    "./dist/hu/index.cjs",
-    "./dist/en/index.js",
-    "./dist/en/index.cjs",
-    "./dist/de/index.js",
     "./dist/de/index.cjs",
-    "./dist/fr/index.js",
-    "./dist/fr/index.cjs",
-    "./dist/es/index.js",
+    "./dist/de/index.js",
+    "./dist/en/index.cjs",
+    "./dist/en/index.js",
     "./dist/es/index.cjs",
-    "./dist/ko/index.js",
-    "./dist/ko/index.cjs"
+    "./dist/es/index.js",
+    "./dist/fr/index.cjs",
+    "./dist/fr/index.js",
+    "./dist/hu/index.cjs",
+    "./dist/hu/index.js",
+    "./dist/it/index.cjs",
+    "./dist/it/index.js",
+    "./dist/ko/index.cjs",
+    "./dist/ko/index.js"
   ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -51,6 +53,11 @@
       "types": "./dist/es/index.d.ts",
       "import": "./dist/es/index.js",
       "require": "./dist/es/index.cjs"
+    },
+    "./it": {
+      "types": "./dist/it/index.d.ts",
+      "import": "./dist/it/index.js",
+      "require": "./dist/it/index.cjs"
     },
     "./ko": {
       "types": "./dist/ko/index.d.ts",

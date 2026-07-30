@@ -8,6 +8,7 @@ export default defineConfig({
     "de/index": "src/de/index.ts",
     "fr/index": "src/fr/index.ts",
     "es/index": "src/es/index.ts",
+    "it/index": "src/it/index.ts",
     "ko/index": "src/ko/index.ts",
   },
   format: ["esm", "cjs"],

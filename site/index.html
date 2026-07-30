@@ -6,7 +6,7 @@
     <title>i18n-inflect — see a word change shape</title>
     <meta
       name="description"
-      content="A live playground for i18n-inflect: type a word and watch it take the right article, case suffix or particle in Hungarian, English, German, French, Spanish and Korean."
+      content="A live playground for i18n-inflect: type a word and watch it take the right article, case suffix or particle in Hungarian, English, German, French, Spanish, Italian and Korean."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -531,7 +531,7 @@ import <span class="s">"i18n-inflect/hu"</span>;
 format(<span class="s">"hu"</span>, <span class="s">"Nyertél ^[a {card}](case: instrumental)!"</span>, { card: <span class="s">"kőr ász"</span> });
 <span class="c">// → "Nyertél a kőr ásszal!"</span></pre>
         <p style="margin-bottom: 0">
-          Six languages today — Hungarian, English, German, French, Spanish, Korean. If a form comes
+          Seven languages today — Hungarian, English, German, French, Spanish, Italian, Korean. If a form comes
           out wrong in yours,
           <a href="https://github.com/i18n-inflect/i18n-inflect-js/issues/new?template=wrong-form.yml"
             >that is worth an issue</a
@@ -576,6 +576,10 @@ format(<span class="s">"hu"</span>, <span class="s">"Nyertél ^[a {card}](case: 
             ["causal", "for the sake of it", { case: "causalFinal" }],
             ["definite article", "the …", { article: "definite" }],
             ["relational", "belonging to it", { derivation: "relational" }],
+            ["as a …", "in the capacity of it", { case: "essiveFormal" }],
+            ["my …", "owned by me", { possessor: "first" }],
+            ["their …", "owned by them", { possessor: "third", possessorNumber: "plural" }],
+            ["my …s", "several, owned by me", { possessor: "first", number: "plural" }],
           ],
         },
         en: {
@@ -623,6 +627,21 @@ format(<span class="s">"hu"</span>, <span class="s">"Nyertél ^[a {card}](case: 
             ["plural", "more than one", { number: "plural" }],
           ],
         },
+        it: {
+          name: "Italian",
+          presets: ["libro", "sport", "amico", "casa", "zaino", "studente", "mano", "città"],
+          start: "amico",
+          rows: [
+            ["as written", "article agreed by sound", {}],
+            ["definite article", "il, lo, l', la", { article: "definite" }],
+            ["indefinite article", "un, uno, un', una", { article: "indefinite" }],
+            ["plural", "more than one", { article: "definite", number: "plural" }],
+            ["of the …", "di + article, fused", { case: "genitive" }],
+            ["to the …", "a + article, fused", { case: "dative" }],
+            ["in the …", "in + article, fused", { case: "inessive" }],
+            ["on the …", "su + article, fused", { case: "superessive" }],
+          ],
+        },
         ko: {
           name: "Korean",
           presets: ["사과", "책", "서울", "집", "지도", "8", "Chrome"],
@@ -654,6 +673,8 @@ format(<span class="s">"hu"</span>, <span class="s">"Nyertél ^[a {card}](case: 
         ["gender", "Which class the noun belongs to.", "der / die / das"],
         ["article", "The word before the noun.", "a / an / the"],
         ["derivation", "A different word, not a different ending.", "Budapest → budapesti"],
+        ["possessor", "Who owns the thing.", "ház → házam (my house)"],
+        ["essiveFormal", "Acting as something.", "tanárként (as a teacher)"],
       ];
 
       const $ = (id) => document.getElementById(id);

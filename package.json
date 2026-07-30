@@ -14,7 +14,8 @@
     "lint:fix": "biome check --write .",
     "pipeline:hu": "tsx data-pipeline/run.ts hu",
     "size": "node scripts/size-gate.mjs",
-    "verify:dist": "node scripts/verify-dist.mjs"
+    "verify:dist": "node scripts/verify-dist.mjs",
+    "pipeline:romance": "tsx data-pipeline/run-romance.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.5",
