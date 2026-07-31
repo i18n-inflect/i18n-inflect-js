@@ -1,5 +1,12 @@
 # @i18n-inflect/neural
 
+## 0.1.7
+
+### Patch Changes
+
+- Updated dependencies [e4e7106]
+  - i18n-inflect@0.6.0
+
 ## 0.1.6
 
 ### Patch Changes
